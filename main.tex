@@ -14,7 +14,17 @@
 \newcommand{\jaqu}{Jaquereçaba\xspace}
 \newcommand{\para}{Paranapitanga\xspace}
 
+\newcommand{\adm}{Administração\xspace}
+\newcommand{\comp}{Computação e Matemática\xspace}
+\newcommand{\edu}{Educacional\xspace}
+\newcommand{\eng}{Engenharia e Produção\xspace}
+\newcommand{\hum}{Humanidades\xspace}
+\newcommand{\jur}{Jurídica e Contábil\xspace}
+
+% Tabelas.
 \usepackage{booktabs}
+\newcommand{\specialcell}[3][c]
+{\begin{tabular}[#1]{@{}#2@{}}#3\end{tabular}}
 
 \author{%
 	Alexis A. Huf, %
@@ -37,6 +47,9 @@ A Tabela \ref{table: dados perdidos} apresenta os dados perdidos e seus respecti
 
 \begin{table}[h]
 \centering
+\caption{Dados perdidos na base de dados.}
+\label{table: dados perdidos}
+\vspace{0.5em}
 \begin{tabular}{c c c c c c}
 	\toprule
 	\textbf{Região} & \textbf{Área} & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
@@ -44,8 +57,6 @@ A Tabela \ref{table: dados perdidos} apresenta os dados perdidos e seus respecti
 	21 $(0.42\%)$   & 21 $(0.42\%)$ & 18 $(0.36\%)$      & 19 $(0.38\%)$    & 14 $(0.28\%)$  & 13 $(0.26\%)$ \\
 	\bottomrule
 \end{tabular}
-\caption{Dados perdidos na base de dados.}
-\label{table: dados perdidos}
 \end{table}
 
 %
@@ -60,6 +71,9 @@ Para evitar que erros de coleta sejam cometidos nas variáveis qualitativas, um 
 
 \begin{table}[h]
 \centering
+\caption{Erros na base de dados.}
+\vspace{0.5em}
+\label{table: dados errados}
 \begin{tabular}{c c c c c c}
 	\toprule
 	\textbf{Região} & \textbf{Área}  & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
@@ -67,17 +81,17 @@ Para evitar que erros de coleta sejam cometidos nas variáveis qualitativas, um 
 	135 $(2.71\%)$  & 114 $(2.28\%)$ & 132 $(2.64\%)$     & 123 $(2.46\%)$   & 0 $(0.00\%)$   & 0 $(0.00\%)$ \\
 	\bottomrule
 \end{tabular}
-\caption{Erros na base de dados.}
-\label{table: dados errados}
 \end{table}
-
 
 \paragraph{Questão 03}
 
-A tabela de frequências para a variável \textit{Região} está indicada na Tabela \ref{table: tabela frequencias regiao}. Por análise, pode-se observar que a região predominante na base dados é \textit{\baep}.
+A tabela de frequências para a variável \textit{Região} está indicada na Tabela \ref{table: tabela frequencias regiao}. Por análise, pode-se observar que a \textit{Região} predominante na base dados é \textit{\baep}.
 
 \begin{table}[h]
 \centering
+\caption{Frequências para a variável \textit{Região}.}
+\label{table: tabela frequencias regiao}
+\vspace{0.5em}
 \begin{tabular}{c c c c c}
 	\toprule
 	\textbf{\arat}    & \textbf{\baep}   & \textbf{\itam}  & \textbf{\jaqu}  & \textbf{\para} \\
@@ -85,8 +99,25 @@ A tabela de frequências para a variável \textit{Região} está indicada na Tab
 	1185 $(23.80\%)$  & 2294 $(46.07\%)$ & 843 $(16.93\%)$ & 536 $(10.77\%)$ & 121 $(2.43\%)$ \\
 	\bottomrule
 \end{tabular}
-\caption{Frequências para a variável \textit{Região}.}
-\label{table: tabela frequencias regiao}
+\end{table}
+
+\paragraph{Questão 04}
+
+A tabela de frequências para a variável \textit{Área} está indicada na Tabela \ref{table: tabela frequencias area}. Por análise, pode-se observar que a \textit{Área} predominante da \texttt{TYU} modificou-se para \eng.
+
+
+\begin{table}[h]
+\centering
+\caption{Frequências para a variável \textit{Área}.}
+\label{table: tabela frequencias area}
+\vspace{0.5em}
+\begin{tabular}{c c c c c c}
+	\toprule
+	\textbf{\adm}   & \textbf{\comp} & \textbf{\edu} & \textbf{\eng}    & \textbf{\hum}   & \textbf{\jur} \\
+	\midrule
+	592 $(11.89\%)$ & 296 $(5.94\%)$ & 338 $(6.79\%)$ & 1741 $(34.97\%)$ & 503 $(10.10\%)$ & 1509 $(30.31\%)$ \\
+	\bottomrule
+\end{tabular}
 \end{table}
 
 \end{document}
