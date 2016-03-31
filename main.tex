@@ -1,10 +1,18 @@
 \documentclass[10pt,a4paper,oneside]{article}
+\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 
+\usepackage{xspace}
+
+\newcommand{\arat}{Aratibutantã\xspace}
+\newcommand{\baep}{Baependinha\xspace}
+\newcommand{\itam}{Itamaracanã\xspace}
+\newcommand{\jaqu}{Jaquereçaba\xspace}
+\newcommand{\para}{Paranapitanga\xspace}
 
 \usepackage{booktabs}
 
@@ -63,5 +71,22 @@ Para evitar que erros de coleta sejam cometidos nas variáveis qualitativas, um 
 \label{table: dados errados}
 \end{table}
 
+
+\paragraph{Questão 03}
+
+A tabela de frequências para a variável \textit{Região} está indicada na Tabela \ref{table: tabela frequencias regiao}. Por análise, pode-se observar que a região predominante na base dados é \textit{\baep}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c}
+	\toprule
+	\textbf{\arat}    & \textbf{\baep}   & \textbf{\itam}  & \textbf{\jaqu}  & \textbf{\para} \\
+	\midrule
+	1185 $(23.80\%)$  & 2294 $(46.07\%)$ & 843 $(16.93\%)$ & 536 $(10.77\%)$ & 121 $(2.43\%)$ \\
+	\bottomrule
+\end{tabular}
+\caption{Frequências para a variável \textit{Região}.}
+\label{table: tabela frequencias regiao}
+\end{table}
 
 \end{document}
