@@ -152,7 +152,7 @@ write.csv(df,file='processed.csv',row.names=F,quote=F)
 
 # Questao 4
 for(i in levels(df$Área)){
-  print ((length(df[(which(df$Área == i)),"Área"]))/(nrow(df)-length(which(is.na(df$Área)))))
+  print (c(i,(length(df[(which(df$Área == i)),"Área"]))/(nrow(df)-length(which(is.na(df$Área))))))
 }
 
 # [1] 0.12
@@ -163,3 +163,8 @@ for(i in levels(df$Área)){
 # [1] 0.3
 
 #--------------------------------------------------------------------------------------------------
+
+#Questao 6
+for(i in levels(df$Opinião)){
+  print ((length(df[(which(df$Opinião == i)),"Opinião"]))/(nrow(df)-length(which(is.na(df$Opinião))))
+}
