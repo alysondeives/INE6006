@@ -163,3 +163,17 @@ for(i in levels(df$Área)){
 # [1] 0.3
 
 #--------------------------------------------------------------------------------------------------
+
+# Questao 5
+parts = c()
+percent = cat("\\%")
+for (i in levels(df$Pagamento)) {
+  total = length(df$Pagamento) - length(which(is.na(df$Pagamento)))
+  levelCount = length(grep(i, df$Pagamento))
+  parts = c(parts, sprintf("%d (%.2f\\%%)", levelCount, levelCount/total * 100))
+}
+print(cat(paste(parts, collapse=" & ")))
+
+# 257 (5.16\%) & 328 (6.58\%) & 2191 (43.98\%) & 1448 (29.06\%) & 758 (15.21\%)
+
+#--------------------------------------------------------------------------------------------------
