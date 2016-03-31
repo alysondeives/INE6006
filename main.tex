@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{xspace}
+
+\newcommand{\arat}{Aratibutantã\xspace}
+\newcommand{\baep}{Baependinha\xspace}
+\newcommand{\itam}{Itamaracanã\xspace}
+\newcommand{\jaqu}{Jaquereçaba\xspace}
+\newcommand{\para}{Paranapitanga\xspace}
+
+\usepackage{booktabs}
+
+\author{%
+	Alexis A. Huf, %
+	Alyson Pereira, %
+	Bruno N. Oliveira,\\%
+	Eliza Gomes, %
+	Pedro H. Penna
+	}
+
+\title{Lista de Exercício I}
+
+
+\begin{document}
+
+\maketitle
+
+\paragraph{Questão 01}
+
+A Tabela \ref{table: dados perdidos} apresenta os dados perdidos e seus respectivos percentuais na base de dados em estudo. Para todos as variáveis o percentual observado de perda foi inferior a $5\%$, o que é aceitável.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c c}
+	\toprule
+	\textbf{Região} & \textbf{Área} & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
+	\midrule
+	21 $(0.42\%)$   & 21 $(0.42\%)$ & 18 $(0.36\%)$      & 19 $(0.38\%)$    & 14 $(0.28\%)$  & 13 $(0.26\%)$ \\
+	\bottomrule
+\end{tabular}
+\caption{Dados perdidos na base de dados.}
+\label{table: dados perdidos}
+\end{table}
+
+%
+% Dúvidas:
+%   Devemos detalhar quis os erros (ex: Arábia, Araba)?
+%
+\paragraph{Questão 02}
+
+A Tabela \ref{table: dados errados} resume os erros de coleta e seus respectivos percentuais na base de dados em estudo. Para as variáveis qualitativas \textit{Região}, \textit{Área}, \textit{Pagamento} e \textit{Opinião}, foram observados erros de ortografia e digitação. Para as variáveis quantitativas \textit{Renda} e \textit{Idade}, não foram observados erros na base de dados, isto é valores infactíveis (\textit{Renda} não positiva, \textit{Idade} inferior a 17 e superior a 100 anos).
+
+Para evitar que erros de coleta sejam cometidos nas variáveis qualitativas, um formulário de múltipla escolha. Já para as variáveis quantitativas, no caso de um formulário eletrônico, limites inferiores e superiores de valores válidos poderiam ser checado previamente à submissão da observação.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c c}
+	\toprule
+	\textbf{Região} & \textbf{Área}  & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
+	\midrule
+	135 $(2.71\%)$  & 114 $(2.28\%)$ & 132 $(2.64\%)$     & 123 $(2.46\%)$   & 0 $(0.00\%)$   & 0 $(0.00\%)$ \\
+	\bottomrule
+\end{tabular}
+\caption{Erros na base de dados.}
+\label{table: dados errados}
+\end{table}
+
+
+\paragraph{Questão 03}
+
+A tabela de frequências para a variável \textit{Região} está indicada na Tabela \ref{table: tabela frequencias regiao}. Por análise, pode-se observar que a região predominante na base dados é \textit{\baep}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c}
+	\toprule
+	\textbf{\arat}    & \textbf{\baep}   & \textbf{\itam}  & \textbf{\jaqu}  & \textbf{\para} \\
+	\midrule
+	1185 $(23.80\%)$  & 2294 $(46.07\%)$ & 843 $(16.93\%)$ & 536 $(10.77\%)$ & 121 $(2.43\%)$ \\
+	\bottomrule
+\end{tabular}
+\caption{Frequências para a variável \textit{Região}.}
+\label{table: tabela frequencias regiao}
+\end{table}
+
+\end{document}
