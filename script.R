@@ -29,6 +29,7 @@ summary(df)
 #  Muito insatisfeito: 464   3rd Qu.: 3   3rd Qu.:35  
 #  (Other)           : 123   Max.   :61   Max.   :70  
 #  NA's              :  19   NA's   :14   NA's   :13
+#------------------------------------------------------------------------------------------------
 
 #get missing data
 for (i in 1:ncol(df)){
@@ -44,43 +45,19 @@ for (i in 1:ncol(df)){
 # [1] "Renda" "14"    "0.28" 
 # [1] "Idade" "13"    "0.26"
 
+#-------------------------------------------------------------------------------------------------------
+
 #get errors in variables values
 for (i in 1:ncol(df)){
   print(levels(df[,i]))
 }
 
+#-------------------------------------------------------------------------------------------------------
+
 # [1] "Arati "        "Aratib "       "Aratibu "      "Aratibut "     "Aratibutantã"  "Baepe "       
 # [7] "Baepen "       "Baepend "      "Baependi "     "Baependinha"   "Itama "        "Itamar "      
 # [13] "Itamara "      "Itamarac "     "Itamaracanã"   "Jaque "        "Jaquer "       "Jaquere "
 # [19] "Jaquereç "     "Jaquereçaba"   "Paranapitanga"
-
-# [1] "Admin "                  "Admini "                 "Adminis "               
-# [4] "Administ "               "Administração"           "Compu "                 
-# [7] "Comput "                 "Computa "                "Computaç "              
-# [10] "Computação e Matemática" "Educa "                  "Educac "                
-# [13] "Educaci "                "Educacio "               "Educacional"            
-# [16] "Engen "                  "Engenh "                 "Engenha "               
-# [19] "Engenhar "               "Engenharia e Produção"   "Human "                 
-# [22] "Humani "                 "Humanid "                "Humanida "              
-# [25] "Humanidades"             "Juríd "                  "Jurídi "                
-# [28] "Jurídic "                "Jurídica "               "Jurídica e Contábil"    
-
-# [1] "Auxíl "                 "Auxíli "                "Auxílio "              
-# [4] "Auxílio  "              "Auxílio de familiares"  "Bolsa "                
-# [7] "Bolsas "                "Bolsas d "              "Bolsas de estudo"      
-# [10] "Finan "                 "Financ "                "Financi "              
-# [13] "Financia "              "Financiamento bancário" "Incen "                
-# [16] "Incent "                "Incenti "               "Incentiv "             
-# [19] "Incentivos federais"    "Recur "                 "Recurs "               
-# [22] "Recurso "               "Recursos "              "Recursos próprios"     
-
-# [1] "Indifer "           "Indifere "          "Indiferente"        "Insatis "          
-# [5] "Insatisf "          "Insatisfeito"       "Muito i "           "Muito in "         
-# [9] "Muito insatisfeito" "Muito s "           "Muito sa "          "Muito satisfeito"  
-# [13] "Satisfe "           "Satisfei "          "Satisfeito"        
-# NULL
-# NULL
-
 
 df[grep("Arat",df$Região),1] = "Aratibutantã"
 df[grep("Baep",df$Região),1] = "Baependinha"
@@ -93,6 +70,18 @@ summary(df$Região)
 # Aratibutantã   Baependinha   Itamaracanã   Jaquereçaba Paranapitanga          NA's 
 #         1185          2294           843           536           121            21 
 
+#--------------------------------------------------------------------------------------------------------
+
+# [1] "Admin "                  "Admini "                 "Adminis "               
+# [4] "Administ "               "Administração"           "Compu "                 
+# [7] "Comput "                 "Computa "                "Computaç "              
+# [10] "Computação e Matemática" "Educa "                  "Educac "                
+# [13] "Educaci "                "Educacio "               "Educacional"            
+# [16] "Engen "                  "Engenh "                 "Engenha "               
+# [19] "Engenhar "               "Engenharia e Produção"   "Human "                 
+# [22] "Humani "                 "Humanid "                "Humanida "              
+# [25] "Humanidades"             "Juríd "                  "Jurídi "                
+# [28] "Jurídic "                "Jurídica "               "Jurídica e Contábil"  
 
 df[grep("Admin",df$Área),2] = "Administração"
 df[grep("Com",df$Área),2] = "Computação e Matemática"
@@ -108,6 +97,17 @@ summary(df$Área)
 #             Humanidades     Jurídica e Contábil                    NA's 
 #                     503                    1509                      21 
 
+#-------------------------------------------------------------------------------------------------
+
+# [1] "Auxíl "                 "Auxíli "                "Auxílio "              
+# [4] "Auxílio  "              "Auxílio de familiares"  "Bolsa "                
+# [7] "Bolsas "                "Bolsas d "              "Bolsas de estudo"      
+# [10] "Finan "                 "Financ "                "Financi "              
+# [13] "Financia "              "Financiamento bancário" "Incen "                
+# [16] "Incent "                "Incenti "               "Incentiv "             
+# [19] "Incentivos federais"    "Recur "                 "Recurs "               
+# [22] "Recurso "               "Recursos "              "Recursos próprios"     
+
 df[grep("Aux",df$Pagamento),3] = "Auxílio de familiares"
 df[grep("Bol",df$Pagamento),3] = "Bolsas de estudo"
 df[grep("Fin",df$Pagamento),3] = "Financiamento bancário"
@@ -121,6 +121,13 @@ summary(df$Pagamento)
 # Recursos próprios                   NA's 
 #                    758                     18 
 
+#--------------------------------------------------------------------------------------------------
+
+# [1] "Indifer "           "Indifere "          "Indiferente"        "Insatis "          
+# [5] "Insatisf "          "Insatisfeito"       "Muito i "           "Muito in "         
+# [9] "Muito insatisfeito" "Muito s "           "Muito sa "          "Muito satisfeito"  
+# [13] "Satisfe "           "Satisfei "          "Satisfeito"        
+
 df[grep("Muito s",df$Opinião),4] = "Muito satisfeito"
 df[grep("Sat",df$Opinião),4] = "Satisfeito"
 df[grep("Ind",df$Opinião),4] = "Indiferente"
@@ -133,5 +140,26 @@ summary(df$Opinião)
 # 1006                749                472               1719               1035 
 # NA's 
 #                 19 
+#--------------------------------------------------------------------------------------------------
 
+# print summary of processed data frame
+summary(df)
+
+#Save processed input file withouth errors
 write.csv(df,file='processed.csv',row.names=F,quote=F)
+
+#--------------------------------------------------------------------------------------------------
+
+# Questao 4
+for(i in levels(df$Área)){
+  print ((length(df[(which(df$Área == i)),"Área"]))/(nrow(df)-length(which(is.na(df$Área)))))
+}
+
+# [1] 0.12
+# [1] 0.059
+# [1] 0.068
+# [1] 0.35
+# [1] 0.1
+# [1] 0.3
+
+#--------------------------------------------------------------------------------------------------
