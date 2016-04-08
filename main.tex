@@ -502,17 +502,38 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 	\label{figure: fonte de pagemento}
 \end{figure}
 
+\FloatBarrier
 \paragraph{Questão 12}
 
 %Conforme a tabela X, pode-se observar que os alunos que recebem incentivos federais são mais críticos (29,77% estão muito insatisfeitos e 35,15% estão insatisfeitos). 
 Por outro lado, os alunos que recebem Auxílio de Familiares ou Bolsa de Estudo são menos críticos (visto que 38,72% dos que recebem bolsa são indiferentes e 22,87% dos que recebem bolsa estão satisfeitos, enquanto 36,96% dos que recebem auxilio dos familiares são indiferentes e 30,35% dos que recebem o auxilio de familiares estão satisfeitos).
 
+
 \begin{figure}
-\centering
+	\centering
 	\includegraphics[width=0.80\linewidth]{plots/q12}
-	\caption{Avaliação dos alunos pela forma de pagamento}
-	\label{figure: avaliacao por forma de pagamento}
+	\caption{Avaliação dos alunos pela fonte de pagamento}
+	\label{figure: avaliacao por fonte de pagamento}
 \end{figure}
+
+%TODO tabela incompleta
+\begin{table}
+	\small
+	\caption{Avaliação dos alunos pela fonte de pagamento.}
+	\label{table: avaliacao por fonte de pagamento}
+	\vspace{0.5em}
+	\begin{tabular}{l r r r r r}
+		\toprule
+		\textbf{Fonte Pagamento}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{\itam}  & \textbf{\jaqu} & \textbf{\para}  \\
+		\midrule
+		Auxílio de Familiares  & $97$       & $131$  & $10$   & $17$  & $1$    \\
+		Bolsas de Estudo       & $116$      & $159$  & $7$    & $43$  & $2$    \\
+		Financiamento Bancário & $180$      & $1216$ & $767$  & $20$  & $0$    \\
+		Incentivos Federais    & $563$      & $346$  & $3$    & $411$ & $116$  \\
+		Recursos Próprios      & $226$      & $433$  & $53$   & $43$  & $1$    \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 
 \end{document}
