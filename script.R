@@ -323,3 +323,25 @@ for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
 }
 print(x)
+
+#29 é o primeiro quartil
+df$FaixaEtaria = "Mais Velho"
+df[which(df$Idade<=29),]$FaixaEtaria = "Mais Novo"
+
+x = table(df$FaixaEtaria,df$Opinião)
+print(x)
+for (i in 1:nrow(x)){
+  x[i,] = x[i,]/sum(x[i,])*100
+}
+print(x)
+
+#            Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Mais Novo          122           15                  5             1111        278
+# Mais Velho         884          734                467              608        757
+# 
+#            Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Mais Novo         7.97         0.98               0.33            72.57      18.16
+# Mais Velho       25.62        21.28              13.54            17.62      21.94
+# ------------------------------------------------------------------------------------------------
+#Questao 17
+

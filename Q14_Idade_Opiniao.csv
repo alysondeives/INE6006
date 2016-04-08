@@ -17,3 +17,13 @@ Diferença Maximo/Minimo,38,42,47,44,52,52
 Moda,37,36,34,31,29,32
 Dados Totais,472,749,1006,1035,1719,4981
 Dados Perdidos,0,1,3,4,5,13
+,,,,,,
+,,,,,,
+,Muito Insatisfeito,Insatisfeito,Indiferente,Satisfeito,Muito Satisfeito,
+Mais Novo,122,15,5,1111,278,1531
+Mais Velho,884,734,467,608,757,3450
+,,,,,,
+Mais Novo,7.9686479425,0.9797517962,0.3265839321,72.5669497061,18.1580666231,
+Mais Velho,25.6231884058,21.2753623188,13.5362318841,17.6231884058,21.9420289855,
+,,,,,,
+*Considerou-se mais novos os alunos com idade menor ou igual ao primeiro quartil,,,,,,
