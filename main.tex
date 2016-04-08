@@ -10,6 +10,7 @@
 \usepackage{placeins}
 
 \usepackage{xspace}
+\usepackage{graphicx}
 
 \newcommand{\arat}{Aratibutantã\xspace}
 \newcommand{\baep}{Baependinha\xspace}
@@ -310,7 +311,7 @@ A tabela de frequências para a variável \textit{Opinião} está indicada na Ta
 A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R\$2402,40$.
 
 Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
-Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$.
+Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$. Um histograma da variável idade é apresentado na Figura \ref{fig:histograma-renda}.
 
 \begin{table}[!h]
 \centering
@@ -343,6 +344,12 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 	\bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}[!h]
+	\includegraphics[width=\linewidth]{plots/histogram_renda_log.eps}
+	\caption{Histograma da varável \textit{Renda}. Escala logarítimica no eixo $x$}
+	\label{fig:histograma-renda}
+\end{figure}
 
 %
 % {GRÁFICOS}
