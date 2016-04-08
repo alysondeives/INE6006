@@ -1,3 +1,5 @@
+library(tables)
+library(xtable)
 options(digits = 2, width = 100)
 #df = read.csv(file = "TYU06.csv",na.strings = c("NA",""," "),header=TRUE)
 
@@ -343,5 +345,25 @@ print(x)
 # Mais Novo         7.97         0.98               0.33            72.57      18.16
 # Mais Velho       25.62        21.28              13.54            17.62      21.94
 # ------------------------------------------------------------------------------------------------
+# Questao 15
+q15 = tabular(df$Área*df$Região~df$Opinião)
+write.csv.tabular(q15,"q15.csv")
+
+q15b = ftable(df$Área,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Área","Região","Opinião"))
+q15l = xtableFtable(q15b, method="compact")
+write(print.xtableFtable(q15l,booktabs=TRUE),file="tab-q15.tex")
+print.xtableFtable(q15l,booktabs=TRUE)
+#-------------------------------------------------------------------------------------------------
 #Questao 17
+q17a = df[which(df$Região=="Aratibutantã" & df$Idade > 28 & df$Pagamento == "Financiamento bancário"),c("Região","Idade","Pagamento","Opinião")]
+summary(q17a)
+
+#            Região        Idade                     Pagamento                 Opinião  
+# Aratibutantã :136   Min.   :29   Auxílio de familiares :  0   Indiferente       :57  
+# Baependinha  :  0   1st Qu.:30   Bolsas de estudo      :  0   Insatisfeito      :21  
+# Itamaracanã  :  0   Median :32   Financiamento bancário:136   Muito insatisfeito: 0  
+# Jaquereçaba  :  0   Mean   :33   Incentivos federais   :  0   Muito satisfeito  :11  
+# Paranapitanga:  0   3rd Qu.:34   Recursos próprios     :  0   Satisfeito        :47  
+#                     Max.   :66
+#-------------------------------------------------------------------------------------------------
 
