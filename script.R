@@ -224,7 +224,8 @@ x = table(df$Área,df$Opinião)
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
 }
-  
+print(x)
+
 #                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 #  Administração                 11.04         3.57               0.34            56.37      28.69
 #  Computação e Matemática       18.98         5.08               0.68            44.41      30.85
@@ -238,10 +239,68 @@ for (i in 1:nrow(x)){
 # Na avaliação antiga os demais cursos (Engenharia e Produçao e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa caractéristica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de 53.82%, enquanto o percentual de alunos indiferentes  é de 27.89%. Já para o curso de Juridica, o percentual de alunos insatisfeitos é alta, correspondendo a um total de 56.62% do total de alunos. Do restante, 23.65% se manifestaram indiferentes e apenas 19.74% se consideram satisfeitos ou muito satisfeitos.
 
 #-------------------------------------------------------------------------------------------------
+#Questao 12
+x = table(df$Pagamento,df$Opinião)
 
-  
-  
-  
+#                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Auxílio de familiares           95           47                  4               33         78
+# Bolsas de estudo               127           67                 22               37         75
+# Financiamento bancário         192           42                  3             1448        497
+# Incentivos federais            354          509                431               30        118
+# Recursos próprios              238           81                  9              166        260
+
+for (i in 1:nrow(x)){
+  x[i,] = x[i,]/sum(x[i,])
+}
+print(x)
+#                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Auxílio de familiares        36.96        18.29               1.56            12.84      30.35
+# Bolsas de estudo             38.72        20.43               6.71            11.28      22.87
+# Financiamento bancário        8.80         1.92               0.14            66.36      22.78
+# Incentivos federais          24.55        35.30              29.89             2.08       8.18
+# Recursos próprios            31.56        10.74               1.19            22.02      34.48  
 #------------------------------------------------------------------------------------------------
+#Questao 13
+x = sort(df$Renda)
+idx_q1 = (length(x)+1)/4
+q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
+q1_idx = which(x<=q1)
 
-  
+idx_q3 = (3*(length(x)+1))/4
+q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
+q3_idx = which(x>=q3)
+
+ordered_df = df[order(df$Renda),]
+ordered_df$Faixa_salarial = "Intermediario"
+ordered_df[q1_idx,]$Faixa_salarial = "Pobres"
+ordered_df[q3_idx,]$Faixa_salarial = "Abastados"
+
+x = table(ordered_df$Faixa_salarial,df$Opinião)
+print(x)
+for (i in 1:nrow(x)){
+  x[i,] = x[i,]/sum(x[i,])*100
+}
+print(x)
+
+#Valores
+#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Abastados             245          202                108              417        276
+# Intermediario         505          369                234              874        499
+# Pobres                256          178                130              428        260
+
+#Percentuais
+#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+# Abastados            19.6         16.2                8.7             33.4       22.1
+# Intermediario        20.4         14.9                9.4             35.2       20.1
+# Pobres               20.4         14.2               10.4             34.2       20.8
+
+#Considerou-se pobres os alunos que possuem uma renda de até 1.35 salários minimos, alunos intermediarios os que recebem entre 1.35 e 2.73 salarios minimos e como abastados os que recebem acima de 2.73 salarios minimos. Isso foi baseado no quartil inferior e superior dos dados.
+#Não se observa relação entre o perfil economico dos alunos e seu grau de satisfação com a TYU, visto que a distribuição é similar para qualquer classe.
+
+#-----------------------------------------------------------------------------------------------
+#Questao 14
+x = table(df$Idade,df$Opinião)
+for (i in 1:nrow(x)){
+  x[i,] = x[i,]/sum(x[i,])*100
+}
+print(x)
