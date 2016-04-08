@@ -6,6 +6,9 @@
 \usepackage{amssymb}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 
+% Nice Floats.
+\usepackage{placeins}
+
 \usepackage{xspace}
 
 \newcommand{\arat}{Aratibutantã\xspace}
@@ -86,7 +89,6 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{tabular}
 \end{table}
 
-
 \begin{table}[!h]
 \centering
 \caption{Erros para a variável \textit{Região}.}
@@ -158,10 +160,6 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{tabular}
 \end{table}
 
-
-\pagebreak
-
-
 \begin{table}[!h]
 \centering
 \caption{Erros para a variável \textit{Pagamento}.}
@@ -222,6 +220,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{tabular}
 \end{table}
 
+\FloatBarrier
 
 \paragraph{Questão 03}
 
@@ -302,10 +301,10 @@ A tabela de frequências para a variável \textit{Opinião} está indicada na Ta
 
 \paragraph{Questão 07}
 
-A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Primeiramente, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo).  Já a tabela \ref{table:frequencias-renda} apresenta uma análise da variável \textit{Renda} classificando-a em duas faixas de valores: \textit{a)} as rendas iguais ou maiores que $R\$2450,00$; e \textit{b)} as rendas abaixo deste valor. Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que $76.03\%$ das pessoas que informaram a renda estão abaixo dos $R\$2450,00$. Tal análise pode ser feita também observando-se o quartil superior, conforme a Tabela \ref{table:medidas-renda}. Por outro lado, analisando o quartil inferior, nota-se que 75\% possuem uma renda de pelo menos $R\$1188.00$. 
+A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R\$2402,40$.
 
-É possível analisar também, por meio da Curtose, o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
-Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$, sendo, portanto, considerados como discrepantes.
+Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
+Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$.
 
 \begin{table}[!h]
 \centering
@@ -314,47 +313,30 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 \label{table:medidas-renda}
 \begin{tabular}{l r}
 	\toprule
-	\textbf{Medida} 		& \textbf{Valor} \\
+	\textbf{Medida}               & \textbf{Valor} \\
 	\midrule
-	Média 				&  $2056.05$ \\
-	Moda 				&  $906.40$ \\
-	Mediana 			&  $1628.00$ \\
-	Variância 			&  $2449929.23$ \\
-	Desvio Padrão 			&  $1565.22$ \\
-	Coeficiente de Variação 	&  $76\%$ \\
-	Assimetria 			&  $9.94$ \\
-	Curtose 			&  $253.91$ \\
-	Mínimo 				&  $880.00$ \\
-	Máximo 				&  $53504.00$ \\
-	Quartil Inferior (Qi) 		&  $1188.00$ \\
-	Quartil Superior (Qs)	 	&  $2402.40$ \\
-	Diferença Interquartil 		&  $1214.40$ \\
-	$Qi-1.5x(Qs-Qi)$ (Discrep. -)	&  $-633.60$ \\
-	$Qs+1.5x(Qs-Qi)$ (Discrep. +)	&  $4224.00$ \\
-	Dados Totais 			&  $5000$ \\
-	Dados Válidos 			&  $4986$ \\
-	Dados Perdidos 			&  $14$ \\
-	Dados Discrepantes 		&  $296$ \\
+	Média                         &  $2056.05$ \\
+	Moda                          &  $906.40$ \\
+	Mediana                       &  $1628.00$ \\
+	Variância                     &  $2449929.23$ \\
+	Desvio Padrão                 &  $1565.22$ \\
+	Coeficiente de Variação       &  $76\%$ \\
+	Assimetria                    &  $9.94$ \\
+	Curtose                       &  $253.91$ \\
+	Mínimo                        &  $880.00$ \\
+	Máximo                        &  $53504.00$ \\
+	Quartil Inferior (Qi)         &  $1188.00$ \\
+	Quartil Superior (Qs)         &  $2402.40$ \\
+	Diferença Interquartil        &  $1214.40$ \\
+	$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $-633.60$ \\
+	$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $4224.00$ \\
+	Dados Totais                  &  $5000$ \\
+	Dados Válidos                 &  $4986$ \\
+	Dados Perdidos                &  $14$ \\
+	Dados Discrepantes            &  $296$ \\
 	\bottomrule
 \end{tabular}
 \end{table}
-
-
-
-\begin{table}[!h]
-\centering
-\caption{Análise da variável \textit{Renda} separada em duas faixas de valores.}
-\vspace{0.5em}
-\label{table:frequencias-renda}
-\begin{tabular}{c c}
-	\toprule
-	\textbf{Maior ou Igual a 2450} & \textbf{Menor que 2450} \\
-	\midrule
-	1195 $(23.97\%)$ & 3791 $(76.03\%)$ \\
-	\bottomrule
-\end{tabular}
-\end{table}
-
 
 %
 % {GRÁFICOS}
