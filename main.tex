@@ -6,7 +6,7 @@
 \usepackage{amssymb}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 
-% Nice Floats.
+% Floats.
 \usepackage{placeins}
 
 \usepackage{xspace}
@@ -91,12 +91,13 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 
 \begin{table}[!h]
 \centering
+\begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Região}.}
 \vspace{0.5em}
 \label{table: erros-regiao}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Erro} & \textbf{Quantidade}  & \textbf{Percentual} \\
+	\textbf{Erro} & \textbf{Absoluto}  & \textbf{Percentual} \\
 	\midrule
 	Arati      & 6  & $0.12\%$ \\
 	Aratib     & 12 & $0.24\%$ \\
@@ -118,18 +119,16 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 	\textbf{Total de erros}  & 135  & $2.71\%$ \\	
 	\bottomrule
 \end{tabular}
-\end{table}
-
-\begin{table}[!h]
-\centering
+\end{minipage}
+%
+\begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Área}.}
 \vspace{0.5em}
 \label{table: erros-area}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Erro} & \textbf{Quantidade}  & \textbf{Percentual} \\
+	\textbf{Erro} & \textbf{Absoluto}  & \textbf{Percentual} \\
 	\midrule
-
 	Admin      & 3   & $0.06\%$ \\
 	Admini 	   & 3   & $0.06\%$ \\
 	Adminis    & 2   & $0.04\%$ \\
@@ -158,16 +157,18 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 	\textbf{Total de erros}  & 114  & $2.28\%$ \\	
 	\bottomrule
 \end{tabular}
+\end{minipage}
 \end{table}
 
 \begin{table}[!h]
 \centering
+\begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Pagamento}.}
 \vspace{0.5em}
 \label{table: erros-pagamento}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Erro} & \textbf{Quantidade}  & \textbf{Percentual} \\
+	\textbf{Erro} & \textbf{Absoluto}  & \textbf{Percentual} \\
 	\midrule
 	Auxíl     		& 3   & $0.06\%$ \\
 	Auxíli 	  		& 2   & $0.04\%$ \\
@@ -192,17 +193,15 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 	\textbf{Total de erros}  & 132  & $2.64\%$ \\	
 	\bottomrule
 \end{tabular}
-\end{table}
-
-
-\begin{table}[!h]
-\centering
+\end{minipage}
+%
+\begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Opinião}.}
 \vspace{0.5em}
 \label{table: erros-opiniao}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Erro} & \textbf{Quantidade}  & \textbf{Percentual} \\
+	\textbf{Erro} & \textbf{Absoluto}  & \textbf{Percentual} \\
 	\midrule
 	Indifer    & 14  & $0.28\%$ \\
 	Indifere   & 16  & $0.32\%$ \\
@@ -218,6 +217,13 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 	\textbf{Total de erros}  & 123  & $2.46\%$ \\	
 	\bottomrule
 \end{tabular}
+\end{minipage}
+\end{table}
+
+
+\begin{table}[!h]
+\centering
+
 \end{table}
 
 \FloatBarrier
@@ -315,25 +321,25 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 	\toprule
 	\textbf{Medida}               & \textbf{Valor} \\
 	\midrule
-	Média                         &  $2056.05$ \\
-	Moda                          &  $906.40$ \\
-	Mediana                       &  $1628.00$ \\
-	Variância                     &  $2449929.23$ \\
-	Desvio Padrão                 &  $1565.22$ \\
-	Coeficiente de Variação       &  $76\%$ \\
-	Assimetria                    &  $9.94$ \\
-	Curtose                       &  $253.91$ \\
-	Mínimo                        &  $880.00$ \\
-	Máximo                        &  $53504.00$ \\
-	Quartil Inferior (Qi)         &  $1188.00$ \\
-	Quartil Superior (Qs)         &  $2402.40$ \\
-	Diferença Interquartil        &  $1214.40$ \\
-	$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $-633.60$ \\
-	$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $4224.00$ \\
-	Dados Totais                  &  $5000$ \\
-	Dados Válidos                 &  $4986$ \\
-	Dados Perdidos                &  $14$ \\
-	Dados Discrepantes            &  $296$ \\
+	Média                         &  $2056,05$     \\
+	Moda                          &  $906,40$      \\
+	Mediana                       &  $1628,00$     \\
+	Variância                     &  $2449929,23$  \\
+	Desvio Padrão                 &  $1565.38$     \\
+	Coeficiente de Variação       &  $76\%$        \\
+	Assimetria                    &  $9.94$        \\
+	Curtose                       &  $253.91$      \\
+	Mínimo                        &  $880.00$      \\
+	Máximo                        &  $53504.00$    \\
+	Quartil Inferior (Qi)         &  $1188.00$     \\
+	Quartil Superior (Qs)         &  $2402.40$     \\
+	Diferença Interquartil        &  $1214.40$     \\
+	$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $-633.60$     \\
+	$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $4224.00$     \\
+	Dados Totais                  &  $5000$        \\
+	Dados Válidos                 &  $4986$        \\
+	Dados Perdidos                &  $14$          \\
+	Dados Discrepantes            &  $296$         \\
 	\bottomrule
 \end{tabular}
 \end{table}
