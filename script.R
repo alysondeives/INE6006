@@ -224,6 +224,7 @@ x = table(df$Área,df$Opinião)
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
 }
+
 print(x)
 
 #                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
@@ -237,6 +238,7 @@ print(x)
 # Na avaliação antiga  os cursos de Educacional e de Humanidades estavam muito insatisfeitos, atualmente 89.91% dos alunos da área Educacional estão muito satisfeitos e 74.9% dos alunos de Humanidades estão muitos satisfeitos.
 # Na avaliação antiga os cursos de Computação e Matématica e de Administração elogiavam seus cursos, atualmente essa característica se mantem. Para o curso de Computação 44.1% estão muito satisfeitos e 30.85% estão satisfeitos e para o curso de Administração 56.37% estão muito satisfeitos e 28.69% estão satisfeitos.
 # Na avaliação antiga os demais cursos (Engenharia e Produçao e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa caractéristica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de 53.82%, enquanto o percentual de alunos indiferentes  é de 27.89%. Já para o curso de Juridica, o percentual de alunos insatisfeitos é alta, correspondendo a um total de 56.62% do total de alunos. Do restante, 23.65% se manifestaram indiferentes e apenas 19.74% se consideram satisfeitos ou muito satisfeitos.
+
 
 #-------------------------------------------------------------------------------------------------
 #Questao 12
