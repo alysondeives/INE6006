@@ -585,15 +585,15 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 %Considerou-se pobres os alunos que possuem uma renda de até 1.35 salários minimos, alunos intermediarios os que recebem entre 1.35 e 2.73 salarios minimos e como abastados os que recebem acima de 2.73 salarios minimos. Isso foi baseado no quartil inferior e superior dos dados.
 %#Não se observa relação entre o perfil economico dos alunos e seu grau de satisfação com a TYU, visto que a distribuição é similar para qualquer classe.
 
-%TODO alexis vai escrever
+Para dividir a amostra em conjuntos de alunos pobres, com renda intermediária, e abastados foram utilizados os quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda superior ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária.
 
-\begin{figure}[!h]
-	\includegraphics[width=\linewidth]{plots/q13.pdf}
-	\caption{Satisfação de acordo com classes de renda}
-	\label{fig:q13}
-\end{figure}
+Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Observando as proporções na \ref{table:satisfaca-renda}, não podem ser observadas diferenças significativas entre as avaliações das classes.
+
+% TODO afirmação subjetiva sem embasamento.
 
 \begin{table}[!h]
+	\caption{Satisfação alunos de acordo com classes de renda.}
+	\label{table:satisfaca-renda}
 	\begin{tabular}{l r r r r r}
 		\toprule
 		\textbf{Classe} & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{Muito Satisfeito}  \\
@@ -605,16 +605,11 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 	\end{tabular}
 \end{table}
 
-%#Valores
-%#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-%# Pobres                256          178                130              428        260
-%# Intermediario         505          369                234              874        499
-%# Abastados             245          202                108              417        276
+\begin{figure}[!h]
+	\includegraphics[width=\linewidth]{plots/q13.pdf}
+	\caption{Satisfação dos alunos de acordo com classes de renda.}
+	\label{fig:satisfacao-renda}
+\end{figure}
 
-%#Percentuais
-%#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-%# Pobres               20.4         14.2               10.4             34.2       20.8
-%# Intermediario        20.4         14.9                9.4             35.2       20.1
-%# Abastados            19.6         16.2                8.7             33.4       22.1
 
 \end{document}
