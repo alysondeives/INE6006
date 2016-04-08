@@ -307,7 +307,6 @@ A tabela de frequências para a variável \textit{Opinião} está indicada na Ta
 
 
 \paragraph{Questão 07}
-
 A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R\$2402,40$.
 
 Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
@@ -315,7 +314,7 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 
 \begin{table}[!h]
 \centering
-\caption{Análise das medidas para a variável variável \textit{Renda}}
+\caption{Análise das medidas para a variável variável \textit{Renda}.}
 \vspace{0.5em}
 \label{table:medidas-renda}
 \begin{tabular}{l r}
@@ -359,37 +358,61 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 
 \paragraph{Questão 08}
 
+Algumas medidas descritivas para a variável \textit{idade} são apresentadas na Tabela \ref{table:medidas-idade}. Por análise, a maioria dos alunos de EAD na TYU possuem mais de 30 anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
 
+Fazendo uma análise mais detalhada, percebe-se que a variável em estudo segue uma distribuição com curtose leptocúrtica e assimetria positiva. Além disso, podemos observar que pelo quartil inferior e superior, que 50\%  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos 98 valores discrepantes na amostra, a maioria, 69 deles encontram-se superiores a $44$ anos. 
 
 \begin{table}[!h]
 	\centering
-	\caption{Análise das medidas para a variável variável \textit{idade}}
+	\caption{Análise das medidas para a variável variável \textit{idade}.}
 	\vspace{0.5em}
 	\label{table:medidas-idade}
 	\begin{tabular}{l r}
 		\toprule
 		\textbf{Medida}               & \textbf{Valor} \\
 		\midrule
-		Média                         &  $32.18$ \\
-		Moda                          &  $32.00$ \\
-		Mediana                       &  $32$ \\
-		Variância                     &  $31.83$ \\
-		Desvio Padrão                 &  $5.64$ \\
-		Coeficiente de Variação       &  $18 \%$ \\
-		Assimetria                    &  $1.205$ \\
-		Curtose                       &  $6.19$ \\
-		Mínimo                        &  $18$ \\
-		Máximo                        &  $70$ \\
-		Quartil Inferior (Qi)         &  $29$ \\
-		Quartil Superior (Qs)         &  $35$ \\
-		Diferença Interquartil        &  $6$ \\
-		$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $20$ \\
-		$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $44$ \\
-		Dados Totais                  &  $5000$ \\
-		Dados Válidos                 &  $4987$ \\
-		Dados Perdidos                &  $13$ \\
-		Dados Discrepantes            &  $0$ \\
+		Média                         &  $32.18$       \\
+		Moda                          &  $32.00$       \\
+		Mediana                       &  $32$          \\
+		Variância                     &  $31.83$       \\
+		Desvio Padrão                 &  $5.64$        \\
+		Coeficiente de Variação       &  $18 \%$       \\
+		Assimetria                    &  $1.205$       \\
+		Curtose                       &  $6.19$        \\
+		Mínimo                        &  $18$          \\
+		Máximo                        &  $70$          \\
+		Quartil Inferior (Qi)         &  $29$          \\
+		Quartil Superior (Qs)         &  $35$          \\
+		Diferença Interquartil        &  $6$           \\
+		$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $20$          \\
+		$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $44$          \\
+		Dados Totais                  &  $5000$        \\
+		Dados Válidos                 &  $4987$        \\
+		Dados Perdidos                &  $13$          \\
+		Dados Discrepantes            &  $98$          \\ %69 são >
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\paragraph{Questão 09}
+
+A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e atual. Por análise conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \beap, que concentra avaliações dos alunos em satisfeitos e muito satisfeitos, concentra $45,88\%$ dos alunos.
+
+\begin{table}
+	\centering
+	\vspace{0.5em}
+	\begin{tabular}{l l l}
+		\toprule
+		Região & Avaliação Antiga & Avaliação Atual                                           \\
+		\midrule
+		\arat  & Muito Insatisfeito & Indiferente ($38,48\%$) e Insatisfeito ($32,15\%$)      \\
+		\baep  & Muito Insatisfeito & Satisfeito ($33,96\%$) e Muito Satisfeito ($38,19\%$)   \\
+		\itam  & Satisfeito         & Muito Satisfeito ($93,94\%$)                            \\
+		\jaqu  & Indiferentes       & Insatisfeito ($33,93\%$) e Muito Satisfeito ($44,03\%$) \\
+		\para  & Diversas           & Muito Insatisfeito ($91,74\%$)                          \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
 \end{document}
