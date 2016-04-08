@@ -1,5 +1,7 @@
 options(digits = 2, width = 100)
-df = read.csv(file = "TYU06.csv",na.strings = c("NA",""," "),header=TRUE)
+#df = read.csv(file = "TYU06.csv",na.strings = c("NA",""," "),header=TRUE)
+
+df = read.csv(file = "processed.csv",na.strings = c("NA",""," "),header=TRUE)
 
 #set columns types
 df$Região = as.factor(df$Região)
@@ -190,3 +192,31 @@ for (i in levels(df$Opinião)) {
 print(cat(paste(parts, collapse=" & ")))
 
 #1006 (20.20\%) & 749 (15.04\%) & 472 (9.48\%) & 1719 (34.51\%) & 1035 (20.78\%)
+
+#------------------------------------------------------------------------------------------------
+#Questao 7 - grafico
+  par(xpd=TRUE,cex.lab=1.5)
+  
+  data = na.omit(df$Renda)*880
+  data.freq = table(data)
+  
+  setEPS()
+  postscript("plots/histogram_renda_log.eps")
+  plot(data.freq,xpd=TRUE,xlab = "Renda (R$)", ylab="Frequência",ylim=c(0,50),log="x")
+  dev.off();
+  
+  #postscript("histogram2_renda.eps")
+  #barplot(data.freq,xpd=TRUE,xlab = "Renda (R$)", ylab="Frequência",ylim=c(0,50))
+  #dev.off();
+  
+#-----------------------------------------------------------------------------------------------
+#Questao 8
+  data = na.omit(df$Idade)
+  data.freq = table(data)
+  
+  #setEPS()
+  #postscript("plots/histogram_idade_log.eps")
+  plot(data.freq,xpd=TRUE,xlab = "Idade", ylab="Frequência")
+  #dev.off();
+
+
