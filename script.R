@@ -214,9 +214,34 @@ print(cat(paste(parts, collapse=" & ")))
   data = na.omit(df$Idade)
   data.freq = table(data)
   
-  #setEPS()
-  #postscript("plots/histogram_idade_log.eps")
+  setEPS()
+  postscript("plots/histogram_idade_log.eps")
   plot(data.freq,xpd=TRUE,xlab = "Idade", ylab="Frequência")
-  #dev.off();
+  dev.off();
+#----------------------------------------------------------------------------------------------
+#Questao 10
+x = table(df$Área,df$Opinião)
+for (i in 1:nrow(x)){
+  x[i,] = x[i,]/sum(x[i,])*100
+}
+  
+#                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
+#  Administração                 11.04         3.57               0.34            56.37      28.69
+#  Computação e Matemática       18.98         5.08               0.68            44.41      30.85
+#  Educacional                    1.78         0.59               0.00            89.91       7.72
+#  Engenharia e Produção         27.89        14.26               3.93            27.25      26.67
+#  Humanidades                    6.77         1.59               0.00            74.90      16.73
+#  Jurídica e Contábil           23.65        30.17              26.45             6.45      13.29
 
+# Na avaliação antiga  os cursos de Educacional e de Humanidades estavam muito insatisfeitos, atualmente 89.91% dos alunos da área Educacional estão muito satisfeitos e 74.9% dos alunos de Humanidades estão muitos satisfeitos.
+# Na avaliação antiga os cursos de Computação e Matématica e de Administração elogiavam seus cursos, atualmente essa característica se mantem. Para o curso de Computação 44.1% estão muito satisfeitos e 30.85% estão satisfeitos e para o curso de Administração 56.37% estão muito satisfeitos e 28.69% estão satisfeitos.
+# Na avaliação antiga os demais cursos (Engenharia e Produçao e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa caractéristica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de 53.82%, enquanto o percentual de alunos indiferentes  é de 27.89%. Já para o curso de Juridica, o percentual de alunos insatisfeitos é alta, correspondendo a um total de 56.62% do total de alunos. Do restante, 23.65% se manifestaram indiferentes e apenas 19.74% se consideram satisfeitos ou muito satisfeitos.
 
+#-------------------------------------------------------------------------------------------------
+
+  
+  
+  
+#------------------------------------------------------------------------------------------------
+
+  
