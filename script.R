@@ -301,6 +301,23 @@ print(x)
 
 #-----------------------------------------------------------------------------------------------
 #Questao 14
+x_mean = c()
+
+
+for(i in levels(df$Opinião)){
+  val_mean = mean(df[which(df$Opinião == i),"Idade"],na.rm=TRUE)
+  #mean
+  print(c(i,val_mean))
+  
+  #standard deviation
+  val_sd = sd[i](df[which(df$Opinião == i),"Idade"],na.rm=TRUE)
+  
+  #missing values
+  print(c(i,length(which(is.na(df[which(df$Opinião == i),"Idade"])))))
+  #total values
+  print(c(i,length(df[which(df$Opinião == i),"Idade"])))
+}
+
 x = table(df$Idade,df$Opinião)
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100

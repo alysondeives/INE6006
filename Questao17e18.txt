@@ -1,0 +1,26 @@
+17)
+Para avaliar a opinião dos alunos de EAD da TYU de acordo com as variáveis Região, Idade e Pagamento, pode-se construir uma tabela de frequência das opiniões relacionados aos valores filtrados das variáveis em questão.
+Ademais, um gráfico de setores ilustra de maneira mais inteligível a opinião dos alunos que atendem os critérios de Região, Idade e Pagamento.
+
+a) A tabela X apresenta as frequências das opiniões dos alunos que estão na Região Aratibutantã, com Idade maior de 28 anos e Pagamento do tipo "Financiamento bancário".
+Pode-se observar por meio do gráfico de setores da Figura X que 42% dos alunos que atendem os requisitos acima são indiferentes em relação ao curso e apenas 15% estão insatisfeitos.
+b) A tabela X apresenta as frequências das opiniões dos alunos que estão na Região Jaquereçaba, com Idade maior de 28 anos e Pagamento do tipo "Recursos próprios".
+Pode-se observar por meio do gráfico de setores da Figura X que 54% dos alunos, ou seja a maioria, que atendem os requisitos acima estão insatisfeitos em relação ao curso e 34% são indiferentes. Apenas 7% estão muito satisfeitos e 5% satisfeitos.
+c) A tabela X apresenta as frequências das opiniões dos alunos que estão na Região Paranapitanga, com Idade maior de 28 anos e Pagamento do tipo "Incentivos federais".
+Pode-se observar por meio do gráfico de setores da Figura X que 92% dos alunos que atendem os requisitos acima estão muito insatisfeitos em relação ao curso 8% estão insatisfeitos.
+É possível notar existe uma plena insatisfação por parte alunos acima de 28 anos da região Paranapitanga e que recebem Incentivos federais.
+
+
+
+18)
+Outras variáveis necessárias para caracterizar adequadamente a opinião dos alunos de EAD da TYU são o "Sexo" e "Rendimento do aluno" no curso.
+
+Sexo: considerando a variável sexo pode-se avaliar a existência de alguma relação entre o sexo e a opinião do aluno.
+Além disso, é possível verificar também a relação entre a idade de homens e mulheres, além da forma de pagamento que ambos mais utilizam.
+Outra análise possível de ser realizada é a proporção de homens e mulheres em cada região de Pindorama.
+
+Rendimento do aluno: o conhecimento do rendimento do aluno (durante todo o curso) pode ser um fator importante também, pois seria possível avaliar a existência de alguma relação entre o rendimento e a opinião do aluno.
+Por exemplo, pode-se verificar se alunos que não estão satisfeitos possuem um bom rendimento ou não. A região seria outra variável a ser avaliada juntamente com o rendimento, a fim de verificar padrões de rendimento dos alunos para cada região de Pindorama.
+Além disso, outra possível análise é a relação do rendimento do aluno com a região ou até mesmo com o sexo (sugerido acima).
+Ademais, poderiamos verificar também alguma relação entre o rendimento do aluno e a origem dos recursos usados por eles para pagar as mensalidades do curso.
+

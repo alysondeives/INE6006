@@ -505,9 +505,9 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \FloatBarrier
 \paragraph{Questão 12}
 
-A avaliação dos alunos para cada uma das fontes de pagamento é apresentada em termos absolutos e percentuais na Tabela ?? e na Tabela ??, respectivamente. Adicionalmente, dados da Tabela ?? são apresentados em formato gráfico na Figura ??.
+A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é mostrada, em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores percentuais, com relação ao número de alunos utilizando determinada fonte, na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. As fontes de recursos podem ser divididas em duas categorias, uma onde o aluno efetivamente \textbf{paga} pelas mensalidades, e outra onde o o aluno \textbf{não paga}. O primeiro grupo é composto por \textit{Financiamento Bancário} e \textit{Recursos próprios}, enquanto o segundo é composto por \textit{Auxílio de Familiares}, \textit{Bolsas de Estudo} e \textit{Incentivos Federais}. Os resultados dessa agregação são exibidos na Tabela \ref{table:pagantes-absoluto} em valores absolutos e percentuais.
 
-Analisando a amostra, não é possível afirmar que os alunos que recebem auxílio de alguém para pagar as mensalidades não são tão críticas da EAD quanto os demais. Os alunos que recebem incentivos federais são os mais críticos, $29,77\%$ estão muito insatisfeitos e $35,15\%$ estão insatisfeitos. Por outro lado, os alunos que recebem Auxílio de Familiares ou Bolsa de Estudo são menos críticos, visto que, dos que recebem bolsa, $38,72\%$ são indiferentes e $22,87\%$ estão satisfeitos; e $36,96\%$ dos que recebem auxilio dos familiares são indiferentes e $30,35\%$ estão satisfeitos.
+A suspeita da direção da TYU não se confirma, pois o grupo de alunos pagantes possui avaliações significativamente melhores de seus cursos, com $83.75\%$ dos alunos avaliando os cursos como \textit{Satisfatório} ou \textit{Muito Satisfatório}. Já entre os alunos não-pagantes, apenas $18.29\%$ se declaram \textit{Satisfeitos} ou \textit{Muito Satisfeitos}, enquanto $53.26\%$ dos alunos se declararam \textit{Muito Insatisfeitos} ou \textit{Insatisfeitos} e $36.96\%$ se declaram indiferentes. Os alunos não-pagantes são na verdade o grupo de alunos mais críticos ao EAD da TYU.
 
 \begin{figure}
 	\centering
@@ -523,13 +523,13 @@ Analisando a amostra, não é possível afirmar que os alunos que recebem auxíl
 	\vspace{0.5em}
 	\begin{tabular}{l r r r r r}
 		\toprule
-		\textbf{Fonte Pagamento}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{\itam}  & \textbf{\jaqu} & \textbf{\para}  \\
+		\textbf{Fonte Pagamento}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{Muito Satisfeito}  \\
 		\midrule
-		Auxílio de Familiares  & $4$        & $47$   & $95$   & $78$   & $33$   \\
-		Bolsas de Estudo       & $22$       & $67$   & $127$  & $75$   & $37$   \\
-		Financiamento Bancário & $3$        & $42$   & $192$  & $497$  & $1448$ \\
-		Incentivos Federais    & $431$      & $509$  & $354$  & $118$  & $30$   \\
-		Recursos Próprios      & $9$        & $81$   & $238$  & $260$  & $166$  \\
+		Auxílio de Familiares  & $4$      & $47$   & $95$   & $78$   & $33$   \\
+		Bolsas de Estudo       & $22$     & $67$   & $127$  & $75$   & $37$   \\
+		Financiamento Bancário & $3$      & $42$   & $192$  & $497$  & $1448$ \\
+		Incentivos Federais    & $431$    & $509$  & $354$  & $118$  & $30$   \\
+		Recursos Próprios      & $9$      & $81$   & $238$  & $260$  & $166$  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -537,24 +537,45 @@ Analisando a amostra, não é possível afirmar que os alunos que recebem auxíl
 
 \begin{table}
 	\small
-	\caption{Avaliação dos alunos pela fonte de pagamento. Valores percentuais\protect\footnote{Valores perdidos não são apresentados, mas são contabilizados no cálculo da porcentagem.}.}
+	\caption{Avaliação dos alunos pela fonte de pagamento. Valores percentuais\protect\footnotemark.}
 	\label{table: avaliacao por fonte de pagamento-percent}
 	\vspace{0.5em}
 	\begin{tabular}{l r r r r r}
 		\toprule
-		\textbf{Fonte Pagamento}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{\itam}  & \textbf{\jaqu} & \textbf{\para}  \\
+		\textbf{Fonte Pagamento}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{Muito Satisfeito}  \\
 		\midrule
-		Auxílio de Familiares  & $1.56\%$  & $18.29\%$  & $36.96\%$ & $30.35\%$  & $12.84\%$   \\
-		Bolsas de Estudo       & $6.71\%$    & $20.43\%$    & $38.72\%$   & $22.87\%$    & $11.28\%$   \\
-		Financiamento Bancário & $0.14\%$    & $1.92\%$     & $8.76\%$    & $22.68\%$    & $66.09\%$ \\
-		Incentivos Federais    & $29.77\%$   & $35.15\%$    & $24.45\%$   & $8.15\%$     & $2.07\%$   \\
-		Recursos Próprios      & $1.19\%$    & $10.69\%$    & $31.40\%$   & $21.90\%$    & $34.30\%$  \\
+		Auxílio de Familiares  & $1.56\%$    & $18.29\%$    & $36.96\%$   & $30.35\%$  & $12.84\%$  \\
+		Bolsas de Estudo       & $6.71\%$    & $20.43\%$    & $38.72\%$   & $22.87\%$  & $11.28\%$  \\
+		Financiamento Bancário & $0.14\%$    & $1.92\%$     & $8.76\%$    & $22.68\%$  & $66.09\%$  \\
+		Incentivos Federais    & $29.77\%$   & $35.15\%$    & $24.45\%$   & $8.15\%$   & $2.07\%$   \\
+		Recursos Próprios      & $1.19\%$    & $10.69\%$    & $31.40\%$   & $21.90\%$  & $34.30\%$  \\
 		\bottomrule
 	\end{tabular}
-	\footnotetext{Valores perdidos não são apresentados, mas são contabilizados no cálculo da porcentagem.}
+	
 \end{table}
 
+\footnotetext{Valores perdidos não são apresentados, mas são contabilizados no cálculo da porcentagem.}
 
+%           Mins ins   indif sats  Msats   Total
+% Paga      12   123   430   757   1614    2936
+% Não paga  457  623   576   271   100     2027
 
+\begin{table}
+	\small
+	\caption{Números de avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes}
+	\label{table:pagantes-absoluto}
+	\begin{tabular}{l c c c c c}
+		\toprule
+		\textbf{Categoria}     & \textbf{Muito Insatisfeito}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{Muito Satisfeito}  \\
+		\midrule
+		Pagante & 12 ($0.40\%$)  & 123 ($4.18\%$)  & 430 ($36.96\%$)   & 757 ($25.78\%$)  & 1614 ($57.97\%$)  \\
+		Não-pagante  & 457 ($22.54\%$) & 623 ($30.73\%$) & 576 ($36.96\%$)   & 271 ($13.36\%$)  & 100 ($4.93\%$)  \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+%           Mins  ins   indif  sats   Msats   Total
+% Paga      0.40  4.18  14.64  25.78  54.97    2936
+% Não paga  22.54 30.73 28.41  13.36  4.93     2027
 
 \end{document}
