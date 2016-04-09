@@ -230,26 +230,33 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 
 \FloatBarrier
 
-\paragraph{Questão 03}
+\clearpage
+\section*{Análise Individual das Variáveis}
 
-A tabela de frequências para a variável \textit{Região} está indicada na Tabela \ref{table: tabela frequencias regiao}. Por análise, pode-se observar que a região predominante na base dados é \textit{\baep}, embora não represente a maioria absoluta.
+\subsection*{Variável \textit{Região}}
 
-\begin{table}[!h]
+A tabela frequências para a variável \textit{Região} é apresentada na Tabela \ref{table: frequencias regiao}. Os resultados indicam que as regiões com menor e maior número de alunos são as regiões \textit{\baep} e \textit{\para}, respectivamente. Já as demais regiões apresentam um corpo discente que varia de $10.77\%$ a $23.80\%$.
+
+\begin{table}[h]
+\small
 \centering
-\caption{Frequências para a variável \textit{Região}.}
+\caption{Frequências para a variável \textit{Região}}
+\label{table: frequencias regiao}
 \vspace{0.5em}
-\label{table: tabela frequencias regiao}
-\vspace{0.5em}
-\begin{tabular}{c c c c c}
+\begin{tabular}{l r r}
 	\toprule
-	\textbf{\arat}    & \textbf{\baep}   & \textbf{\itam}  & \textbf{\jaqu}  & \textbf{\para} \\
+	\textbf{Região} & \textbf{Ocorrências} & \textbf{Frequência} \\
 	\midrule
-	1185 $(23.80\%)$  & 2294 $(46.07\%)$ & 843 $(16.93\%)$ & 536 $(10.77\%)$ & 121 $(2.43\%)$ \\
+	\arat  & $1185$                         & $23.80\%$           \\
+	\baep  & $2294$                         & $46.07\%$           \\
+	\itam  & $843$                          & $16.93\%$           \\
+	\jaqu  & $536$                          & $10.77\%$           \\
+	\para  & $121$                          & $2.43\%$            \\
 	\bottomrule
 \end{tabular}
 \end{table}
 
-\paragraph{Questão 04}
+\paragraph{Variável Área}
 
 A tabela de frequências para a variável \textit{Área} está indicada na Tabela \ref{table: tabela frequencias area}. Por análise, pode-se observar que a \textit{Área} predominante da \texttt{TYU} modificou-se para \eng.
 
@@ -270,7 +277,7 @@ A tabela de frequências para a variável \textit{Área} está indicada na Tabel
 \end{table}
 
 
-\paragraph{Questão 05}
+\paragraph{Variável Pagamento}
 
 A tabela de frequências para a variável \textit{Pagamento} está indicada na Tabela \ref{table:frequencias-pagamento}. Por análise, pode-se observar que os recursos usados para pagar as mensalidades do curso são oriundos, em sua maioria, de \textit{Financiamento Bancário} representando $43.98\%$. Já o pagamento  oriundo de \textit{Incentivos Federais} apresenta-se como o segundo mais utilizado, com  $29.06\%$.  Portanto, a maior dependência de pagamento está no \textit{Financiamento Bancário}, embora  \textit{Incentivos Federais} representem a segunda forma de pagamento mais utilizada.
 
@@ -288,7 +295,7 @@ A tabela de frequências para a variável \textit{Pagamento} está indicada na T
 \end{tabular}
 \end{table}
 
-\paragraph{Questão 06}
+\paragraph{Variável Opinião}
 
 A tabela de frequências para a variável \textit{Opinião} está indicada na Tabela \ref{table:frequencias-opiniao}. Por análise, pode-se observar que a opinião predominante na base dados é \textit{Muito satisfeito}. O grupo dos que mencionaram estarem \textit{Muito satisfeito} e \textit{Satisfeito} totaliza $55,29\%$. Podemos considerar, portanto, que a maioria dos alunos da TYU que opinaram estão satisfeitos com a EAD.
 
@@ -307,7 +314,7 @@ A tabela de frequências para a variável \textit{Opinião} está indicada na Ta
 \end{table}
 
 
-\paragraph{Questão 07}
+\paragraph{Variável Renda}
 A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R$\$$2402,40$.
 
 Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
@@ -315,32 +322,33 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 
 \begin{table}[!h]
 \centering
-\caption{Análise das medidas para a variável variável \textit{Renda}.}
+\small
+\caption{Análise das variáveis qualitativas na amostra estudada.}
 \vspace{0.5em}
 \label{table:medidas-renda}
-\begin{tabular}{l r}
+\begin{tabular}{l r r}
 	\toprule
-	\textbf{Medida}               & \textbf{Valor} \\
+	\textbf{Medida}               & \textbf{Renda (R\$)} & \textbf{Idade (anos)}\\
 	\midrule
-	Média                         &  $2056,05$     \\
-	Moda                          &  $906,40$      \\
-	Mediana                       &  $1628,00$     \\
-	Variância                     &  $2449929,23$  \\
-	Desvio Padrão                 &  $1565.38$     \\
-	Coeficiente de Variação       &  $76\%$        \\
-	Assimetria                    &  $9.94$        \\
-	Curtose                       &  $253.91$      \\
-	Mínimo                        &  $880.00$      \\
-	Máximo                        &  $53504.00$    \\
-	Quartil Inferior (Qi)         &  $1188.00$     \\
-	Quartil Superior (Qs)         &  $2402.40$     \\
-	Diferença Interquartil        &  $1214.40$     \\
-	$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $-633.60$     \\
-	$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $4224.00$     \\
-	Dados Totais                  &  $5000$        \\
-	Dados Válidos                 &  $4986$        \\
-	Dados Perdidos                &  $14$          \\
-	Dados Discrepantes            &  $296$         \\
+	Média                         &  $2056,05$           & $32.18$              \\
+	Moda                          &  $906,40$            & $32.00$              \\
+	Mediana                       &  $1628,00$           & $32$                 \\
+	Variância                     &  $2449929,23$        & $31.83$              \\
+	Desvio Padrão                 &  $1565.38$           & $5.64$               \\
+	Coeficiente de Variação       &  $76\%$              & $18 \%$              \\
+	Assimetria                    &  $9.94$              & $1.205$              \\
+	Curtose                       &  $253.91$            & $6.19$               \\
+	Mínimo                        &  $880.00$            & $18$                 \\
+	Máximo                        &  $53504.00$          & $70$                 \\
+	Quartil Inferior (Qi)         &  $1188.00$           & $29$                 \\
+	Quartil Superior (Qs)         &  $2402.40$           & $35$                 \\
+	Diferença Interquartil        &  $1214.40$           & $6$                  \\
+	$Qi-1.5x(Qs-Qi)$              &  $-633.60$           & $20$                 \\
+	$Qs+1.5x(Qs-Qi)$              &  $4224.00$           & $44$                 \\
+	Dados Totais                  &  $5000$              & $5000$               \\
+	Dados Válidos                 &  $4986$              & $4987$               \\
+	Dados Perdidos                &  $14$                & $13$                 \\
+	Dados Discrepantes            &  $296$               & $98$                 \\
 	\bottomrule
 \end{tabular}
 \end{table}
@@ -357,43 +365,11 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 
 \FloatBarrier
 
-\paragraph{Questão 08}
+\paragraph{Variável Idade}
 
 Algumas medidas descritivas para a variável \textit{idade} são apresentadas na Tabela \ref{table:medidas-idade}. Por análise, a maioria dos alunos de EAD na TYU possuem mais de 30 anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
 
 Fazendo uma análise mais detalhada, percebe-se que a variável em estudo segue uma distribuição com curtose leptocúrtica e assimetria positiva. Além disso, podemos observar que pelo quartil inferior e superior, que 50\%  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos 98 valores discrepantes na amostra, a maioria, 69 deles encontram-se superiores a $44$ anos. A Figura \ref{fig:histogram-idade} apresenta a distribuição de frequência da variável idade.
-
-\begin{table}[!h]
-	\centering
-	\caption{Análise das medidas para a variável variável \textit{idade}.}
-	\vspace{0.5em}
-	\label{table:medidas-idade}
-	\begin{tabular}{l r}
-		\toprule
-		\textbf{Medida}               & \textbf{Valor} \\
-		\midrule
-		Média                         &  $32.18$       \\%
-		Moda                          &  $32.00$       \\
-		Mediana                       &  $32$          \\
-		Variância                     &  $31.83$       \\
-		Desvio Padrão                 &  $5.64$        \\
-		Coeficiente de Variação       &  $18 \%$       \\
-		Assimetria                    &  $1.205$       \\
-		Curtose                       &  $6.19$        \\
-		Mínimo                        &  $18$          \\
-		Máximo                        &  $70$          \\
-		Quartil Inferior (Qi)         &  $29$          \\
-		Quartil Superior (Qs)         &  $35$          \\
-		Diferença Interquartil        &  $6$           \\
-		$Qi-1.5x(Qs-Qi)$ (Discrep. -) &  $20$          \\
-		$Qs+1.5x(Qs-Qi)$ (Discrep. +) &  $44$          \\
-		Dados Totais                  &  $5000$        \\
-		Dados Válidos                 &  $4987$        \\
-		Dados Perdidos                &  $13$          \\
-		Dados Discrepantes            &  $98$          \\ %69 são >
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 \begin{figure}[!h]
 	\centering
