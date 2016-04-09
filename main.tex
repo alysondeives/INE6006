@@ -57,19 +57,7 @@
 
 A Tabela \ref{table: dados perdidos} apresenta a quantidade de dados perdidos (aqueles que não puderam ser recuperados por não estarem preenchidos) e seus respectivos percentuais em relação a cada variável analisada na base de dados em estudo. Foi observado um total de 106 dados perdidos para todas as variáveis, o que representa apenas $2.12\%$ do total. Pode-se considerar, portanto, como aceitável, uma vez que está abaixo dos $5\%$ definidos como percentual aceitável de dados perdidos.
 
-\begin{table}[h]
-\centering
-\caption{Dados perdidos na base de dados.}
-\label{table: dados perdidos}
-\vspace{0.5em}
-\begin{tabular}{c c c c c c}
-	\toprule
-	\textbf{Região} & \textbf{Área} & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
-	\midrule
-	21 $(0.42\%)$   & 21 $(0.42\%)$ & 18 $(0.36\%)$      & 19 $(0.38\%)$    & 14 $(0.28\%)$  & 13 $(0.26\%)$ \\
-	\bottomrule
-\end{tabular}
-\end{table}
+
 
 %
 % Dúvidas:
@@ -84,19 +72,45 @@ Para as variáveis quantitativas \textit{Renda} e \textit{Idade}, não foram obs
 
 Para evitar que erros de ortografia e formatação sejam cometidos nas variáveis qualitativas, pode-se utilizar um formulário de múltipla escolha de modo a evitar que as informações sejam preenchidas de maneira textual. Já para as variáveis quantitativas, no caso de um formulário eletrônico, limites inferiores e superiores de valores válidos poderiam ser checado previamente à submissão da observação. Por outro lado, quanto aos dados perdidos que não foram preenchidos, é possível criar opções de modo que as pessoas possam informar explicitamente se não sabem ou, ainda, se não desejam responder. Desse modo, nenhuma informação seria ficaria perdida ou sem preenchimento. Ademais, é possível também aplicar um teste do questionário a um grupo menor de pessoas com o objetivo de testá-lo e verificar a sua adequação, para, posteriormente, aplicá-lo a um grupo maior. Assim, problemas de entendimento podem ser resolvidos nesta fase de teste, tendendo a reduzir o percentual de erros ou informações faltantes.
 
-\begin{table}[!h]
+\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
 \centering
-\caption{Erros na base de dados.}
+\captionof{table}{Dados perdidos na base de dados.}
+\label{table: dados perdidos}
 \vspace{0.5em}
-\label{table: dados errados}
-\begin{tabular}{c c c c c c}
+\begin{tabular}{l r r}
 	\toprule
-	\textbf{Região} & \textbf{Área}  & \textbf{Pagamento} & \textbf{Opinião} & \textbf{Renda} & \textbf{Idade} \\
+	\textbf{Variável} & \textbf{\specialcell{c}{Dados\\Perdidos}} & \textbf{\specialcell{c}{Perdas\\Percentuais}} \\
 	\midrule
-	135 $(2.71\%)$  & 114 $(2.28\%)$ & 132 $(2.64\%)$     & 123 $(2.46\%)$   & 0 $(0.00\%)$   & 0 $(0.00\%)$ \\
+	Área              & $21$            & $0,42\%$          \\
+	Idade             & $13$            & $0,26\%$          \\
+	Opinião           & $19$            & $0,38\%$          \\
+	Pagamento         & $18$            & $0,36\%$          \\
+	Região            & $21$            & $0,42\%$          \\
+	Renda             & $14$            & $0,28\%$          \\
 	\bottomrule
 \end{tabular}
-\end{table}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\centering
+\captionof{table}{Erros na base de dados.}
+\label{table: dados errados}
+\vspace{0.5em}
+\begin{tabular}{l r r}
+	\toprule
+	\textbf{Variável} & \textbf{\specialcell{c}{Dados\\Errados}} & \textbf{\specialcell{c}{Erros\\Percentuais}} \\
+	\midrule
+	Área              & $114$                                    & $2,28\%$          \\
+	Idade             & $0$                                      & $0,00\%$          \\
+	Opinião           & $123$                                    & $2,46\%$          \\
+	Pagamento         & $132$                                    & $2,64\%$          \\
+	Região            & $135$                                    & $2,71\%$          \\
+	Renda             & $0$                                      & $0,00\%$          \\
+	\bottomrule
+\end{tabular}
+\end{minipage}
+\end{figure}
 
 \begin{table}[!h]
 \centering
@@ -391,7 +405,7 @@ Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela 
 
 A análise indica que a maioria dos alunos de EAD na TYU possuem mais de $30$ anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. Fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
 
-Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela segue uma distribuição com curtose leptocúrtica (curtose $> 0$), assimetria positiva (assimetria $> 0$) e dispersão de $18\%$ em relação à média. Além disso, podemos observar que pelo quartil inferior e superior, que $50\%$  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos $98$ valores discrepantes na amostra, a maioria ($69$) encontram-se superiores a $44$ anos.
+Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela segue uma distribuição com curtose leptocúrtica (curtose $> 0$), assimetria positiva (assimetria $> 0$) e dispersão de $18\%$ em relação à média. Além disso, podemos observar que pelo quartil inferior e superior, que $50\%$  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos $98$ valores discrepantes na amostra, a maioria ($69$ observações) encontram-se superiores a $44$ anos.
 
 \begin{figure}[h]
 \centering
@@ -401,7 +415,7 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 \captionof{table}{Medidas de síntese para variável \textit{Idade}.}
 \vspace{0.5em}
 \label{table: medidas sintese idade}
-\begin{tabular}{l r r}
+\begin{tabular}{l r}
 	\toprule
 	\textbf{Medida}               & \textbf{Idade} \\
 	\midrule
@@ -681,6 +695,8 @@ Em contraste quando o EAD iniciou suas atividades, no estudo atual percebe-se um
 \end{tabular}
 \end{table}
 
+\section*{Parte 4: Análise em Conjunto de Mais de Duas Variáveis}
+
 \paragraph{Questão 15}
 Formatar tabela
 \input{tables/tab-q15a.tex}
@@ -689,6 +705,8 @@ Formatar tabela
 \paragraph{Questão 16}
 Formatar tabela
 \input{tables/tab-q16.tex}
+
+\section*{Parte 5: Recomendações para o Cliente}
 
 \FloatBarrier
 \paragraph{Questão 17}
