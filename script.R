@@ -1,159 +1,24 @@
+#libraries
 library(tables)
 library(xtable)
-options(digits = 2, width = 100)
-#df = read.csv(file = "TYU06.csv",na.strings = c("NA",""," "),header=TRUE)
-
+#----------------------------------------------------------------------------------------------------
+options(digits = 4, width = 100) #set precision for float values and and chars by line
+par(xpd=TRUE,cex.lab=1.5) #set global options for plot
+#----------------------------------------------------------------------------------------------------
+#Read from csv
 df = read.csv(file = "processed.csv",na.strings = c("NA",""," "),header=TRUE)
 
 #set columns types
 df$Região = as.factor(df$Região)
 df$Área = as.factor(df$Área)
 df$Pagamento = as.factor(df$Pagamento)
-df$Opinião = as.factor(df$Opinião)
+
+#ordena os fatores na ordem desejada
+df$Opinião = factor(df$Opinião,levels = c("Muito insatisfeito","Insatisfeito","Indiferente","Satisfeito","Muito satisfeito"))
+
 df$Renda = as.numeric(df$Renda)
 df$Idade = as.integer(df$Idade)
-
-colnames = colnames(df) #get name of columns
-#summary of data
-summary(df)
-
-# Região                        Área                       Pagamento   
-# Baependinha  :2238   Engenharia e Produção:1695   Financiamento bancário:2131  
-# Aratibutantã :1150   Jurídica e Contábil  :1481   Incentivos federais   :1408  
-# Itamaracanã  : 822   Administração        : 579   Recursos próprios     : 743  
-# Jaquereçaba  : 513   Humanidades          : 488   Bolsas de estudo      : 319  
-# Paranapitanga: 121   Educacional          : 332   Auxílio de familiares : 249  
-# (Other)      : 135   (Other)              : 404   (Other)               : 132  
-# NA's         :  21   NA's                 :  21   NA's                  :  18  
-#                Opinião         Renda        Idade   
-#  Muito satisfeito  :1669   Min.   : 1   Min.   :18  
-#  Satisfeito        :1017   1st Qu.: 1   1st Qu.:29  
-#  Indiferente       : 976   Median : 2   Median :32  
-#  Insatisfeito      : 732   Mean   : 2   Mean   :32  
-#  Muito insatisfeito: 464   3rd Qu.: 3   3rd Qu.:35  
-#  (Other)           : 123   Max.   :61   Max.   :70  
-#  NA's              :  19   NA's   :14   NA's   :13
-#------------------------------------------------------------------------------------------------
-
-#get missing data
-for (i in 1:ncol(df)){
-  na_val <- length(which(is.na(df[,i])))
-  na_percent <- (na_val/nrow(df))*100
-  print(c(colnames[i],na_val,na_percent))
-}
-
-# [1] "Região" "21"     "0.42"  
-# [1] "Área" "21"   "0.42"
-# [1] "Pagamento" "18"        "0.36"     
-# [1] "Opinião" "19"      "0.38"   
-# [1] "Renda" "14"    "0.28" 
-# [1] "Idade" "13"    "0.26"
-
-#-------------------------------------------------------------------------------------------------------
-
-#get errors in variables values
-for (i in 1:ncol(df)){
-  print(levels(df[,i]))
-}
-
-#-------------------------------------------------------------------------------------------------------
-
-# [1] "Arati "        "Aratib "       "Aratibu "      "Aratibut "     "Aratibutantã"  "Baepe "       
-# [7] "Baepen "       "Baepend "      "Baependi "     "Baependinha"   "Itama "        "Itamar "      
-# [13] "Itamara "      "Itamarac "     "Itamaracanã"   "Jaque "        "Jaquer "       "Jaquere "
-# [19] "Jaquereç "     "Jaquereçaba"   "Paranapitanga"
-
-df[grep("Arat",df$Região),1] = "Aratibutantã"
-df[grep("Baep",df$Região),1] = "Baependinha"
-df[grep("Itama",df$Região),1] = "Itamaracanã"
-df[grep("Jaqu",df$Região),1] = "Jaquereçaba"
-df[grep("Para",df$Região),1] = "Paranapitanga"
-df$Região = factor(df$Região)
-
-summary(df$Região)
-# Aratibutantã   Baependinha   Itamaracanã   Jaquereçaba Paranapitanga          NA's 
-#         1185          2294           843           536           121            21 
-
-#--------------------------------------------------------------------------------------------------------
-
-# [1] "Admin "                  "Admini "                 "Adminis "               
-# [4] "Administ "               "Administração"           "Compu "                 
-# [7] "Comput "                 "Computa "                "Computaç "              
-# [10] "Computação e Matemática" "Educa "                  "Educac "                
-# [13] "Educaci "                "Educacio "               "Educacional"            
-# [16] "Engen "                  "Engenh "                 "Engenha "               
-# [19] "Engenhar "               "Engenharia e Produção"   "Human "                 
-# [22] "Humani "                 "Humanid "                "Humanida "              
-# [25] "Humanidades"             "Juríd "                  "Jurídi "                
-# [28] "Jurídic "                "Jurídica "               "Jurídica e Contábil"  
-
-df[grep("Admin",df$Área),2] = "Administração"
-df[grep("Com",df$Área),2] = "Computação e Matemática"
-df[grep("Edu",df$Área),2] = "Educacional"
-df[grep("Engen",df$Área),2] = "Engenharia e Produção"
-df[grep("Human",df$Área),2] = "Humanidades"
-df[grep("Jur",df$Área),2] = "Jurídica e Contábil"
-df$Área = factor(df$Área)
-
-summary(df$Área)
-# Administração           Computação e Matemática Educacional            Engenharia e Produção 
-# 592                     296                     338                    1741 
-#             Humanidades     Jurídica e Contábil                    NA's 
-#                     503                    1509                      21 
-
-#-------------------------------------------------------------------------------------------------
-
-# [1] "Auxíl "                 "Auxíli "                "Auxílio "              
-# [4] "Auxílio  "              "Auxílio de familiares"  "Bolsa "                
-# [7] "Bolsas "                "Bolsas d "              "Bolsas de estudo"      
-# [10] "Finan "                 "Financ "                "Financi "              
-# [13] "Financia "              "Financiamento bancário" "Incen "                
-# [16] "Incent "                "Incenti "               "Incentiv "             
-# [19] "Incentivos federais"    "Recur "                 "Recurs "               
-# [22] "Recurso "               "Recursos "              "Recursos próprios"     
-
-df[grep("Aux",df$Pagamento),3] = "Auxílio de familiares"
-df[grep("Bol",df$Pagamento),3] = "Bolsas de estudo"
-df[grep("Fin",df$Pagamento),3] = "Financiamento bancário"
-df[grep("Inc",df$Pagamento),3] = "Incentivos federais"
-df[grep("Rec",df$Pagamento),3] = "Recursos próprios"
-df$Pagamento = factor(df$Pagamento)
-
-summary(df$Pagamento)
-# Auxílio de familiares       Bolsas de estudo Financiamento bancário    Incentivos federais 
-# 257                    328                   2191                   1448 
-# Recursos próprios                   NA's 
-#                    758                     18 
-
 #--------------------------------------------------------------------------------------------------
-
-# [1] "Indifer "           "Indifere "          "Indiferente"        "Insatis "          
-# [5] "Insatisf "          "Insatisfeito"       "Muito i "           "Muito in "         
-# [9] "Muito insatisfeito" "Muito s "           "Muito sa "          "Muito satisfeito"  
-# [13] "Satisfe "           "Satisfei "          "Satisfeito"        
-
-df[grep("Muito s",df$Opinião),4] = "Muito satisfeito"
-df[grep("Sat",df$Opinião),4] = "Satisfeito"
-df[grep("Ind",df$Opinião),4] = "Indiferente"
-df[grep("Ins",df$Opinião),4] = "Insatisfeito"
-df[grep("Muito i",df$Opinião),4] = "Muito insatisfeito"
-df$Opinião = factor(df$Opinião)
-summary(df$Opinião)
-
-# Indiferente       Insatisfeito Muito insatisfeito   Muito satisfeito         Satisfeito 
-# 1006                749                472               1719               1035 
-# NA's 
-#                 19 
-#--------------------------------------------------------------------------------------------------
-
-# print summary of processed data frame
-summary(df)
-
-#Save processed input file withouth errors
-write.csv(df,file='processed.csv',row.names=F,quote=F)
-
-#--------------------------------------------------------------------------------------------------
-
 # Questao 4
 for(i in levels(df$Área)){
   print (c(i,(length(df[(which(df$Área == i)),"Área"]))/(nrow(df)-length(which(is.na(df$Área))))))
@@ -167,7 +32,6 @@ for(i in levels(df$Área)){
 # [1] 0.3
 
 #--------------------------------------------------------------------------------------------------
-
 # Questao 5
 parts = c()
 percent = cat("\\%")
@@ -181,7 +45,6 @@ print(cat(paste(parts, collapse=" & ")))
 # 257 (5.16\%) & 328 (6.58\%) & 2191 (43.98\%) & 1448 (29.06\%) & 758 (15.21\%)
 
 #--------------------------------------------------------------------------------------------------
-
 #Questao 6
 
 parts = c()
@@ -197,8 +60,6 @@ print(cat(paste(parts, collapse=" & ")))
 
 #------------------------------------------------------------------------------------------------
 #Questao 7 - grafico
-  par(xpd=TRUE,cex.lab=1.5)
-  
   data = na.omit(df$Renda)*880
   data.freq = table(data)
   
@@ -279,6 +140,7 @@ ordered_df$Faixa_salarial = "Intermediario"
 ordered_df[q1_idx,]$Faixa_salarial = "Pobres"
 ordered_df[q3_idx,]$Faixa_salarial = "Abastados"
 
+
 x = table(ordered_df$Faixa_salarial,df$Opinião)
 print(x)
 for (i in 1:nrow(x)){
@@ -286,26 +148,22 @@ for (i in 1:nrow(x)){
 }
 print(x)
 
-#Valores
-#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-# Abastados             245          202                108              417        276
-# Intermediario         505          369                234              874        499
-# Pobres                256          178                130              428        260
+#               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
+# Abastados                    108          202         245        276              417
+# Intermediario                234          369         505        499              874
+# Pobres                       130          178         256        260              428
 
 #Percentuais
-#               Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-# Abastados            19.6         16.2                8.7             33.4       22.1
-# Intermediario        20.4         14.9                9.4             35.2       20.1
-# Pobres               20.4         14.2               10.4             34.2       20.8
+#               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
+# Abastados                    8.7         16.2        19.6       22.1             33.4
+# Intermediario                9.4         14.9        20.4       20.1             35.2
+# Pobres                      10.4         14.2        20.4       20.8             34.2
 
 #Considerou-se pobres os alunos que possuem uma renda de até 1.35 salários minimos, alunos intermediarios os que recebem entre 1.35 e 2.73 salarios minimos e como abastados os que recebem acima de 2.73 salarios minimos. Isso foi baseado no quartil inferior e superior dos dados.
 #Não se observa relação entre o perfil economico dos alunos e seu grau de satisfação com a TYU, visto que a distribuição é similar para qualquer classe.
 
 #-----------------------------------------------------------------------------------------------
 #Questao 14
-x_mean = c()
-
-
 for(i in levels(df$Opinião)){
   val_mean = mean(df[which(df$Opinião == i),"Idade"],na.rm=TRUE)
   #mean
@@ -346,14 +204,38 @@ print(x)
 # Mais Velho       25.62        21.28              13.54            17.62      21.94
 # ------------------------------------------------------------------------------------------------
 # Questao 15
-q15 = tabular(df$Área*df$Região~df$Opinião)
-write.csv.tabular(q15,"q15.csv")
+# q15 = tabular(df$Área*df$Região~df$Opinião)
+# write.csv.tabular(q15,"q15.csv")
 
-q15b = ftable(df$Área,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Área","Região","Opinião"))
-q15l = xtableFtable(q15b, method="compact")
+q15a = ftable(df$Área,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Área","Região","Opinião"))
+q15l = xtableFtable(q15a, method="compact")
 write(print.xtableFtable(q15l,booktabs=TRUE),file="tab-q15.tex")
 print.xtableFtable(q15l,booktabs=TRUE)
+
+
+# q15b = ftable(df$Área,df$Região,df$Opinião,row.vars=c(2,1),dnn=c("Área","Região","Opinião"))
+# q15bl = xtableFtable(q15b, method="compact")
+# write(print.xtableFtable(q15bl,booktabs=TRUE),file="tab-q15b.tex")
+# print.xtableFtable(q15l,booktabs=TRUE)
 #-------------------------------------------------------------------------------------------------
+x = sort(df$Renda)
+idx_q1 = (length(x)+1)/4
+q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
+q1_idx = which(df$Renda<=q1)
+
+idx_q3 = (3*(length(x)+1))/4
+q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
+q3_idx = which(df$Renda>=q3)
+
+df$FaixaSalarial = "Intermediario"
+df[q1_idx,]$FaixaSalarial = "Pobres"
+df[q3_idx,]$FaixaSalarial = "Abastados"
+
+q16 = ftable(df$FaixaSalarial,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Classe","Região","Opinião"))
+q16l = xtableFtable(q16, method="compact")
+write(print.xtableFtable(q16l,booktabs=TRUE),file="tabs/tab-q16.tex")
+print.xtableFtable(q15l,booktabs=TRUE)
+#------------------------------------------------------------------------------------------------
 #Questao 17
 q17a = df[which(df$Região=="Aratibutantã" & df$Idade > 28 & df$Pagamento == "Financiamento bancário"),c("Região","Idade","Pagamento","Opinião")]
 summary(q17a)
@@ -366,4 +248,3 @@ summary(q17a)
 # Paranapitanga:  0   3rd Qu.:34   Recursos próprios     :  0   Satisfeito        :47  
 #                     Max.   :66
 #-------------------------------------------------------------------------------------------------
-
