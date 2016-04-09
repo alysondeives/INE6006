@@ -437,26 +437,36 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 \clearpage
 \paragraph{Questão 09}
 
-A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e atual. Por análise conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que concentra avaliações dos alunos em satisfeitos e muito satisfeitos, concentra $45,88\%$ dos alunos.
+A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e na amostra atual. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
 
-\begin{table}[h]
+Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos ou muito satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que onde os alunos estão majoritariamente satisfeitos ou muito satisfeitos, concentra $45,88\%$ dos 5000 alunos. O gráfico da Figura \ref{fig:stacked-opiniao-por-regiao} mostra visualmente como \baep e \itam mascaram o péssimo resultado de \arat e \para quando a amostra inteira é considerada.
+
+\begin{table}[!h]
 	\centering
 	\caption{Satisfação por região.}
 	\vspace{0.5em}
 	\label{table:satisfacao-regiao}
 	\begin{tabular}{l l l}
 		\toprule
-		Região & Avaliação Antiga & Avaliação Atual                                           \\
+		\textbf{Região} & \textbf{Avaliação Antiga} & \textbf{Avaliação Atual}                \\
 		\midrule
 		\arat  & Muito Insatisfeito & Indiferente ($38,48\%$) e Insatisfeito ($32,15\%$)      \\
 		\baep  & Muito Insatisfeito & Satisfeito ($33,96\%$) e Muito Satisfeito ($38,19\%$)   \\
 		\itam  & Satisfeito         & Muito Satisfeito ($93,94\%$)                            \\
-		\jaqu  & Indiferentes       & Insatisfeito ($33,93\%$) e Muito Satisfeito ($44,03\%$) \\
+		\jaqu  & Indiferentes       & Insatisfeito ($33,93\%$) e Muito Insatisfeito ($44,03\%$) \\
 		\para  & Diversas           & Muito Insatisfeito ($91,74\%$)                          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.9\linewidth]{plots/stacked_opiniao_por_regiao.pdf}
+	\caption{Gráfico empilhado de opinião para cada região.}
+	\label{fig:stacked-opiniao-por-regiao}
+\end{figure}
+
+\FloatBarrier
 \paragraph{Questão 10}
 
 

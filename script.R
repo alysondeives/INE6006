@@ -81,6 +81,20 @@ print(cat(paste(parts, collapse=" & ")))
   postscript("plots/histogram_idade_log.eps")
   plot(data.freq,xpd=TRUE,xlab = "Idade", ylab="Frequência")
   dev.off();
+#-----------------------------------------------------------------------------------------------
+#Questao 9
+  tb = table(df$Opinião, df$Região)
+  orderedOpiniao <- c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito")
+  
+  reorder(tb, target)
+  
+  barplot(tb, xlab = "Região", ylab = "Frequência", beside = FALSE)
+  legend("topright", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"))
+  
+  setEPS()
+  postscript("plots/histogram_idade_log.eps")
+  plot(data.freq,xpd=TRUE,xlab = "Opinião", ylab="Frequência")
+  dev.off();
 #----------------------------------------------------------------------------------------------
 #Questao 10
 x = table(df$Área,df$Opinião)
