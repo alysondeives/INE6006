@@ -6,8 +6,13 @@
 \usepackage{amssymb}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 
+
 % Floats.
 \usepackage{placeins}
+
+% Captions
+\usepackage{caption}
+\usepackage{capt-of}
 
 \usepackage{xspace}
 \usepackage{graphicx}
@@ -328,11 +333,68 @@ A tabela de frequências para a variável \textit{Opinião} é apresentada na Ta
 \end{tabular}
 \end{table}
 
-\paragraph{Variável Renda}
-A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R$\$$2402,40$.
+\subsection*{Variável Renda}
 
-Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
-Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$. Um histograma da variável idade é apresentado na Figura \ref{fig:histograma-renda}.
+Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese renda}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure: histograma renda}. Vale ressaltar que, para fins de estudo, aplicou-se uma transformação nessa variável, utilizando como fator multiplicativo o valor de $R\$880$ (referência salarial em Pindorama). 
+
+A análise indica que pelo menos três três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da amostra para essa variável é de $R$\$$2402,40$. Além disso constata-se que a distribuição da variável segue uma curva leptocúrtica (curtose $> 0$), possui assimetria à direita (assimetria $> 0$) e dispersão de $76\%$ em relação à média.
+Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de R\$ $4224,00$.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.52\textwidth}
+\centering
+\small
+\captionof{table}{Medidas de síntese para variável \textit{Renda}.}
+\vspace{0.5em}
+\label{table: medidas sintese renda}
+\begin{tabular}{l r r}
+	\toprule
+	\textbf{Medida}               & \textbf{Renda}    \\
+	\midrule
+	Média                         &  R\$ $2056,05$    \\
+	Moda                          &  R\$ $906,40$     \\
+	Mediana                       &  R\$ $1628,00$    \\
+	Variância                     &  R\$ $2449929,23$ \\
+	Desvio Padrão                 &  R\$ $1565.38$    \\
+	Coeficiente de Variação       &  $76\%$           \\
+	Assimetria                    &  $9.94$           \\
+	Curtose                       &  $253.91$         \\
+	Mínimo                        &  R\$ $880.00$     \\
+	Máximo                        &  R\$ $53504.00$   \\
+	Quartil Inferior (Qi)         &  R\$ $1188.00$    \\
+	Quartil Superior (Qs)         &  R\$ $2402.40$    \\
+	Diferença Interquartil        &  R\$ $1214.40$    \\
+	$Qi-1.5x(Qs-Qi)$              &  R\$ ${-633.60}$    \\
+	$Qs+1.5x(Qs-Qi)$              &  R\$ $4224.00$    \\
+	Dados Totais                  &  $5000$           \\
+	Dados Válidos                 &  $4986$           \\
+	Dados Perdidos                &  $14$             \\
+	Dados Discrepantes            &  $296$            \\
+	\bottomrule
+\end{tabular}
+\end{minipage}
+%
+\begin{minipage}{0.46\textwidth}
+	\includegraphics[width=\linewidth]{plots/histograma-renda}
+	\captionof{figure}{Histograma da varável \textit{Renda}.}
+	\label{figure: histograma renda}
+\end{minipage}
+\end{figure}
+
+
+
+%
+% {GRÁFICOS}
+%
+
+\FloatBarrier
+
+\paragraph{Variável Idade}
+
+Algumas medidas descritivas para a variável \textit{idade} são apresentadas na Tabela \ref{table:medidas-idade}. Por análise, a maioria dos alunos de EAD na TYU possuem mais de 30 anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
+
+Fazendo uma análise mais detalhada, percebe-se que a variável em estudo segue uma distribuição com curtose leptocúrtica e assimetria positiva. Além disso, podemos observar que pelo quartil inferior e superior, que 50\%  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos 98 valores discrepantes na amostra, a maioria, 69 deles encontram-se superiores a $44$ anos. A Figura \ref{fig:histogram-idade} apresenta a distribuição de frequência da variável idade.
 
 \begin{table}[!h]
 \centering
@@ -366,24 +428,6 @@ Com relação aos valores discrepantes, observa-se que o conjunto de dados anali
 	\bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[!h]
-	\includegraphics[width=\linewidth]{plots/histograma-renda}
-	\caption{Histograma da varável \textit{Renda}. Escala logarítimica no eixo $x$}
-	\label{fig:histograma-renda}
-\end{figure}
-
-%
-% {GRÁFICOS}
-%
-
-\FloatBarrier
-
-\paragraph{Variável Idade}
-
-Algumas medidas descritivas para a variável \textit{idade} são apresentadas na Tabela \ref{table:medidas-idade}. Por análise, a maioria dos alunos de EAD na TYU possuem mais de 30 anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
-
-Fazendo uma análise mais detalhada, percebe-se que a variável em estudo segue uma distribuição com curtose leptocúrtica e assimetria positiva. Além disso, podemos observar que pelo quartil inferior e superior, que 50\%  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos 98 valores discrepantes na amostra, a maioria, 69 deles encontram-se superiores a $44$ anos. A Figura \ref{fig:histogram-idade} apresenta a distribuição de frequência da variável idade.
 
 \begin{figure}[!h]
 	\centering
