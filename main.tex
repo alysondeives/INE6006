@@ -486,31 +486,42 @@ Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos
 \FloatBarrier
 \paragraph{Questão 10}
 
+De um modo geral, o investimento resultou em uma melhora da avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, e a Figura \ref{fig:stacked-opiniao-por-area} mostra os mesmos dados usando valores absolutos de alunos em um gráfico empilhado. Tanto na Figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual.
 
-\begin{table}
-\centering
-\begin{tabular}{l r r r r r}
-	\toprule
-	Curso                   & Indiferente & Insatisfeito & \specialcell{c}{Muito\\Insatisfeito} &  \specialcell{c}{Muito\\Satisfeito} & Satisfeito \\
-	\midrule
-	Administração           & $11.04\%$   & $3.57\%$     & $0.34\%$           & $56.37\%$        & $28.69\%$  \\
-	Computação e Matemática & $18.98\%$   & $5.08\%$     & $0.68\%$           & $44.41\%$        & $30.85\%$  \\
-	Educacional             & $1.78\%$    & $0.59\%$     & $0.00\%$           & $89.91\%$        & $7.72\%$   \\
-	Engenharia e Produção   & $27.8\%$    & $14.26\%$    & $3.93\%$           & $27.25\%$        & $26.67\%$  \\
-	Humanidades             & $6.77\%$    & $1.59\%$     & $0.00\%$           & $74.90\%$        & $16.73\%$  \\
-	Jurídica e Contábil     & $23.6\%5$   & $30.17\%$    & $26.45\%$          & $6.45\%$         & $13.29\%$  \\
-	\bottomrule
-\end{tabular}
+Na avaliação antiga  os cursos das áreas \edu e de \hum estavam muito insatisfeitos. Atualmente $89.91\%$ dos alunos da área \edu estão muito satisfeitos e $74.9\%$ dos alunos de \hum estão muitos satisfeitos. Considerando além de muito satisfeitos, os alunos satisfeitos, esses alunos correspondem a $97.63\%$ dos cursos da área \edu e a $91.63\%$ da área \hum.
+
+Na avaliação antiga os cursos de \comp e de \adm elogiavam seus cursos, atualmente essa característica se mantêm. Para os cursos de \comp e os cursos de \adm, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
+
+Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) eram tinham opinião majoritariamente indiferente. Atualmente, essa característica foi alterada. Nos cursos de \eng a quantidade de pessoas satisfeitas ou muito satisfeitas corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$, indicando uma melhora. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos ou muito insatisfeitos é alta, correspondendo a um total de $56.62\%$ do total de alunos, com $23.65\%$ indiferentes e apenas $19.74\%$ satisfeitos ou muito satisfeitos. Os cursos da área  \jur apresentaram uma deterioração no período e devem receber atenção especial. A urgência da tomada de ações para melhorar a opinião dos alunos da área \jur é agravada pelo grande número de alunos nessa área, correspondendo a  $30.18\%$ dos 5000 alunos na amostra.
+
+\begin{table}[!h]
+	\centering
+	\vspace{0.5em}
+	\caption{Opinião por área do conhecimento}
+	\label{table:opiniao-por-area}
+	\begin{tabular}{l r r r r r}
+		\toprule
+		Curso                   & \specialcell{c}{Muito\\Insatisfeito} & Insatisfeito &  Indiferente &  Satisfeito & \specialcell{c}{Muito\\Satisfeito} \\
+		\midrule
+		%                        Muito Ins  & Insatisfeito  & Indiferente & Satisfeito & Muito Satis           
+		Administração           & $0.34\%$   & $3.57\%$     & $11.04\%$   & $28.69\%$  & $56.37\%$  \\
+		Computação e Matemática & $0.68\%$   & $5.08\%$     & $18.98\%$   & $30.85\%$  & $44.41\%$  \\
+		Educacional             & $0\%$      & $0.59\%$     & $1.78\%$    & $7.72\%$   & $89.91\%$  \\
+		Engenharia e Produção   & $3.93\%$   & $14.26\%$    & $27.89\%$   & $26.67\%$  & $27.25\%$  \\
+		Humanidades             & $0\%$      & $1.59\%$     & $6.77\%$    & $16.73\%$  & $74.90\%$  \\
+		Jurídica e Contábil     & $26.45\%$ & $30.17\%$    & $23.65\%$   & $13.29\%$  & $6.45\%$   \\
+		\bottomrule
+	\end{tabular}
 \end{table}
 
-De um modo geral, o investimento resultou em uma melhora da avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para curso de \comp. Portanto, o investimento foi eficaz.
+\begin{figure}[!h]
+	\centering
+	\caption{Gráfico empilhado de opinião dos alunos por área do curso.}
+	\label{fig:stacked-opiniao-por-area}
+	\includegraphics[width=\linewidth]{plots/stacked_opiniao_por_area.eps}
+\end{figure}
 
-Na avaliação antiga  os cursos de Educacional e de Humanidades estavam muito insatisfeitos, atualmente $89.91\%$ dos alunos da área Educacional estão muito satisfeitos e $74.9\%$ dos alunos de Humanidades estão muitos satisfeitos.
-
-Na avaliação antiga os cursos de Computação e Matemática e de Administração elogiavam seus cursos, atualmente essa característica se mantêm. Para o curso de Computação e Matemática e o Curso de Administração, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
-
-Na avaliação antiga os demais cursos (Engenharia e Produção e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa característica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos é alta, correspondendo a um total de $56.62\%$ do total de alunos. Do restante, $23.65\%$ se manifestaram indiferentes e apenas $19.74\%$ se consideram satisfeitos ou muito satisfeitos.
-
+\FloatBarrier
 \paragraph{Questão 11}
 
 As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}.

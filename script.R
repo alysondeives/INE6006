@@ -85,24 +85,27 @@ print(cat(paste(parts, collapse=" & ")))
 #Questao 9
   tb = table(df$Opinião, df$Região)
   orderedOpiniao <- c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito")
-  
-  reorder(tb, target)
-  
-  barplot(tb, xlab = "Região", ylab = "Frequência", beside = FALSE)
-  legend("topright", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"))
+  tb <- tb[orderedOpiniao,,drop=FALSE]
   
   setEPS()
-  postscript("plots/histogram_idade_log.eps")
-  plot(data.freq,xpd=TRUE,xlab = "Opinião", ylab="Frequência")
+  postscript("plots/stacked_opiniao_por_regiao.eps")
+  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE, legend.text = TRUE)
   dev.off();
 #----------------------------------------------------------------------------------------------
 #Questao 10
 x = table(df$Área,df$Opinião)
+x <- x[,orderedOpiniao,drop=FALSE]
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
 }
 
 print(x)
+
+# Grafico
+x = table(df$Opinião,df$Área)
+colnames(x)
+barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE, names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."))
+legend("topleft", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"),  bty="n", fill=gray.colors(5))
 
 #                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 #  Administração                 11.04         3.57               0.34            56.37      28.69
