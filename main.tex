@@ -6,8 +6,13 @@
 \usepackage{amssymb}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 
+
 % Floats.
 \usepackage{placeins}
+
+% Captions
+\usepackage{caption}
+\usepackage{capt-of}
 
 \usepackage{xspace}
 \usepackage{graphicx}
@@ -45,6 +50,8 @@
 \begin{document}
 
 \maketitle
+
+\section*{Parte 1: Pré-Análise de Dados}
 
 \paragraph{Questão 01}
 
@@ -231,11 +238,13 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \FloatBarrier
 
 \clearpage
-\section*{Análise Individual das Variáveis}
+\section*{Parte 2: Análise Individual das Variáveis}
+
+Nessa segunda parte é apresentada uma análise individual das variáveis da amostra. Para o estudo das variáveis qualitativas (\textit{Região}, \textit{Área}, \textit{Pagamento} e \textit{Opinião}) utilizou-se a tabela de frequências. Já para análise das variáveis quantitativas, fez-se o uso de medidas de síntese e histogramas.
 
 \subsection*{Variável \textit{Região}}
 
-A tabela frequências para a variável \textit{Região} é apresentada na Tabela \ref{table: frequencias regiao}. Os resultados indicam que as regiões com menor e maior número de alunos são as regiões \textit{\para} e \textit{\baep}, respectivamente. Já as demais regiões apresentam um corpo discente que varia de $10.77\%$ a $23.80\%$.
+A tabela frequências para a variável \textit{Região} é apresentada na Tabela \ref{table: frequencias regiao}. A análise indica que as regiões com menor e maior número de alunos são as regiões \textit{\para} e \textit{\baep}, respectivamente. Já as demais regiões apresentam um corpo discente que varia de $10,77\%$ a $23,80\%$.
 
 \begin{table}[h]
 \small
@@ -247,18 +256,18 @@ A tabela frequências para a variável \textit{Região} é apresentada na Tabela
 	\toprule
 	\textbf{Região} & \textbf{Ocorrências} & \textbf{Frequência} \\
 	\midrule
-	\arat           & $1185$               & $23.80\%$           \\
-	\baep           & $2294$               & $46.07\%$           \\
-	\itam           & $843$                & $16.93\%$           \\
-	\jaqu           & $536$                & $10.77\%$           \\
-	\para           & $121$                & $2.43\%$            \\
+	\arat           & $1185$               & $23,80\%$           \\
+	\baep           & $2294$               & $46,07\%$           \\
+	\itam           & $843$                & $16,93\%$           \\
+	\jaqu           & $536$                & $10,77\%$           \\
+	\para           & $121$                & $2,43\%$            \\
 	\bottomrule
 \end{tabular}
 \end{table}
 
-\subsection*{Variável Área}
+\subsection*{Variável \textit{Área}}
 
-A tabela de frequências para a variável \textit{Área} é apresentada na Tabela \ref{table: frequencias area}. O perfil da TYU modificou-se. Os resultados indicam que a área com o maior contingente de alunos é \textit{\eng}, na amostra atual.
+A tabela de frequências para a variável \textit{Área} é apresentada na Tabela \ref{table: frequencias area}. O perfil da TYU modificou-se. A análise indica que a área com o maior contingente de alunos é \textit{\eng}, na amostra atual.
 
 \begin{table}[h]
 \small
@@ -268,126 +277,172 @@ A tabela de frequências para a variável \textit{Área} é apresentada na Tabel
 \vspace{0.5em}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Região} & \textbf{Ocorrências} & \textbf{Frequência} \\
+	\textbf{Área} & \textbf{Ocorrências} & \textbf{Frequência} \\
 	\midrule
-	\adm            & $592$                & $11.89\%$           \\
-	\comp           & $296$                & $5.94\%$            \\
-	\edu            & $338$                & $6.79\%$            \\
-	\eng            & $1741$               & $34.97\%$           \\
-	\hum            & $503$                & $10.10\%$           \\
-	\jur            & $1509$               & $30.31\%$           \\
+	\adm            & $592$                & $11,89\%$           \\
+	\comp           & $296$                & $5,94\%$            \\
+	\edu            & $338$                & $6,79\%$            \\
+	\eng            & $1741$               & $34,97\%$           \\
+	\hum            & $503$                & $10,10\%$           \\
+	\jur            & $1509$               & $30,31\%$           \\
 	\bottomrule
 \end{tabular}
 \end{table}
 
-\paragraph{Variável Pagamento}
+\subsection*{Variável \textit{Pagamento}}
 
-A tabela de frequências para a variável \textit{Pagamento} está indicada na Tabela \ref{table:frequencias-pagamento}. Por análise, pode-se observar que os recursos usados para pagar as mensalidades do curso são oriundos, em sua maioria, de \textit{Financiamento Bancário} representando $43.98\%$. Já o pagamento  oriundo de \textit{Incentivos Federais} apresenta-se como o segundo mais utilizado, com  $29.06\%$.  Portanto, a maior dependência de pagamento está no \textit{Financiamento Bancário}, embora  \textit{Incentivos Federais} representem a segunda forma de pagamento mais utilizada.
+A tabela de frequências para a variável \textit{Pagamento} á apresentada na Tabela \ref{table: frequencias pagamento}. A análise indica que os recursos usados para pagar as mensalidades do curso são oriundos, em sua maioria, de \textit{Financiamento Bancário} ($43,98\%$) seguido por \textit{Incentivos Federais} ($29,06\%$), somando um total de $73,04\%$. Portanto, cortes no orçamento federal de Pindorama não afetarão a fonte de recursos primária para pagamentos de mensalidades na TYU.
 
-\begin{table}[!h]
-\centering
-\caption{Frequências para a variável \textit{Pagamento}.}
-\vspace{0.5em}
-\label{table:frequencias-pagamento}
-\begin{tabular}{c c c c c}
-	\toprule
-	\textbf{Aux. de Fam.}    & \textbf{Bolsas}   & \textbf{Financ. Banc.}  & \textbf{Inc. Federais} & \textbf{Rec. Próprios} \\
-	\midrule
-	257 $(5.16\%)$ & 328 $(6.58\%)$ & 2191 $(43.98\%)$ & 1448 $(29.06\%)$ & 758 $(15.21\%)$ \\
-	\bottomrule
-\end{tabular}
-\end{table}
-
-\paragraph{Variável Opinião}
-
-A tabela de frequências para a variável \textit{Opinião} está indicada na Tabela \ref{table:frequencias-opiniao}. Por análise, pode-se observar que a opinião predominante na base dados é \textit{Muito satisfeito}. O grupo dos que mencionaram estarem \textit{Muito satisfeito} e \textit{Satisfeito} totaliza $55,29\%$. Podemos considerar, portanto, que a maioria dos alunos da TYU que opinaram estão satisfeitos com a EAD.
-
-\begin{table}[!h]
-\centering
-\caption{Frequências para a variável \textit{Opinião}.}
-\vspace{0.5em}
-\label{table:frequencias-opiniao}
-\begin{tabular}{c c c c c}
-	\toprule
-	\textbf{Indiferente}    & \textbf{Insatisfeito}   & \textbf{Muito insatisfeito}  & \textbf{Muito satisfeito} & \textbf{Satisfeito} \\
-	\midrule
-	1006 $(20.20\%)$ & 749 $(15.04\%)$ & 472 $(9.48\%)$ & 1719 $(34.51\%)$ & 1035 $(20.78\%)$ \\
-	\bottomrule
-\end{tabular}
-\end{table}
-
-
-\paragraph{Variável Renda}
-A tabela \ref{table:medidas-renda} foi construída com base nos valores de \textit{Renda} disponíveis na base de dados e apresenta as diversas medidas calculadas para análise desta variável. Vale observar que, para fins de análise, criou-se uma nova variável com base na renda multiplicando-a por 880 (valor utilizado para o salário mínimo). Pode-se observar que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da base de dados para essa variável é de $R$\$$2402,40$.
-
-Por meio da Curtose, é possível analisar também o grau de achatamento da distribuição como sendo leptocúrtica - uma curva de frequência mais aguda. Além disso, como a média e mediana são diferentes, existe uma assimetria de $9.94$, isto é, a distribuição dos dados é assimétrica à direita ou positiva. Pode-se interpretar, ademais, a dispersão de $76\%$ dos dados em relação à média, com base no Coeficiente de variação.
-Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de $4224.00$. Um histograma da variável idade é apresentado na Figura \ref{fig:histograma-renda}.
-
-\begin{table}[!h]
-\centering
+\begin{table}[h]
 \small
-\caption{Análise das variáveis qualitativas na amostra estudada.}
+\centering
+\caption{Frequências para a variável \textit{Pagamento}}
+\label{table: frequencias pagamento}
 \vspace{0.5em}
-\label{table:medidas-renda}
 \begin{tabular}{l r r}
 	\toprule
-	\textbf{Medida}               & \textbf{Renda (R\$)} & \textbf{Idade (anos)}\\
+	\textbf{Pagamento}     & \textbf{Ocorrências} & \textbf{Frequência} \\
 	\midrule
-	Média                         &  $2056,05$           & $32.18$              \\
-	Moda                          &  $906,40$            & $32.00$              \\
-	Mediana                       &  $1628,00$           & $32$                 \\
-	Variância                     &  $2449929,23$        & $31.83$              \\
-	Desvio Padrão                 &  $1565.38$           & $5.64$               \\
-	Coeficiente de Variação       &  $76\%$              & $18 \%$              \\
-	Assimetria                    &  $9.94$              & $1.205$              \\
-	Curtose                       &  $253.91$            & $6.19$               \\
-	Mínimo                        &  $880.00$            & $18$                 \\
-	Máximo                        &  $53504.00$          & $70$                 \\
-	Quartil Inferior (Qi)         &  $1188.00$           & $29$                 \\
-	Quartil Superior (Qs)         &  $2402.40$           & $35$                 \\
-	Diferença Interquartil        &  $1214.40$           & $6$                  \\
-	$Qi-1.5x(Qs-Qi)$              &  $-633.60$           & $20$                 \\
-	$Qs+1.5x(Qs-Qi)$              &  $4224.00$           & $44$                 \\
-	Dados Totais                  &  $5000$              & $5000$               \\
-	Dados Válidos                 &  $4986$              & $4987$               \\
-	Dados Perdidos                &  $14$                & $13$                 \\
-	Dados Discrepantes            &  $296$               & $98$                 \\
+	Auxilio Familiar       & $257$                & $5,16\%$            \\
+	Bolsas                 & $328$                & $6,58\%$            \\
+	Financiamento Bancário & $2191$               & $43,98\%$           \\
+	Incentivos Federais    & $1448$               & $29,06\%$           \\
+	Recursos Próprios      & $758$                & $15,21\%$           \\
 	\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[!h]
+\subsection*{Variável \textit{Opinião}}
+
+A tabela de frequências para a variável \textit{Opinião} é apresentada na Tabela \ref{table: frequencias opiniao}. A análise indica que opinião predominante na amostra é \textit{Muito Satisfeito} e que o grupo de alunos que mencionaram estarem \textit{Muito satisfeito} ou \textit{Satisfeito} totaliza $55,29\%$. Portanto, pode-se considerar que a maioria dos alunos da TYU estão satisfeitos com a EAD.
+
+\begin{table}[h]
+\small
+\centering
+\caption{Frequências para a variável \textit{Opinião}}
+\label{table: frequencias opiniao}
+\vspace{0.5em}
+\begin{tabular}{l r r}
+	\toprule
+	\textbf{Pagamento}     & \textbf{Ocorrências} & \textbf{Frequência} \\
+	\midrule
+	Muito Insatisfeito     & $472$                & $9,48\%$            \\
+	Insatisfeito           & $749$                & $15,04\%$           \\
+	Indiferente            & $1006$               & $20,20\%$           \\
+	Satisfeito             & $1035$               & $20,78\%$           \\
+	Muito Satisfeito       & $1719$               & $34,51\%$           \\
+	\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Variável \textit{Renda}}
+
+Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese renda}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure: histograma renda}. Vale ressaltar que, para fins de estudo, aplicou-se uma transformação nessa variável, utilizando como fator multiplicativo o valor de $R\$880$ (referência salarial em Pindorama). 
+
+A análise indica que pelo menos três três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450,00$, uma vez que o quartil superior da amostra para essa variável é de $R$\$$2402,40$. Além disso constata-se que a distribuição da variável segue uma curva leptocúrtica (curtose $> 0$), possui assimetria à direita (assimetria $> 0$) e dispersão de $76\%$ em relação à média. Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de R\$ $4224,00$.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.52\textwidth}
+\centering
+\small
+\captionof{table}{Medidas de síntese para variável \textit{Renda}.}
+\vspace{0.5em}
+\label{table: medidas sintese renda}
+\begin{tabular}{l r}
+	\toprule
+	\textbf{Medida}               & \textbf{Renda}    \\
+	\midrule
+	Média                         &  R\$ $2056,05$    \\
+	Moda                          &  R\$ $906,40$     \\
+	Mediana                       &  R\$ $1628,00$    \\
+	Variância                     &  R\$ $2449929,23$ \\
+	Desvio Padrão                 &  R\$ $1565.38$    \\
+	Coeficiente de Variação       &  $76\%$           \\
+	Assimetria                    &  $9.94$           \\
+	Curtose                       &  $253.91$         \\
+	Mínimo                        &  R\$ $880.00$     \\
+	Máximo                        &  R\$ $53504.00$   \\
+	Quartil Inferior (Qi)         &  R\$ $1188.00$    \\
+	Quartil Superior (Qs)         &  R\$ $2402.40$    \\
+	Diferença Interquartil        &  R\$ $1214.40$    \\
+	$Qi-1.5x(Qs-Qi)$              &  R\$ ${-633.60}$  \\
+	$Qs+1.5x(Qs-Qi)$              &  R\$ $4224.00$    \\
+	Dados Totais                  &  $5000$           \\
+	Dados Válidos                 &  $4986$           \\
+	Dados Perdidos                &  $14$             \\
+	Dados Discrepantes            &  $296$            \\
+	\bottomrule
+\end{tabular}
+\end{minipage}
+%
+\begin{minipage}{0.46\textwidth}
+	\centering
 	\includegraphics[width=\linewidth]{plots/histograma-renda}
-	\caption{Histograma da varável \textit{Renda}. Escala logarítimica no eixo $x$}
-	\label{fig:histograma-renda}
+	\captionof{figure}{Histograma da varável \textit{Renda}.}
+	\label{figure: histograma renda}
+\end{minipage}
 \end{figure}
 
+\clearpage
+\subsection*{Variável \textit{Idade}}
+
+Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure: histograma idade}.
+
+A análise indica que a maioria dos alunos de EAD na TYU possuem mais de $30$ anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. Fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
+
+Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela segue uma distribuição com curtose leptocúrtica (curtose $> 0$), assimetria positiva (assimetria $> 0$) e dispersão de $18\%$ em relação à média. Além disso, podemos observar que pelo quartil inferior e superior, que $50\%$  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos $98$ valores discrepantes na amostra, a maioria ($69$) encontram-se superiores a $44$ anos.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.52\textwidth}
+\centering
+\small
+\captionof{table}{Medidas de síntese para variável \textit{Idade}.}
+\vspace{0.5em}
+\label{table: medidas sintese idade}
+\begin{tabular}{l r r}
+	\toprule
+	\textbf{Medida}               & \textbf{Idade} \\
+	\midrule
+	Média                         & $32.18$ anos   \\
+	Moda                          & $32.00$ anos   \\
+	Mediana                       & $32$ anos      \\
+	Variância                     & $31.83$ anos   \\
+	Desvio Padrão                 & $5.64$ anos    \\
+	Coeficiente de Variação       & $18 \%$        \\
+	Assimetria                    & $1.205$        \\
+	Curtose                       & $6.19$         \\
+	Mínimo                        & $18$ anos      \\
+	Máximo                        & $70$ anos      \\
+	Quartil Inferior (Qi)         & $29$ anos      \\
+	Quartil Superior (Qs)         & $35$ anos      \\
+	Diferença Interquartil        & $6$  anos      \\
+	$Qi-1.5x(Qs-Qi)$              & $20$ anos      \\
+	$Qs+1.5x(Qs-Qi)$              & $44$ anos      \\
+	Dados Totais                  & $5000$         \\
+	Dados Válidos                 & $4987$         \\
+	Dados Perdidos                & $13$           \\
+	Dados Discrepantes            & $98$           \\
+	\bottomrule
+\end{tabular}
+\end{minipage}
 %
-% {GRÁFICOS}
-%
-
-\FloatBarrier
-
-\paragraph{Variável Idade}
-
-Algumas medidas descritivas para a variável \textit{idade} são apresentadas na Tabela \ref{table:medidas-idade}. Por análise, a maioria dos alunos de EAD na TYU possuem mais de 30 anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
-
-Fazendo uma análise mais detalhada, percebe-se que a variável em estudo segue uma distribuição com curtose leptocúrtica e assimetria positiva. Além disso, podemos observar que pelo quartil inferior e superior, que 50\%  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos 98 valores discrepantes na amostra, a maioria, 69 deles encontram-se superiores a $44$ anos. A Figura \ref{fig:histogram-idade} apresenta a distribuição de frequência da variável idade.
-
-\begin{figure}[!h]
+\begin{minipage}{0.46\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{plots/histograma-idade}
 	\caption{Histograma da variável idade. }
-	\label{fig:histogram-idade}
+	\label{figure: histograma idade}
+\end{minipage}
 \end{figure}
 
-\FloatBarrier
+\section*{Parte 3: Análise em Conjunto de Duas Variáveis}
 
 \paragraph{Questão 09}
 
 A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e atual. Por análise conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que concentra avaliações dos alunos em satisfeitos e muito satisfeitos, concentra $45,88\%$ dos alunos.
 
-\begin{table}
+\begin{table}[h]
 	\centering
 	\caption{Satisfação por região.}
 	\vspace{0.5em}
