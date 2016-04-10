@@ -104,8 +104,11 @@ print(x)
 # Grafico
 x = table(df$Opinião,df$Área)
 colnames(x)
+setEPS()
+postscript("plots/stacked_opiniao_por_area.eps")
 barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE, names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."))
 legend("topleft", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"),  bty="n", fill=gray.colors(5))
+dev.off()
 
 #                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 #  Administração                 11.04         3.57               0.34            56.37      28.69
@@ -119,6 +122,16 @@ legend("topleft", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisf
 # Na avaliação antiga os cursos de Computação e Matématica e de Administração elogiavam seus cursos, atualmente essa característica se mantem. Para o curso de Computação 44.1% estão muito satisfeitos e 30.85% estão satisfeitos e para o curso de Administração 56.37% estão muito satisfeitos e 28.69% estão satisfeitos.
 # Na avaliação antiga os demais cursos (Engenharia e Produçao e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa caractéristica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de 53.82%, enquanto o percentual de alunos indiferentes  é de 27.89%. Já para o curso de Juridica, o percentual de alunos insatisfeitos é alta, correspondendo a um total de 56.62% do total de alunos. Do restante, 23.65% se manifestaram indiferentes e apenas 19.74% se consideram satisfeitos ou muito satisfeitos.
 
+#-------------------------------------------------------------------------------------------------
+#Questao 11
+# Grafico
+x = table(df$Pagamento,df$Região)
+
+setEPS()
+postscript("plots/stacked_pagamento_por_regiao.eps", fonts = c("serif", "Palatino"))
+barplot(x, xlab = "Região", ylab = "Alunos", beside = FALSE, family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+legend("topright", rownames(x),  bty="n", fill=gray.colors(length(rownames(x))),  text.font=1, cex = 1.0)
+dev.off()
 
 #-------------------------------------------------------------------------------------------------
 #Questao 12

@@ -524,11 +524,11 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) eram t
 \FloatBarrier
 \paragraph{Questão 11}
 
-As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}.
+As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra por fonte de pagamento por região, levando em conta o número de alunos em cada região pode ser visualizado na Figura \ref{fig:fonte de pagamento absoluto}.
 
-Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova principal fonte de recursos é oriunda de \textit{Financiamento Bancário} ($53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, um observa-se a predominância de uma única fonte de pagamento, sendo para primeira região \textit{Financiamento Bancário}, e para as demais \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, mas não majoritária, de \textit{Incentivos Federais} na fonte de recursos ($47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, mas com fontes predominantes distintas.
+Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova principal fonte de recursos é oriunda de \textit{Financiamento Bancário} ($53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem apenas $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, observa-se a predominância de uma única fonte de pagamento, sendo para primeira região \textit{Financiamento Bancário}, e para as demais \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, mas não majoritária, de \textit{Incentivos Federais} na fonte de recursos ($47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, mas com fontes predominantes distintas.
 
-\begin{table}
+\begin{table}[!h]
 \small
 \caption{Fontes de pagamento para regiões em valores absolutos.}
 \label{tabela: fontes de pagamento absoluto}
@@ -546,7 +546,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[!h]
 \small
 \caption{Fontes de pagamento para regiões em valores percentuais.}
 \label{tabela: fontes de pagamento percentual}
@@ -564,11 +564,18 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{tabular}
 \end{table}
 
-\begin{figure}
-\centering
+\begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.80\linewidth]{plots/q11}
-	\caption{Fontes de pagamento por região.}
+	\caption{Fontes de pagamento, em percentual, por região.}
 	\label{figure: fonte de pagemento}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.65\linewidth]{plots/stacked_pagamento_por_regiao.eps}
+	\caption{Número de alunos por fonte de pagamento por região}
+	\label{fig:fonte de pagamento absoluto}
 \end{figure}
 
 \FloatBarrier
