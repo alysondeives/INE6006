@@ -179,6 +179,7 @@ df[q1_idx,]$FaixaSalarial = "Pobres"
 df[q3_idx,]$FaixaSalarial = "Abastados"
 
 y = table(df$FaixaSalarial,df$Opinião)
+y <- y[,orderedOpiniao,drop=FALSE]
 addmargins(y)
 print(y)
 for (i in 1:nrow(y)){
@@ -223,10 +224,12 @@ for (i in 1:nrow(x)){
 print(x)
 
 #29 é o primeiro quartil
-df$FaixaEtaria = "Mais Velho"
-df[which(df$Idade<=29),]$FaixaEtaria = "Mais Novo"
+df$FaixaEtaria = "Alunos Velhos"
+df[which(df$Idade<=29),]$FaixaEtaria = "Alunos Jovens"
 
 x = table(df$FaixaEtaria,df$Opinião)
+x <- x[,orderedOpiniao,drop=FALSE]
+addmargins(x)
 print(x)
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
@@ -240,6 +243,16 @@ print(x)
 #            Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 # Mais Novo         7.97         0.98               0.33            72.57      18.16
 # Mais Velho       25.62        21.28              13.54            17.62      21.94
+
+x = table(df$Opinião,df$FaixaEtaria)
+x <- x[orderedOpiniao,,drop=FALSE]
+
+setEPS()
+postscript("plots/stacked_opiniao_por_idade.eps", fonts = c("serif", "Palatino"))
+barplot(x, xlab = "Faixa Etária", ylab = "Alunos", beside = FALSE, family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+legend("topleft", rownames(x),  bty="n", fill=gray.colors(length(rownames(x))),  text.font=1, cex = 1.0)
+dev.off()
+
 # ------------------------------------------------------------------------------------------------
 # Questao 15
 # q15 = tabular(df$Área*df$Região~df$Opinião)
