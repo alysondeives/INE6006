@@ -693,27 +693,29 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, subjetivamente
 
 \paragraph{Questão 14}
 
-A correlação entre alunos e velhos com grau de satisfação com seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura (??) sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos percentual}.
+A correlação entre alunos e velhos com grau de satisfação com seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura \ref{fig:stacked-opiniao-por-idade} sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos absoluta}.
 
-Em contraste quando o EAD iniciou suas atividades, no estudo atual percebe-se uma inversão da avaliação dos alunos velhos e novos quanto ao  seus cursos. A maioria dos alunos mais novo estão satisfeitos com o curso ($90,73\%$), enquanto os alunos mais velhos são em sua maioria, muito insatisfeitos, insatisfeitos ou indiferentes ($60,44\%$).
+Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, no estudo atual, percebe-se uma inversão da avaliação dos alunos velhos e jovens quanto ao  seus cursos. A maioria dos alunos jovens estão satisfeitos ou muito satisfeitos com o curso ($90,73\%$). Os alunos mais velhos apresentam uma distribuição de opiniões mais uniforme onde a opinião mais popular é a indiferença com $25.62\%$ dos alunos. Há mais alunos velhos com opiniões positivas ($39.56\%$) do que alunos com opiniões negativas ($36.82\%$), então pode-se afirmar que os alunos mais velhos ainda estão mais satisfeitos ou indiferentes com relação ao seu curso. No entanto, diferentemente de antigamente, os alunos jovens estão muito mais satisfeitos que os alunos velhos.
 
-\begin{table}
+\begin{table}[!h]
 \small
 \centering
 \caption{Correlação absoluta de alunos novos e velhos com grau de satisfação com seus cursos.}
 \vspace{0.5em}
 \label{tabela: correlacao idade cursos absoluta}
-\begin{tabular}{l r r r r r}
+\begin{tabular}{l r r r r r r}
 	\toprule
-	\textbf{Alunos}	& \textbf{\specialcell{c}{Muito\\Insatisfeito}} & \textbf{Insatisfeito} & \textbf{Indiferente} & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\Satisfeito}} \\
+	\textbf{Alunos}	& \textbf{\specialcell{c}{Muito\\Insatisfeito}} & \textbf{Insatisfeito} & \textbf{Indiferente} & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\Satisfeito}} & \textbf{Total} \\
 	\midrule
-	Alunos Novos ($< 30$ anos)     & $122$                                         & $15$                  & $5$                  & $111$               & $278$                                      \\
-	Alunos Velhos ($\geq 30$ anos) & $884$                                         & $734$                 & $467$                & $608$               & $757$                                      \\
+	%                                M Ins  & Ins    & Indif  & Satisf  & M Satisf & Total
+	Alunos Jovens ($< 30$ anos)     & $5$    & $15$   & $122$  & $278$   & $1111$   & $1531$  \\
+	Alunos Velhos ($\geq 30$ anos) & $467$  & $734$  & $467$  & $608$   & $757$    & $3450$  \\
+	\textbf{Total}                 & $472$  & $749$  & $1006$ & $1035$  & $1719$   & $4981$  \\
 	\bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!h]
 \small
 \centering
 \caption{Correlação percentual de alunos novos e velhos com grau de satisfação com seus cursos.}
@@ -723,11 +725,19 @@ Em contraste quando o EAD iniciou suas atividades, no estudo atual percebe-se um
 	\toprule
 	\textbf{Alunos}                & \textbf{\specialcell{c}{Muito\\Insatisfeito}} & \textbf{Insatisfeito} & \textbf{Indiferente} & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\Satisfeito}} \\
 	\midrule
-	Alunos Novos ($< 30$ anos)     & $7,97\%$                                      & $0,98\%$              & $0,33\%$             & $72,57\%$           & $18,16\%$                                      \\
-	Alunos Velhos ($\geq 30$ anos) & $25,62\%$                                     & $21,28\%$             & $13,54\%$            & $17,62\%$           & $21,94\%$                                      \\
+	%                              & M Insatisf  & Insatisf   & Indif      & Satisf      &  M Satisf  \\
+	Alunos Jovens ($< 30$ anos)     & $0,33\%$    & $0,98\%$   & $7,97\%$  & $18,16\%$   & $72,57\%$  \\
+	Alunos Velhos ($\geq 30$ anos) & $15.54\%$   & $21,28\%$  & $25,62\%$  & $21.94\%$  & $17.62\%$  \\
 	\bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.6\linewidth]{plots/stacked_opiniao_por_idade.eps}
+	\caption{Gráfico empilhado de \textit{Opinião} por \textit{Faixa Etária}}
+	\label{fig:stacked-opiniao-por-idade}
+\end{figure}
 
 \FloatBarrier
 \section*{Parte 4: Análise em Conjunto de Mais de Duas Variáveis}
