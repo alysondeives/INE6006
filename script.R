@@ -88,8 +88,10 @@ print(cat(paste(parts, collapse=" & ")))
   tb <- tb[orderedOpiniao,,drop=FALSE]
   
   setEPS()
-  postscript("plots/stacked_opiniao_por_regiao.eps")
-  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE, legend.text = TRUE)
+  postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"))
+  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE,
+          )
+  legend("topright", orderedOpiniao,  bty="n", fill=gray.colors(5))
   dev.off();
 #----------------------------------------------------------------------------------------------
 #Questao 10
@@ -103,10 +105,12 @@ print(x)
 
 # Grafico
 x = table(df$Opinião,df$Área)
-colnames(x)
+
 setEPS()
-postscript("plots/stacked_opiniao_por_area.eps")
-barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE, names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."))
+postscript("plots/stacked_opiniao_por_area.eps", fonts = c("serif", "Palatino"))
+barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE, 
+        names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."), 
+        family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
 legend("topleft", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"),  bty="n", fill=gray.colors(5))
 dev.off()
 
