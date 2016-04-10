@@ -454,60 +454,81 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 
 \paragraph{Questão 09}
 
-A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e atual. Por análise conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que concentra avaliações dos alunos em satisfeitos e muito satisfeitos, concentra $45,88\%$ dos alunos.
+A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e na amostra atual. Para análise da variável \textit{Opinião} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
 
-\begin{table}[h]
+Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos ou muito satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que onde os alunos estão majoritariamente satisfeitos ou muito satisfeitos, concentra $45,88\%$ dos 5000 alunos. O gráfico da Figura \ref{fig:stacked-opiniao-por-regiao} mostra visualmente como \baep e \itam mascaram o péssimo resultado de \arat e \para quando a amostra inteira é considerada.
+
+\begin{table}[!h]
 	\centering
 	\caption{Satisfação por região.}
 	\vspace{0.5em}
 	\label{table:satisfacao-regiao}
 	\begin{tabular}{l l l}
 		\toprule
-		Região & Avaliação Antiga & Avaliação Atual                                           \\
+		\textbf{Região} & \textbf{Avaliação Antiga} & \textbf{Avaliação Atual}                \\
 		\midrule
 		\arat  & Muito Insatisfeito & Indiferente ($38,48\%$) e Insatisfeito ($32,15\%$)      \\
 		\baep  & Muito Insatisfeito & Satisfeito ($33,96\%$) e Muito Satisfeito ($38,19\%$)   \\
 		\itam  & Satisfeito         & Muito Satisfeito ($93,94\%$)                            \\
-		\jaqu  & Indiferentes       & Insatisfeito ($33,93\%$) e Muito Satisfeito ($44,03\%$) \\
+		\jaqu  & Indiferentes       & Insatisfeito ($33,93\%$) e Muito Insatisfeito ($44,03\%$) \\
 		\para  & Diversas           & Muito Insatisfeito ($91,74\%$)                          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.75\linewidth]{plots/stacked_opiniao_por_regiao.eps}
+	\caption{Gráfico empilhado de opinião para cada região.}
+	\label{fig:stacked-opiniao-por-regiao}
+\end{figure}
+
+\FloatBarrier
 \paragraph{Questão 10}
 
+De um modo geral, o investimento resultou em uma melhora da avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, e a Figura \ref{fig:stacked-opiniao-por-area} mostra os mesmos dados usando valores absolutos de alunos em um gráfico empilhado. Tanto na Figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variáve \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
-\begin{table}
-\centering
-\begin{tabular}{l r r r r r}
-	\toprule
-	Curso                   & Indiferente & Insatisfeito & \specialcell{c}{Muito\\Insatisfeito} &  \specialcell{c}{Muito\\Satisfeito} & Satisfeito \\
-	\midrule
-	Administração           & $11.04\%$   & $3.57\%$     & $0.34\%$           & $56.37\%$        & $28.69\%$  \\
-	Computação e Matemática & $18.98\%$   & $5.08\%$     & $0.68\%$           & $44.41\%$        & $30.85\%$  \\
-	Educacional             & $1.78\%$    & $0.59\%$     & $0.00\%$           & $89.91\%$        & $7.72\%$   \\
-	Engenharia e Produção   & $27.8\%$    & $14.26\%$    & $3.93\%$           & $27.25\%$        & $26.67\%$  \\
-	Humanidades             & $6.77\%$    & $1.59\%$     & $0.00\%$           & $74.90\%$        & $16.73\%$  \\
-	Jurídica e Contábil     & $23.6\%5$   & $30.17\%$    & $26.45\%$          & $6.45\%$         & $13.29\%$  \\
-	\bottomrule
-\end{tabular}
+Na avaliação antiga  os cursos das áreas \edu e de \hum estavam muito insatisfeitos. Atualmente $89.91\%$ dos alunos da área \edu estão muito satisfeitos e $74.9\%$ dos alunos de \hum estão muitos satisfeitos. Considerando além de muito satisfeitos, os alunos satisfeitos, esses alunos correspondem a $97.63\%$ dos cursos da área \edu e a $91.63\%$ da área \hum.
+
+Na avaliação antiga os cursos de \comp e de \adm elogiavam seus cursos, atualmente essa característica se mantêm. Para os cursos de \comp e os cursos de \adm, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
+
+Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) eram tinham opinião majoritariamente indiferente. Atualmente, essa característica foi alterada. Nos cursos de \eng a quantidade de pessoas satisfeitas ou muito satisfeitas corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$, indicando uma melhora. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos ou muito insatisfeitos é alta, correspondendo a um total de $56.62\%$ do total de alunos, com $23.65\%$ indiferentes e apenas $19.74\%$ satisfeitos ou muito satisfeitos. Os cursos da área  \jur apresentaram uma deterioração no período e devem receber atenção especial. A urgência da tomada de ações para melhorar a opinião dos alunos da área \jur é agravada pelo grande número de alunos nessa área, correspondendo a  $30.18\%$ dos 5000 alunos na amostra.
+
+\begin{table}[!h]
+	\centering
+	\vspace{0.5em}
+	\caption{Opinião por área do conhecimento}
+	\label{table:opiniao-por-area}
+	\begin{tabular}{l r r r r r}
+		\toprule
+		Curso                   & \specialcell{c}{Muito\\Insatisfeito} & Insatisfeito &  Indiferente &  Satisfeito & \specialcell{c}{Muito\\Satisfeito} \\
+		\midrule
+		%                        Muito Ins  & Insatisfeito  & Indiferente & Satisfeito & Muito Satis           
+		Administração           & $0.34\%$   & $3.57\%$     & $11.04\%$   & $28.69\%$  & $56.37\%$  \\
+		Computação e Matemática & $0.68\%$   & $5.08\%$     & $18.98\%$   & $30.85\%$  & $44.41\%$  \\
+		Educacional             & $0\%$      & $0.59\%$     & $1.78\%$    & $7.72\%$   & $89.91\%$  \\
+		Engenharia e Produção   & $3.93\%$   & $14.26\%$    & $27.89\%$   & $26.67\%$  & $27.25\%$  \\
+		Humanidades             & $0\%$      & $1.59\%$     & $6.77\%$    & $16.73\%$  & $74.90\%$  \\
+		Jurídica e Contábil     & $26.45\%$ & $30.17\%$    & $23.65\%$   & $13.29\%$  & $6.45\%$   \\
+		\bottomrule
+	\end{tabular}
 \end{table}
 
-De um modo geral, o investimento resultou em uma melhora da avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para curso de \comp. Portanto, o investimento foi eficaz.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.8\linewidth]{plots/stacked_opiniao_por_area.eps}
+	\caption{Gráfico empilhado de opinião dos alunos por área do curso.}
+	\label{fig:stacked-opiniao-por-area}
+\end{figure}
 
-Na avaliação antiga  os cursos de Educacional e de Humanidades estavam muito insatisfeitos, atualmente $89.91\%$ dos alunos da área Educacional estão muito satisfeitos e $74.9\%$ dos alunos de Humanidades estão muitos satisfeitos.
-
-Na avaliação antiga os cursos de Computação e Matemática e de Administração elogiavam seus cursos, atualmente essa característica se mantêm. Para o curso de Computação e Matemática e o Curso de Administração, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
-
-Na avaliação antiga os demais cursos (Engenharia e Produção e Jurídica e Contábil) eram indiferentes quanto ao grau de satisfação. Atualmente essa característica foi alterada. No curso de Engenharia a quantidade de pessoas satisfeitas e muito satisfeitas corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos é alta, correspondendo a um total de $56.62\%$ do total de alunos. Do restante, $23.65\%$ se manifestaram indiferentes e apenas $19.74\%$ se consideram satisfeitos ou muito satisfeitos.
-
+\FloatBarrier
 \paragraph{Questão 11}
 
-As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}.
+As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra por fonte de pagamento por região, levando em conta o número de alunos em cada região pode ser visualizado na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
-Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova principal fonte de recursos é oriunda de \textit{Financiamento Bancário} ($53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, um observa-se a predominância de uma única fonte de pagamento, sendo para primeira região \textit{Financiamento Bancário}, e para as demais \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, mas não majoritária, de \textit{Incentivos Federais} na fonte de recursos ($47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, mas com fontes predominantes distintas.
+Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova principal fonte de recursos é oriunda de \textit{Financiamento Bancário} ($53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem apenas $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, observa-se a predominância de uma única fonte de pagamento, sendo para primeira região \textit{Financiamento Bancário}, e para as demais \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, mas não majoritária, de \textit{Incentivos Federais} na fonte de recursos ($47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, mas com fontes predominantes distintas.
 
-\begin{table}
+\begin{table}[!h]
 \small
 \caption{Fontes de pagamento para regiões em valores absolutos.}
 \label{tabela: fontes de pagamento absoluto}
@@ -525,7 +546,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[!h]
 \small
 \caption{Fontes de pagamento para regiões em valores percentuais.}
 \label{tabela: fontes de pagamento percentual}
@@ -543,19 +564,28 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{tabular}
 \end{table}
 
-\begin{figure}
-\centering
+\begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.80\linewidth]{plots/q11}
-	\caption{Fontes de pagamento por região.}
+	\caption{Fontes de pagamento, em percentual, por região.}
 	\label{figure: fonte de pagemento}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.65\linewidth]{plots/stacked_pagamento_por_regiao.eps}
+	\caption{Número de alunos por fonte de pagamento por região}
+	\label{fig:fonte de pagamento absoluto}
 \end{figure}
 
 \FloatBarrier
 \paragraph{Questão 12}
 
-A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é mostrada, em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores percentuais, com relação ao número de alunos utilizando determinada fonte, na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. As fontes de recursos podem ser divididas em duas categorias, uma onde o aluno efetivamente paga pelas mensalidades, e outra onde o o aluno não paga. O primeiro grupo é composto por \textit{Financiamento Bancário} e \textit{Recursos próprios}, enquanto o segundo é composto por \textit{Auxílio de Familiares}, \textit{Bolsas de Estudo} e \textit{Incentivos Federais}. Os resultados dessa agregação são exibidos na Tabela \ref{table:pagantes-absoluto} em valores absolutos e percentuais.
+A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é mostrada, em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores relativos ao número de alunos utilizando determinada fonte, na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. Para análise da variável \textit{Opinião} agrupada por \textit{Pagamento} foram ignorados registros com valores indisponíveis em qualquer uma das variáveis. 
 
-A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro de alguém não são tão críticos da EAD quanto os demais, não se confirma. O grupo de alunos pagantes possui avaliações significativamente melhores de seus cursos, com $83.75\%$ dos alunos avaliando os cursos como \textit{Satisfatório} ou \textit{Muito Satisfatório}. Já entre os alunos não-pagantes, apenas $18.29\%$ se declaram \textit{Satisfeitos} ou \textit{Muito Satisfeitos}, enquanto $53.26\%$ dos alunos se declararam \textit{Muito Insatisfeitos} ou \textit{Insatisfeitos} e $36.96\%$ se declaram indiferentes. Os alunos não-pagantes são na verdade o grupo de alunos mais críticos ao EAD da TYU.
+As fontes de recursos podem ser divididas em duas categorias, uma onde o aluno efetivamente paga pelas mensalidades, e outra onde o o aluno não paga. O primeiro grupo é composto por \textit{Financiamento Bancário} e \textit{Recursos próprios}, enquanto o segundo é composto por \textit{Auxílio de Familiares}, \textit{Bolsas de Estudo} e \textit{Incentivos Federais}. Os resultados dessa agregação são exibidos na Tabela \ref{table:pagantes-absoluto} em valores absolutos e percentuais.
+
+A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro de alguém não são tão críticos da EAD quanto os demais, não se confirma. O grupo de alunos pagantes possui avaliações significativamente melhores de seus cursos, com $83.75\%$ dos alunos avaliando os cursos como \textit{Satisfatório} ou \textit{Muito Satisfatório}. Já entre os alunos não-pagantes, apenas $18.29\%$ se declaram \textit{Satisfeitos} ou \textit{Muito Satisfeitos}, enquanto $53.26\%$ dos alunos se declararam \textit{Muito Insatisfeitos} ou \textit{Insatisfeitos} e $36.96\%$ se declaram indiferentes. Os alunos não-pagantes são, na verdade, o grupo de alunos mais críticos ao EAD da TYU.
 
 \begin{figure}
 	\centering
@@ -630,12 +660,9 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 
 \paragraph{Questão 13}
 
-%Considerou-se pobres os alunos que possuem uma renda de até 1.35 salários minimos, alunos intermediarios os que recebem entre 1.35 e 2.73 salarios minimos e como abastados os que recebem acima de 2.73 salarios minimos. Isso foi baseado no quartil inferior e superior dos dados.
-%#Não se observa relação entre o perfil economico dos alunos e seu grau de satisfação com a TYU, visto que a distribuição é similar para qualquer classe.
+Para dividir a amostra em conjuntos de alunos pobres, com renda intermediária, e abastados foram utilizados os quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda superior ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária. Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Para esta análise, registros com valores faltantes nas variáveis \textit{Opinião} ou \textit{Renda} foram desconsiderados.
 
-Para dividir a amostra em conjuntos de alunos pobres, com renda intermediária, e abastados foram utilizados os quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda superior ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária.
-
-Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Observando as proporções na \ref{table:satisfaca-renda}, subjetivamente, não podem ser observadas diferenças significativas entre as avaliações das classes. O perfil dos alunos mais abastados se modificou de majoritariamente indiferente para majoritariamente ($54.8\%$) \textit{Satisfeito} ou \textit{Muito Satisfeito}. O perfil dos alunos com renda intermediária se modificou de majoritariamente insatisfeitos para majoritariamente ($55.30\%$) \textit{Satisfeitos} ou \textit{Muito Satisfeitos}. Finalmente, o perfil dos alunos pobres se modificou de majoritariamente satisfeitos para majoritariamente ($55.5\%$) \textit{satisfeitos} ou \textit{muito satisfeitos}.
+Observando as proporções na Tabela \ref{table:satisfaca-renda}, subjetivamente, não podem ser observadas diferenças significativas entre as avaliações das classes. O perfil dos alunos mais abastados se modificou de majoritariamente indiferente para majoritariamente ($54.8\%$) \textit{Satisfeito} ou \textit{Muito Satisfeito}. O perfil dos alunos com renda intermediária se modificou de majoritariamente insatisfeitos para majoritariamente ($55.30\%$) \textit{Satisfeitos} ou \textit{Muito Satisfeitos}. Finalmente, o perfil dos alunos pobres se modificou de majoritariamente satisfeitos para majoritariamente ($55.5\%$) \textit{satisfeitos} ou \textit{muito satisfeitos}.
 
 \begin{table}[!h]
 	\caption{Satisfação alunos de acordo com classes de renda.}
