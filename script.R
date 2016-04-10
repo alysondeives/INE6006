@@ -160,7 +160,7 @@ print(x)
 # Recursos próprios            31.56        10.74               1.19            22.02      34.48  
 #------------------------------------------------------------------------------------------------
 #Questao 13
-x = sort(df$Renda)
+x = sort(na.omit(df$Renda))
 idx_q1 = (length(x)+1)/4
 q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
 q1_idx = which(x<=q1)
@@ -169,7 +169,7 @@ idx_q3 = (3*(length(x)+1))/4
 q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
 q3_idx = which(x>=q3)
 
-ordered_df = df[order(df$Renda),]
+ordered_df = df[order(na.omit(df$Renda)),]
 ordered_df$Faixa_salarial = "Intermediario"
 ordered_df[q1_idx,]$Faixa_salarial = "Pobres"
 ordered_df[q3_idx,]$Faixa_salarial = "Abastados"
@@ -261,13 +261,17 @@ idx_q3 = (3*(length(x)+1))/4
 q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
 q3_idx = which(df$Renda>=q3)
 
-df$FaixaSalarial = "Intermediario"
+na_idx = which(is.na(df$Renda)) #indices dos valores NA
+df$FaixaSalarial = NA
+df[-c(na_idx),]$FaixaSalarial = "Intermediario"
 df[q1_idx,]$FaixaSalarial = "Pobres"
 df[q3_idx,]$FaixaSalarial = "Abastados"
 
 q16 = ftable(df$FaixaSalarial,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Classe","Região","Opinião"))
+addmargins(q16)
+
 q16l = xtableFtable(q16, method="compact")
-write(print.xtableFtable(q16l,booktabs=TRUE),file="tabs/tab-q16.tex")
+write(print.xtableFtable(q16l,booktabs=TRUE),file="tab-q16.tex")
 print.xtableFtable(q15l,booktabs=TRUE)
 #------------------------------------------------------------------------------------------------
 #Questao 17
