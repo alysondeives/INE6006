@@ -178,10 +178,10 @@ df[q3_idx,]$FaixaSalarial = "Abastados"
 y = table(df$FaixaSalarial,df$Opinião)
 addmargins(y)
 print(y)
-for (i in 1:nrow(x)){
+for (i in 1:nrow(y)){
   y[i,] = y[i,]/sum(y[i,])*100
 }
-print()y
+print(y)
 
 #               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
 # Abastados                    108          202         245        276              417
