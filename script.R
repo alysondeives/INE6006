@@ -160,7 +160,7 @@ print(x)
 # Recursos próprios            31.56        10.74               1.19            22.02      34.48  
 #------------------------------------------------------------------------------------------------
 #Questao 13
-x = sort(na.omit(df$Renda))
+x = sort(df$Renda)
 idx_q1 = (length(x)+1)/4
 q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
 q1_idx = which(x<=q1)
@@ -169,18 +169,19 @@ idx_q3 = (3*(length(x)+1))/4
 q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
 q3_idx = which(x>=q3)
 
-ordered_df = df[order(na.omit(df$Renda)),]
-ordered_df$Faixa_salarial = "Intermediario"
-ordered_df[q1_idx,]$Faixa_salarial = "Pobres"
-ordered_df[q3_idx,]$Faixa_salarial = "Abastados"
+na_idx = which(is.na(df$Renda)) #indices dos valores NA
+df$FaixaSalarial = NA
+df[-c(na_idx),]$FaixaSalarial = "Intermediario"
+df[q1_idx,]$FaixaSalarial = "Pobres"
+df[q3_idx,]$FaixaSalarial = "Abastados"
 
-
-x = table(ordered_df$Faixa_salarial,df$Opinião)
-print(x)
+y = table(df$FaixaSalarial,df$Opinião)
+addmargins(y)
+print(y)
 for (i in 1:nrow(x)){
-  x[i,] = x[i,]/sum(x[i,])*100
+  y[i,] = y[i,]/sum(y[i,])*100
 }
-print(x)
+print()y
 
 #               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
 # Abastados                    108          202         245        276              417
