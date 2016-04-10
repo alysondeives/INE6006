@@ -140,24 +140,27 @@ dev.off()
 #-------------------------------------------------------------------------------------------------
 #Questao 12
 x = table(df$Pagamento,df$Opinião)
-
-#                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-# Auxílio de familiares           95           47                  4               33         78
-# Bolsas de estudo               127           67                 22               37         75
-# Financiamento bancário         192           42                  3             1448        497
-# Incentivos federais            354          509                431               30        118
-# Recursos próprios              238           81                  9              166        260
+addmargins(x)
+#                        Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito  Sum
+# Auxílio de familiares                   4           47          95         78               33  257
+# Bolsas de estudo                       22           67         127         75               37  328
+# Financiamento bancário                  3           42         192        497             1448 2182
+# Incentivos federais                   431          509         354        118               30 1442
+# Recursos próprios                       9           81         238        260              166  754
+# Sum                                   469          746        1006       1028             1714 4963
 
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])
 }
 print(x)
+
 #                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 # Auxílio de familiares        36.96        18.29               1.56            12.84      30.35
 # Bolsas de estudo             38.72        20.43               6.71            11.28      22.87
 # Financiamento bancário        8.80         1.92               0.14            66.36      22.78
 # Incentivos federais          24.55        35.30              29.89             2.08       8.18
 # Recursos próprios            31.56        10.74               1.19            22.02      34.48  
+
 #------------------------------------------------------------------------------------------------
 #Questao 13
 x = sort(df$Renda)
