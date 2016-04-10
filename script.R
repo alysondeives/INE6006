@@ -90,7 +90,7 @@ print(cat(paste(parts, collapse=" & ")))
   setEPS()
   postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"))
   barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE,
-          )
+          family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
   legend("topright", orderedOpiniao,  bty="n", fill=gray.colors(5))
   dev.off();
 #----------------------------------------------------------------------------------------------
