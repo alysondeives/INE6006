@@ -187,6 +187,15 @@ for (i in 1:nrow(y)){
 }
 print(y)
 
+y = table(df$Opinião,df$FaixaSalarial)
+for (i in 1:ncol(y)) {
+  y[,i] = y[,i]/sum(y[,i])*100
+}
+par(xpd=TRUE, mar=c(5, 4, 8, 2) + 0.1)
+barplot(y, width = 1,  xlab = "Faixa", ylab = "Alunos", beside = FALSE, family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+legend(3.7 , 6, rownames(y),  bty="n", fill=gray.colors(length(rownames(y))),  text.font=1, cex = 1.0)
+par(xpd=FALSE, mar=c(5, 4, 4, 2)+0.1)
+
 #               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
 # Abastados                    460          510         222         44               12
 # Intermediario                 12          238         774        886              562
