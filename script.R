@@ -263,6 +263,20 @@ q15l = xtableFtable(q15a, method="compact")
 write(print.xtableFtable(q15l,booktabs=TRUE),file="tab-q15.tex")
 print.xtableFtable(q15l,booktabs=TRUE)
 
+q15p = ftable(df$Área,df$Região,df$Opinião,row.vars=c(1,2),dnn=c("Área","Região","Opinião"))
+for (i in 1:nrow(q15p)) {
+  if (sum(q15p[i,]) == 0) {
+    q15p[i,] = 0
+  } else {
+    q15p[i,] = q15p[i,]/sum(q15p[i,])*100
+  }
+}
+print(q15p)
+q15l = xtableFtable(q15p, method="compact", caption = "Opinião por Área e por Região", label = "tabela:q15", caption.placement = "top")
+write(print.xtableFtable(q15l,booktabs=TRUE, caption.placement = "top", display = c("%.2f\\%", "%.2f\\%", "%.2f\\%", "%.2f\\%")),file="tables/tab-q15p.tex")
+print.xtableFtable(q15l,booktabs=TRUE, display = c("f", "f", "f", "f", "f"))
+
+
 
 # q15b = ftable(df$Área,df$Região,df$Opinião,row.vars=c(2,1),dnn=c("Área","Região","Opinião"))
 # q15bl = xtableFtable(q15b, method="compact")
