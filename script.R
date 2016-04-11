@@ -6,7 +6,7 @@ options(digits = 4, width = 100) #set precision for float values and and chars b
 par(xpd=TRUE,cex.lab=1.5) #set global options for plot
 #----------------------------------------------------------------------------------------------------
 #Read from csv
-df = read.csv(file = "processed.csv",na.strings = c("NA",""," "),header=TRUE)
+df = read.csv(file = "/home/bruno/PPGCC/Metodos Estatisticos/Repositorio Git/INE6006/processed.csv",na.strings = c("NA",""," "),header=TRUE)
 
 #set columns types
 df$Região = as.factor(df$Região)
@@ -107,7 +107,7 @@ print(x)
 x = table(df$Opinião,df$Área)
 
 setEPS()
-postscript("plots/stacked_opiniao_por_area.eps", fonts = c("serif", "Palatino"))
+postscript("/home/bruno/PPGCC/Metodos Estatisticos/Repositorio Git/INE6006/plots/stacked_opiniao_por_area.eps", fonts = c("serif", "Palatino"))
 barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE, 
         names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."), 
         family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
