@@ -315,6 +315,28 @@ addmargins(q16)
 q16l = xtableFtable(q16, method="compact")
 write(print.xtableFtable(q16l,booktabs=TRUE),file="tab-q16.tex")
 print.xtableFtable(q15l,booktabs=TRUE)
+
+#inverte area com regiao
+q16b = ftable(df$FaixaSalarial,df$Região,df$Opinião,row.vars=c(2,1),dnn=c("Classe","Região","Opinião"))
+addmargins(q16b)
+
+q16bl = xtableFtable(q16b, method="compact")
+write(print.xtableFtable(q16bl,booktabs=TRUE),file="tab-q16b.tex")
+print.xtableFtable(q16bl,booktabs=TRUE)
+
+for (i in 1:nrow(q16b)) {
+  if (sum(q16b[i,]) == 0) {
+    q16b[i,] = 0
+  } else {
+    q16b[i,] = q16b[i,]/sum(q16b[i,])*100
+  }
+}
+print(q16b)
+
+q16bl = xtableFtable(q16b, method="compact")
+write(print.xtableFtable(q16bl,booktabs=TRUE),file="tables/tab-q20p.tex")
+print.xtableFtable(q16bl,booktabs=TRUE)
+
 #------------------------------------------------------------------------------------------------
 #Questao 17
 q17a = df[which(df$Região=="Aratibutantã" & df$Idade > 28 & df$Pagamento == "Financiamento bancário"),c("Região","Idade","Pagamento","Opinião")]
