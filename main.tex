@@ -55,15 +55,17 @@
 
 \maketitle
 
+\begin{center}
 \section*{Parte 1: Pré-Análise de Dados}
+\end{center}
 
-\subsection*{Dados Perdidos}
-\label{subsection: dados perdidos}
+\section{Dados Perdidos}
+\label{section:dados-perdidos}
 
 Este relatório considera dados perdidos como aqueles que não puderam ser recuperados por não estarem preenchidos. A Tabela \ref{table: dados perdidos} apresenta a quantidade de dados perdidos e seus respectivos percentuais em relação a cada variável analisada na base de dados em estudo. Constatou-se um total de 106 dados perdidos para todas as variáveis, o que representa apenas $2.12\%$ do total. Pode-se considerar, portanto, como aceitável a quantidade de dados perdidos, uma vez que está abaixo dos $5\%$ definidos como percentual aceitável.
 
-\subsection*{Dados Errados}
-
+\section{Dados Errados}
+\label{section:dados-errados}
 
 A Tabela \ref{table: dados errados} resume os erros de coleta e seus respectivos percentuais na base de dados em estudo. Além de ausência de informação, isto é, os dados perdidos analisados na seção anterior, foram evidenciados erros de ortografia, digitação e formatação (ex: espaços em branco excedentes). 
 
@@ -256,11 +258,13 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{table}
 
 \FloatBarrier
-
 \clearpage
+\begin{center}
 \section*{Parte 2: Análise Individual das Variáveis}
+\end{center}
 
-\subsection*{Variável \textit{Região}}
+\section{Variável \textit{Região}}
+\label{section:regiao}
 
 A tabela frequências para a variável \textit{Região} é apresentada na Tabela \ref{table: frequencias regiao}. A análise indica que as regiões com menor e maior número de alunos são as regiões \textit{\para} e \textit{\baep}, respectivamente. Já as demais regiões apresentam um corpo discente que varia de $10.77\%$ a $23.80\%$.
 
@@ -283,7 +287,8 @@ A tabela frequências para a variável \textit{Região} é apresentada na Tabela
 \end{tabular}
 \end{table}
 
-\subsection*{Variável \textit{Área}}
+\section{Variável \textit{Área}}
+\label{section:area}
 
 A tabela de frequências para a variável \textit{Área} é apresentada na Tabela \ref{table: frequencias area}. O perfil da TYU modificou-se. A análise indica que a área com o maior contingente de alunos é \textit{\eng}, na amostra atual.
 
@@ -307,7 +312,8 @@ A tabela de frequências para a variável \textit{Área} é apresentada na Tabel
 \end{tabular}
 \end{table}
 
-\subsection*{Variável \textit{Pagamento}}
+\section{Variável \textit{Pagamento}}
+\label{section:pagamento}
 
 A tabela de frequências para a variável \textit{Pagamento} á apresentada na Tabela \ref{table: frequencias pagamento}. A análise indica que os recursos usados para pagar as mensalidades do curso são oriundos, em sua maioria, de \textit{Financiamento Bancário} ($43.98\%$) seguido por \textit{Incentivos Federais} ($29.06\%$), somando um total de $73.04\%$. Portanto, cortes no orçamento federal de Pindorama não afetarão a fonte de recursos primária para pagamentos de mensalidades na TYU.
 
@@ -330,7 +336,8 @@ A tabela de frequências para a variável \textit{Pagamento} á apresentada na T
 \end{tabular}
 \end{table}
 
-\subsection*{Variável \textit{Opinião}}
+\section{Variável \textit{Opinião}}
+\label{section:opiniao}
 
 A tabela de frequências para a variável \textit{Opinião} é apresentada na Tabela \ref{table: frequencias opiniao}. A análise indica que opinião predominante na amostra é \textit{Muito Satisfeito} e que o grupo de alunos que mencionaram estarem \textit{Muito satisfeito} ou \textit{Satisfeito} totaliza $55.29\%$. Portanto, pode-se considerar que a maioria dos alunos da TYU estão satisfeitos com a EAD.
 
@@ -353,7 +360,8 @@ A tabela de frequências para a variável \textit{Opinião} é apresentada na Ta
 \end{tabular}
 \end{table}
 
-\subsection*{Variável \textit{Renda}}
+\section{Variável \textit{Renda}}
+\label{section:renda}
 
 Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese renda}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure:histograma-boxplot-renda}. Vale ressaltar que, para fins de estudo, aplicou-se uma transformação nessa variável, utilizando como fator multiplicativo o valor de $R\$880$ (referência salarial em Pindorama). 
 
@@ -416,7 +424,8 @@ A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda ma
 
 \FloatBarrier
 \clearpage
-\subsection*{Variável \textit{Idade}}
+\section{Variável \textit{Idade}}
+\label{section:idade}
 
 Medidas de síntese para a variável \textit{Idade} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável idade é apresentado na Figura \ref{figure:histograma-boxplot-idade}.
 
@@ -470,9 +479,12 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 \end{figure}
 
 \clearpage
+\begin{center}
 \section*{Parte 3: Análise em Conjunto de Duas Variáveis}
+\end{center}
 
-\subsection*{Opinião por Região}
+\section{Opinião por Região}
+\label{section:opiniao-regiao}
 
 A Tabela \ref{table:satisfacao-regiao} apresenta uma análise da variável \textit{Opinião} agrupada por \textit{Região}. Registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual se difere do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
 
@@ -506,9 +518,11 @@ Vale ressaltar que na avaliação atual, $55.29\%$ dos alunos estão satisfeitos
 
 \todo[inline]{Ajustar o eixo do gráfico da Figura \ref{fig:stacked-opiniao-por-regiao}.}
 
-\clearpage
+\clearpage{}
+
 \FloatBarrier
-\subsection*{Opinião por Curso}
+\section{Opinião por Curso}
+\label{section:opiniao-curso}
 
 De um modo geral, o investimento resultou em uma melhora na avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, enquanto a Figura \ref{fig:stacked-opiniao-por-area} apresenta os mesmos dados em um gráfico empilhado usando valores absolutos da quantidade de alunos. Tanto na figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variável \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram igualmente desconsiderados.
 
@@ -549,7 +563,8 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham
 \todo[inline]{Inverter eixos do gráfico da Figura \ref{fig:stacked-opiniao-por-area} para acomodar float nessa página.}
 
 \FloatBarrier
-\subsection*{Pagamento por Região}
+\section{Pagamento por Região}
+\label{section:opiniao-regiao}
 
 As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra de fonte de pagamento por região, levando em conta o número de alunos em cada região, pode ser visualizada na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
@@ -607,7 +622,8 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \todo[inline]{Ajustar eixo vertical do gráfico da Figura \ref{fig:fonte de pagamento absoluto}.}
 
 \FloatBarrier
-\subsection*{Opinião por Pagamento}
+\section{Opinião por Pagamento}
+\label{section:opiniao-pagamento}
 
 A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é apresentada em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores relativos ao número de alunos utilizando determinada fonte na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. Para análise da variável \textit{Opinião} agrupada por \textit{Pagamento} foram ignorados registros com valores indisponíveis em qualquer uma das variáveis. 
 
@@ -655,14 +671,14 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \midrule
 	Auxílio de Familiares  & $1.56\%$    & $18.29\%$    & $36.96\%$   & $30.35\%$  & $12.84\%$  \\
 	Bolsas de Estudo       & $6.71\%$    & $20.43\%$    & $38.72\%$   & $22.87\%$  & $11.28\%$  \\
-	Financiamento Bancário & $0.14\%$    & $1.92\%$     & $8.76\%$    & $22.68\%$  & $66.09\%$  \\
-	Incentivos Federais    & $29.77\%$   & $35.15\%$    & $24.45\%$   & $8.15\%$   & $2.07\%$   \\
-	Recursos Próprios      & $1.19\%$    & $10.69\%$    & $31.40\%$   & $21.90\%$  & $34.30\%$  \\
+	Financiamento Bancário & $0.14\%$    & $1.92\%$     & $8.80\%$    & $22.78\%$  & $66.36\%$  \\
+	Incentivos Federais    & $29.89\%$   & $35.30\%$    & $24.55\%$   & $8.18\%$   & $2.08\%$   \\
+	Recursos Próprios      & $1.19\%$    & $10.74\%$    & $31.56\%$   & $34.48\%$  & $22.02\%$  \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\footnotetext{Valores perdidos não são apresentados, mas são contabilizados no cálculo da porcentagem.}
+%\footnotetext{Valores perdidos não são apresentados, mas são contabilizados no cálculo da porcentagem.}
 
 %           Mins ins   indif sats  Msats   Total
 % Paga      12   123   430   757   1614    2936
@@ -691,7 +707,8 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 
 \FloatBarrier
 
-\subsection*{Opinião por Renda}
+\section{Opinião por Renda}
+\label{section:opiniao-renda}
 
 Para dividir a amostra em conjuntos de alunos pobres, alunos com renda intermediária e alunos abastados foram utilizados os valores dos quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda maior ou igual ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária. Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfacao-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Para esta análise, registros com valores faltantes nas variáveis \textit{Opinião} ou \textit{Renda} foram desconsiderados.
 
@@ -727,7 +744,8 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 	\label{fig:satisfacao-renda}
 \end{figure}
 
-\subsection*{Opinião por Idade}
+\section{Opinião por Idade}
+\label{section:opiniao-idade}
 
 A correlação entre alunos mais velhos com o grau de satisfação em seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura \ref{fig:stacked-opiniao-por-idade} sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos absoluta}.
 
@@ -776,9 +794,12 @@ Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-s
 \end{figure}
 
 \FloatBarrier
+\begin{center}
 \section*{Parte 4: Análise em Conjunto de Mais de Duas Variáveis}
+\end{center}
 
-\paragraph{Questão 15}
+\section{Opinião por Região e Área}
+\label{section:opiniao-regiao-area}
 
 A Tabela \ref{tabela:q15p} apresenta a proporção de alunos para cada nível de satisfação, agrupados por Região e Área do curso, e a tabela \ref{tabela:q15a} apresenta os mesmos dados em valores absolutos. Em contraste, a Tabela \ref{table:opiniao-por-area} da \textbf{Questão 10} apresenta essas proporções apenas por área, ignorando a região. Novamente, na construção da Tabelas \ref{tabela:q15a} e \ref{tabela:q15p} foram desconsiderados registros com valores perdidos em quaisquer uma das três variáveis (\textit{Região}, \textit{Área} e \textit{Opinião}) envolvidas. 
 
@@ -802,11 +823,13 @@ Na área \jur, temos que $56.62\%$ do total de alunos apresentam um grau de insa
 No geral, podemos concluir que os investimentos realizados pela TYU para aumentar a satisfação dos seus alunos em seus cursos surtiram um maior efeito nas regiões de \arat, \baep e \itam. Para os cursos das regiões \jaqu e \para é necessário realizar um maior investimento ou abordar uma nova estratégia para aumentar a satisfação de seus alunos.
 
 \FloatBarrier
-\paragraph{Questão 16}
-A Tabela \ref{tabela:q16p} apresenta a proporção de alunos para cada nível de satisfação, agrupados por Classe de Renda e Região do curso, e a tabela \ref{tabela:q16} apresenta os mesmos dados em valores absolutos. Em contraste, a Tabela \ref{table:satisfaca-renda} da \textbf{Questão 13} apresenta essas proporções apenas por classe de renda, ignorando a região. Os resultados apresentados na \textbf{Questão 13} indicam que os alunos mais abastados estão insatisfeitos com seus cursos, os de renda intermediária são indiferentes e que os mais pobres são mais satisfeitos com seu curso. Ressaltamos que na construção das Tabelas \ref{tabela:q16} e \ref{tabela:q16p} foram desconsiderados registros com valores perdidos em quaisquer uma das três variáveis (\textit{Renda}, \textit{Área} e \textit{Opinião}) envolvidas. 
+\section{Opinião por Renda e Área}
+\label{section:opiniao-renda-area}
+
+A Tabela \ref{tabela:q16p} apresenta a proporção de alunos para cada nível de satisfação, agrupados por Classe de Renda e Região do curso, e a tabela \ref{tabela:q16} apresenta os mesmos dados em valores absolutos. Em contraste, a Tabela \ref{table:satisfaca-renda} da Seção \ref{section:opiniao-renda} apresenta essas proporções apenas por classe de renda, ignorando a região. Os resultados apresentados na \textbf{Questão 13} indicam que os alunos mais abastados estão insatisfeitos com seus cursos, os de renda intermediária são indiferentes e que os mais pobres são mais satisfeitos com seu curso. Ressaltamos que na construção das Tabelas \ref{tabela:q16} e \ref{tabela:q16p} foram desconsiderados registros com valores perdidos em quaisquer uma das três variáveis (\textit{Renda}, \textit{Área} e \textit{Opinião}) envolvidas. 
 
 \input{tables/tab-q16.tex}
-%\input{tables/tab-q16p.tex}
+\input{tables/tab-q16p.tex}
 
 De acordo com as tabelas \ref{tabela:q16} e \ref{tabela:q16p}, dos alunos que são mais abastados, os que pertencem as regiões \arat, \baep, \jaqu e \para são majoriamente insatisfeitos ou muito insatisfeitos, correspondendo à $71.65\%$, $44.52\%$, $90.36\%$ e $100\%$, respectivamente. Apenas os alunos da região \itam estão muito satisfeitos, porém eles correspondem à apenas $0.32\%$ da quantidade total de alunos abastados.
 
@@ -814,12 +837,15 @@ Para os alunos de renda intermediária, nas cidades de \arat são em sua maioria
 
 Para os alunos pobres, observa-se que eles são, praticamente, satisfeitos ou muitos satisfeitos com os seus cursos. Nas cidades de \baep e \itam menos de $1\%$ de todos os alunos pobres são indiferentes. Portanto, pode-se concluir que, assim como indicado na \textbf{Questão 13}, os alunos mais pobres são satisfeitos ou muitos satisfeitos com seus cursos, independente da sua região. 
 
+\begin{center}
 \section*{Parte 5: Recomendações para o Cliente}
+\end{center}
 
 \FloatBarrier
-\paragraph{Questão 17}
+\section{Recomendação para o Cliente: Estimativa}
+\label{section:estimativa}
 
-Para avaliar a opinião dos alunos de EAD da TYU de acordo com as variáveis \textit{Região}, \textit{Idade} e \textit{Pagamento}, pode-se construir uma tabela de frequência das opiniões relacionados aos valores filtrados das variáveis em questão. Para apresentação visual, gráficos de setores para cada conjunto de alunos são mais adequados. Conforme detalhado a seguir, em comparação com os dados da Tabela \ref{table: frequencias opiniao} da \textbf{Questão 06}, o grupo de \textit{\arat} apresenta uma quantidade expressiva de alunos indiferentes, enquanto os grupos de \textit{\jaqu} e \textit{\para} apresentam proporções significativas de alunos insatisfeitos.
+Para avaliar a opinião dos alunos de EAD da TYU de acordo com as variáveis \textit{Região}, \textit{Idade} e \textit{Pagamento}, pode-se construir uma tabela de frequência das opiniões relacionados aos valores filtrados das variáveis em questão. Para apresentação visual, gráficos de setores para cada conjunto de alunos são mais adequados. Conforme detalhado a seguir, em comparação com os dados da Tabela \ref{table: frequencias opiniao} da Seção \ref{section:opiniao}, o grupo de \textit{\arat} apresenta uma quantidade expressiva de alunos indiferentes, enquanto os grupos de \textit{\jaqu} e \textit{\para} apresentam proporções significativas de alunos insatisfeitos.
 
 \paragraph{(a)} A Tabela \ref{table:opiniao-28anos-finBancario} apresenta as frequências dos valores de \textit{Opinião} dos alunos de \arat, com \textit{Idade} maior de 28 anos e \textit{Pagamento} do tipo \textit{Financiamento Bancário}. O gráfico de setores da Figura \ref{fig:opiniao-28anos-finBancario} mostra a porcentagem dos valores da variável \textit{Opinião} com ao menos uma ocorrência.
 Foi observado que $41.91\%$ dos alunos são indiferentes e que os alunos Satisfeitos e Muito Satisfeitos, juntos, somam $42.65\%$ do total de alunos. Os alunos insatisfeitos contabilizam apenas $15.44\%$ do total.
@@ -914,9 +940,10 @@ Pode-se observar que $92.24\%$ dos alunos estão muito insatisfeitos e $7.76\%$ 
 	\label{fig:opiniao-28anos-incFederaiso}
 \end{figure}
 
-\FloatBarrier
-\paragraph{Questão 18}
-Outras variáveis necessárias para caracterizar adequadamente a opinião dos alunos de EAD da TYU são  ``Gênero'' e ``Rendimento do aluno'' no curso.
+\FloatBarrier{}
+\section{Recomendações para o Cliente: Outras variáveis}
+\label{section:outras-variaveis}
+Outras variáveis necessárias para caracterizar adequadamente a opinião dos alunos de EAD da TYU são  ``Gênero'' e "Rendimento do aluno" no curso.
 
 % eu não concordo com algumas coisas que escrevi, não me odeiem
 O Gênero tem sido uma variável popular e presente em diversos estudos disponíveis ao público. 
@@ -941,7 +968,8 @@ O rendimento acadêmico do aluno pode ser usado para identificar a necessidade d
 % \input{tables/tab-q20p.tex}
 
 \FloatBarrier
-\paragraph{Questão 19}
+\section{Recomendação para o Cliente: Sugestão de Análises}
+\label{section:sugestao}
 
 Uma análise que poderia ser feita é a relação entre \textbf{Renda}, \textbf{Área} e \textbf{Opinião}. Assim seria possível complementar a análise da \textbf{Questão 10} verificando se a área com alunos mais 
 insatisfeitos está relacionada com alunos mais abastados.
@@ -950,12 +978,13 @@ Uma segunda análise seria a relação entre \textbf{Área} e \textbf{Pagamento}
 possível verificar se a forma de pagamento predominante de cada área está relacionada com a opinião dos alunos.
 
 \FloatBarrier
-\paragraph{Questão 20}
+\section{Recomendação para o Cliente: Análises Sugeridas}
+\label{section:analises}
 
 \paragraph{a}{\textbf{Área x Renda x Opinião}}
 
-Com a análise das Tabelas \ref{tab:q20a1} e \ref{tab:q20a2} é possível observar que na área da \textbf{Administração} os alunos mais abastados estão mais insatisfeitos (44.44\%), seguido por 
-indiferentes (37.04\%). Os intermediários são mais satisfeitos (46.71\%) e muito satisfeitos (33.54\%), enquanto os pobres estão muito satisfeitos (92.53\%) e satisfeitos (7.05\%).
+Com a análise das Tabelas \ref{tab:q20a1} e \ref{tab:q20a2} é possível observar que na área da \adm os alunos mais abastados estão mais insatisfeitos ($44.44\%$), seguido por 
+indiferentes (37.04\%). Os intermediários são mais satisfeitos ($46.71\%$) e muito satisfeitos ($33.54\%$), enquanto os pobres estão muito satisfeitos ($92.53\%$) e satisfeitos ($7.05\%$).
 
 Na área da \textbf{Computação e Matemática}, os mais abastados são indiferentes (34.62\%) e insatisfeitos (26.92\%). Já os intermediários são mais satisfeitos (40.96\%) e muito satisfeito (30.85\%) e 
 os pobres são muito satisfeitos (87.65\%) e satisfeitos (9.88\%).
