@@ -68,6 +68,11 @@ print(cat(paste(parts, collapse=" & ")))
   plot(data.freq,xpd=TRUE,xlab = "Renda (R$)", ylab="Frequência",ylim=c(0,50),log="x")
   dev.off();
   
+  setEPS()
+  postscript("plots/boxplot_renda_log.eps", fonts = c("serif", "Palatino"))
+  boxplot(df$Renda, log = "y", family = "serif", font=1, cex.axis = 1.3)
+  dev.off()
+  
   #postscript("histogram2_renda.eps")
   #barplot(data.freq,xpd=TRUE,xlab = "Renda (R$)", ylab="Frequência",ylim=c(0,50))
   #dev.off();
@@ -80,6 +85,11 @@ print(cat(paste(parts, collapse=" & ")))
   setEPS()
   postscript("plots/histogram_idade_log.eps")
   plot(data.freq,xpd=TRUE,xlab = "Idade", ylab="Frequência")
+  dev.off();
+  
+  setEPS()
+  postscript("plots/boxplot_idade.eps", fonts = c("serif", "Palatino"))
+  boxplot(df$Idade, family = "serif", font=1, cex.axis=1.2)
   dev.off();
 #-----------------------------------------------------------------------------------------------
 #Questao 9
