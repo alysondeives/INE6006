@@ -166,11 +166,11 @@ print(x)
 x = sort(df$Renda)
 idx_q1 = (length(x)+1)/4
 q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
-q1_idx = which(x<=q1)
+q1_idx = which(df$Renda<=q1)
 
 idx_q3 = (3*(length(x)+1))/4
 q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
-q3_idx = which(x>=q3)
+q3_idx = which(df$Renda>=q3)
 
 na_idx = which(is.na(df$Renda)) #indices dos valores NA
 df$FaixaSalarial = NA
@@ -188,18 +188,17 @@ for (i in 1:nrow(y)){
 print(y)
 
 #               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
-# Abastados                    108          202         245        276              417
-# Intermediario                234          369         505        499              874
-# Pobres                       130          178         256        260              428
+# Abastados                    460          510         222         44               12
+# Intermediario                 12          238         774        886              562
+# Pobres                         0            0           6        102             1139
 
-#Percentuais
 #               Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
-# Abastados                    8.7         16.2        19.6       22.1             33.4
-# Intermediario                9.4         14.9        20.4       20.1             35.2
-# Pobres                      10.4         14.2        20.4       20.8             34.2
+# Abastados                36.8590      40.8654     17.7885     3.5256           0.9615
+# Intermediario             0.4854       9.6278     31.3107    35.8414          22.7346
+# Pobres                    0.0000       0.0000      0.4812     8.1796          91.3392
 
 #Considerou-se pobres os alunos que possuem uma renda de até 1.35 salários minimos, alunos intermediarios os que recebem entre 1.35 e 2.73 salarios minimos e como abastados os que recebem acima de 2.73 salarios minimos. Isso foi baseado no quartil inferior e superior dos dados.
-#Não se observa relação entre o perfil economico dos alunos e seu grau de satisfação com a TYU, visto que a distribuição é similar para qualquer classe.
+#Observa-se que abastados sao mais insatisfeitos, intermediario eh indiferente e satisfeito e pobres sao muito satisfeitos.
 
 #-----------------------------------------------------------------------------------------------
 #Questao 14
