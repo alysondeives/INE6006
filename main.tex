@@ -461,15 +461,17 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 \end{minipage}
 \end{figure}
 
+\clearpage
 \section*{Parte 3: Análise em Conjunto de Duas Variáveis}
 
-\paragraph{Questão 09}
+\subsection*{Opinião por Região}
 
-A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e na amostra atual. Para análise da variável \textit{Opinião} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual se difere do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
+A Tabela \ref{table:satisfacao-regiao} apresenta uma análise da variável \textit{Opinião} agrupada por \textit{Região}. Registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual se difere do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
 
 Vale ressaltar que na avaliação atual, $55.29\%$ dos alunos estão satisfeitos ou muito satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação, (\arat e \para), contém apenas $26.12\%$ dos alunos. Adicionalmente, \baep, onde os alunos estão majoritariamente satisfeitos ou muito satisfeitos, concentra $45.88\%$ dos 5000 alunos. O gráfico da Figura \ref{fig:stacked-opiniao-por-regiao} mostra visualmente como \baep e \itam mascaram o péssimo resultado de \arat e \para quando a amostra inteira é considerada.
 
 \begin{table}[!h]
+	\small
 	\centering
 	\caption{Satisfação por região.}
 	\vspace{0.5em}
@@ -494,8 +496,9 @@ Vale ressaltar que na avaliação atual, $55.29\%$ dos alunos estão satisfeitos
 	\label{fig:stacked-opiniao-por-regiao}
 \end{figure}
 
+\clearpage
 \FloatBarrier
-\paragraph{Questão 10}
+\subsection*{Opinião por Curso}
 
 De um modo geral, o investimento resultou em uma melhora na avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, enquanto a Figura \ref{fig:stacked-opiniao-por-area} apresenta os mesmos dados em um gráfico empilhado usando valores absolutos da quantidade de alunos. Tanto na figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variável \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram igualmente desconsiderados.
 
@@ -506,13 +509,14 @@ Na avaliação antiga dos cursos de \comp e de \adm, os alunos elogiaram seus cu
 Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham opinião majoritariamente indiferente. Todavia, esta característica foi alterada na recente pesquisa. A quantidade de alunos satisfeitos ou muito satisfeitos nos cursos de \eng corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$, indicando uma melhora. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos ou muito insatisfeitos é alto, correspondendo a um total de $56.62\%$ do total de alunos do curso, com $23.65\%$ indiferentes e apenas $19.74\%$ satisfeitos ou muito satisfeitos. Os cursos da área  \jur apresentaram uma deterioração no período e devem receber atenção especial. A urgência da tomada de ações para melhorar a opinião dos alunos da área \jur é agravada pelo grande número de alunos nessa área, correspondendo a  $30.18\%$ do total de 5000 alunos na amostra.
 
 \begin{table}[!h]
+	\small
 	\centering
 	\vspace{0.5em}
 	\caption{Opinião por área do conhecimento}
 	\label{table:opiniao-por-area}
 	\begin{tabular}{l r r r r r}
 		\toprule
-		Curso                   & \specialcell{c}{Muito\\Insatisfeito} & Insatisfeito &  Indiferente &  Satisfeito & \specialcell{c}{Muito\\Satisfeito} \\
+		\textbf{Curso}                   & \textbf{\specialcell{c}{Muito\\Insatisfeito}} & \textbf{Insatisfeito} &  \textbf{Indiferente} &  \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\Satisfeito}} \\
 		\midrule
 		%                        Muito Ins  & Insatisfeito  & Indiferente & Satisfeito & Muito Satis           
 		Administração           & $0.34\%$   & $3.57\%$     & $11.04\%$   & $28.69\%$  & $56.37\%$  \\
@@ -527,20 +531,20 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.8\linewidth]{plots/stacked_opiniao_por_area.eps}
+	\includegraphics[width=.7\linewidth]{plots/stacked_opiniao_por_area.eps}
 	\caption{Gráfico empilhado de opinião dos alunos por área do curso.}
 	\label{fig:stacked-opiniao-por-area}
 \end{figure}
 
 \FloatBarrier
-\paragraph{Questão 11}
+\subsection*{Pagamento por Região}
 
 As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra de fonte de pagamento por região, levando em conta o número de alunos em cada região, pode ser visualizada na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
 Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova fonte de recursos principal é oriunda de \textit{Financiamento Bancário} (representando $53.01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem apenas $15.08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, observa-se a predominância de uma única fonte de pagamento, sendo para \itam o \textit{Financiamento Bancário}, e para as demais regiões \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, embora não majoritária, de \textit{Incentivos Federais} na fonte de recursos (representando $47.51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, porém com fontes predominantes distintas.
 
 \begin{table}[!h]
-\small
+\footnotesize
 \caption{Fontes de pagamento para regiões em valores absolutos.}
 \label{tabela: fontes de pagamento absoluto}
 \vspace{0.5em}
@@ -550,7 +554,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 	\midrule
 	Auxílio de Familiares  & $97$       & $131$  & $10$   & $17$  & $1$    \\
 	Bolsas de Estudo       & $116$      & $159$  & $7$    & $43$  & $2$    \\
-	Financiamento Bancário & $180$      & $1216$ & $767$  & $20$  & $0$    \\
+	Fin. Bancário & $180$      & $1216$ & $767$  & $20$  & $0$    \\
 	Incentivos Federais    & $563$      & $346$  & $3$    & $411$ & $116$  \\
 	Recursos Próprios      & $226$      & $433$  & $53$   & $43$  & $1$    \\
 	\bottomrule
@@ -558,8 +562,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{table}
 
 \begin{table}[!h]
-\small
-\caption{Fontes de pagamento para regiões em valores percentuais.}
+\footnotesize\caption{Fontes de pagamento para regiões em valores percentuais.}
 \label{tabela: fontes de pagamento percentual}
 \vspace{0.5em}
 \begin{tabular}{l r r r r r}
@@ -568,7 +571,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 	\midrule
 	Auxílio de Familiares       & $8.19\%$           & $5.71\%$         & $1.19\%$         & $3.17\%$       & $0.83\%$  \\
 	Bolsas de Estudo            & $9.79\%$           & $6.93\%$         & $0.83\%$         & $8.02\%$       & $1.65\%$  \\
-	Financiamento Bancário      & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
+	Fin. Bancário      & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
 	Incentivos Federais         & $47.51\%$          & $15.08\%$        & $0.36\%$         & $76.68\%$      & $95.87\%$ \\
 	Recursos Próprios           & $19.07\%$          & $18.88\%$        & $6.29\%$         & $8.02\%$       & $0.83\%$  \\
 	\bottomrule
@@ -590,7 +593,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{figure}
 
 \FloatBarrier
-\paragraph{Questão 12}
+\subsection*{Opinião por Pagamento}
 
 A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é apresentada em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores relativos ao número de alunos utilizando determinada fonte na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. Para análise da variável \textit{Opinião} agrupada por \textit{Pagamento} foram ignorados registros com valores indisponíveis em qualquer uma das variáveis. 
 
@@ -613,11 +616,11 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \vspace{0.5em}
 \begin{tabular}{l rrrrrr}
 \toprule
-	\textbf{\specialcell{c}{Fonte de\\Pagamento}}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}    & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} & \textbf{Total} \\
+	\textbf{\specialcell{c}{Fonte Pagamento}}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}    & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} & \textbf{Total} \\
 \midrule
 	Auxílio de Familiares  & $4$      & $47$   & $95$   & $78$   & $33$   &\textbf{257}\\
 	Bolsas de Estudo       & $22$     & $67$   & $127$  & $75$   & $37$   &\textbf{328}\\
-	Financiamento Bancário & $3$      & $42$   & $192$  & $497$  & $1448$ &\textbf{2182}\\
+	Fin. Bancário & $3$      & $42$   & $192$  & $497$  & $1448$ &\textbf{2182}\\
 	Incentivos Federais    & $431$    & $509$  & $354$  & $118$  & $30$   &\textbf{1442}\\
 	Recursos Próprios      & $9$      & $81$   & $238$  & $260$  & $166$  &\textbf{754}\\
 \midrule
@@ -674,7 +677,7 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 
 \FloatBarrier
 
-\paragraph{Questão 13}
+\subsection*{Opinião por Renda}
 
 Para dividir a amostra em conjuntos de alunos pobres, alunos com renda intermediária e alunos abastados foram utilizados os valores dos quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda maior ou igual ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária. Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Para esta análise, registros com valores faltantes nas variáveis \textit{Opinião} ou \textit{Renda} foram desconsiderados.
 
@@ -710,7 +713,7 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 	\label{fig:satisfacao-renda}
 \end{figure}
 
-\paragraph{Questão 14}
+\subsection*{Opinião por Idade}
 
 A correlação entre alunos mais velhos com o grau de satisfação em seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura \ref{fig:stacked-opiniao-por-idade} sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos absoluta}.
 
