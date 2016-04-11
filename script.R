@@ -96,7 +96,7 @@ print(cat(paste(parts, collapse=" & ")))
 #----------------------------------------------------------------------------------------------
 #Questao 10
 x = table(df$Área,df$Opinião)
-x <- x[,orderedOpiniao,drop=FALSE]
+#x <- x[,orderedOpiniao,drop=FALSE]
 for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])*100
 }
@@ -114,13 +114,13 @@ barplot(x, xlab = "Área", ylab = "Alunos", beside = FALSE, legend.text = FALSE,
 legend("topleft", c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito"),  bty="n", fill=gray.colors(5))
 dev.off()
 
-#                          Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
-#  Administração                 11.04         3.57               0.34            56.37      28.69
-#  Computação e Matemática       18.98         5.08               0.68            44.41      30.85
-#  Educacional                    1.78         0.59               0.00            89.91       7.72
-#  Engenharia e Produção         27.89        14.26               3.93            27.25      26.67
-#  Humanidades                    6.77         1.59               0.00            74.90      16.73
-#  Jurídica e Contábil           23.65        30.17              26.45             6.45      13.29
+#                         Muito insatisfeito Insatisfeito Indiferente Satisfeito Muito satisfeito
+# Administração                         0.34         3.57       11.04      28.69            56.37
+# Computação e Matemática               0.68         5.08       18.98      30.85            44.41
+# Educacional                           0.00         0.59        1.78       7.72            89.91
+# Engenharia e Produção                 3.93        14.26       27.89      26.67            27.25
+# Humanidades                           0.00         1.59        6.77      16.73            74.90
+# Jurídica e Contábil                  26.45        30.17       23.65      13.29             6.45
 
 # Na avaliação antiga  os cursos de Educacional e de Humanidades estavam muito insatisfeitos, atualmente 89.91% dos alunos da área Educacional estão muito satisfeitos e 74.9% dos alunos de Humanidades estão muitos satisfeitos.
 # Na avaliação antiga os cursos de Computação e Matématica e de Administração elogiavam seus cursos, atualmente essa característica se mantem. Para o curso de Computação 44.1% estão muito satisfeitos e 30.85% estão satisfeitos e para o curso de Administração 56.37% estão muito satisfeitos e 28.69% estão satisfeitos.
