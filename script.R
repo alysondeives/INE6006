@@ -315,28 +315,6 @@ addmargins(q16)
 q16l = xtableFtable(q16, method="compact")
 write(print.xtableFtable(q16l,booktabs=TRUE),file="tab-q16.tex")
 print.xtableFtable(q15l,booktabs=TRUE)
-
-#inverte area com regiao
-q16b = ftable(df$FaixaSalarial,df$Região,df$Opinião,row.vars=c(2,1),dnn=c("Classe","Região","Opinião"))
-addmargins(q16b)
-
-q16bl = xtableFtable(q16b, method="compact")
-write(print.xtableFtable(q16bl,booktabs=TRUE),file="tab-q16b.tex")
-print.xtableFtable(q16bl,booktabs=TRUE)
-
-for (i in 1:nrow(q16b)) {
-  if (sum(q16b[i,]) == 0) {
-    q16b[i,] = 0
-  } else {
-    q16b[i,] = q16b[i,]/sum(q16b[i,])*100
-  }
-}
-print(q16b)
-
-q16bl = xtableFtable(q16b, method="compact")
-write(print.xtableFtable(q16bl,booktabs=TRUE),file="tables/tab-q20p.tex")
-print.xtableFtable(q16bl,booktabs=TRUE)
-
 #------------------------------------------------------------------------------------------------
 #Questao 17
 q17a = df[which(df$Região=="Aratibutantã" & df$Idade > 28 & df$Pagamento == "Financiamento bancário"),c("Região","Idade","Pagamento","Opinião")]
@@ -350,3 +328,40 @@ summary(q17a)
 # Paranapitanga:  0   3rd Qu.:34   Recursos próprios     :  0   Satisfeito        :47  
 #                     Max.   :66
 #-------------------------------------------------------------------------------------------------
+#Questao 20
+x = sort(df$Renda)
+idx_q1 = (length(x)+1)/4
+q1 = mean(x[floor(idx_q1)],x[ceiling(idx_q1)])
+q1_idx = which(df$Renda<=q1)
+
+idx_q3 = (3*(length(x)+1))/4
+q3 = mean(x[floor(idx_q3)],x[ceiling(idx_q3)])
+q3_idx = which(df$Renda>=q3)
+
+na_idx = which(is.na(df$Renda)) #indices dos valores NA
+df$FaixaSalarial = NA
+df[-c(na_idx),]$FaixaSalarial = "Intermediario"
+df[q1_idx,]$FaixaSalarial = "Pobres"
+df[q3_idx,]$FaixaSalarial = "Abastados"
+
+#inverte area com regiao
+q20 = ftable(df$Área,df$FaixaSalarial,df$Opinião,row.vars=c(1,2),dnn=c("Área","Classe","Opinião"))
+addmargins(q20)
+
+q20l = xtableFtable(q20, method="compact")
+write(print.xtableFtable(q20l,booktabs=TRUE),file="tables/tab-q20.tex")
+print.xtableFtable(q20l,booktabs=TRUE)
+
+#percentual
+for (i in 1:nrow(q20)) {
+  if (sum(q20[i,]) == 0) {
+    q20[i,] = 0
+  } else {
+    q20[i,] = q20[i,]/sum(q20[i,])*100
+  }
+}
+print(q20)
+
+q20pl = xtableFtable(q20, method="compact")
+write(print.xtableFtable(q20pl,booktabs=TRUE),file="tables/tab-q20p.tex")
+print.xtableFtable(q20pl,booktabs=TRUE)
