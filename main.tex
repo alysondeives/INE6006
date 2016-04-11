@@ -55,17 +55,13 @@
 
 \paragraph{Questão 01}
 
-A Tabela \ref{table: dados perdidos} apresenta a quantidade de dados perdidos (aqueles que não puderam ser recuperados por não estarem preenchidos) e seus respectivos percentuais em relação a cada variável analisada na base de dados em estudo. Foi observado um total de 106 dados perdidos para todas as variáveis, o que representa apenas $2.12\%$ do total. Pode-se considerar, portanto, como aceitável, uma vez que está abaixo dos $5\%$ definidos como percentual aceitável de dados perdidos.
+Este relatório considera dados perdidos como aqueles que não puderam ser recuperados por não estarem preenchidos. A Tabela \ref{table: dados perdidos} apresenta a quantidade de dados perdidos e seus respectivos percentuais em relação a cada variável analisada na base de dados em estudo. Foi observado um total de 106 dados perdidos para todas as variáveis, o que representa apenas $2.12\%$ do total. Pode-se considerar, portanto, como aceitável, uma vez que está abaixo dos $5\%$ definidos como percentual aceitável de dados perdidos.
 
 
 
-%
-% Dúvidas:
-%   Devemos detalhar quis os erros (ex: Arábia, Araba)?
-%
 \paragraph{Questão 02}
 
-A Tabela \ref{table: dados errados} resume os erros de coleta e seus respectivos percentuais na base de dados em estudo. Além de ausência de informação (conforme já mencionado na \textbf{Questão 01}), foram evidenciados erros de ortografia, digitação e formatação (ex: espaços em branco excedentes). 
+A Tabela \ref{table: dados errados} resume os erros de coleta e seus respectivos percentuais na base de dados em estudo. Além de ausência de informação (conforme já mencionado na \textbf{Questão 01}), foram evidenciados erros de ortografia, digitação e formatação (ex: espaços em branco excedentes no texto). 
 
 As Tabelas \ref{table: erros-regiao}, \ref{table: erros-area}, \ref{table: erros-pagamento} e \ref{table: erros-opiniao} apresentam os erros observados para as variáveis qualitativas \textit{Região}, \textit{Área}, \textit{Pagamento} e \textit{Opinião}, respectivamente.
 Para as variáveis quantitativas \textit{Renda} e \textit{Idade}, não foram observados erros na base de dados, isto é, valores infactíveis (ex: \textit{Renda} não positiva e \textit{Idade} inferior a 17 ou superior a 100 anos).
@@ -254,7 +250,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \clearpage
 \section*{Parte 2: Análise Individual das Variáveis}
 
-Nessa segunda parte é apresentada uma análise individual das variáveis da amostra. Para o estudo das variáveis qualitativas (\textit{Região}, \textit{Área}, \textit{Pagamento} e \textit{Opinião}) utilizou-se a tabela de frequências. Já para análise das variáveis quantitativas, fez-se o uso de medidas de síntese e histogramas.
+Nessa segunda parte, os erros de registro foram corrigidos de modo a ser apresentada uma análise mais efetiva das variáveis da amostra. Para o estudo das variáveis qualitativas (\textit{Região}, \textit{Área}, \textit{Pagamento} e \textit{Opinião}) utilizou-se a tabela de frequências. Já para análise das variáveis quantitativas, fez-se o uso de medidas de síntese e histogramas.
 
 \subsection*{Variável \textit{Região}}
 
@@ -401,7 +397,7 @@ A análise indica que pelo menos três três quartos dos alunos de EAD da TYU ai
 \clearpage
 \subsection*{Variável \textit{Idade}}
 
-Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure: histograma idade}.
+Medidas de síntese para a variável \textit{Idade} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável idade é apresentado na Figura \ref{figure: histograma idade}.
 
 A análise indica que a maioria dos alunos de EAD na TYU possuem mais de $30$ anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61,4\%$. Fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
 
@@ -454,9 +450,9 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 
 \paragraph{Questão 09}
 
-A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e na amostra atual. Para análise da variável \textit{Opinião} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual difere-se do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
+A Tabela \ref{table:satisfacao-regiao} apresenta a satisfação por região na avaliação antiga e na amostra atual. Para análise da variável \textit{Opinião} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados. Identificando as opiniões que compõem mais de 50\% da amostra para cada região, conclui-se que o perfil atual se difere do antigo. Para as regiões \jaqu e \para, observou-se que a avaliação dos alunos piorou. Já para as demais regiões, percebeu-se uma melhoria na avaliação. 
 
-Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos ou muito satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação (\arat e \para) contém apenas $26,12\%$ dos alunos. Adicionalmente \baep, que onde os alunos estão majoritariamente satisfeitos ou muito satisfeitos, concentra $45,88\%$ dos 5000 alunos. O gráfico da Figura \ref{fig:stacked-opiniao-por-regiao} mostra visualmente como \baep e \itam mascaram o péssimo resultado de \arat e \para quando a amostra inteira é considerada.
+Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos ou muito satisfeitos. No entanto, os \textit{campi} que concentram as maiores taxas de insatisfação, (\arat e \para), contém apenas $26,12\%$ dos alunos. Adicionalmente, \baep, onde os alunos estão majoritariamente satisfeitos ou muito satisfeitos, concentra $45,88\%$ dos 5000 alunos. O gráfico da Figura \ref{fig:stacked-opiniao-por-regiao} mostra visualmente como \baep e \itam mascaram o péssimo resultado de \arat e \para quando a amostra inteira é considerada.
 
 \begin{table}[!h]
 	\centering
@@ -486,13 +482,13 @@ Vale ressaltar que na avaliação atual, $55,29\%$ dos alunos estão satisfeitos
 \FloatBarrier
 \paragraph{Questão 10}
 
-De um modo geral, o investimento resultou em uma melhora da avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, e a Figura \ref{fig:stacked-opiniao-por-area} mostra os mesmos dados usando valores absolutos de alunos em um gráfico empilhado. Tanto na Figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variáve \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
+De um modo geral, o investimento resultou em uma melhora na avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, enquanto a Figura \ref{fig:stacked-opiniao-por-area} apresenta os mesmos dados em um gráfico empilhado usando valores absolutos da quantidade de alunos. Tanto na figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variável \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram igualmente desconsiderados.
 
-Na avaliação antiga  os cursos das áreas \edu e de \hum estavam muito insatisfeitos. Atualmente $89.91\%$ dos alunos da área \edu estão muito satisfeitos e $74.9\%$ dos alunos de \hum estão muitos satisfeitos. Considerando além de muito satisfeitos, os alunos satisfeitos, esses alunos correspondem a $97.63\%$ dos cursos da área \edu e a $91.63\%$ da área \hum.
+Na avaliação antiga, os alunos dos cursos das áreas \edu e de \hum estavam muito insatisfeitos. Atualmente, $89.91\%$ dos alunos da área \edu estão muito satisfeitos e $74.9\%$ dos alunos de \hum estão muitos satisfeitos. Considerando os alunos que se disseram muito satisfeitos ou apenas satisfeitos com o curso, estes correspondem a $97.63\%$ dos cursos da área \edu e a $91.63\%$ da área \hum.
 
-Na avaliação antiga os cursos de \comp e de \adm elogiavam seus cursos, atualmente essa característica se mantêm. Para os cursos de \comp e os cursos de \adm, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
+Na avaliação antiga dos cursos de \comp e de \adm, os alunos elogiaram seus cursos, mantendo esta carcterística atualmente. Para os cursos de \comp e \adm, $75,26\%$ e $85.09\%$ dos alunos reportaram estarem satisfeitos ou muito satisfeitos, respectivamente.
 
-Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) eram tinham opinião majoritariamente indiferente. Atualmente, essa característica foi alterada. Nos cursos de \eng a quantidade de pessoas satisfeitas ou muito satisfeitas corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$, indicando uma melhora. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos ou muito insatisfeitos é alta, correspondendo a um total de $56.62\%$ do total de alunos, com $23.65\%$ indiferentes e apenas $19.74\%$ satisfeitos ou muito satisfeitos. Os cursos da área  \jur apresentaram uma deterioração no período e devem receber atenção especial. A urgência da tomada de ações para melhorar a opinião dos alunos da área \jur é agravada pelo grande número de alunos nessa área, correspondendo a  $30.18\%$ dos 5000 alunos na amostra.
+Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham opinião majoritariamente indiferente. Todavia, esta característica foi alterada na recente pesquisa. A quantidade de alunos satisfeitos ou muito satisfeitos nos cursos de \eng corresponde a um total de $53.82\%$, enquanto o percentual de alunos indiferentes é de $27.89\%$, indicando uma melhora. Já para o curso de Jurídica e Contábil, o percentual de alunos insatisfeitos ou muito insatisfeitos é alto, correspondendo a um total de $56.62\%$ do total de alunos do curso, com $23.65\%$ indiferentes e apenas $19.74\%$ satisfeitos ou muito satisfeitos. Os cursos da área  \jur apresentaram uma deterioração no período e devem receber atenção especial. A urgência da tomada de ações para melhorar a opinião dos alunos da área \jur é agravada pelo grande número de alunos nessa área, correspondendo a  $30.18\%$ do total de 5000 alunos na amostra.
 
 \begin{table}[!h]
 	\centering
@@ -524,9 +520,9 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) eram t
 \FloatBarrier
 \paragraph{Questão 11}
 
-As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra por fonte de pagamento por região, levando em conta o número de alunos em cada região pode ser visualizado na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
+As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra de fonte de pagamento por região, levando em conta o número de alunos em cada região, pode ser visualizada na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
-Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova principal fonte de recursos é oriunda de \textit{Financiamento Bancário} ($53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem apenas $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, observa-se a predominância de uma única fonte de pagamento, sendo para primeira região \textit{Financiamento Bancário}, e para as demais \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, mas não majoritária, de \textit{Incentivos Federais} na fonte de recursos ($47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, mas com fontes predominantes distintas.
+Tanto para a região \baep quanto as demais, pode-se constar uma mudança na composição da fonte de recursos para pagamentos em relação à pesquisa anterior. Para a região \baep, a nova fonte de recursos principal é oriunda de \textit{Financiamento Bancário} (representando $53,01\%$). Em contraste com a pesquisa anterior, \textit{Incentivos Federais} agora compõem apenas $15,08\%$ dos recursos. Para as regiões \itam, \jaqu e \para, observa-se a predominância de uma única fonte de pagamento, sendo para \itam o \textit{Financiamento Bancário}, e para as demais regiões \textit{Incentivos Federais}. Por fim, para a região \arat, observa-se uma maior participação, embora não majoritária, de \textit{Incentivos Federais} na fonte de recursos (representando $47,51\%$). Cabe ressaltar que \arat e \baep apresentam composições similares para os recursos de pagamentos, porém com fontes predominantes distintas.
 
 \begin{table}[!h]
 \small
@@ -581,11 +577,11 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \FloatBarrier
 \paragraph{Questão 12}
 
-A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é mostrada, em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores relativos ao número de alunos utilizando determinada fonte, na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. Para análise da variável \textit{Opinião} agrupada por \textit{Pagamento} foram ignorados registros com valores indisponíveis em qualquer uma das variáveis. 
+A avaliação dos alunos de acordo com a fonte dos recursos para pagamento é apresentada em valores absolutos na Tabela \ref{table: avaliacao por fonte de pagamento}, e em valores relativos ao número de alunos utilizando determinada fonte na Tabela \ref{table: avaliacao por fonte de pagamento-percent}. A Figura \ref{figure: avaliacao por fonte de pagamento} mostra os mesmos dados da Tabela \ref{table: avaliacao por fonte de pagamento-percent} na forma de um gráfico de barras empilhado. Para análise da variável \textit{Opinião} agrupada por \textit{Pagamento} foram ignorados registros com valores indisponíveis em qualquer uma das variáveis. 
 
-As fontes de recursos podem ser divididas em duas categorias, uma onde o aluno efetivamente paga pelas mensalidades, e outra onde o o aluno não paga. O primeiro grupo é composto por \textit{Financiamento Bancário} e \textit{Recursos próprios}, enquanto o segundo é composto por \textit{Auxílio de Familiares}, \textit{Bolsas de Estudo} e \textit{Incentivos Federais}. Os resultados dessa agregação são exibidos na Tabela \ref{table:pagantes-absoluto} em valores absolutos e percentuais.
+As fontes de recursos podem ser divididas em duas categorias: uma onde o próprio aluno paga efetivamente as mensalidades, e outra onde o o aluno não paga. O primeiro grupo é composto por \textit{Financiamento Bancário} e \textit{Recursos próprios}, enquanto o segundo é composto por \textit{Auxílio de Familiares}, \textit{Bolsas de Estudo} e \textit{Incentivos Federais}. Os resultados dessa agregação são exibidos na Tabela \ref{table:pagantes-absoluto} em valores absolutos e percentuais.
 
-A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro de alguém não são tão críticos da EAD quanto os demais, não se confirma. O grupo de alunos pagantes possui avaliações significativamente melhores de seus cursos, com $83.75\%$ dos alunos avaliando os cursos como \textit{Satisfatório} ou \textit{Muito Satisfatório}. Já entre os alunos não-pagantes, apenas $18.29\%$ se declaram \textit{Satisfeitos} ou \textit{Muito Satisfeitos}, enquanto $53.26\%$ dos alunos se declararam \textit{Muito Insatisfeitos} ou \textit{Insatisfeitos} e $36.96\%$ se declaram indiferentes. Os alunos não-pagantes são, na verdade, o grupo de alunos mais críticos ao EAD da TYU.
+A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro de alguém não são tão críticos da EAD quanto os demais não se confirma. O grupo de alunos pagantes possui avaliações significativamente melhores de seus cursos, com $83.75\%$ dos alunos avaliando os cursos como \textit{Satisfatório} ou \textit{Muito Satisfatório}. Já entre os alunos não-pagantes, apenas $18.29\%$ se declaram \textit{Satisfeitos} ou \textit{Muito Satisfeitos}, enquanto $53.26\%$ dos alunos se declararam \textit{Muito Insatisfeitos} ou \textit{Insatisfeitos} e $36.96\%$ se declaram indiferentes. Pode-se notar que os alunos não-pagantes são, na verdade, o grupo de alunos mais críticos ao EAD da TYU.
 
 \begin{figure}
 	\centering
@@ -665,9 +661,9 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 
 \paragraph{Questão 13}
 
-Para dividir a amostra em conjuntos de alunos pobres, com renda intermediária, e abastados foram utilizados os quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda superior ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária. Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Para esta análise, registros com valores faltantes nas variáveis \textit{Opinião} ou \textit{Renda} foram desconsiderados.
+Para dividir a amostra em conjuntos de alunos pobres, alunos com renda intermediária e alunos abastados foram utilizados os valores dos quartis inferior e superior. O quartil inferior foi calculado em $1.35$ salários mínimos, o que foi usado para definir todos os alunos com renda menor ou igual a $1.35$ salários como pobres. Similarmente, todos os alunos com renda maior ou igual ao quartil superior ($2.73$ salários mínimos) foram considerados como abastados. Os alunos com renda maior que $1.35$ e menor que $2.73$ foram considerados como de renda intermediária. Usando essa divisão de classes, a contagem e percentuais associados exibidos na Tabela \ref{fig:satisfaceo-renda} foram obtidos. A Figura \ref{fig:satisfacao-renda} mostra um gráfico empilhado com a distribuição das avaliações de acordo com a classe de renda. Para esta análise, registros com valores faltantes nas variáveis \textit{Opinião} ou \textit{Renda} foram desconsiderados.
 
-Observando as proporções na Tabela \ref{table:satisfaca-renda}, subjetivamente, não podem ser observadas diferenças significativas entre as avaliações das classes. O perfil dos alunos mais abastados se modificou de majoritariamente indiferente para majoritariamente ($54.8\%$) \textit{Satisfeito} ou \textit{Muito Satisfeito}. O perfil dos alunos com renda intermediária se modificou de majoritariamente insatisfeitos para majoritariamente ($55.30\%$) \textit{Satisfeitos} ou \textit{Muito Satisfeitos}. Finalmente, o perfil dos alunos pobres se modificou de majoritariamente satisfeitos para majoritariamente ($55.5\%$) \textit{satisfeitos} ou \textit{muito satisfeitos}.
+Observando as proporções na Tabela \ref{table:satisfaca-renda}, subjetivamente, não podem ser observadas diferenças significativas entre as avaliações das classes. O perfil dos alunos mais abastados se modificou de majoritariamente indiferente para majoritariamente ($54.8\%$) \textit{Satisfeito} ou \textit{Muito Satisfeito}. O perfil dos alunos com renda intermediária se modificou de majoritariamente insatisfeitos para majoritariamente ($55.30\%$) \textit{Satisfeitos} ou \textit{Muito Satisfeitos}. Finalmente, o perfil dos alunos pobres alterou de majoritariamente satisfeitos para majoritariamente ($55.5\%$) \textit{satisfeitos} ou \textit{muito satisfeitos}.
 
 \begin{table}[h]
 \centering
@@ -696,9 +692,9 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, subjetivamente
 
 \paragraph{Questão 14}
 
-A correlação entre alunos e velhos com grau de satisfação com seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura \ref{fig:stacked-opiniao-por-idade} sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos absoluta}.
+A correlação entre alunos mais velhos com o grau de satisfação em seus cursos é apresentada na Tabela \ref{tabela: correlacao idade cursos absoluta} e na Tabela \ref{tabela: correlacao idade cursos percentual} em termos absolutos e percentuais, respectivamente. Além disso, a Figura \ref{fig:stacked-opiniao-por-idade} sintetiza de forma gráfica os valores apresentados na Tabela  \ref{tabela: correlacao idade cursos absoluta}.
 
-Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, no estudo atual, percebe-se uma inversão da avaliação dos alunos velhos e jovens quanto ao  seus cursos. A maioria dos alunos jovens estão satisfeitos ou muito satisfeitos com o curso ($90,73\%$). Os alunos mais velhos apresentam uma distribuição de opiniões mais uniforme onde a opinião mais popular é a indiferença com $25.62\%$ dos alunos. Há mais alunos velhos com opiniões positivas ($39.56\%$) do que alunos com opiniões negativas ($36.82\%$), então pode-se afirmar que os alunos mais velhos ainda estão mais satisfeitos ou indiferentes com relação ao seu curso. No entanto, diferentemente de antigamente, os alunos jovens estão muito mais satisfeitos que os alunos velhos.
+Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-se que no estudo atual houve uma inversão da avaliação dos alunos velhos e jovens quanto ao  seus cursos. A maioria dos alunos jovens estão satisfeitos ou muito satisfeitos com o curso ($90,73\%$). Os alunos mais velhos apresentam uma distribuição de opiniões mais uniforme onde a opinião mais popular é a indiferença com $25.62\%$ dos alunos. Há mais alunos velhos com opiniões positivas ($39.56\%$) do que alunos com opiniões negativas ($36.82\%$), então pode-se afirmar que os alunos mais velhos ainda estão mais satisfeitos ou indiferentes com relação ao seu curso. No entanto, diferentemente do passado, os alunos jovens estão muito mais satisfeitos que os alunos mais velhos.
 
 \begin{table}[!h]
 \small
@@ -746,8 +742,24 @@ Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, no estudo
 \section*{Parte 4: Análise em Conjunto de Mais de Duas Variáveis}
 
 \paragraph{Questão 15}
-Formatar tabela \ref{tabela:q15}.
+
+A Tabela \ref{tabela:q15p} apresenta a proporção de alunos para cada nível de satisfação, agrupados por Região e Área do curso, e a tabela \ref{tabela:q15a} apresenta os mesmos dados em valores absolutos. Em contraste, a Tabela \ref{table:opiniao-por-area} da \textbf{Questão 10} apresenta essas proporções apenas por área, ignorando a região. Novamente, na construção da Tabela \ref{tabela:q15} foram desconsiderados registros com valores perdidos em quaisquer uma das três variáveis (\textit{Região}, \textit{Área} e \textit{Opinião}) envolvidas. 
+
+Os cursos da área \edu, quando avaliados em toda a TYU apresentaram melhora, com $89.91\%$ dos alunos muito satisfeitos. Analisando cada região separadamente, \arat, que possui apenas 7 alunos tem seus alunos majoritariamente ($57.14\%$) apenas satisfeitos. \baep possui um número razoável de alunos, dos quais, $75.65\%$ estão muito satisfeitos, um valor abaixo do índice global, mas ainda assim uma melhoria significativa em comparação à última pesquisa. Já em \itam todos os 212 alunos, que constituem $67.52\%$ dos alunos da área educacional estão muito satisfeitos. Conclui-se que de fato todos os polos apresentaram melhoria na opinião dos alunos, mas \arat e \baep apresentam índices inferiores ao maior polo em \itam.
+
+Os cursos da área \hum apresentaram um total de $74.9\%$ de alunos muito satisfeitos, mas observando as Tabelas \ref{tabela:q15p} e \ref{tabela:q15a}, novamente observa-se que \itam, nessa ocasião contendo $42.2\%$ dos alunos apresenta  $98.10\%$ dos alunos muito satisfeitos, enquanto em \arat e \baep apenas $15.62\%$ e $64.17\%$ dos alunos, respectivamente, possuem a mesma opinião. Mesmo assim, tanto \arat quanto \baep possuem, majoritariamente alunos satisfeitos ou muito satisfeitos contabilizando, respectivamente, $59.37\%$ e $89.76\%$. Já \jaqu possui apenas 3 alunos, 1 insatisfeito, 1 indiferente e 1 satisfeito, mas mesmo assim a conclusão da Questão 10 se mantém, pois não há alunos muito insatisfeitos.
+
+%TODO \comp manteve em satisf/msatisf?
+
+%TODO \adm manteve em satisf/msatisf
+
+%TODO \eng melhorou de indif.?
+%TODO \jur melhorou de indif.?
+
+\input{tables/tab-q15p.tex}
+
 \input{tables/tab-q15a.tex}
+
 
 \FloatBarrier
 \paragraph{Questão 16}
@@ -762,7 +774,7 @@ Formatar tabela \ref{tabela:q16}.
 Para avaliar a opinião dos alunos de EAD da TYU de acordo com as variáveis \textit{Região}, \textit{Idade} e \textit{Pagamento}, pode-se construir uma tabela de frequência das opiniões relacionados aos valores filtrados das variáveis em questão. Para apresentação visual, gráficos de setores para cada conjunto de alunos são mais adequados. Conforme será detalhado a seguir para cada grupo definido no enunciado, em comparação com os dados da Tabela \ref{table:frequencias-opiniao} da \textbf{Questão 06}, o grupo \textbf{a} apresenta uma quantidade expressiva de alunos indiferentes, enquanto os grupos \textbf{b} e \textbf{c} apresentam proporções significativas de alunos insatisfeitos.
 
 \paragraph{(a)} A Tabela \ref{table:opiniao-28anos-finBancario} apresenta as frequências dos valores de \textit{Opinião} dos alunos de \arat, com \textit{Idade} maior de 28 anos e \textit{Pagamento} do tipo \textit{Financiamento Bancário}. O gráfico de setores da Figura \ref{fig:opiniao-28anos-finBancario} mostra a porcentagem dos valores da variável \textit{Opinião} com ao menos uma ocorrência.
-Pode-se observar que $41.91\%$ dos alunos são indiferentes, e que os alunos Satisfeitos e Muito Satisfeitos, juntos, somam $42.65\%$ do total de alunos. Os alunos insatisfeitos contabilizam apenas $15.44\%$ do total.
+Pode-se observar que $41.91\%$ dos alunos são indiferentes e que os alunos Satisfeitos e Muito Satisfeitos, juntos, somam $42.65\%$ do total de alunos. Os alunos insatisfeitos contabilizam apenas $15.44\%$ do total.
 
 
 \begin{table}[!h]
@@ -825,8 +837,8 @@ Pode-se observar que a maioria, $53.66\%$ dos alunos, estão insatisfeitos, incl
 \paragraph{(c)}
 
 A Tabela \ref{table:opiniao-28anos-incFederais} apresenta as frequências dos valores da variável \textit{Opinião} dentre os alunos que de \para, com mais de 28 anos e financiados por \textit{Incentivos Federais}. Uma representação desses valores é mostrada em um gráfico de setores na Figura \ref{fig:opiniao-28anos-incFederaiso}.
-Pode-se observar $92.24\%$ dos alunos muito insatisfeitos e $7.76\%$ estão insatisfeitos, não havendo alunos indiferentes, satisfeitos ou insatisfeitos.
-É possível notar existe uma plena insatisfação por parte alunos acima de 28 anos da região \para e que recebem Incentivos federais.
+Pode-se observar que $92.24\%$ dos alunos estão muito insatisfeitos e $7.76\%$ estão insatisfeitos, não havendo, na amostra, dados de alunos indiferentes, satisfeitos ou insatisfeitos.
+É possível notar que existe uma plena insatisfação por parte alunos acima de 28 anos da região \para e que recebem Incentivos federais.
 
 \begin{table}[!h]
 	\small
@@ -860,20 +872,20 @@ Outras variáveis necessárias para caracterizar adequadamente a opinião dos al
 
 % eu não concordo com algumas coisas que escrevi, não me odeiem
 O Gênero tem sido uma variável popular e presente em diversos estudos disponíveis ao público. 
-Amplo uso, dessa variável tem sido feito nos mais diversos contextos com objetivo de encontrar correlações entre o gênero e outras variáveis. Essa busca por correlações frequentemente pode ser associada a verificação da desigualdade de gêneros. No caso da TYU, a verificação dessa desigualdade pode motivar políticas que a reduzam, e se verificada igualdade de gênero, os resultados podem ser uados em marketing. Podem ser estudadas as seguintes relações:
+Amplo uso dessa variável tem sido feito nos mais diversos contextos com objetivo de encontrar correlações entre o gênero e outras variáveis. Essa busca por correlações frequentemente pode ser associada a verificação da desigualdade de gêneros. No caso da TYU, a verificação dessa desigualdade pode motivar políticas que a reduzam, e se verificada igualdade de gênero, os resultados podem ser usados em marketing. Podem ser estudadas, por exemplo, as seguintes relações:
 \begin{itemize}
-	\item Participação dos gêneros em cada região: Os alunos da TYU tem uma distribuição de gênero similar à da população da região em estudo?
+	\item Participação dos gêneros em cada região: Os alunos da TYU têm uma distribuição de gênero similar ao da população da região em estudo?
 	\item Participação dos gêneros por área: Como a TYU se compara nesse aspecto com outras universidades ou com os totais nacionais de Pindorama? A TYU é mais inclusiva ou ou há espaço para melhora?
-	\item Distribuição da Opinião por gênero: Algum gênero está particularmente insatisfeito? Alterações podem ser estudadas para melhorar a opinião e prevenir evasão;
-	\item Participação de gênero em incentivos federais e bolsas de estudo: Essas modalidades de auxílio possuem viés à um gênero?
+	\item Distribuição da Opinião por gênero: Algum gênero está particularmente insatisfeito? Possíveis alterações podem ser estudadas para melhorar a opinião e/ou prevenir a evasão nos cursos;
+	\item Participação de gênero em incentivos federais e bolsas de estudo: Essas modalidades de auxílio possuem viés a um gênero?
 \end{itemize}
 
-O rendimento acadêmico do aluno pode ser usado para identificar a necessidade de mudanças na área pedagógica dos cursos e dos polos de EAD. Inclusive, nos dados analisados nesse relatório, foram incluídos apenas alunos com rendimento acadêmico superior a 5, isso é uma possível fonte de erros. Os alunos com rendimento inferior, ainda assim são alunos da TYU e a sua ausência na amostra pode ter enviesado os resultados, fazendo com que futuras ações de melhorias tomadas pela direção da TYU não levem em consideração esse grupo de alunos, possivelmente levando à uma maior evasão entre os alunos nesse grupo. Como o rendimento é uma medida particular da TYU, não é confiável realizar sua comparação com índices de outras instituições, mas assim como no caso do gênero, diversas análises em conjunto com outras variáveis são possíveis:
+O rendimento acadêmico do aluno pode ser usado para identificar a necessidade de mudanças na área pedagógica dos cursos e dos polos de EAD. Inclusive, nos dados analisados neste relatório, foram incluídos apenas alunos com rendimento acadêmico superior a 5 - isso tende a ser uma possível fonte de erros. Os alunos com rendimento inferior, ainda assim são alunos da TYU e a sua ausência na amostra pode ter enviesado os resultados, fazendo com que futuras ações de melhorias tomadas pela direção da TYU não levem em consideração esse grupo de alunos, possivelmente ocasionando uma maior evasão entre os alunos nesse grupo. Como o rendimento é uma medida particular da TYU, não é confiável realizar sua comparação com índices de outras instituições. Entretanto, assim como no caso do gênero, diversas análises em conjunto com as outras variáveis são possíveis:
 \begin{itemize}
-	\item Qual é a distribuição do rendimento dado um dos valores de Opinião? Por exemplo, alunos insatisfeitos com rendimento alto pode ser um indicativo de ensino e avaliação pedagógica muito frouxos.
-	\item Qual a distribuição do rendimento em cada área em cada região? Quais cursos em quais polos precisam de mais atenção quanto os tutores e professores? Essa análise poderia guiar o investimento em laboratórios, e contratação de tutores e docentes;
+	\item Qual é a distribuição do rendimento dado um dos valores de Opinião? Por exemplo, alunos insatisfeitos com rendimento alto pode ser um indicativo de ensino e avaliação pedagógica mais frouxos.
+	\item Qual a distribuição do rendimento em cada área em cada região? Quais cursos em quais polos precisam de mais atenção em relação aos tutores e professores? Tal análise poderia guiar o investimento em laboratórios, além quando da contratação de tutores e docentes;
 	\item Qual a distribuição do rendimento por fonte de pagamento? Alunos contemplados com Bolsas ou incentivos federais estão apresentando desempenho acadêmico superior aos seus pares que possuem outros tipos de financiamento? 
-	\item Qual a distribuição do rendimento por renda? Alunos pobres conseguem manter um rendimento acadêmico similar aos demais grupos de renda? Refinando essa análise fazendo agrupamentos por fonte de pagamento seria possível identificar grupos de alunos de acordo com renda e fonte de pagamento que precisem de atenção pedagógica especial;
+	\item Qual a distribuição do rendimento por renda? Alunos pobres conseguem manter um rendimento acadêmico similar aos demais grupos de renda? Refinando essa análise aplicando agrupamentos por fonte de pagamento, seria possível identificar grupos de alunos de acordo com renda e fonte de pagamento que precisem de atenção pedagógica especial.
 \end{itemize}
 
 
