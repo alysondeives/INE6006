@@ -183,6 +183,20 @@ legend("topright", rownames(x),  bty="n", fill=gray.colors(length(rownames(x))))
 mtext("Área", side=1, line=5.75)
 dev.off()
 
+x = table(df$Pagamento,df$Região)
+for (i in 1:ncol(x)) {
+  x[,i] <- x[,i]/sum(x[,i])*100
+}
+
+setEPS()
+postscript("plots/stacked100_pagamento_por_regiao.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+par(xpd=TRUE, mar=c(8, 4, 4, 10))
+barplot(x, xlab = "", ylab = "Alunos", beside = FALSE, ylim = c(0, 100), las=2,
+        names.arg = c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana."))
+legend("topright", inset=c(-0.90, 0), rownames(x),  bty="n", fill=gray.colors(length(rownames(x))))
+mtext("Região", side=1, line=4.5)
+dev.off()
+
 #-------------------------------------------------------------------------------------------------
 #Questao 12
 x = table(df$Pagamento,df$Opinião)
@@ -199,6 +213,20 @@ for (i in 1:nrow(x)){
   x[i,] = x[i,]/sum(x[i,])
 }
 print(x)
+
+x = table(df$Opinião,df$Pagamento)
+for (i in 1:ncol(x)) {
+  x[,i] <- x[,i]/sum(x[,i])*100
+}
+
+setEPS()
+postscript("plots/stacked_opiniao_por_pagamento.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+par(xpd=TRUE, mar=c(8, 4, 4, 10))
+barplot(x, xlab = "", ylab = "Alunos", beside = FALSE, ylim = c(0, 100), las=2,
+        names.arg = c("Aux. Fam.", "Bolsas", "Fin. Banc.", "Inc. Fed.", "Rec. Próp."))
+legend("topright", inset=c(-0.8, 0), rownames(x),  bty="n", fill=gray.colors(length(rownames(x))))
+mtext("Pagamento", side=1, line=5.75)
+dev.off()
 
 #                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 # Auxílio de familiares        36.96        18.29               1.56            12.84      30.35
