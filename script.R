@@ -18,6 +18,9 @@ df$Opinião = factor(df$Opinião,levels = c("Muito insatisfeito","Insatisfeito",
 
 df$Renda = as.numeric(df$Renda)
 df$Idade = as.integer(df$Idade)
+
+abbrvRegiao <- c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana.")
+
 #--------------------------------------------------------------------------------------------------
 # Questao 4
 for(i in levels(df$Área)){
@@ -124,11 +127,12 @@ print(cat(paste(parts, collapse=" & ")))
   tb = table(df$Opinião, df$Região)
   orderedOpiniao <- c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito")
   tb <- tb[orderedOpiniao,,drop=FALSE]
+  colnames(tb) <- abbrvRegiao
+  
   
   setEPS()
-  postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"))
-  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE,
-          family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+  postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE, names.arg = abbrvRegiao, ylim=c(0, 2500))
   legend("topright", orderedOpiniao,  bty="n", fill=gray.colors(5))
   dev.off();
 #----------------------------------------------------------------------------------------------
