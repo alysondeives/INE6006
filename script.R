@@ -104,7 +104,7 @@ print(cat(paste(parts, collapse=" & ")))
   postscript("plots/histogram_renda.eps", fonts = c("serif", "Palatino"), family = "serif", pointsize = 14)
   par(mar=c(12, 4, 4, 2) + 0.1, mgp=c(3, 1, 0))
   barplot(freqs,xpd=TRUE,xlab = "", ylab="Frequência", ylim=c(0, 800), las=3, width=c(rep(1, k), 3))
-  mtext("Faixas Renda", side=1, line=9.5, cex = 2)
+  mtext("Faixas de Renda (R$)", side=1, line=9.5, cex = 2)
   par(mar=c(5, 4, 4, 2) + 0.1, mgp=c(3, 1, 0))
   dev.off()
   
@@ -115,7 +115,7 @@ print(cat(paste(parts, collapse=" & ")))
   
   setEPS()
   postscript("plots/histogram_idade_log.eps")
-  plot(data.freq,xpd=TRUE,xlab = "Idade", ylab="Frequência")
+  plot(data.freq,xpd=TRUE,xlab = "Idade (anos)", ylab="Frequência")
   dev.off();
   
   setEPS()
@@ -177,7 +177,7 @@ x = table(df$Pagamento,df$Região)
 
 setEPS()
 postscript("plots/stacked_pagamento_por_regiao.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
-barplot(x, xlab = "", ylab = "Alunos", beside = FALSE, ylim = c(0, 2000), las=2, 
+barplot(x, xlab = "", ylab = "Alunos", beside = FALSE, ylim = c(0, 2500), las=2, 
         names.arg = abbrvRegiao)
 legend("topright", rownames(x),  bty="n", fill=gray.colors(length(rownames(x))))
 mtext("Área", side=1, line=5.75)
@@ -214,7 +214,7 @@ for (i in 1:nrow(x)){
 }
 print(x)
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #plot
 y =  table(df$Opinião,df$Pagamento)
 for (i in 1:ncol(y)){
