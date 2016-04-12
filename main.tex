@@ -519,7 +519,7 @@ Vale ressaltar que na avaliação atual, $55.29\%$ dos alunos estão satisfeitos
 \clearpage{}
 
 \FloatBarrier
-\section{Opinião por Curso}
+\section{Opinião por Área}
 \label{section:opiniao-curso}
 
 De um modo geral, o investimento resultou em uma melhora na avaliação dos cursos \edu, \hum e \eng, e estabilidade na avaliação para os cursos de \comp e \adm. Portanto, o investimento foi eficaz. A Tabela \ref{table:opiniao-por-area} mostra a distribuição da opinião dos alunos para cada área do conhecimento, enquanto a Figura \ref{fig:stacked-opiniao-por-area} apresenta os mesmos dados em um gráfico empilhado usando valores absolutos da quantidade de alunos. Tanto na figura quanto na tabela, amostras sem valor para a variável \textit{Opinião} ou para a variável \textit{Área} foram desconsiderados no cálculo do percentual. Para análise da variável \textit{Opinião} agrupada por \textit{Área}, registros com valores faltantes em qualquer uma das duas variáveis foram igualmente desconsiderados.
@@ -553,12 +553,13 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.6\linewidth]{plots/stacked_opiniao_por_area.eps}
+	\includegraphics[]{plots/stacked_opiniao_por_area.eps}
 	\caption{Gráfico empilhado de opinião dos alunos por área do curso.}
 	\label{fig:stacked-opiniao-por-area}
 \end{figure}
 
-\todo[inline]{Inverter eixos do gráfico da Figura \ref{fig:stacked-opiniao-por-area} para acomodar float nessa página.}
+%\todo[inline]{Inverter eixos do gráfico da Figura \ref{fig:stacked-opiniao-por-area} para acomodar float nessa página.}
+%Inverter no R não faz o float caber na página e fica estranho. Não consigo colocar a legenda fóra da área de plot e não consigo reduzir a largura (altura) das colunas.
 
 \FloatBarrier
 \section{Pagamento por Região}
