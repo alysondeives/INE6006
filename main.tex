@@ -478,6 +478,7 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 \end{minipage}
 \end{figure}
 
+\FloatBarrier
 \clearpage
 \begin{center}
 \section*{Parte 3: Análise em Conjunto de Duas Variáveis}
@@ -630,7 +631,7 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.80\linewidth]{plots/q12}
+	\includegraphics[width=0.80\linewidth]{plots/stacked_opiniao_por_pagamento.eps}
 	\caption{Avaliação dos alunos pela fonte de pagamento}
 	\label{figure: avaliacao por fonte de pagamento}
 \end{figure}
@@ -737,7 +738,7 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 \begin{table}[h]
 \centering
 \small
-\caption{Satisfação percentual de alunos de acordo com classes de renda.}
+\caption{Satisfação de alunos de acordo com classes de renda. Valores percentuais}
 \label{table:satisfacao-percentual-renda}
 \begin{tabular}{l r r r r r r}
 \toprule
@@ -747,8 +748,6 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 	Pobres         & $0\%$     & $0\%$     & $0.48\%$  & $8.18\%$  & $91.34\%$ & \textbf{100\%} \\
 	Intermediário  & $0.49\%$  & $9.63\%$  & $31.31\%$ & $35.84\%$ & $22.73\%$ & \textbf{100\%} \\
  	Abastados      & $36.86\%$ & $40.87\%$ & $17.79\%$ & $3.53\%$  & $0.96\%$  & \textbf{100,01\%} \\
-\midrule
-  \textbf{Total} & $\textbf{37,35\%}$    & $\textbf{50,5\%}$    & $\textbf{49,58\%}$   & $\textbf{47,55\%}$   & $\textbf{115,03\%}$    & $\textbf{??}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -812,6 +811,7 @@ Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-s
 \end{figure}
 
 \FloatBarrier
+\clearpage
 \begin{center}
 \section*{Parte 4: Análise em Conjunto de Mais de Duas Variáveis}
 \end{center}
@@ -854,11 +854,12 @@ Para os alunos de renda intermediária, os que estudam na cidades de \arat são 
 
 Para os alunos pobres, observa-se que eles são, praticamente, satisfeitos ou muitos satisfeitos com os seus cursos. Nas cidades de \baep e \itam menos de $1\%$ de todos os alunos pobres são indiferentes. Portanto, pode-se concluir que, assim como indicado na Seção \ref{section:opiniao-renda}, os alunos mais pobres são satisfeitos ou muitos satisfeitos com seus cursos, independente da sua região. 
 
+\FloatBarrier
+\clearpage
 \begin{center}
 \section*{Parte 5: Recomendações para o Cliente}
 \end{center}
 
-\FloatBarrier
 \section{Recomendação para o Cliente: Estimativa}
 \label{section:estimativa}
 
@@ -1076,8 +1077,9 @@ mais insatisfeitos (35.15\%) e muito insatisfeitos ($39.77\%$). De acordo com es
 os alunos da área \jur são mais insatisfeitos.
 
 \begin{figure}[ht]
-	\includegraphics[width=\linewidth]{plots/q20b.pdf}
-	\caption{Gráfico de barras combinando as variáveis Área e Pagamento com seus valores relativos}
+	\centering
+	\includegraphics[]{plots/stacked100_pagamento_por_area.eps}
+	\caption{Gráfico de barras empilhadas mostrando a proporção dos tipos de pagamento para cada área.}
 	\label{fig:q20b}
 \end{figure}
 
