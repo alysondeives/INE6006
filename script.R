@@ -200,6 +200,21 @@ for (i in 1:nrow(x)){
 }
 print(x)
 
+#plot
+y =  table(df$Opinião,df$Pagamento)
+for (i in 1:ncol(y)){
+  y[,i] = y[,i]/sum(y[,i])*100
+}
+print(y)
+
+setEPS()
+postscript("plots/stacked_opiniao_por_pagamento.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+par(xpd=TRUE, mar=c(5, 4, 4, 9) + 0.1)
+barplot(y, xlab = "Pagamento", ylab = "Percentual de Alunos", ylim=c(0,100),beside = FALSE,names.arg = c("Aux. famil.","Bols. Est.","Fin. Banc.","Inc. Fed.","Rec. Prop."),legend.text=TRUE,args.legend = list(horiz=FALSE, x = "right", bty = "n", inset=c(-0.8, 0)),width=5,las=2)
+#legend(3.7 , 60, rownames(y),  bty="n", fill=gray.colors(length(rownames(y))),  text.font=1, cex = 1.0,horiz = FALSE,xjust=0.5,yjust=-2)
+#par(xpd=FALSE, mar=c(5, 4, 4, 2)+0.1)
+dev.off()
+
 #                        Indiferente Insatisfeito Muito insatisfeito Muito satisfeito Satisfeito
 # Auxílio de familiares        36.96        18.29               1.56            12.84      30.35
 # Bolsas de estudo             38.72        20.43               6.71            11.28      22.87
