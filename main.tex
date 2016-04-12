@@ -76,7 +76,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 
 \begin{figure}[h]
 \begin{minipage}{0.49\textwidth}
-\small
+\footnotesize
 \centering
 \captionof{table}{Dados perdidos na base de dados.}
 \label{table: dados perdidos}
@@ -96,7 +96,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{minipage}
 %
 \begin{minipage}{0.49\textwidth}
-\small
+\footnotesize
 \centering
 \captionof{table}{Erros na base de dados.}
 \label{table: dados errados}
@@ -117,7 +117,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{figure}
 
 \begin{table}[!h]
-\small
+\footnotesize
 \centering
 \begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Região}.}
@@ -150,7 +150,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{minipage}
 %
 \begin{minipage}[t]{0.49\textwidth}
-\small
+\footnotesize
 \caption{Erros para a variável \textit{Área}.}
 \vspace{0.5em}
 \label{table: erros-area}
@@ -190,7 +190,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{table}
 
 \begin{table}[!h]
-\small
+\footnotesize
 \centering
 \begin{minipage}[t]{0.49\textwidth}
 \caption{Erros para a variável \textit{Pagamento}.}
@@ -226,7 +226,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 \end{minipage}
 %
 \begin{minipage}[t]{0.49\textwidth}
-\small
+\footnotesize
 \caption{Erros para a variável \textit{Opinião}.}
 \vspace{0.5em}
 \label{table: erros-opiniao}
@@ -318,7 +318,7 @@ A tabela de frequências para a variável \textit{Área} é apresentada na Tabel
 A tabela de frequências para a variável \textit{Pagamento} á apresentada na Tabela \ref{table: frequencias pagamento}. A análise indica que os recursos usados para pagar as mensalidades do curso são oriundos, em sua maioria, de \textit{Financiamento Bancário} ($43.98\%$) seguido por \textit{Incentivos Federais} ($29.06\%$), somando um total de $73.04\%$. Portanto, cortes no orçamento federal de Pindorama não afetarão a fonte de recursos primária para pagamentos de mensalidades na TYU.
 
 \begin{table}[h]
-\small
+\footnotesize
 \centering
 \caption{Frequências para a variável \textit{Pagamento}}
 \label{table: frequencias pagamento}
@@ -336,6 +336,7 @@ A tabela de frequências para a variável \textit{Pagamento} á apresentada na T
 \end{tabular}
 \end{table}
 
+\clearpage
 \section{Variável \textit{Opinião}}
 \label{section:opiniao}
 
@@ -598,7 +599,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 	\midrule
 	Auxílio de Familiares       & $8.19\%$           & $5.71\%$         & $1.19\%$         & $3.17\%$       & $0.83\%$  \\
 	Bolsas de Estudo            & $9.79\%$           & $6.93\%$         & $0.83\%$         & $8.02\%$       & $1.65\%$  \\
-	Fin. Bancário      & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
+	Fin. Bancário               & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
 	Incentivos Federais         & $47.51\%$          & $15.08\%$        & $0.36\%$         & $76.68\%$      & $95.87\%$ \\
 	Recursos Próprios           & $19.07\%$          & $18.88\%$        & $6.29\%$         & $8.02\%$       & $0.83\%$  \\
 	\bottomrule
@@ -607,7 +608,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.80\linewidth]{plots/q11}
+	\includegraphics[width=0.80\linewidth]{plots/stacked100_pagamento_por_regiao.eps}
 	\caption{Fontes de pagamento, em percentual, por região.}
 	\label{figure: fonte de pagemento}
 \end{figure}
@@ -648,7 +649,7 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \midrule
 	Auxílio de Familiares  & $4$      & $47$   & $95$   & $78$   & $33$   &\textbf{257}\\
 	Bolsas de Estudo       & $22$     & $67$   & $127$  & $75$   & $37$   &\textbf{328}\\
-	Fin. Bancário & $3$      & $42$   & $192$  & $497$  & $1448$ &\textbf{2182}\\
+	Fin. Bancário          & $3$      & $42$   & $192$  & $497$  & $1448$ &\textbf{2182}\\
 	Incentivos Federais    & $431$    & $509$  & $354$  & $118$  & $30$   &\textbf{1442}\\
 	Recursos Próprios      & $9$      & $81$   & $238$  & $260$  & $166$  &\textbf{754}\\
 \midrule
@@ -685,16 +686,33 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \begin{table}
 \small
 \centering
-\caption{Números de avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes}
+\caption{Números de avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes.}
 \label{table:pagantes-absoluto}
 \begin{tabular}{l c c c c c c}
 	\toprule
 	\textbf{Categoria}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} & \textbf{Total} \\
 	\midrule
 	%              & M Insatisf.     & Insatisf.       & Indif.          & Satisf.         & M Satisf.        & Total
-	Pagante        & 12 ($0.40\%$)   & 123 ($4.18\%$)  & 430 ($36.96\%$) & 757 ($25.78\%$) & 1614 ($57.97\%$) & 2936 \\
-	Não-pagante    & 457 ($22.54\%$) & 623 ($30.73\%$) & 576 ($36.96\%$) & 271 ($13.36\%$) & 100 ($4.93\%$)   & 2027 \\
-	\textbf{Total} & 469             & 746             & 1006            & 10028           & 1714             & 4963 \\
+	Pagante        & 12   & 123  & 430  & 757  & 1614  & \textbf{2936} \\
+	Não-pagante    & 457  & 623  & 576  & 271  & 100   & \textbf{2027} \\
+	\midrule
+	\textbf{Total} & \textbf{469}             & \textbf{746}             & \textbf{1006}            & \textbf{10028}           & \textbf{1714}             & \textbf{4963} \\
+	\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\small
+\centering
+\caption{Avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes. Valores percentuais.}
+\label{table:pagantes-percentual}
+\begin{tabular}{l c c c c c c}
+	\toprule
+	\textbf{Categoria}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} \\
+	\midrule
+	%              & M Insatisf.     & Insatisf.       & Indif.          & Satisf.         & M Satisf.        & Total
+	Pagante        & $0.40\%$   & $4.18\%$  & $36.96\%$ & $25.78\%$ & $57.97\%$ \\
+	Não-pagante    & $22.54\%$  & $30.73\%$ & $36.96\%$ & $13.36\%$ & $4.93\%$ \\
 	\bottomrule
 \end{tabular}
 \end{table}
@@ -742,12 +760,12 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 \label{table:satisfacao-percentual-renda}
 \begin{tabular}{l r r r r r r}
 \toprule
-\textbf{Classe} & \textbf{\specialcell{c}{Muito\\insatisfeito}}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} \\%& \textbf{Total}  \\
+\textbf{Classe} & \textbf{\specialcell{c}{Muito\\insatisfeito}}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}}  \\
 \midrule
 %                & M Insatsf.      & Insats.         & Indif.          & Satisf.         & Muito Satisf.    & Total         \\ 
-	Pobres         & $0\%$     & $0\%$     & $0.48\%$  & $8.18\%$  & $91.34\%$ \\%& \textbf{100\%} \\
-	Intermediário  & $0.49\%$  & $9.63\%$  & $31.31\%$ & $35.84\%$ & $22.73\%$ \\%& \textbf{100\%} \\
- 	Abastados      & $36.86\%$ & $40.87\%$ & $17.79\%$ & $3.53\%$  & $0.96\%$  \\%& \textbf{100,01\%} \\
+	Pobres         & $0\%$     & $0\%$     & $0.48\%$  & $8.18\%$  & $91.34\%$ \\
+	Intermediário  & $0.49\%$  & $9.63\%$  & $31.31\%$ & $35.84\%$ & $22.73\%$ \\
+ 	Abastados      & $36.86\%$ & $40.87\%$ & $17.79\%$ & $3.53\%$  & $0.96\%$  \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -769,7 +787,7 @@ A correlação entre alunos mais velhos com o grau de satisfação em seus curso
 Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-se que no estudo atual houve uma inversão da avaliação dos alunos velhos e jovens quanto ao  seus cursos. A maioria dos alunos jovens estão satisfeitos ou muito satisfeitos com o curso ($90.73\%$). Os alunos mais velhos apresentam uma distribuição de opiniões mais uniforme onde a opinião mais popular é a indiferença com $25.62\%$ dos alunos. Há mais alunos velhos com opiniões positivas ($39.56\%$) do que alunos com opiniões negativas ($36.82\%$), então pode-se afirmar que os alunos mais velhos ainda estão mais satisfeitos ou indiferentes com relação ao seu curso. No entanto, diferentemente do passado, os alunos jovens estão muito mais satisfeitos que os alunos mais velhos.
 
 \begin{table}[!h]
-\small
+\footnotesize
 \centering
 \caption{Correlação absoluta de alunos novos e velhos com grau de satisfação com seus cursos.}
 \vspace{0.5em}
@@ -788,7 +806,7 @@ Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-s
 \end{table}
 
 \begin{table}[!h]
-\small
+\footnotesize
 \centering
 \caption{Correlação percentual de alunos novos e velhos com grau de satisfação com seus cursos.}
 \vspace{0.5em}
