@@ -18,6 +18,9 @@ df$Opinião = factor(df$Opinião,levels = c("Muito insatisfeito","Insatisfeito",
 
 df$Renda = as.numeric(df$Renda)
 df$Idade = as.integer(df$Idade)
+
+abbrvRegiao <- c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana.")
+
 #--------------------------------------------------------------------------------------------------
 # Questao 4
 for(i in levels(df$Área)){
@@ -70,12 +73,40 @@ print(cat(paste(parts, collapse=" & ")))
   
   setEPS()
   postscript("plots/boxplot_renda_log.eps", fonts = c("serif", "Palatino"))
-  boxplot(df$Renda, log = "y", family = "serif", font=1, cex.axis = 1.3)
+  boxplot(data, log = "y", family = "serif", font=1, cex.axis = 1.3, ylab = "R$")
   dev.off()
   
   #postscript("histogram2_renda.eps")
   #barplot(data.freq,xpd=TRUE,xlab = "Renda (R$)", ylab="Frequência",ylim=c(0,50))
   #dev.off();
+  
+  # Histograma
+  discr_sup = 4224.0
+  
+  min_data = min(data)
+  max_data = discr_sup  
+  k = ceil(5 * log10(length(which(data<discr_sup))))
+  delta = (max_data - min_data) / k
+  freqs = c()
+  freqs_names = c()
+  for(i in 1:k) {
+    lower = min_data + (i-1)*delta
+    upper = min_data + i*delta
+    elements <- which(data>=lower & data<upper)
+    freqs <- c(freqs, length(elements))
+    freqs_names <- c(freqs_names, sprintf("R$ %.2f-%.2f", lower, upper))
+  }
+  freqs <- c(freqs, length(which(data>discr_sup)))
+  freqs_names <- c(freqs_names, sprintf("R$ %.2f-%.2f", discr_sup, max(data)))
+  names(freqs) <- freqs_names
+
+  setEPS()
+  postscript("plots/histogram_renda.eps", fonts = c("serif", "Palatino"), family = "serif", pointsize = 14)
+  par(mar=c(12, 4, 4, 2) + 0.1, mgp=c(3, 1, 0))
+  barplot(freqs,xpd=TRUE,xlab = "", ylab="Frequência", ylim=c(0, 800), las=3, width=c(rep(1, k), 3))
+  mtext("Faixas Renda", side=1, line=9.5, cex = 2)
+  par(mar=c(5, 4, 4, 2) + 0.1, mgp=c(3, 1, 0))
+  dev.off()
   
 #-----------------------------------------------------------------------------------------------
 #Questao 8
@@ -96,11 +127,12 @@ print(cat(paste(parts, collapse=" & ")))
   tb = table(df$Opinião, df$Região)
   orderedOpiniao <- c("Muito insatisfeito", "Insatisfeito", "Indiferente", "Satisfeito", "Muito satisfeito")
   tb <- tb[orderedOpiniao,,drop=FALSE]
+  colnames(tb) <- abbrvRegiao
+  
   
   setEPS()
-  postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"))
-  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE,
-          family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+  postscript("plots/stacked_opiniao_por_regiao.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+  barplot(tb, xlab = "Região", ylab = "Alunos", beside = FALSE, names.arg = abbrvRegiao, ylim=c(0, 2500))
   legend("topright", orderedOpiniao,  bty="n", fill=gray.colors(5))
   dev.off();
 #----------------------------------------------------------------------------------------------

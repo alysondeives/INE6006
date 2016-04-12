@@ -363,7 +363,7 @@ A tabela de frequências para a variável \textit{Opinião} é apresentada na Ta
 \section{Variável \textit{Renda}}
 \label{section:renda}
 
-Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese renda}. Além disso, um histograma da variável renda é apresentado na Figura \ref{figure:histograma-boxplot-renda}. Vale ressaltar que, para fins de estudo, aplicou-se uma transformação nessa variável, utilizando como fator multiplicativo o valor de $R\$880$ (referência salarial em Pindorama). 
+Medidas de síntese para a variável \textit{Renda} são apresentadas na Tabela \ref{table: medidas sintese renda}. Além disso, um histograma da variável renda e um boxplot são apresentados na Figura \ref{figure:histograma-boxplot-renda}. Um desafio para a construção  de um histograma é a presença de valores discrepantes de grande magnitude. Desse modo o intervalo que abrange os valores discrepantes, $[4224, \infty)$ consiste de uma única classe no histograma. O intervalo de valores não discrepantes, $[880, 4224)$, foi dividido em 19 classes ($k = 5 \times log_{10}(4689)$), cada uma com um intervalo de $R\$ 176$.  Vale ressaltar que, para fins de estudo, aplicou-se uma transformação nessa variável, utilizando como fator multiplicativo o valor de $R\$880$ (referência salarial em Pindorama).
 
 A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda mantém renda familiar inferior a $R\$2450.00$, uma vez que o quartil superior da amostra para essa variável é de $R$\$$2402.40$. Além disso constata-se que a distribuição da variável segue uma curva leptocúrtica (curtose $> 0$), possui assimetria à direita (assimetria $> 0$) e dispersão de $76\%$ em relação à média. Com relação aos valores discrepantes, observa-se que o conjunto de dados analisados e disponíveis na base de dados contempla $296$ valores de renda acima de R\$ $4224.00$.
 
@@ -405,7 +405,7 @@ A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda ma
 \begin{minipage}{0.46\textwidth}
 	\centering
 %	\begin{subfigure}[!h]{\linewidth}
-		\includegraphics[width=\linewidth]{plots/histograma-renda}
+		\includegraphics[width=\linewidth]{plots/histogram_renda.eps}
 %		\label{figure: histograma renda}
 %		\subcaption{ }
 %	\end{subfigure}
@@ -511,12 +511,10 @@ Vale ressaltar que na avaliação atual, $55.29\%$ dos alunos estão satisfeitos
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=.75\linewidth]{plots/stacked_opiniao_por_regiao.eps}
+	\includegraphics[]{plots/stacked_opiniao_por_regiao.eps}
 	\caption{Gráfico empilhado de opinião para cada região.}
 	\label{fig:stacked-opiniao-por-regiao}
 \end{figure}
-
-\todo[inline]{Ajustar o eixo do gráfico da Figura \ref{fig:stacked-opiniao-por-regiao}.}
 
 \clearpage{}
 
@@ -564,7 +562,7 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham
 
 \FloatBarrier
 \section{Pagamento por Região}
-\label{section:opiniao-regiao}
+\label{section:pagamento-regiao}
 
 As fontes de pagamento para cada uma das regiões são apresentadas em termos absolutos e percentuais na Tabela \ref{tabela: fontes de pagamento absoluto} e na Tabela \ref{tabela: fontes de pagamento percentual}, respectivamente. Adicionalmente, dados da Tabela \ref{tabela: fontes de pagamento percentual} são apresentados em formato gráfico na Figura \ref{figure: fonte de pagemento}. A composição da amostra de fonte de pagamento por região, levando em conta o número de alunos em cada região, pode ser visualizada na Figura \ref{fig:fonte de pagamento absoluto}. Para análise da variável \textit{Pagamento} agrupada por \textit{Região}, registros com valores faltantes em qualquer uma das duas variáveis foram desconsiderados.
 
