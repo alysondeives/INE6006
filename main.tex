@@ -618,6 +618,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 \end{minipage}
 \end{figure}
 
+\clearpage
 \FloatBarrier
 \section{Opinião por Pagamento}
 \label{section:opiniao-pagamento}
@@ -633,7 +634,6 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \centering
 \caption{Avaliação dos alunos pela fonte de pagamento.}
 \label{table: avaliacao por fonte de pagamento}
-\vspace{0.5em}
 \begin{tabular}{l rrrrrr}
 \toprule
 	\textbf{\specialcell{c}{Fonte Pagamento}}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}    & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}} & \textbf{Total} \\
@@ -654,7 +654,6 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 \centering
 \caption{Avaliação dos alunos pela fonte de pagamento. Valores percentuais}
 \label{table: avaliacao por fonte de pagamento-percent}
-\vspace{0.5em}
 \begin{tabular}{l r r r r r}
 	\toprule
 	\textbf{\specialcell{c}{Fonte de\\Pagamento}}     & \textbf{\specialcell{c}{Muito\\insatisfeito}}     & \textbf{Insatisfeito}   & \textbf{Indiferente}  & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\satisfeito}}  \\
@@ -672,16 +671,11 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 % Não paga  457  623   576   271   100     2027
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.75]{plots/stacked_opiniao_por_pagamento.eps}
-	\caption{Avaliação dos alunos pela fonte de pagamento}
-	\label{figure: avaliacao por fonte de pagamento}
-\end{figure}
-
-\begin{table}[h]
+\centering
+\begin{minipage}{\textwidth}
 \footnotesize
 \centering
-\caption{Números de avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes.}
+\captionof{table}{Números de avaliações para alunos nas categorias agrupadas de pagantes e não-pagantes.}
 \label{table:pagantes-absoluto}
 \begin{tabular}{l c c c c c c}
 	\toprule
@@ -694,12 +688,13 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 	\textbf{Total} & \textbf{469}             & \textbf{746}             & \textbf{1006}            & \textbf{10028}           & \textbf{1714}             & \textbf{4963} \\
 	\bottomrule
 \end{tabular}
-\end{table}
-
-\begin{table}[h]
+\end{minipage}
+\\
+\vspace{3em}
+\begin{minipage}{\textwidth}
 \footnotesize
 \centering
-\caption{Avaliações para alunos pagantes e não-pagantes. Valores percentuais.}
+\captionof{table}{Avaliações para alunos pagantes e não-pagantes. Valores percentuais.}
 \label{table:pagantes-percentual}
 \begin{tabular}{l c c c c c c}
 	\toprule
@@ -710,7 +705,23 @@ A suspeita da direção da TYU de que os alunos que recebem auxílio financeiro 
 	Não-pagante    & $22.54\%$  & $30.73\%$ & $36.96\%$ & $13.36\%$ & $4.93\%$ \\
 	\bottomrule
 \end{tabular}
-\end{table}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{plots/stacked_opiniao_por_pagamento.eps}
+	\caption{Avaliação dos alunos pela fonte de pagamento}
+	\label{figure: avaliacao por fonte de pagamento}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{plots/stacked_opiniao_por_faixaRenda.eps}
+	\caption{Satisfação dos alunos de acordo com classes de renda.}
+	\label{fig:satisfacao-renda}
+\end{minipage}
+\end{figure}
+
 
 %           Mins  ins   indif  sats   Msats   Total
 % Paga      0.40  4.18  14.64  25.78  54.97    2936
@@ -745,14 +756,6 @@ Observando as proporções na Tabela \ref{table:satisfaca-renda}, pode ser perce
 \bottomrule
 \end{tabular}
 \end{table}
-
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.65]{plots/stacked_opiniao_por_faixaRenda.eps}
-	\caption{Satisfação dos alunos de acordo com classes de renda.}
-	\label{fig:satisfacao-renda}
-\end{figure}
 
 \begin{table}[h]
 \centering
