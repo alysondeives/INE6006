@@ -370,17 +370,17 @@ A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda ma
 
 \begin{figure}[h]
 \centering
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}{0.54\textwidth}
 	\centering
 		\includegraphics[width=\linewidth]{plots/histogram_renda.eps}
-	\captionof{figure}{Histograma da variável \textit{Renda}.}
+	\captionof{figure}{Histograma da varável \textit{Renda}.}
 	\label{figure:histograma-boxplot-renda}
 \end{minipage}
 %
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}{0.44\textwidth}
 	\centering
 		\includegraphics[width=\linewidth]{plots/boxplot_renda_log.eps}
-	\captionof{figure}{\textit{Boxplot} da variável \textit{Renda}.}
+	\captionof{figure}{\textit{Boxplot} da varável \textit{Renda}.}
 	\label{figure:histograma-boxplot-renda}
 \end{minipage}
 \end{figure}
@@ -466,14 +466,14 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 
 \begin{figure}[h]
 \centering
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}{0.44\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{plots/histograma-idade}
 	\caption{Histograma da variável \textit{Idade}.}
 	\label{figure:histograma-boxplot-idade}
 \end{minipage}
 %
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}{0.54\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{plots/boxplot_idade.eps}
 	\caption{\textit{Boxplot} da variável \textit{Idade}.}
@@ -561,7 +561,7 @@ Na avaliação antiga os alunos de cursos das demais áreas (\eng e \jur) tinham
 %\todo[inline]{Inverter eixos do gráfico da Figura \ref{fig:stacked-opiniao-por-area} para acomodar float nessa página.}
 %Inverter no R não faz o float caber na página e fica estranho. Não consigo colocar a legenda fóra da área de plot e não consigo reduzir a largura (altura) das colunas.
 
-\FloatBarrier
+%\FloatBarrier
 \section{Pagamento por Região}
 \label{section:pagamento-regiao}
 
@@ -885,11 +885,11 @@ Para avaliar a opinião dos alunos de EAD da TYU de acordo com as variáveis \te
 \paragraph{(a)} A Tabela \ref{table:opiniao-28anos-finBancario} apresenta as frequências dos valores de \textit{Opinião} dos alunos de \arat, com \textit{Idade} maior de 28 anos e \textit{Pagamento} do tipo \textit{Financiamento Bancário}. O gráfico de setores da Figura \ref{fig:opiniao-28anos-finBancario} mostra a porcentagem dos valores da variável \textit{Opinião} com ao menos uma ocorrência.
 Foi observado que $41.91\%$ dos alunos são indiferentes e que os alunos Satisfeitos e Muito Satisfeitos, juntos, somam $42.65\%$ do total de alunos. Os alunos insatisfeitos contabilizam apenas $15.44\%$ do total.
 
-
-\begin{table}[!h]
-	\small
+\begin{figure}[h]
+\begin{minipage}{0.39\textwidth}
+	\footnotesize
 	\centering
-	\caption{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
+	\captionof{table}{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
 	\label{table:opiniao-28anos-finBancario}
 	\begin{tabular}{l r}
 		\toprule
@@ -900,16 +900,17 @@ Foi observado que $41.91\%$ dos alunos são indiferentes e que os alunos Satisfe
 		Satisfeito       &  47 \\
 		Muito Satisfeito &  11 \\
 		\midrule
-		Total            &  136 \\
+		\textbf{Total}            &  \textbf{136} \\
 		\bottomrule
 	\end{tabular}
-\end{table}
-
-\begin{figure}[!h]
+\end{minipage}
+%
+\begin{minipage}{0.69\textwidth}
 	\centering
-	\includegraphics[width=.5\linewidth]{plots/q17a.pdf}
-	\caption{Opinião dos alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
+	\includegraphics[width=0.55\linewidth]{plots/q17a.pdf}
+	\captionof{figure}{Opinião dos alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
 	\label{fig:opiniao-28anos-finBancario}
+\end{minipage}
 \end{figure}
 
 \paragraph{(b)}
@@ -917,10 +918,11 @@ Foi observado que $41.91\%$ dos alunos são indiferentes e que os alunos Satisfe
 A Tabela \ref{table:opiniao-28anos-proprios} apresenta as frequências dos valores da variável \textit{Opinião} dos alunos que estão de \jaqu, com \textit{Idade} maior de 28 anos e Pagamento do tipo \textit{Recursos Próprios}. Os porcentuais desses valores podem ser observados no gráfico de setores da Figura \ref{fig:opiniao-28anos-proprios}.
 Pode-se observar que a maioria, $53.66\%$ dos alunos, está insatisfeita, e incluindo os alunos muito insatisfeitos, obtém-se $60.98\%$ do total. Dos $39.02\%$ restantes, a maioria é de alunos indiferentes ($34.15\%$) e apenas dois alunos (4.88\%) declararam-se satisfeitos.
 
-\begin{table}[!h]
-	\small
+\begin{figure}[h]
+\begin{minipage}{0.39\textwidth}
+	\footnotesize
 	\centering
-	\caption{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
+	\captionof{table}{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
 	\label{table:opiniao-28anos-proprios}
 	\begin{tabular}{l r}
 		\toprule
@@ -934,13 +936,14 @@ Pode-se observar que a maioria, $53.66\%$ dos alunos, está insatisfeita, e incl
 		Total               &  41 \\
 		\bottomrule
 	\end{tabular}
-\end{table}
-
-\begin{figure}[!h]
+\end{minipage}
+%
+\begin{minipage}{0.69\textwidth}
 	\centering
-	\includegraphics[width=.4\linewidth]{plots/q17b.pdf}
-	\caption{Opinião dos alunos de \jaqu com mais de 28 anos pagando mensalidade com Recursos próprios.}
+	\includegraphics[width=0.55\linewidth]{plots/q17b.pdf}
+	\captionof{figure}{Opinião dos alunos de \jaqu com mais de 28 anos pagando mensalidade com Recursos próprios.}
 	\label{fig:opiniao-28anos-proprios}
+\end{minipage}
 \end{figure}
 
 \paragraph{(c)}
@@ -949,10 +952,11 @@ A Tabela \ref{table:opiniao-28anos-incFederais} apresenta as frequências dos va
 Pode-se observar que $92.24\%$ dos alunos estão muito insatisfeitos e $7.76\%$ estão insatisfeitos, não havendo, na amostra, dados de alunos indiferentes, satisfeitos ou insatisfeitos.
 É possível notar que existe uma plena insatisfação por parte alunos acima de 28 anos da região \para e que recebem Incentivos federais.
 
-\begin{table}[!h]
-	\small
+\begin{figure}[h]
+\begin{minipage}{0.39\textwidth}
+	\footnotesize
 	\centering
-	\caption{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
+	\captionof{table}{Frequência dos valores de \textit{Opinião} para alunos de \arat com mais de 28 anos pagando mensalidade via Financiamento Bancário.}
 	\label{table:opiniao-28anos-incFederais}
 	\begin{tabular}{l r}
 		\toprule
@@ -966,13 +970,14 @@ Pode-se observar que $92.24\%$ dos alunos estão muito insatisfeitos e $7.76\%$ 
 		Total               &  41 \\
 		\bottomrule
 	\end{tabular}
-\end{table}
-
-\begin{figure}[!h]
+\end{minipage}
+%
+\begin{minipage}{0.69\textwidth}
 	\centering
-	\includegraphics[width=.7\linewidth]{plots/q17c.pdf}
-	\caption{Opinião dos alunos de \para com mais de 28 anos pagando mensalidade via Incentivos Federais.}
+	\includegraphics[width=0.70\linewidth]{plots/q17c.pdf}
+	\caption{Opinião dos alunos de \para com mais\\de 28 anos pagando mensalidade via Incentivos Federais.}
 	\label{fig:opiniao-28anos-incFederaiso}
+\end{minipage}
 \end{figure}
 
 \FloatBarrier{}
@@ -1044,7 +1049,7 @@ Analisando as Tabelas \ref{table:area-pag-abs} e \ref{table:area-pag-rel} pode-s
 \begin{table}[h]
 \scriptsize
 \centering
-\caption{Relação entre as variáveis \textit{Área} e \textit{Pagamento} usando valores absolutos}
+\caption{Relação entre as variáveis Área e Pagamento usando valores absolutos}
 \label{table:area-pag-abs}
 \begin{tabular}{l rrrrrr}
 \toprule
@@ -1066,7 +1071,7 @@ Jurídica e Contábil & 91 & 128 & 232 & 858 & 193 & \textbf{1502} \\
 \begin{table}[h]
 \scriptsize
 \centering
-\caption{Relação entre as variáveis \textit{Área} e \textit{Pagamento} usando valores relativos}
+\caption{Relação entre as variáveis \textbf{Área} e \textbf{Pagamento} usando valores relativos}
 \label{table:area-pag-rel}
 \begin{tabular}{l rrrrr}
 \toprule
