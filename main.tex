@@ -269,7 +269,7 @@ Para evitar que erros de ortografia e formatação sejam cometidos nas variávei
 A tabela frequências para a variável \textit{Região} é apresentada na Tabela \ref{table: frequencias regiao}. A análise indica que as regiões com menor e maior número de alunos são as regiões \textit{\para} e \textit{\baep}, respectivamente. Já as demais regiões apresentam um corpo discente que varia de $10.77\%$ a $23.80\%$.
 
 \begin{table}[h]
-\small
+\footnotesize
 \centering
 \caption{Frequências para a variável \textit{Região}}
 \label{table: frequencias regiao}
@@ -293,7 +293,7 @@ A tabela frequências para a variável \textit{Região} é apresentada na Tabela
 A tabela de frequências para a variável \textit{Área} é apresentada na Tabela \ref{table: frequencias area}. O perfil da TYU modificou-se. A análise indica que a área com o maior contingente de alunos é \textit{\eng}, na amostra atual.
 
 \begin{table}[h]
-\small
+\footnotesize
 \centering
 \caption{Frequências para a variável \textit{Área}}
 \label{table: frequencias area}
@@ -343,7 +343,7 @@ A tabela de frequências para a variável \textit{Pagamento} á apresentada na T
 A tabela de frequências para a variável \textit{Opinião} é apresentada na Tabela \ref{table: frequencias opiniao}. A análise indica que opinião predominante na amostra é \textit{Muito Satisfeito} e que o grupo de alunos que mencionaram estarem \textit{Muito satisfeito} ou \textit{Satisfeito} totaliza $55.29\%$. Portanto, pode-se considerar que a maioria dos alunos da TYU estão satisfeitos com a EAD.
 
 \begin{table}[h]
-\small
+\footnotesize
 \centering
 \caption{Frequências para a variável \textit{Opinião}}
 \label{table: frequencias opiniao}
@@ -370,10 +370,27 @@ A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda ma
 
 \begin{figure}[h]
 \centering
-\begin{minipage}{0.52\textwidth}
+\begin{minipage}{0.49\textwidth}
+	\centering
+		\includegraphics[width=\linewidth]{plots/histogram_renda.eps}
+	\captionof{figure}{Histograma da varável \textit{Renda}.}
+	\label{figure:histograma-boxplot-renda}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\centering
+		\includegraphics[width=\linewidth]{plots/boxplot_renda_log.eps}
+	\captionof{figure}{\textit{Boxplot} da varável \textit{Renda}.}
+	\label{figure:histograma-boxplot-renda}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
 \centering
-\small
-\captionof{table}{Medidas de síntese para variável \textit{Renda}.}
+\begin{minipage}{0.49\textwidth}
+\centering
+\footnotesize
+\captionof{table}{Medidas de síntese para \textit{Renda}.}
 \vspace{0.5em}
 \label{table: medidas sintese renda}
 \begin{tabular}{l r}
@@ -403,43 +420,10 @@ A análise indica que pelo menos três quartos dos alunos de EAD da TYU ainda ma
 \end{tabular}
 \end{minipage}
 %
-\begin{minipage}{0.46\textwidth}
-	\centering
-%	\begin{subfigure}[!h]{\linewidth}
-		\includegraphics[width=\linewidth]{plots/histogram_renda.eps}
-%		\label{figure: histograma renda}
-%		\subcaption{ }
-%	\end{subfigure}
-
-%	\begin{subfigure}[!h]{\linewidth}
-		\includegraphics[width=\linewidth]{plots/boxplot_renda_log.eps}
-%		\label{figure:boxplot-renda}
-%		\subcaption{}
-%	\end{subfigure}
-
-%	\captionof{figure}{Histograma (a) e \emph{boxplot} (b) da varável \textit{Renda}.}
-	\captionof{figure}{Histograma (acima) e \emph{boxplot} (abaixo) da varável \textit{Renda}.}
-	\label{figure:histograma-boxplot-renda}
-\end{minipage}
-\end{figure}
-
-\FloatBarrier
-\clearpage
-\section{Variável \textit{Idade}}
-\label{section:idade}
-
-Medidas de síntese para a variável \textit{Idade} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável idade é apresentado na Figura \ref{figure:histograma-boxplot-idade}.
-
-A análise indica que a maioria dos alunos de EAD na TYU possuem mais de $30$ anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61.4\%$. Fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
-
-Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela segue uma distribuição com curtose leptocúrtica (curtose $> 0$), assimetria positiva (assimetria $> 0$) e dispersão de $18\%$ em relação à média. Além disso, podemos observar que pelo quartil inferior e superior, que $50\%$  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos $98$ valores discrepantes na amostra, a maioria ($69$ observações) encontram-se superiores a $44$ anos.
-
-\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
 \centering
-\begin{minipage}{0.52\textwidth}
-\centering
-\small
-\captionof{table}{Medidas de síntese para variável \textit{Idade}.}
+\footnotesize
+\captionof{table}{Medidas de síntese para \textit{Idade}.}
 \vspace{0.5em}
 \label{table: medidas sintese idade}
 \begin{tabular}{l r}
@@ -468,13 +452,31 @@ Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela s
 	\bottomrule
 \end{tabular}
 \end{minipage}
-%
-\begin{minipage}{0.46\textwidth}
-	\centering
-	\includegraphics[width=\linewidth]{plots/histograma-idade} \\
-	\includegraphics[width=\linewidth]{plots/boxplot_idade.eps}
+\end{figure}
 
-	\caption{Histograma (acima) e \emph{boxplot} da variável idade.}
+\FloatBarrier
+\section{Variável \textit{Idade}}
+\label{section:idade}
+
+Medidas de síntese para a variável \textit{Idade} são apresentadas na Tabela \ref{table: medidas sintese idade}. Além disso, um histograma da variável idade é apresentado na Figura \ref{figure:histograma-boxplot-idade}.
+
+A análise indica que a maioria dos alunos de EAD na TYU possuem mais de $30$ anos. Essa conclusão pode ser tomada com base mediana, que assume valor $32$ anos. Mais especificamente, a proporção de alunos com mais de 30 anos na amostra é de $61.4\%$. Fazendo uma comparação com o perfil antigo, pode-se afirmar que o perfil dos alunos mudou, agora a maioria dos alunos são dois anos mais velhos, de $30$ para $32$ anos.
+
+Fazendo uma análise mais detalhada da variável em estudo, percebe-se que ela segue uma distribuição com curtose leptocúrtica (curtose $> 0$), assimetria positiva (assimetria $> 0$) e dispersão de $18\%$ em relação à média. Além disso, podemos observar que pelo quartil inferior e superior, que $50\%$  dos alunos possuem de $29$ a $35$ anos. Vale observar, que dos $98$ valores discrepantes na amostra, a maioria ($69$ observações) encontram-se superiores a $44$ anos.
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.49\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{plots/histograma-idade}
+	\caption{Histograma da variável \textit{Idade}.}
+	\label{figure:histograma-boxplot-idade}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{plots/boxplot_idade.eps}
+	\caption{\textit{Boxplot} da variável \textit{Idade}.}
 	\label{figure:histograma-boxplot-idade}
 \end{minipage}
 \end{figure}
