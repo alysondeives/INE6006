@@ -238,9 +238,9 @@ for (i in 1:ncol(y)) {
   y[,i] = y[,i]/sum(y[,i])*100
 }
 setEPS()
-postscript("plots/stacked_opiniao_por_faixaRenda.eps", fonts = c("serif", "Palatino"))
+postscript("plots/stacked_opiniao_por_faixaRenda.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
 par(xpd=TRUE, mar=c(5, 4, 4, 9) + 0.1)
-barplot(y, width = 1,  xlab = "Faixa", ylab = "Alunos", beside = FALSE, family = "serif", font=1, cex.axis = 1.1, cex.names = 1.1, cex.lab=1.1)
+barplot(y, width = 1,  xlab = "Faixa", ylab = "Alunos", beside = FALSE, las=2)
 legend(3.7 , 60, rownames(y),  bty="n", fill=gray.colors(length(rownames(y))),  text.font=1, cex = 1.0)
 par(xpd=FALSE, mar=c(5, 4, 4, 2)+0.1)
 dev.off()
@@ -266,7 +266,7 @@ for(i in levels(df$Opinião)){
   print(c(i,val_mean))
   
   #standard deviation
-  val_sd = sd[i](df[which(df$Opinião == i),"Idade"],na.rm=TRUE)
+  val_sd = sd(df[which(df$Opinião == i),"Idade"],na.rm=TRUE)
   
   #missing values
   print(c(i,length(which(is.na(df[which(df$Opinião == i),"Idade"])))))
