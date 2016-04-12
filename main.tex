@@ -601,7 +601,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 	\midrule
 	Auxílio de Familiares       & $8.19\%$           & $5.71\%$         & $1.19\%$         & $3.17\%$       & $0.83\%$  \\
 	Bolsas de Estudo            & $9.79\%$           & $6.93\%$         & $0.83\%$         & $8.02\%$       & $1.65\%$  \\
-	Fin. Bancário      & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
+	Fin. Bancário               & $15.19\%$          & $53.01\%$        & $90.98\%$        & $3.73\%$       & $0.0\%$   \\
 	Incentivos Federais         & $47.51\%$          & $15.08\%$        & $0.36\%$         & $76.68\%$      & $95.87\%$ \\
 	Recursos Próprios           & $19.07\%$          & $18.88\%$        & $6.29\%$         & $8.02\%$       & $0.83\%$  \\
 	\bottomrule
@@ -610,7 +610,7 @@ Tanto para a região \baep quanto as demais, pode-se constar uma mudança na com
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.80\linewidth]{plots/q11}
+	\includegraphics[width=0.80\linewidth]{plots/stacked100_pagamento_por_regiao.eps}
 	\caption{Fontes de pagamento, em percentual, por região.}
 	\label{figure: fonte de pagemento}
 \end{figure}
@@ -799,8 +799,9 @@ Em contraste com 10 anos atrás, quando o EAD iniciou suas atividades, percebe-s
 	\textbf{Alunos}	& \textbf{\specialcell{c}{Muito\\Insatisfeito}} & \textbf{Insatisfeito} & \textbf{Indiferente} & \textbf{Satisfeito} & \textbf{\specialcell{c}{Muito\\Satisfeito}} & \textbf{Total} \\
 	\midrule
 	%                                M Ins  & Ins    & Indif  & Satisf  & M Satisf & Total
-	Alunos Jovens ($< 30$ anos)     & $5$    & $15$   & $122$  & $278$   & $1111$   & $1531$  \\
-	Alunos Velhos ($\geq 30$ anos) & $467$  & $734$  & $467$  & $608$   & $757$    & $3450$  \\
+	\specialcell{c}{Alunos Jovens\\($< 30$ anos)}     & $5$    & $15$   & $122$  & $278$   & $1111$   & $1531$  \\
+	\specialcell{c}{Alunos Velhos\\($\geq 30$ anos)} & $467$  & $734$  & $467$  & $608$   & $757$    & $3450$  \\
+	\midrule{}
 	\textbf{Total}                 & $472$  & $749$  & $1006$ & $1035$  & $1719$   & $4981$  \\
 	\bottomrule
 \end{tabular}
@@ -1071,18 +1072,17 @@ Jurídica e Contábil & 91 & 128 & 232 & 858 & 193 & \textbf{1502} \\
 \centering
 \caption{Relação entre as variáveis \textbf{Área} e \textbf{Pagamento} usando valores relativos}
 \label{table:area-pag-rel}
-\begin{tabular}{l r r r r r r}
+\begin{tabular}{l rrrrr}
 \toprule
 \textbf{Área}    & \textbf{\specialcell{c}{Auxílio de\\ familiares}} & \textbf{\specialcell{c}{Bolsas de\\ estudos}} & \textbf{\specialcell{c}{Financiamento\\ bancário}} & 
-\textbf{\specialcell{c}{Incentivos\\ federais}} & \textbf{\specialcell{c}{Recursos\\ próprios}} & 
-\textbf{Total} \\
+\textbf{\specialcell{c}{Incentivos\\ federais}} & \textbf{\specialcell{c}{Recursos\\ próprios}} \\%& \textbf{Total} \\
 \midrule
-Administração  			&  $3.05\%$ &  $4.75\%$ &  $67.97\%$ &  $10.17\%$ &  $14.07\%$ &  \textbf{100.00\%}  \\
-Computação e Matemática &  $5.07\%$ &  $6.42\%$ &  $54.73\%$ &  $12.50\%$ &  $21.28\%$ &  \textbf{100.00\%} \\
-Educacional         	&  $0.89\%$ &  $1.48\%$ &  $91.72\%$ &  $1.18\%$  &  $4.73\%$ &  \textbf{100.00\%} \\
-Engenharia e Produção   &  $6.52\%$ &  $7.73\%$ &  $39.41\%$ &  $26.77\%$ &  $19.56\%$ &  \textbf{100.00\%}  \\
-Humanidades 			&  $3.39\%$ &  $2.19\%$ &  $78.09\%$ &  $4.18\%$  &  $12.15\%$ &  \textbf{100.00\%} \\
-Jurídica e Contábil 	&  $6.06\%$ &  $8.52\%$ &  $15.45\%$ &  $57.12\%$ &  $12.85\%$ &  \textbf{100.00\%} \\
+Administração  			&  $3.05\%$ &  $4.75\%$ &  $67.97\%$ &  $10.17\%$ &  $14.07\%$ \\%&  \textbf{100.00\%}  \\
+Computação e Matemática &  $5.07\%$ &  $6.42\%$ &  $54.73\%$ &  $12.50\%$ &  $21.28\%$ \\%&  \textbf{100.00\%} \\
+Educacional         	&  $0.89\%$ &  $1.48\%$ &  $91.72\%$ &  $1.18\%$  &  $4.73\%$ \\%&  \textbf{100.00\%} \\
+Engenharia e Produção   &  $6.52\%$ &  $7.73\%$ &  $39.41\%$ &  $26.77\%$ &  $19.56\%$ \\%&  \textbf{100.00\%}  \\
+Humanidades 			&  $3.39\%$ &  $2.19\%$ &  $78.09\%$ &  $4.18\%$  &  $12.15\%$ \\%&  \textbf{100.00\%} \\
+Jurídica e Contábil 	&  $6.06\%$ &  $8.52\%$ &  $15.45\%$ &  $57.12\%$ &  $12.85\%$ \\%&  \textbf{100.00\%} \\
 %\midrule
 %\textbf{Total}          &  \textbf{5.18\%} &  \textbf{6.55\%} &  \textbf{43.94\%} &  \textbf{29.11\%} &  \textbf{15.22\%} &  \textbf{100.00\%} \\
 \bottomrule
