@@ -6,7 +6,7 @@ options(digits = 4, width = 100) #set precision for float values and and chars b
 par(xpd=TRUE,cex.lab=1.5) #set global options for plot
 #----------------------------------------------------------------------------------------------------
 #Read from csv
-df = read.csv(file = "/home/bruno/PPGCC/Metodos Estatisticos/Repositorio Git/INE6006/processed.csv",na.strings = c("NA",""," "),header=TRUE)
+df = read.csv(file = "processed.csv",na.strings = c("NA",""," "),header=TRUE)
 
 #set columns types
 df$Região = as.factor(df$Região)
@@ -414,3 +414,23 @@ print(q20)
 q20pl = xtableFtable(q20, method="compact")
 write(print.xtableFtable(q20pl,booktabs=TRUE),file="tables/tab-q20p.tex")
 print.xtableFtable(q20pl,booktabs=TRUE)
+
+
+#-------------------------------------------------------------------------------------------------
+#Questao 20b
+
+y = table(df$Pagamento,df$Área)
+for (i in 1:ncol(y)) {
+  y[,i] = y[,i]/sum(y[,i])*100
+}
+
+setEPS()
+postscript("plots/stacked100_pagamento_por_area.eps", fonts = c("serif", "Palatino"), family="serif", pointsize = 12, pagecentre=TRUE, width=4.95, height=4.95)
+par(xpd=TRUE, mar=c(8, 4, 4, 10)+0.1,mgp=c(3, 1, 0))
+barplot(y, xpd=TRUE, width=1, xlab = "", ylab = "Alunos %", beside = FALSE, ylim = c(0, 100), las=2, cex.axis = 1,
+        names.arg = c("Adm.", "Comp. e Mat.", "Educ.", "Eng. e Prod.", "Hum.", "Júr. e Cont."))
+legend(7.2, 80,  rownames(y),  bty="n", fill=gray.colors(length(rownames(y))))
+mtext("Área", side=1, line=6.5)
+par(mar=c(5, 4, 4, 2)+0.1,oma=c(0, 0, 0, 0))
+dev.off()
+
