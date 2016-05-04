@@ -21,7 +21,11 @@ df$Idade = as.integer(df$Idade)
 abbrvRegiao <- c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana.")
 #----------------------------------------------------------------------------------------------------
 
+# Level de interesse
+incFed <- "Incentivos federais"
+szAmostra <- 200
 # Excluir as linhas com registros perdidos
 pop <- na.omit(df$Pagamento)
-
-# Amostra aleatória de 200 elementos
+# Amostra aleatória simples (sem reposição) de 200 elementos
+amostra <- sample(pop, size = szAmostra, replace = FALSE)
+propAmostral <- length(which(amostra==incFed))/szAmostra
