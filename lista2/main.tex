@@ -1,0 +1,94 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{todonotes} % todos
+\usepackage{placeins} %\FloatBarrier
+\usepackage{caption}
+\usepackage{capt-of} %Workarounds for manually inserting captions
+%\usepackage{subcaption} %subfigure environment
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+%\usepackage{titlesec} %Customization of headings
+
+%%%%%%%%%%%% Configuring packages
+
+\newcommand{\specialcell}[3][c]
+{\begin{tabular}[#1]{@{}#2@{}}#3\end{tabular}}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%% Macros
+\newcommand{\arat}{Aratibutantã\xspace}
+\newcommand{\baep}{Baependinha\xspace}
+\newcommand{\itam}{Itamaracanã\xspace}
+\newcommand{\jaqu}{Jaquereçaba\xspace}
+\newcommand{\para}{Paranapitanga\xspace}
+
+\newcommand{\adm}{Administração\xspace}
+\newcommand{\comp}{Computação e Matemática\xspace}
+\newcommand{\edu}{Educacional\xspace}
+\newcommand{\eng}{Engenharia e Produção\xspace}
+\newcommand{\hum}{Humanidades\xspace}
+\newcommand{\jur}{Jurídica e Contábil\xspace}
+
+%%%%%%%%%%%%% Autor e Título
+
+\author{%
+	Alexis A. Huf, %
+	Alyson D. Pereira, %
+	Bruno C. N. Oliveira,\\%
+	Eliza Gomes, %
+	Pedro H. Penna
+	}
+
+\title{Lista de Exercícios II - Grupo 6}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+	\section*{Parte 1: Distribuição Amostral da média}
+\end{center}
+
+\section{Variável Renda}
+\label{questao:1}
+\input{questao1}
+
+\begin{center}
+	\section*{Parte 2: Intervalos de Confiança para Média}
+\end{center}
+
+\section{Variável Idade}
+\label{questao:2}
+\input{questao2}
+
+\section{Variável Renda}
+\label{questao:3}
+\input{questao3}
+
+\begin{center}
+	\section*{Parte 3: Intervalos de Confiança para Proporção}
+\end{center}
+
+\section{Variável Pagamento}
+\label{questao:4}
+\input{questao4}
+
+\section{Variável Opinião}
+\label{questao:5}
+\input{questao5}
+
+\section{Variável Renda}
+\label{questao:6}
+\input{questao6}
+
+\end{document}
