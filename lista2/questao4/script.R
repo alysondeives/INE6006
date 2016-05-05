@@ -39,8 +39,8 @@ ic=c(up-delta, up+delta)
 # (b) Qual o tamanho da amostra para que o E0 = 2%?
 #Usando a amostra do item (a) como como uma aproximação da proporção populacional:
 E0 <- 0.02
-n0 <- (zy**2*pAmostral*(1-pAmostral))/E0**2
-nb <- (N*n0) / (N+n0-1)
+n0b <- (zy**2*pAmostral*(1-pAmostral))/E0**2
+nb <- (N*n0b) / (N+n0b-1)
 
 # Isolando n0 na fórmula que calcula n dado n0:
 # n0 = (n - n*N)/(n-N)
@@ -60,10 +60,15 @@ nc <- (N*n0) / (N+n0-1)
 #Note: open = "w" means open for writing (nothing about truncation is specified)
 #      however, it does truncate the file on this line, but avoids truncation on every cat.
 out <- file("vars.tex", open = "w")
-cat(sprintf("\\newcommand{\\QUATROpAmostral}{%.2f}\n", pAmostral), file = out)
-cat(sprintf("\\newcommand{\\QUATRON}{%.2f}\n", N), file = out)
-cat(sprintf("\\newcommand{\\QUATROn}{%.2f}\n", n), file = out)
-cat(sprintf("\\newcommand{\\QUATROAdelta}{%.2f}\n", delta), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICinf}{%.2f}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICsup}{%.2f}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\QUATROpAmostral}{%.2f\\xspace}\n", pAmostral), file = out)
+cat(sprintf("\\newcommand{\\QUATRON}{%d\\xspace}\n", N), file = out)
+cat(sprintf("\\newcommand{\\QUATROn}{%d\\xspace}\n", n), file = out)
+cat(sprintf("\\newcommand{\\QUATROzy}{%.2f\\xspace}\n", zy), file = out)
+cat(sprintf("\\newcommand{\\QUATROAdelta}{%.4f\\xspace}\n", delta), file = out)
+cat(sprintf("\\newcommand{\\QUATROAICinf}{%.2f\\xspace}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\QUATROAICsup}{%.2f\\xspace}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\QUATROBE}{%.4f\\xspace}\n", E1), file = out)
+cat(sprintf("\\newcommand{\\QUATROBn}{%.4f\\xspace}\n", nb), file = out)
+cat(sprintf("\\newcommand{\\QUATROBnceil}{%d\\xspace}\n", ceil(nb)), file = out)
+cat(sprintf("\\newcommand{\\QUATROBnz}{%.4f\\xspace}\n", n0b), file = out)
 close(out)
