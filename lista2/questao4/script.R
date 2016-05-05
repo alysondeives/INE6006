@@ -32,4 +32,24 @@ pAmostral <- length(which(amostra==incFed))/n
 # (a) Como 20*n < N, pAmostral é normal com média p e stdDev = sqrt(p*(1-p)/n)
 up <- pAmostral
 sp <- sqrt(pAmostral*(1-pAmostral)/n)
-ic=c(up-1.96*sp, up+1.96*sp)
+zy <- 1.96
+ic=c(up-zy*sp, up+zy*sp)
+
+# (b) Qual o tamanho da amostra para que o E0 = 2%?
+#Usando a amostra do item (a) como como uma aproximação da proporção populacional:
+E0 <- 0.02
+n0 <- (zy**2*pAmostral*(1-pAmostral))/E0**2
+nb <- (N*n0) / (N+n0-1)
+
+# Isolando n0 na fórmula que calcula n dado n0:
+# n0 = (n - n*N)/(n-N)
+# https://www.wolframalpha.com/input/?i=solve+n%3D(N*m)%2F(N%2Bm-1)+for+m
+# Isolando E0 na fórmula que calcula n0:
+# E0 = sqrt(zy*p*(1-p)/n0)
+# Erro amostral de uma amostra de 200 alunos:
+E1 <- sqrt((zy*pAmostral*(1-pAmostral)) / ((n-n*N)/(n-N)))
+
+# (c) Qual o tamanho da amostra para que o E0 = 2%? sem amostra piloto?
+E0 <- 0.02
+n0 <- (zy**2) / (4*E0**2)
+nc <- (N*n0) / (N+n0-1)
