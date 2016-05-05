@@ -21,11 +21,15 @@ df$Idade = as.integer(df$Idade)
 abbrvRegiao <- c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana.")
 #----------------------------------------------------------------------------------------------------
 
-# Level de interesse
-incFed <- "Incentivos federais"
-szAmostra <- 200
+incFed = "Incentivos federais"
+n <- 200 #tamanho da amostra
 # Excluir as linhas com registros perdidos
 pop <- na.omit(df$Pagamento)
-# Amostra aleatória simples (sem reposição) de 200 elementos
-amostra <- sample(pop, size = szAmostra, replace = FALSE)
-propAmostral <- length(which(amostra==incFed))/szAmostra
+N <- length(pop)
+# Amostra aleatória simples sem reposição de 200 elementos
+amostra <- sample(pop, size = n, replace = FALSE)
+pAmostral <- length(which(amostra==incFed))/n
+# (a) Como 20*n < N, pAmostral é normal com média p e stdDev = sqrt(p*(1-p)/n)
+up <- pAmostral
+sp <- sqrt(pAmostral*(1-pAmostral)/n)
+ic=c(up-1.96*sp, up+1.96*sp)
