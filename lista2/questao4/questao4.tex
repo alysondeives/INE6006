@@ -1,5 +1,24 @@
-\subsection{(item a)}
-Lorem ipsum...
+\input{questao4/vars}
+
+Foi retirada uma amostra aleatória simples, sem reposição com \QUATROn elementos, dentre os \QUATRON alunos que possuíam um valor definido para a variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
+
+\subsection{}
+O intervalo de confiança para a a estatística $\hat{p}$ é dado pela \autoref{eq:quatro-expr}.
+
+\begin{align} 
+	IC(p, 95\%) \label{eq:quatro-expr}
+	            &= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
+	            \label{eq:quatro-estim}
+	            &= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+	            &= \QUATROpAmostral \pm \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
+	            &= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
+	            \label{eq:quatro-a-result}
+	            &= [\QUATROAICinf, \QUATROAICsup]
+\end{align}
+
+Dada uma amostra aleatória simples de \QUATROn alunos tomados dentre os \QUATRON da população, há 95\% de chance de que a proporção de alunos cuja fonte de recursos são ``Incentivos Federais'' seja um valor contido no intervalo \eqref{eq:quatro-a-result}.
+
+Em \eqref{eq:quatro-expr}, $\sigma_{\hat{p}}$ simboliza o desvio padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser tomadas da população. Como não possuímos tal parâmetro, e como $n$ é grande ($n = \QUATROn \geq 50$), $\sigma_{\hat{p}}$ foi aproximado por $s_{\hat{p}}$, o desvio padrão da amostra tomada.
 
 \subsection{(item b)}
 Lorem ipsum...

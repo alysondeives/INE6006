@@ -33,7 +33,8 @@ pAmostral <- length(which(amostra==incFed))/n
 up <- pAmostral
 sp <- sqrt(pAmostral*(1-pAmostral)/n)
 zy <- 1.96
-ic=c(up-zy*sp, up+zy*sp)
+delta <- zy*sp
+ic=c(up-delta, up+delta)
 
 # (b) Qual o tamanho da amostra para que o E0 = 2%?
 #Usando a amostra do item (a) como como uma aproximação da proporção populacional:
@@ -53,3 +54,16 @@ E1 <- sqrt((zy*pAmostral*(1-pAmostral)) / ((n-n*N)/(n-N)))
 E0 <- 0.02
 n0 <- (zy**2) / (4*E0**2)
 nc <- (N*n0) / (N+n0-1)
+
+#----------------------------------------------------------------------------------------------------
+# Write parameters as latex commands
+#Note: open = "w" means open for writing (nothing about truncation is specified)
+#      however, it does truncate the file on this line, but avoids truncation on every cat.
+out <- file("vars.tex", open = "w")
+cat(sprintf("\\newcommand{\\QUATROpAmostral}{%.2f}\n", pAmostral), file = out)
+cat(sprintf("\\newcommand{\\QUATRON}{%.2f}\n", N), file = out)
+cat(sprintf("\\newcommand{\\QUATROn}{%.2f}\n", n), file = out)
+cat(sprintf("\\newcommand{\\QUATROAdelta}{%.2f}\n", delta), file = out)
+cat(sprintf("\\newcommand{\\QUATROAICinf}{%.2f}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\QUATROAICsup}{%.2f}\n", ic[2]), file = out)
+close(out)
