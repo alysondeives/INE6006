@@ -29,6 +29,9 @@ N <- length(pop)
 # Amostra aleatória simples sem reposição de 200 elementos
 amostra <- sample(pop, size = n, replace = FALSE)
 pAmostral <- length(which(amostra==incFed))/n
+# Salvar amostra em arquivo .csv
+write.csv(amostra, file = "sample.csv", row.names = FALSE, 
+          na="", fileEncoding = "UTF-8", eol="\r\n")
 # (a) Como 20*n < N, pAmostral é normal com média p e stdDev = sqrt(p*(1-p)/n)
 up <- pAmostral
 sp <- sqrt(pAmostral*(1-pAmostral)/n)
@@ -52,7 +55,7 @@ E1 <- sqrt((zy*pAmostral*(1-pAmostral)) / ((n-n*N)/(n-N)))
 
 # (c) Qual o tamanho da amostra para que o E0 = 2%? sem amostra piloto?
 E0 <- 0.02
-n0 <- (zy**2) / (4*E0**2)
+n0c <- (zy**2) / (4*E0**2)
 nc <- (N*n0) / (N+n0-1)
 
 #----------------------------------------------------------------------------------------------------
@@ -71,4 +74,7 @@ cat(sprintf("\\newcommand{\\QUATROBE}{%.4f\\xspace}\n", E1), file = out)
 cat(sprintf("\\newcommand{\\QUATROBn}{%.4f\\xspace}\n", nb), file = out)
 cat(sprintf("\\newcommand{\\QUATROBnceil}{%d\\xspace}\n", ceil(nb)), file = out)
 cat(sprintf("\\newcommand{\\QUATROBnz}{%.4f\\xspace}\n", n0b), file = out)
+cat(sprintf("\\newcommand{\\QUATROCnz}{%.4f\\xspace}\n", n0c), file = out)
+cat(sprintf("\\newcommand{\\QUATROCn}{%.4f\\xspace}\n", nc), file = out)
+cat(sprintf("\\newcommand{\\QUATROCnceil}{%d\\xspace}\n", ceil(nc)), file = out)
 close(out)

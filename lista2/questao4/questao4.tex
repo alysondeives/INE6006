@@ -69,4 +69,24 @@ Como o tamanho da população é conhecido, o valor em \eqref{eq:quatro-b-n0-res
 	     \QUATROBnceil
 \end{align}
 
-\subsection{}
+\subsection{Tamanho da amostra sem amostra piloto}
+
+Para estimar o tamanho da amostra que garanta erro amostral máximo de 2\% sem uma estimativa adequada para a proporção populacional $p$, deve ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de $n_0$.
+
+\begin{align}
+	n_0 &= \label{eq:quatro-c-n0-expr}
+	       \frac{z_\gamma^2}{4 E_0^2} \\
+	    &= \frac{\QUATROzy^2}{4 0.02^2} \nonumber \\
+	    &= \label{eq:quatro-c-n0-result}
+	       \QUATROCnz
+\end{align}
+
+Novamente, \eqref{eq:quatro-c-n0-result} pode ser substituído em \eqref{eq:quatro-b-n}, resultando no tamanho da amostra necessário, em \eqref{eq:quatro-c-n-result}.
+
+\begin{align}
+	n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
+	  &= \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz - 1} \nonumber \\
+	  &= \QUATROCn \nonumber \\
+	  &= \label{eq:quatro-c-n-result} 
+	     \QUATROCnceil
+\end{align}
