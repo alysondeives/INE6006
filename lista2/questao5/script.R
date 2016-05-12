@@ -22,7 +22,7 @@ abbrvRegiao <- c("Arati.", "Baepe.", "Itama.", "Jaque.", "Parana.")
 #----------------------------------------------------------------------------------------------------
 
 insatis = "Insatisfeito"
-muitoInsat = "Muito Insatisfeito"
+muitoInsat = "Muito insatisfeito"
 n <- 200 #tamanho da amostra
 # Excluir as linhas com registros perdidos
 pop <- na.omit(df$Opinião)
