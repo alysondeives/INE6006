@@ -29,7 +29,8 @@ pop <- na.omit(df$Opinião)
 N <- length(pop)
 # Amostra aleatória simples sem reposição de 200 elementos
 amostra <- sample(pop, size = n, replace = FALSE)
-pAmostral <- length(which(amostra==insatis|amostra==muitoInsat))/n
+qtdOpinioesNegativas <- length(which(amostra==insatis|amostra==muitoInsat))
+pAmostral <- qtdOpinioesNegativas/n
 # Salvar amostra em arquivo .csv
 write.csv(amostra, file = "sampleOpiniao.csv", row.names = FALSE, 
           na="", fileEncoding = "UTF-8", eol="\r\n")
@@ -47,7 +48,7 @@ n0b <- (zy**2*pAmostral*(1-pAmostral))/E0**2
 nb <- (N*n0b) / (N+n0b-1)
 
 # Isolando n0 na fórmula que calcula n dado n0:
- n0 = (n - n*N)/(n-N)
+ #n0 = (n - n*N)/(n-N)
 # https://www.wolframalpha.com/input/?i=solve+n%3D(N*m)%2F(N%2Bm-1)+for+m
 # Isolando E0 na fórmula que calcula n0:
  #E0 = sqrt(zy*p*(1-p)/n0)
@@ -57,25 +58,26 @@ E1 <- sqrt((zy*pAmostral*(1-pAmostral)) / ((n-n*N)/(n-N)))
 # (c) Qual o tamanho da amostra para que o E0 = 2%? sem amostra piloto?
 E0 <- 0.02
 n0c <- (zy**2) / (4*E0**2)
-nc <- (N*n0) / (N+n0-1)
+nc <- (N*n0c) / (N+n0c-1)
 
 #----------------------------------------------------------------------------------------------------
 # Write parameters as latex commands
 #Note: open = "w" means open for writing (nothing about truncation is specified)
 #      however, it does truncate the file on this line, but avoids truncation on every cat.
 out <- file("vars.tex", open = "w")
-cat(sprintf("\\newcommand{\\QUATROpAmostral}{%.2f\\xspace}\n", pAmostral), file = out)
-cat(sprintf("\\newcommand{\\QUATRON}{%d\\xspace}\n", N), file = out)
-cat(sprintf("\\newcommand{\\QUATROn}{%d\\xspace}\n", n), file = out)
-cat(sprintf("\\newcommand{\\QUATROzy}{%.2f\\xspace}\n", zy), file = out)
-cat(sprintf("\\newcommand{\\QUATROAdelta}{%.4f\\xspace}\n", delta), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICinf}{%.2f\\xspace}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICsup}{%.2f\\xspace}\n", ic[2]), file = out)
-cat(sprintf("\\newcommand{\\QUATROBE}{%.4f\\xspace}\n", E1), file = out)
-cat(sprintf("\\newcommand{\\QUATROBn}{%.4f\\xspace}\n", nb), file = out)
-cat(sprintf("\\newcommand{\\QUATROBnceil}{%d\\xspace}\n", ceiling(nb)), file = out)
-cat(sprintf("\\newcommand{\\QUATROBnz}{%.4f\\xspace}\n", n0b), file = out)
-cat(sprintf("\\newcommand{\\QUATROCnz}{%.4f\\xspace}\n", n0c), file = out)
-cat(sprintf("\\newcommand{\\QUATROCn}{%.4f\\xspace}\n", nc), file = out)
-cat(sprintf("\\newcommand{\\QUATROCnceil}{%d\\xspace}\n", ceiling(nc)), file = out)
+cat(sprintf("\\newcommand{\\CINCOqtdOpinioesNegativas}{%d\\xspace}\n", qtdOpinioesNegativas), file = out)
+cat(sprintf("\\newcommand{\\CINCOpAmostral}{%.2f\\xspace}\n", pAmostral), file = out)
+cat(sprintf("\\newcommand{\\CINCON}{%d\\xspace}\n", N), file = out)
+cat(sprintf("\\newcommand{\\CINCOn}{%d\\xspace}\n", n), file = out)
+cat(sprintf("\\newcommand{\\CINCOzy}{%.2f\\xspace}\n", zy), file = out)
+cat(sprintf("\\newcommand{\\CINCOAdelta}{%.4f\\xspace}\n", delta), file = out)
+cat(sprintf("\\newcommand{\\CINCOAICinf}{%.2f\\xspace}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\CINCOAICsup}{%.2f\\xspace}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\CINCOBE}{%.4f\\xspace}\n", E1), file = out)
+cat(sprintf("\\newcommand{\\CINCOBn}{%.4f\\xspace}\n", nb), file = out)
+cat(sprintf("\\newcommand{\\CINCOBnceil}{%d\\xspace}\n", ceiling(nb)), file = out)
+cat(sprintf("\\newcommand{\\CINCOBnz}{%.4f\\xspace}\n", n0b), file = out)
+cat(sprintf("\\newcommand{\\CINCOCnz}{%.4f\\xspace}\n", n0c), file = out)
+cat(sprintf("\\newcommand{\\CINCOCn}{%.4f\\xspace}\n", nc), file = out)
+cat(sprintf("\\newcommand{\\CINCOCnceil}{%d\\xspace}\n", ceiling(nc)), file = out)
 close(out)
