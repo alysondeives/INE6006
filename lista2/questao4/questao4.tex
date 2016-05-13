@@ -1,6 +1,6 @@
 \input{questao4/vars}
 
-Foi retirada uma amostra aleatória simples, sem reposição com \QUATROn elementos, dentre os \QUATRON alunos que possuíam um valor definido para a variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
+Foi retirada uma amostra aleatória simples, sem reposição, com \QUATROn elementos, dentre os \QUATRON alunos que possuíam um valor definido para a variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
 
 \subsection{Intervalo de confiança}
 O intervalo de confiança para a a estatística $\hat{p}$ é dado pela \autoref{eq:quatro-a-expr}.
@@ -55,7 +55,7 @@ Como $E_0 = \QUATROBE$, a amostra não é suficiente para uma margem de erro de 
 
 \begin{align}
 	n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-	    &= \frac{\QUATROzy^2 \QUATROpAmostral(1-\QUATROpAmostral)}{0.02^2} \nonumber \\
+	    &= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{0.02^2} \nonumber \\
 	    &= \label{eq:quatro-b-n0-result}
 	       \QUATROBnz	
 \end{align}
@@ -71,12 +71,12 @@ Como o tamanho da população é conhecido, o valor em \eqref{eq:quatro-b-n0-res
 
 \subsection{Tamanho da amostra sem amostra piloto}
 
-Para estimar o tamanho da amostra que garanta erro amostral máximo de 2\% sem uma estimativa adequada para a proporção populacional $p$, deve ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de $n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida super-estimando $p$ como $0.5$ e aplicando isso em \eqref{eq:quatro-b-n0}
+Para estimar o tamanho da amostra que garanta erro amostral máximo de 2\% sem uma estimativa adequada para a proporção populacional $p$, deve ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de $n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida superestimando $p$ como $0.5$ e aplicando isso em \eqref{eq:quatro-b-n0}
 
 \begin{align}
 	n_0 &= \label{eq:quatro-c-n0-expr}
-	       \frac{z_\gamma^2}{4 E_0^2} \\
-	    &= \frac{\QUATROzy^2}{4 0.02^2} \nonumber \\
+	       \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+	    &= \frac{\QUATROzy^2}{4 \cdot (0.02)^2} \nonumber \\
 	    &= \label{eq:quatro-c-n0-result}
 	       \QUATROCnz
 \end{align}
@@ -90,3 +90,5 @@ Novamente, \eqref{eq:quatro-c-n0-result} pode ser substituído em \eqref{eq:quat
 	  &= \label{eq:quatro-c-n-result} 
 	     \QUATROCnceil
 \end{align}
+
+Portanto, considerando a ausência de uma amostra piloto, é preciso ter uma amostra de tamanho mínimo de \QUATROCnceil para estimar com 95\% de confiança e precisão de 2\% a proporção populacional de alunos de EAD da TYU que usam incentivos federais.
