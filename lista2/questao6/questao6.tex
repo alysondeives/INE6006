@@ -1,8 +1,116 @@
-\subsection{(item a)}
-Lorem ipsum...
+\input{questao6/vars}
 
-\subsection{(item b)}
-Lorem ipsum...
+Para avaliação da variável Renda, primeiramente foi feita uma recodificação
+da mesma em uma variável quantiatativa de dois valores: alunos com renda
+familiar inferior a $2,5$ salários mínimos e alunos com renda igual ou
+superior a $2,5$ salários mínimos. Nesse processo, apenas foram considerados
+aqueles alunos que possuíam um valor definido para a variável, totalizando
+$N=\SEISN$ alunos. Em seguida, retirou-se uma amostra aleatório simples de
+\SEISn elementos dessa população. A proporção amostral $\hat{p}$ de alunos
+com renda superior a $2.5$ salários mínimos é de \SEISpAmostral.
 
-\subsection{(item c)}
-Lorem ipsum...
+\subsection{Intervalo de Confiança}
+
+	O intervalo de confiança para a a estatística $\hat{p}$ é dado por:
+	%
+	\begin{align*}
+		IC(p, 95\%) &= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
+					&= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+					&= \SEISpAmostral \pm \SEISzy \sqrt{\frac{\SEISpAmostral (1- \SEISpAmostral)}{\SEISn}} \nonumber \\
+					&= \SEISpAmostral \pm \SEISAdelta \nonumber \\
+					&= [\SEISAICinf, \SEISAICsup]
+	\end{align*}
+
+	\noindent Dada uma amostra aleatória simples de \SEISn alunos
+	selecionados dentre os \SEISN da população há $95\%$ de chance de que a
+	proporção de alunos que possuem renda familiar superior a $2,5$ salários
+	mínimos seja um valor no intervalo $[\SEISAICinf, \SEISAICsup]$
+
+\subsection{Precisão}
+	
+	É possível calcular o tamanho da amostra necessária para que $|\hat{p} -
+	E(\hat{p})| \leq E_0$ aplicando as seguintes equações:
+	%
+	\begin{align}
+		n_0 &= \label{eq:seis-b-n0}
+			   \frac{z_\gamma^2 p(1-p)}{E_0^2} \\
+		n &= \label{eq:seis-b-n}
+			 \frac{N n_0}{N + n_0 - 1} 
+	\end{align}
+
+	Para obter o erro amostral máximo, dado o tamanho da amostra, as equações
+	\eqref{eq:seis-b-e0-expr} e \eqref{eq:seis-b-n0-expr} podem ser usadas. 
+
+	Sabemos $n$, $N$ $z\gamma$ e $\hat{p}$, que pode ser usado para aproximar
+	$p$. Para encontrar $E_0$, podemos deduzir \eqref{eq:seis-b-e0-expr}
+	algebricamente de \eqref{eq:seis-b-n0}. Para encontrar $n_0$, usado em
+	\eqref{eq:seis-b-e0-expr}, $n_0$ pode ser isolada em
+	\eqref{eq:seis-b-n}, resultando em \eqref{eq:seis-b-n0-expr}. Para tal
+	foi utilizada a ferramenta
+	WolframAlpha\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}.
+
+	\begin{align}
+		E_0 &= \label{eq:seis-b-e0-expr}
+			   \sqrt{\frac{z_\gamma p(1 - p) }{n_0}} \\
+		n_0 &= \label{eq:seis-b-n0-expr}
+			   \frac{n-n N}{n-N}
+	\end{align}
+
+	Combinando \eqref{eq:seis-b-e0-expr} e \eqref{eq:seis-b-n0-expr} e
+	substituindo os valores, o erro amostral máximo de uma amostra com
+	\SEISn elementos é dado por \eqref{eq:seis-b-e0-calc}.
+
+	\begin{align}
+		\label{eq:seis-b-e0-calc}
+		E_0 &= \sqrt{\frac{z_\gamma \hat{p}(1 - \hat{p}) }{\frac{n-n N}{n - N}}} \\
+			&= \sqrt{\frac{\SEISzy \;\cdot\; \SEISpAmostral (1 - \SEISpAmostral) }{\frac{\SEISn - \SEISn \;\cdot\; \SEISN}{\SEISn - \SEISN}}} \nonumber \\
+			&= \SEISBE \nonumber
+	\end{align}
+
+	Como $E_0 = \SEISBE$, a amostra é suficientemente grande para seafirmar
+	uma margem de erro de $2\%$.
+
+\subsection{Tamanho da Amostra sem Amostra-Piloto}
+
+	Para estimar o tamanho da amostra que garanta erro amostral máximo de 2\%
+	sem uma estimativa adequada para a proporção populacional $p$, deve ser
+	utilizada a fórmula \eqref{eq:seis-c-n0-expr} para obtenção de $n_0$. A
+	fórmula em \eqref{eq:seis-c-n0-expr} foi obtida superestimando $p$ como
+	$0.5$ e aplicando isso em \eqref{eq:seis-b-n0}
+
+	\begin{align}
+		n_0 &= \label{eq:seis-c-n0-expr}
+			   \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+			&= \frac{\SEISzy^2}{4 \cdot (0.02)^2} \nonumber \\
+			&= \label{eq:seis-c-n0-result}
+			   \SEISCnz
+	\end{align}
+
+	Novamente, \eqref{eq:seis-c-n0-result} pode ser substituído em
+	\eqref{eq:seis-b-n}, resultando no tamanho da amostra necessário, em
+	\eqref{eq:seis-c-n-result}.
+
+	\begin{align}
+		n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
+		  &= \frac{\SEISN \cdot \SEISCnz}{\SEISN + \SEISCnz - 1} \nonumber \\
+		  &= \SEISCn \nonumber \\
+		  &= \label{eq:seis-c-n-result} 
+			 \SEISCnceil
+	\end{align}
+
+	Portanto, considerando a ausência de uma amostra piloto, é preciso ter uma
+	amostra de tamanho mínimo de \SEISCnceil para estimar com 95\% de
+	confiança e precisão de 2\% a proporção populacional de alunos de EAD da TYU
+	apresentam renda familiar superior a $2,5$ salários mínimosi.
+
+\subsection{Impactos na Recodificação da Variável}
+
+	A escolha da recodificação ou não da variável renda depende do parâmetro
+	sendo estudado, e não da estimação do intervalo de confiança. Caso o
+	intuito seja estudar o parâmetro proporção, a recodificação se faz
+	necessária para a variável \textit{Renda} e não implicará em perda de
+	informação.  No entanto, caso o objetivo seja estudar os parâmetros
+	média e variância, uma recodificação impactaria em perda de informação.
+	Em ambos os cenários -- estudo do parâmetro proporção e estudo da
+	média/variância -- a estimação do intervalo de confiança não seria
+	comprometida.
