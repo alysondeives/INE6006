@@ -28,7 +28,8 @@ pop <- na.omit(df$Renda)
 q <- 200 #quantidade de amostras
 N <- length(pop) #tamanho da população
 mean_pop = mean(pop) #media da população
-
+x = mean(pop)
+sd = sd(pop)
 # Amostra aleatória simples sem reposição de 200 elementos
 #amostra <- sample(pop, size = n, replace = FALSE)
 
@@ -56,80 +57,80 @@ write.csv(amostra_100, file = "sample_100.csv", row.names = FALSE, na="", fileEn
 #------------------------------------------------------------------------------------------------------------
 #Calcular maximos e minmos para media e stddev dentre as 200 amostras
 
-min_mean = c(Inf,Inf,Inf,Inf,Inf)
-max_mean = c(0, 0, 0, 0,0)
-min_sd = c(Inf,Inf,Inf,Inf,Inf)
-max_sd = c(0, 0, 0, 0,0)
-
-for(i in 1:q){
-  #Get minimum mean
-  if(mean(amostra_4[,i]) < min_mean[1]){
-    min_mean[1] = mean(amostra_4[,i])
-  }
-  if(mean(amostra_8[,i]) < min_mean[2]){
-    min_mean[2] = mean(amostra_8[,i])
-  }
-  if(mean(amostra_16[,i]) < min_mean[3]){
-    min_mean[3] = mean(amostra_16[,i])
-  }
-  if(mean(amostra_30[,i]) < min_mean[4]){
-    min_mean[4] = mean(amostra_30[,i])
-  }
-  if(mean(amostra_100[,i]) < min_mean[5]){
-    min_mean[5] = mean(amostra_100[,i])
-  }
-  
-  #Get minimum stddev
-  if(sd(amostra_4[,i]) < min_sd[1]){
-    min_sd[1] = sd(amostra_4[,i])
-  }
-  if(sd(amostra_8[,i]) < min_sd[2]){
-    min_sd[2] = sd(amostra_8[,i])
-  }
-  if(sd(amostra_16[,i]) < min_sd[3]){
-    min_sd[3] = sd(amostra_16[,i])
-  }
-  if(sd(amostra_30[,i]) < min_sd[4]){
-    min_sd[4] = sd(amostra_30[,i])
-  }
-  if(sd(amostra_100[,i]) < min_sd[5]){
-    min_sd[5] = sd(amostra_100[,i])
-  }
-  
-  #Check for maximum mean
-  if(mean(amostra_4[,i]) > max_mean[1]){
-    max_mean[1] = mean(amostra_4[,i])
-  }
-  if(mean(amostra_8[,i]) > max_mean[2]){
-    max_mean[2] = mean(amostra_8[,i])
-  }
-  if(mean(amostra_16[,i]) > max_mean[3]){
-    max_mean[3] = mean(amostra_16[,i])
-  }
-  if(mean(amostra_30[,i]) > max_mean[4]){
-    max_mean[4] = mean(amostra_30[,i])
-  }
-  if(mean(amostra_100[,i]) > max_mean[5]){
-    max_mean[5] = mean(amostra_100[,i])
-  }
-  
-  #Check for maximum sd
-  if(sd(amostra_4[,i]) > max_sd[1]){
-    max_sd[1] = sd(amostra_4[,i])
-  }
-  if(sd(amostra_8[,i]) > max_sd[2]){
-    max_sd[2] = sd(amostra_8[,i])
-  }
-  if(sd(amostra_16[,i]) > max_sd[3]){
-    max_sd[3] = sd(amostra_16[,i])
-  }
-  if(sd(amostra_30[,i]) > max_sd[4]){
-    max_sd[4] = sd(amostra_30[,i])
-  }
-  if(sd(amostra_100[,i]) > max_sd[5]){
-    max_sd[5] = sd(amostra_100[,i])
-  }
-}
+# min_mean = c(Inf,Inf,Inf,Inf,Inf)
+# max_mean = c(0, 0, 0, 0,0)
+# min_sd = c(Inf,Inf,Inf,Inf,Inf)
+# max_sd = c(0, 0, 0, 0,0)
+# 
+# for(i in 1:q){
+#   #Get minimum mean
+#   if(mean(amostra_4[,i]) < min_mean[1]){
+#     min_mean[1] = mean(amostra_4[,i])
+#   }
+#   if(mean(amostra_8[,i]) < min_mean[2]){
+#     min_mean[2] = mean(amostra_8[,i])
+#   }
+#   if(mean(amostra_16[,i]) < min_mean[3]){
+#     min_mean[3] = mean(amostra_16[,i])
+#   }
+#   if(mean(amostra_30[,i]) < min_mean[4]){
+#     min_mean[4] = mean(amostra_30[,i])
+#   }
+#   if(mean(amostra_100[,i]) < min_mean[5]){
+#     min_mean[5] = mean(amostra_100[,i])
+#   }
+#   
+#   #Get minimum stddev
+#   if(sd(amostra_4[,i]) < min_sd[1]){
+#     min_sd[1] = sd(amostra_4[,i])
+#   }
+#   if(sd(amostra_8[,i]) < min_sd[2]){
+#     min_sd[2] = sd(amostra_8[,i])
+#   }
+#   if(sd(amostra_16[,i]) < min_sd[3]){
+#     min_sd[3] = sd(amostra_16[,i])
+#   }
+#   if(sd(amostra_30[,i]) < min_sd[4]){
+#     min_sd[4] = sd(amostra_30[,i])
+#   }
+#   if(sd(amostra_100[,i]) < min_sd[5]){
+#     min_sd[5] = sd(amostra_100[,i])
+#   }
+#   
+#   #Check for maximum mean
+#   if(mean(amostra_4[,i]) > max_mean[1]){
+#     max_mean[1] = mean(amostra_4[,i])
+#   }
+#   if(mean(amostra_8[,i]) > max_mean[2]){
+#     max_mean[2] = mean(amostra_8[,i])
+#   }
+#   if(mean(amostra_16[,i]) > max_mean[3]){
+#     max_mean[3] = mean(amostra_16[,i])
+#   }
+#   if(mean(amostra_30[,i]) > max_mean[4]){
+#     max_mean[4] = mean(amostra_30[,i])
+#   }
+#   if(mean(amostra_100[,i]) > max_mean[5]){
+#     max_mean[5] = mean(amostra_100[,i])
+#   }
+#   
+#   #Check for maximum sd
+#   if(sd(amostra_4[,i]) > max_sd[1]){
+#     max_sd[1] = sd(amostra_4[,i])
+#   }
+#   if(sd(amostra_8[,i]) > max_sd[2]){
+#     max_sd[2] = sd(amostra_8[,i])
+#   }
+#   if(sd(amostra_16[,i]) > max_sd[3]){
+#     max_sd[3] = sd(amostra_16[,i])
+#   }
+#   if(sd(amostra_30[,i]) > max_sd[4]){
+#     max_sd[4] = sd(amostra_30[,i])
+#   }
+#   if(sd(amostra_100[,i]) > max_sd[5]){
+#     max_sd[5] = sd(amostra_100[,i])
+#   }
+# }
 
 # > mean(pop)
 # [1] 2.336
@@ -202,10 +203,23 @@ for(i in 1:q){
 print (c(var4,var8,var16,var30,var100))
 #[1] 0.41856 0.78057 0.18612 0.09513 0.03152
 
-print (c(sqrt(var4),sqrt(var8),sqrt(var16),sqrt(var30),sqrt(var100)))
+sd4 = sqrt(var4)
+sd8 = sqrt(var8)
+sd16 = sqrt(var16)
+sd30 = sqrt(var30)
+sd100 = sqrt(var100)
+
+print (c(sd4,sd8,sd16,sd30,sd100))
 #[1] 0.6470 0.8835 0.4314 0.3084 0.1775
 
-print (c(sd(pop)/sqrt(4),sd(pop)/sqrt(8),sd(pop)/sqrt(16),sd(pop)/sqrt(30),sd(pop)/sqrt(100)))
+sde4 = sd(pop)/sqrt(4)
+sde8 = sd(pop)/sqrt(8)
+sde16 = sd(pop)/sqrt(16)
+sde30 = sd(pop)/sqrt(30)
+sde100 = sd(pop)/sqrt(100)
+
+print (c(sde4,sde8,sde16,sde30,sde100))
+
 #[1] 0.8894 0.6289 0.4447 0.3248 0.1779
 
 # b) Sim, é possivel observar isso.
@@ -217,18 +231,25 @@ print (c(sd(pop)/sqrt(4),sd(pop)/sqrt(8),sd(pop)/sqrt(16),sd(pop)/sqrt(30),sd(po
 #Note: open = "w" means open for writing (nothing about truncation is specified)
 #      however, it does truncate the file on this line, but avoids truncation on every cat.
 out <- file("vars.tex", open = "w")
-cat(sprintf("\\newcommand{\\QUATROpAmostral}{%.2f\\xspace}\n", pAmostral), file = out)
-cat(sprintf("\\newcommand{\\QUATRON}{%d\\xspace}\n", N), file = out)
-cat(sprintf("\\newcommand{\\QUATROn}{%d\\xspace}\n", n), file = out)
-cat(sprintf("\\newcommand{\\QUATROzy}{%.2f\\xspace}\n", zy), file = out)
-cat(sprintf("\\newcommand{\\QUATROAdelta}{%.4f\\xspace}\n", delta), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICinf}{%.2f\\xspace}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\QUATROAICsup}{%.2f\\xspace}\n", ic[2]), file = out)
-cat(sprintf("\\newcommand{\\QUATROBE}{%.4f\\xspace}\n", E1), file = out)
-cat(sprintf("\\newcommand{\\QUATROBn}{%.4f\\xspace}\n", nb), file = out)
-cat(sprintf("\\newcommand{\\QUATROBnceil}{%d\\xspace}\n", ceil(nb)), file = out)
-cat(sprintf("\\newcommand{\\QUATROBnz}{%.4f\\xspace}\n", n0b), file = out)
-cat(sprintf("\\newcommand{\\QUATROCnz}{%.4f\\xspace}\n", n0c), file = out)
-cat(sprintf("\\newcommand{\\QUATROCn}{%.4f\\xspace}\n", nc), file = out)
-cat(sprintf("\\newcommand{\\QUATROCnceil}{%d\\xspace}\n", ceil(nc)), file = out)
+cat(sprintf("\\newcommand{\\UMx}{%.3f\\xspace}\n", x), file = out)
+cat(sprintf("\\newcommand{\\UMsd}{%.3f\\xspace}\n", sd), file = out)
+
+cat(sprintf("\\newcommand{\\UMx4}{%.3f\\xspace}\n", x4), file = out)
+cat(sprintf("\\newcommand{\\UMx8}{%.3f\\xspace}\n", x8), file = out)
+cat(sprintf("\\newcommand{\\UMx16}{%.3f\\xspace}\n", x16), file = out)
+cat(sprintf("\\newcommand{\\UMx30}{%.3f\\xspace}\n", x30), file = out)
+cat(sprintf("\\newcommand{\\UMx100}{%.3f\\xspace}\n", x100), file = out)
+
+cat(sprintf("\\newcommand{\\UMsd4}{%.3f\\xspace}\n", sd4), file = out)
+cat(sprintf("\\newcommand{\\UMsd8}{%.3f\\xspace}\n", sd8), file = out)
+cat(sprintf("\\newcommand{\\UMsd16}{%.3f\\xspace}\n", sd16), file = out)
+cat(sprintf("\\newcommand{\\UMsd30}{%.3f\\xspace}\n", sd30), file = out)
+cat(sprintf("\\newcommand{\\UMsd100}{%.3f\\xspace}\n", sd100), file = out)
+
+cat(sprintf("\\newcommand{\\UMsde4}{%.3f\\xspace}\n", sde4), file = out)
+cat(sprintf("\\newcommand{\\UMsde8}{%.3f\\xspace}\n", sde8), file = out)
+cat(sprintf("\\newcommand{\\UMsde16}{%.3f\\xspace}\n", sde16), file = out)
+cat(sprintf("\\newcommand{\\UMsde30}{%.3f\\xspace}\n", sde30), file = out)
+cat(sprintf("\\newcommand{\\UMsde100}{%.3f\\xspace}\n", sde100), file = out)
+
 close(out)
