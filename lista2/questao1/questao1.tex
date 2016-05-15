@@ -1,8 +1,38 @@
+\input{questao1/vars}
+
+Foram retiradas 200 amostras, sem reposição, com tamanhos 4, 8, 16, 30 e 100, 
+dentre os 4986 alunos que possuíam um valor definido para a variável Renda.
+A população possuí média de ${\UMx}$ para a variável Renda, com desvio padrão de
+${\UMsd}$. A tabela \ref{tab:q1} apresentam os valores esperados da média amostral
+e seu respectivos desvios padrões.
+
+\begin{table}[h]
+\centering
+\caption{Valores das médias amostrais para a variável \textit{Renda}}
+\label{tab:q1}
+\vspace{0.5em}
+\begin{tabular}{l r r r}
+	\toprule
+	\textbf{n} & \textbf{Média} & \textbf{Desvio Padrão} & \textbf{\sigma/\sqrt{n}\\
+	\midrule
+	$4$       & ${\UMx4}$   & ${\UMsd4}$   & ${\UMsde4}$   \\
+	$8$       & ${\UMx8}$   & ${\UMsd8}$   & ${\UMsde8}$   \\
+	$16$      & ${\UMx16}$  & ${\UMsd16}$  & ${\UMsde16}$  \\
+	$30$      & ${\UMx30}$  & ${\UMsd30}$  & ${\UMsde30}$  \\
+	$100$     & ${\UMx100}$ & ${\UMsd100}$ & ${\UMsde100}$ \\
+	\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{(item a)}
-Lorem ipsum...
+A medida que se aumentou o tamanho da amostra, de 4 para 16, o resultado se aproximou à media populacional.
+Porém para amostra de tamanho 30 e 100, a média amostral se distanciou da média populacional.
+
 
 \subsection{(item b)}
-Lorem ipsum...
+Sim, as amostras retiradas confirmam a afirmação. Conforme indicado na tabela \ref{tab:q1}, os valores 
+de desvio padrão das amostras são próximos aos valores de ^\sigma/_sqrt{n} e para a amostra de tamanho 100, 
+são exatamente iguais.
 
 \subsection{(item c)}
-Lorem ipsum...
+Como gerar o gráfico? Escolher uma amostra dentre as 200 para algum tamanho? Qual seria o valor da distribuição?
