@@ -1,94 +1,133 @@
 \input{questao4/vars}
 
-Foi retirada uma amostra aleatória simples, sem reposição, com \QUATROn elementos, dentre os \QUATRON alunos que possuíam um valor definido para a variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
+	Foi retirada uma amostra aleatória simples, sem reposição, com \QUATROn
+	elementos, dentre os \QUATRON alunos que possuíam um valor definido para a
+	variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de
+	Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
 
 \subsection{Intervalo de confiança}
-O intervalo de confiança para a a estatística $\hat{p}$ é dado pela \autoref{eq:quatro-a-expr}.
 
-\begin{align} 
-	IC(p, 95\%) \label{eq:quatro-a-expr}
-	            &= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
-	            \label{eq:quatro-a-estim}
-	            &= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
-	            &= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
-	            &= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
-	            \label{eq:quatro-a-result}
-	            &= [\QUATROAICinf, \QUATROAICsup]
-\end{align}
+	O intervalo de confiança para a a estatística $\hat{p}$ é dado pela
+	\autoref{eq:quatro-a-expr}.
 
-Dada uma amostra aleatória simples de \QUATROn alunos tomados dentre os \QUATRON da população, há 95\% de chance de que a proporção de alunos cuja fonte de recursos são ``Incentivos Federais'' seja um valor contido no intervalo \eqref{eq:quatro-a-result}.
+	\begin{align} 
+		IC(p, 95\%) \label{eq:quatro-a-expr}
+					&= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
+					\label{eq:quatro-a-estim}
+					&= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+					&= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
+					&= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
+					\label{eq:quatro-a-result}
+					&= [\QUATROAICinf, \QUATROAICsup]
+	\end{align}
 
-Em \eqref{eq:quatro-a-expr}, $\sigma_{\hat{p}}$ simboliza o desvio padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser tomadas da população. Como não possuímos tal parâmetro, e como $n$ é grande ($n = \QUATROn \geq 50$), $\sigma_{\hat{p}}$ foi aproximado por $s_{\hat{p}}$, o desvio padrão da amostra tomada.
+	Dada uma amostra aleatória simples de \QUATROn alunos tomados dentre os
+	\QUATRON da população, há 95\% de chance de que a proporção de alunos
+	cuja fonte de recursos são ``Incentivos Federais'' seja um valor contido
+	no intervalo \eqref{eq:quatro-a-result}.
+
+	Em \eqref{eq:quatro-a-expr}, $\sigma_{\hat{p}}$ simboliza o desvio
+	padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser
+	tomadas da população. Como não possuímos tal parâmetro, e como $n$ é
+	grande ($n = \QUATROn \geq 50$), $\sigma_{\hat{p}}$ foi aproximado por
+	$s_{\hat{p}}$, o desvio padrão da amostra tomada.
 
 \subsection{Precisão}
-No contexto dessa questão, é possível calcular o tamanho da amostra necessária para que $|\hat{p} - E(\hat{p})| \leq E_0$ usando as fórmulas \eqref{eq:quatro-b-n0} e \eqref{eq:quatro-b-n}.
 
-\begin{align}
-	n_0 &= \label{eq:quatro-b-n0}
-	       \frac{z_\gamma^2 p(1-p)}{E_0^2} \\
-	n &= \label{eq:quatro-b-n}
-	     \frac{N n_0}{N + n_0 - 1} 
-\end{align}
+	No contexto dessa questão, é possível calcular o tamanho da amostra
+	necessária para que $|\hat{p} - E(\hat{p})| \leq E_0$ usando as fórmulas
+	\eqref{eq:quatro-b-n0} e \eqref{eq:quatro-b-n}.
 
-Para obter o erro amostral máximo, dado o tamanho da amostra, as equações \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} podem ser usadas. 
+	\begin{align}
+		n_0 &= \label{eq:quatro-b-n0}
+			   \frac{z_\gamma^2 p(1-p)}{E_0^2} \\
+		n &= \label{eq:quatro-b-n}
+			 \frac{N n_0}{N + n_0 - 1} 
+	\end{align}
 
-Sabemos $n$, $N$ $z\gamma$ e $\hat{p}$, que pode ser usado para aproximar $p$. Para encontrar $E_0$, podemos deduzir \eqref{eq:quatro-b-e0-expr} algebricamente de \eqref{eq:quatro-b-n0}. Para encontrar $n_0$, usado em \eqref{eq:quatro-b-e0-expr}, $n_0$ pode ser isolada em \eqref{eq:quatro-b-n}, resultando em \eqref{eq:quatro-b-n0-expr}. Para tal foi utilizada a ferramenta WolframAlpha\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}.
+	Para obter o erro amostral máximo, dado o tamanho da amostra, as
+	equações \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} podem
+	ser usadas. 
 
-\begin{align}
-	E_0 &= \label{eq:quatro-b-e0-expr}
-	       \sqrt{\frac{z_\gamma p(1 - p) }{n_0}} \\
-	n_0 &= \label{eq:quatro-b-n0-expr}
-	       \frac{n-n N}{n-N}
-\end{align}
+	Sabemos $n$, $N$ $z\gamma$ e $\hat{p}$, que pode ser usado para
+	aproximar $p$. Para encontrar $E_0$, podemos deduzir
+	\eqref{eq:quatro-b-e0-expr} algebricamente de \eqref{eq:quatro-b-n0}.
+	Para encontrar $n_0$, usado em \eqref{eq:quatro-b-e0-expr}, $n_0$ pode
+	ser isolada em \eqref{eq:quatro-b-n}, resultando em
+	\eqref{eq:quatro-b-n0-expr}. Para tal foi utilizada a ferramenta
+	WolframAlpha\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}.
 
-Combinando \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} e substituindo os valores, o erro amostral máximo de uma amostra com \QUATROn elementos é dado por \eqref{eq:quatro-b-e0-calc}.
+	\begin{align}
+		E_0 &= \label{eq:quatro-b-e0-expr}
+			   \sqrt{\frac{z_\gamma p(1 - p) }{n_0}} \\
+		n_0 &= \label{eq:quatro-b-n0-expr}
+			   \frac{n-n N}{n-N}
+	\end{align}
 
-\begin{align}
-	\label{eq:quatro-b-e0-calc}
-	E_0 &= \sqrt{\frac{z_\gamma \hat{p}(1 - \hat{p}) }{\frac{n-n N}{n - N}}} \\
-	    &= \sqrt{\frac{\QUATROzy \;\cdot\; \QUATROpAmostral (1 - \QUATROpAmostral) }{\frac{\QUATROn - \QUATROn \;\cdot\; \QUATRON}{\QUATROn - \QUATRON}}} \nonumber \\
-	    &= \QUATROBE \nonumber
-\end{align}
+	Combinando \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} e
+	substituindo os valores, o erro amostral máximo de uma amostra com
+	\QUATROn elementos é dado por \eqref{eq:quatro-b-e0-calc}.
 
-Como $E_0 = \QUATROBE$, a amostra não é suficiente para uma margem de erro de 2\%. Usando \eqref{eq:quatro-b-n0} obtemos $n_0$ necessário para uma margem de erro de 2\% em \eqref{eq:quatro-b-n0-result}.
-% e \eqref{eq:quatro-b-n} (pois sabemos o tamanho da população), necessitaríamos de uma amostra com \QUATROBn elementos. Os detalhes são mostrados em \eqref{eq:quatro-b-n-2p}.
+	\begin{align}
+		\label{eq:quatro-b-e0-calc}
+		E_0 &= \sqrt{\frac{z_\gamma \hat{p}(1 - \hat{p}) }{\frac{n-n N}{n - N}}} \\
+			&= \sqrt{\frac{\QUATROzy \;\cdot\; \QUATROpAmostral (1 - \QUATROpAmostral) }{\frac{\QUATROn - \QUATROn \;\cdot\; \QUATRON}{\QUATROn - \QUATRON}}} \nonumber \\
+			&= \QUATROBE \nonumber
+	\end{align}
 
-\begin{align}
-	n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-	    &= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{0.02^2} \nonumber \\
-	    &= \label{eq:quatro-b-n0-result}
-	       \QUATROBnz	
-\end{align}
+	Como $E_0 = \QUATROBE$, a amostra não é suficiente para uma margem de
+	erro de 2\%. Usando \eqref{eq:quatro-b-n0} obtemos $n_0$ necessário para
+	uma margem de erro de 2\% em \eqref{eq:quatro-b-n0-result}.
+	% e \eqref{eq:quatro-b-n} (pois sabemos o tamanho da população),
+	% necessitaríamos de uma amostra com \QUATROBn elementos. Os detalhes
+	% são mostrados em \eqref{eq:quatro-b-n-2p}.
 
-Como o tamanho da população é conhecido, o valor em \eqref{eq:quatro-b-n0-result} pode ser reduzido para o valor em \eqref{eq:quatro-b-n-result}.
+	\begin{align}
+		n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
+			&= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{0.02^2} \nonumber \\
+			&= \label{eq:quatro-b-n0-result}
+			   \QUATROBnz	
+	\end{align}
 
-\begin{align}
-	n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
-    &= \QUATROBn \nonumber \\
-	  &\sim \label{eq:quatro-b-n-result} 
-	     \QUATROBnceil
-\end{align}
+	Como o tamanho da população é conhecido, o valor em
+	\eqref{eq:quatro-b-n0-result} pode ser reduzido para o valor em
+	\eqref{eq:quatro-b-n-result}.
+
+	\begin{align}
+		n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
+		  &= \QUATROBn \nonumber \\
+		  &\sim \label{eq:quatro-b-n-result} \QUATROBnceil
+	\end{align}
 
 \subsection{Tamanho da amostra sem amostra piloto}
 
-Para estimar o tamanho da amostra que garanta erro amostral máximo de 2\% sem uma estimativa adequada para a proporção populacional $p$, deve ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de $n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida superestimando $p$ como $0.5$ e aplicando isso em \eqref{eq:quatro-b-n0}
+	Para estimar o tamanho da amostra que garanta erro amostral máximo de
+	2\% sem uma estimativa adequada para a proporção populacional $p$, deve
+	ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de
+	$n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida
+	superestimando $p$ como $0.5$ e aplicando isso em \eqref{eq:quatro-b-n0}
 
-\begin{align}
-	n_0 &= \label{eq:quatro-c-n0-expr}
-	       \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
-	    &= \frac{\QUATROzy^2}{4 \cdot (0.02)^2} \nonumber \\
-	    &= \label{eq:quatro-c-n0-result}
-	       \QUATROCnz
-\end{align}
+	\begin{align}
+		n_0 &= \label{eq:quatro-c-n0-expr}
+			   \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+			&= \frac{\QUATROzy^2}{4 \cdot (0.02)^2} \nonumber \\
+			&= \label{eq:quatro-c-n0-result}
+			   \QUATROCnz
+	\end{align}
 
-Novamente, \eqref{eq:quatro-c-n0-result} pode ser substituído em \eqref{eq:quatro-b-n}, resultando no tamanho da amostra necessário, em \eqref{eq:quatro-c-n-result}.
+	Novamente, \eqref{eq:quatro-c-n0-result} pode ser substituído em
+	\eqref{eq:quatro-b-n}, resultando no tamanho da amostra necessário, em
+	\eqref{eq:quatro-c-n-result}.
 
-\begin{align}
-	n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
-	  &= \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz - 1} \nonumber \\
-	  &= \QUATROCn \nonumber \\
-	  &= \label{eq:quatro-c-n-result} 
-	     \QUATROCnceil
-\end{align}
+	\begin{align}
+		n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
+		  &= \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz - 1} \nonumber \\
+		  &= \QUATROCn \nonumber \\
+		  &= \label{eq:quatro-c-n-result} 
+			 \QUATROCnceil
+	\end{align}
 
-Portanto, considerando a ausência de uma amostra piloto, é preciso ter uma amostra de tamanho mínimo de \QUATROCnceil para estimar com 95\% de confiança e precisão de 2\% a proporção populacional de alunos de EAD da TYU que usam incentivos federais.
+	Portanto, considerando a ausência de uma amostra piloto, é preciso ter
+	uma amostra de tamanho mínimo de \QUATROCnceil para estimar com 95\% de
+	confiança e precisão de 2\% a proporção populacional de alunos de EAD da
+	TYU que usam incentivos federais.
