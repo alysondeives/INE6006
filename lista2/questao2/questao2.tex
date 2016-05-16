@@ -32,33 +32,42 @@ A média de idades de amostra é 31,85 anos, com o nível de confiança de 95\%,
 	tamanho da amostra é pequeno ($n < 30$) utiliza-se a \textit{distribuição t
 	student}.
 
-Para saber o tamanho da amostra necessário para estimar a média populacional da idade dos alunos, com erro amostral máximo tolerado de 2 anos, utiliza-se a seguinte equação:
+	Para saber o tamanho da amostra necessário para estimar a média populacional
+	da idade dos alunos, com erro amostral máximo tolerado de 2 anos, utiliza-se
+	a seguinte equação:
 
-\begin{equation*}
-  n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
-\end{equation*}
+	\begin{equation*}
+	  n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
+	\end{equation*}
 
-Sabendo-se que o grau de liberdade é 19, pois gl = n - 1, e o nível de confiança é de 99\%, o valor da cauda superior será de 0,005. Obtendo os valores da tabela de \textit{distribuição t student}, t 
-= 2,861. Inserindo os valores na equação, tem-se:
+	Sabendo-se que o grau de liberdade é 19, pois gl = n - 1, e o nível de
+	confiança é de 99\%, o valor da cauda superior será de 0,005. Obtendo os
+	valores da tabela de \textit{distribuição t student}, t = 2,861. Inserindo
+	os valores na equação, tem-se:
 
-\begin{equation*}
- n_0 = \left (\frac{2,861 \times 6,11534}{2} \right)^2 = 76,52 \cong 77
-\end{equation*}
+	\begin{equation*}
+		 n_0 = \left (\frac{2,861 \times 6,11534}{2} \right)^2 = 76,52 \cong 77
+	\end{equation*}
 
-Como o tamanho da população não é grande e é conhecido, adicionalmente, utiliza-se a seguinte equação para calcular o tamanho da amostra.
+	Como o tamanho da população não é grande e é conhecido, adicionalmente,
+	utiliza-se a seguinte equação para calcular o tamanho da amostra.
 
-\begin{equation*}
- n = \frac{N . n_0}{N + n_0}
-\end{equation*}
+	\begin{equation*}
+		 n = \frac{N . n_0}{N + n_0}
+	\end{equation*}
 
-Inserindo os valores na equação, tem-se:
+	Inserindo os valores na equação, tem-se:
 
-\begin{equation*}
- n = \frac{4987 \times 76,52}{4987 + 76,52} = 75,3636 \cong 75
-\end{equation*}
+	\begin{equation*}
+		 n = \lceil \frac{4987 \times 76,52}{4987 + 76,52} \rceil = \lceil 75,3636 \rceil
+		 = 76
+	\end{equation*}
 
-Diante dos cálculos apresentados acima, pode-se dizer que uma amostra com 20 elementos não é suficiente para encontrar um intervalo de 99\% de confiança para a média populacional da idade dos alunos 
-com um erro máximo tolerado de 2 anos. Seria necessário, no mínimo 77 elementos da amostra para garantir certa precisão. 
+	Diante dos cálculos apresentados acima, pode-se dizer que uma amostra
+	com 20 elementos não é suficiente para encontrar um intervalo de 99\% de
+	confiança para a média populacional da idade dos alunos com um erro
+	máximo tolerado de 2 anos. Seria necessário, no mínimo $76$ elementos da
+	amostra para garantir certa precisão. 
 
 \subsection{Você concorda com o plano de amostragem usado, que considerou a população homogênea}
 Com o objetivo de caracterizar melhor o perfil dos alunos através da variável idade, o plano de amostragem utilizado, considerando a população homogênea, não é o ideal, uma vez que a variável idade 
