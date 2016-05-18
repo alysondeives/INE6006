@@ -13,7 +13,7 @@ e seu respectivos desvios padrões.
 \vspace{0.5em}
 \begin{tabular}{l r r r}
 	\toprule
-	\textbf{n} & \textbf{Média} & \textbf{Desvio Padrão} & \textbf{$\frac{\sigma}{\sqrt{n}}$}\\
+	\textbf{\specialcell{c}{Tamanho da\\Amostra}} & \textbf{Média} & \textbf{\specialcell{c}{Desvio\\Padrão}} & \textbf{$\frac{\sigma}{\sqrt{n}}$}\\
 	\midrule
 	$4$       & ${\UMxQuatro}$   & ${\UMsdQuatro}$   & ${\UMsdeQuatro}$   \\
 	$8$       & ${\UMxOito}$   & ${\UMsdOito}$   & ${\UMsdeOito}$   \\
@@ -31,9 +31,42 @@ Porém para amostra de tamanho 30 e 100, a média amostral se distanciou da méd
 
 \subsection{(item b)}
 Sim, as amostras retiradas confirmam a afirmação. Conforme indicado na \autoref{tab:q1}, os valores 
-de desvio padrão das amostras são próximos aos valores de $\frac{\sigma}{sqrt{n}}$ e para a amostra de tamanho 100, 
+de desvio padrão das amostras são próximos aos valores de $\frac{\sigma}{\sqrt{n}}$ e para a amostra de tamanho 100, 
 são exatamente iguais.
 
 \subsection{(item c)}
-Como gerar o gráfico? Escolher uma amostra dentre as 200 para algum tamanho? Qual seria o valor da distribuição?
 
+\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{questao1/histogram_renda_m4.eps}
+	\caption{Amostra de tamanho 4}
+	\label{fig:m8}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{questao1/histogram_renda_m8.eps}
+	\caption{Amostra de tamanho 8}
+	\label{fig:m8}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{questao1/histogram_renda_m16.eps}
+	\caption{Amostra de tamanho 16}
+	\label{fig:m16}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{questao1/histogram_renda_m30.eps}
+	\caption{Amostra de tamanho 30}
+	\label{fig:m30}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[width=0.49\textwidth]{questao1/histogram_renda_m100.eps}
+	\caption{Amostra de tamanho 100}
+	\label{fig:m100}
+\end{figure}
+
+\FloatBarrier

@@ -62,7 +62,7 @@ print(ic99)
 
 #b) Sim, o intervalo ficou maior. Poderia aumentar o tamanho da amostra pq...
 
-E0 = 1.5/2
+E0 = 1.5
 n0 = (t99*sd(amostra$x)/E0)*(t99*sd(amostra$x)/E0)
 #[1] 25.94
 
