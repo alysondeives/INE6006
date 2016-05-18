@@ -1,8 +1,123 @@
-\subsection{(item a)}
-Lorem ipsum...
+\subsection{Intervalo de 95\% de confiança para a média populacional da Idade dos alunos}
+\label{sub:1a}
+	
+	Após retirar os dados perdidos da variável Idade, foi retirada uma
+	amostra aleatória de 20 idades, por meio de sorteio. Com a amostra
+	adquirida, tem-se média $\bar{x}$ = 31,85 e desvio padrão s = 6,11534.
+	Com o desvio padrão da população desconhecido, utiliza-se o desvio
+	padrão da amostra (s = 6,11534).  O tamanho da população é conhecido (N
+	= 4987) e o da amostra é pequeno, $n < 30$, então, nesse caso utiliza-se
+	a \textit{distribuição t de Student}.
 
-\subsection{(item b)}
-Lorem ipsum...
+	Para obter o intervalo de confiança para a média em uma população
+	conhecida, é possível utilizar a seguinte equação:
 
-\subsection{(item c)}
-Lorem ipsum...
+	\begin{align*}
+		IC (\mu, \gamma) = \bar{x} \pm t_\gamma \frac{s}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}
+	\end{align*}
+
+	Para um intervalo de confiança de 95\%, obtém-se o valor da cauda
+	superior 0,025. Diante disso, procura-se na tabela \textit{distribuição
+	t de student} o grau de liberdade 19, pois gl = n-1, e o valor 0,025,
+	resultando em \textit{t = 2,093}. Inserindo os valores na equação
+	tem-se:
+
+	\begin{align*}
+		IC (\mu, 95\%) &= 31,85 \pm 2,093 \frac{6,11534}{\sqrt{20}} \sqrt{\frac{4987 - 20}{4987 - 1}} \\
+		IC (\mu, 95\%) &= 31,85 \pm 2,8565
+	\end{align*}
+
+	A média de idades de amostra é 31,85 anos, com o nível de confiança de
+	95\%, a margem de erro é de 2,8565 anos para mais ou para menos. Diante
+	disso, o intervalo de confiança é de [28,9935; 34,7065].
+
+\subsection{Intervalo de 99\% de confiança para a média populacional da Idade dos alunos, com uma precisão de 2 anos}
+
+	Com o desvio padrão da população desconhecido, utiliza-se como amostra
+	piloto n = 20 e desvio padrão s = 6,11534, obtidos anteriormente. Como o
+	tamanho da amostra é pequeno ($n < 30$) utiliza-se a
+	\textit{distribuição t student}.
+
+	Para saber o tamanho da amostra necessário para estimar a média
+	populacional da idade dos alunos, com erro amostral máximo tolerado de 2
+	anos, utiliza-se a seguinte equação:
+
+	\begin{align*}
+		 n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
+	\end{align*}
+
+	Sabendo-se que o grau de liberdade é 19, pois gl = n - 1, e o nível de
+	confiança é de 99\%, o valor da cauda superior será de 0,005. Obtendo os
+	valores da tabela de \textit{distribuição t student}, t = 2,861.
+	Inserindo os valores na equação, tem-se:
+
+	\begin{align*}
+		n_0 = \left (\frac{2,861 \times 6,11534}{2} \right)^2 = 76,52 \cong 77
+	\end{align*}
+
+	Como o tamanho da população não é grande e é conhecido, adicionalmente,
+	utiliza-se a seguinte equação para calcular o tamanho da amostra.
+
+	\begin{align*}
+		n = \frac{N . n_0}{N + n_0}
+	\end{align*}
+
+	Inserindo os valores na equação, tem-se:
+
+	\begin{align*}
+		n &= \lceil \frac{4987 \times 76,52}{4987 + 76,52} \rceil \\
+		n &= \lceil 75,3636 \rceil \\
+		n &= 76
+	\end{align*}
+
+	Diante dos cálculos apresentados acima, pode-se dizer que uma amostra
+	com 20 elementos não é suficiente para encontrar um intervalo de 99\% de
+	confiança para a média populacional da idade dos alunos com um erro
+	máximo tolerado de 2 anos. Seria necessário, no mínimo $76$ elementos da
+	amostra para garantir certa precisão. 
+
+\subsection{Você concorda com o plano de amostragem usado, que considerou a população homogênea}
+
+	Com o objetivo de caracterizar melhor o perfil dos alunos através da
+	variável idade, o plano de amostragem utilizado, considerando a
+	população homogênea, não é o ideal, uma vez que a variável idade está
+	associada a pelo menos uma outra variável. Por exemplo, existe uma
+	associação entre a variável Idade e a variável Opinião, mostrando que os
+	alunos com idades inferiores a 30 anos possuem maiores percentuais
+	(72,57\%) para a opinião \textquotedblleft Muito
+	Satisfeitos\textquotedblright, enquanto os alunos com idades superiores
+	a 30 anos possuem maiores percentuais (25,62\%) para a opinião
+	\textquotedblleft Indiferente\textquotedblright, não obtendo flutuação
+	maior do que 5\% para as opiniões \textquotedblleft
+	Satisfeitos\textquotedblright (21,94\%) e \textquotedblleft
+	Insatisfeitos\textquotedblright (21,28\%). Além disso, o perfil dos
+	alunos pode ser analisado através da associações entre outras variáveis,
+	como por exemplo, Opinião e Pagamento e Pagamento e Região, conforme
+	apresentado na Lista 1. 
+
+	Como resultado da associação entre Opinião e Pagamento, observou-se que
+	os alunos que pagam sua mensalidade com Auxílio de Familiares são mais
+	\textquotedblleft Indiferentes\textquotedblright (36,96\%), com Bolsas
+	de Estudos são mais \textquotedblleft Indiferentes\textquotedblright
+	(38,72\%), com Financiamento Bancário são mais \textquotedblleft Muito
+	Satisfeitos\textquotedblright (66,36\%), com Incentivos Federal são mais
+	\textquotedblleft Insatisfeitos\textquotedblright (35,30\%) e com
+	Recursos Próprios são mais \textquotedblleft
+	Satisfeitos\textquotedblright (34,48\%).
+
+	Por outro lado, a associação entre as variáveis Pagamento e Região
+	apresentou o seguinte resultado: os alunos de Aratibutantã utilizam,
+	maioritariamente, a forma de pagamento por \textquotedblleft Incentivos
+	Federais\textquotedblright (47,51\%), os de Baependinha utilizam o
+	\textquotedblleft Financiamento Bancário\textquotedblright (53,01\%), os
+	de Itamaracanã utilizam o \textquotedblleft Financiamento Bancário
+	\textquotedblright (90,98\%), os de Jaquereçaba utilizam os
+	\textquotedblleft Incentivos Federais\textquotedblright (76,68\%) e por
+	fim, os alunos de Paranapitanga utilizam, maioritariamente, a forma de
+	pagamento \textquotedblleft Incentivos Federais\textquotedblright
+	(95,87\%). 
+
+	Para caracterizar melhor o perfil dos alunos, poderia ser realizado um
+	plano de amostragem estratificada proporcional, uma vez que se conhece,
+	neste caso, as características da população (quantos e quais são os
+	tamanhos dos estratos). 

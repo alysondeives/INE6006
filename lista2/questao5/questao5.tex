@@ -1,80 +1,111 @@
 \input{questao5/vars}
 
-Foi retirada uma amostra aleatória simples sem reposição com \CINCOn elementos, dentre os \CINCON alunos que possuíam um valor definido para a variável Opinião. 
-A proporção amostral $\hat{p}$ de alunos com opiniões negativas (ou seja, alunos que consideraram ``Insatisfeitos'' ou ``Muito insatisfeitos'') foi de \CINCOpAmostral.
+	Foi retirada uma amostra aleatória simples sem reposição com \CINCOn
+	elementos, dentre os \CINCON alunos que possuíam um valor definido para
+	a variável Opinião.  A proporção amostral $\hat{p}$ de alunos com
+	opiniões negativas (ou seja, alunos que consideraram ``Insatisfeitos''
+	ou ``Muito insatisfeitos'') foi de \CINCOpAmostral.
 
-\begin{align*} 
-	\hat{p}  &= {\frac{\CINCOqtdOpinioesNegativas}{\CINCOn}} = \CINCOpAmostral \nonumber \\
-\end{align*}
-
+	\begin{align*} 
+		\hat{p}  &= {\frac{\CINCOqtdOpinioesNegativas}{\CINCOn}} = \CINCOpAmostral \nonumber \\
+	\end{align*}
 
 \subsection{Intervalo de confiança}
-O intervalo de confiança para a estatística $\hat{p}$ é dado pelas equações \eqref{eq:quatro-a-expr} e \eqref{eq:quatro-a-estim} já apresentadas no item 4 deste trabalho.
-Substituindo na fórmula os valores obtidos na amostra, encontra-se o seguinte resultado:
 
-\begin{align} 
-	IC(p, 95\%) 
-	            &= \CINCOpAmostral \pm \CINCOzy \sqrt{\frac{\CINCOpAmostral (1- \CINCOpAmostral)}{\CINCOn}} \nonumber \\
-	            &= \CINCOpAmostral \pm \CINCOAdelta \nonumber \\
-	            \label{eq:cinco-a-result}
-	            &= [\CINCOAICinf, \CINCOAICsup]
-\end{align}
+	O intervalo de confiança para a estatística $\hat{p}$ é dado pelas
+	equações \eqref{eq:quatro-a-expr} e \eqref{eq:quatro-a-estim} já
+	apresentadas no item 4 deste trabalho.  Substituindo na fórmula os
+	valores obtidos na amostra, encontra-se o seguinte resultado:
 
-Do mesmo modo em que foi aplicada a \autoref{eq:quatro-a-expr} no item 4, $\sigma_{\hat{p}}$ (desvio padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser tomadas da população) também foi aproximado pelo desvio padrão da amostra tomada $s_{\hat{p}}$.
+	\begin{align} 
+		IC(p, 95\%) 
+					&= \CINCOpAmostral \pm \CINCOzy \sqrt{\frac{\CINCOpAmostral (1- \CINCOpAmostral)}{\CINCOn}} \nonumber \\
+					&= \CINCOpAmostral \pm \CINCOAdelta \nonumber \\
+					\label{eq:cinco-a-result}
+					&= [\CINCOAICinf, \CINCOAICsup]
+	\end{align}
 
-Portanto, dada uma amostra aleatória simples de \CINCOn alunos tomados dentre os \CINCON da população, há 95\% de chance de que a proporção de alunos com opiniões negativas seja um valor entre \CINCOAICinf e \CINCOAICsup.
+	Do mesmo modo em que foi aplicada a \autoref{eq:quatro-a-expr} no item
+	4, $\sigma_{\hat{p}}$ (desvio padrão de $\hat{p}$ em todas as amostras
+	aleatórias que podem ser tomadas da população) também foi aproximado
+	pelo desvio padrão da amostra tomada $s_{\hat{p}}$.
 
+	Portanto, dada uma amostra aleatória simples de \CINCOn alunos tomados
+	dentre os \CINCON da população, há 95\% de chance de que a proporção de
+	alunos com opiniões negativas seja um valor entre \CINCOAICinf e
+	\CINCOAICsup.
 
 \subsection{Precisão}
-Como já apresentado anteriormente no item 4, é possível aplicar a mesma fórmula definida em \eqref{eq:quatro-b-e0-calc}, de modo a obter o valor do erro amostral máximo de uma amostra com \CINCOn elementos.
 
-\begin{align}
-	\label{eq:cinco-b-e0-calc}
-	E_0 &= \sqrt{\frac{\CINCOzy \;\cdot\; \CINCOpAmostral (1 - \CINCOpAmostral) }{\frac{\CINCOn - \CINCOn \;\cdot\; \CINCON}{\CINCOn - \CINCON}}} \\
-	    &= \CINCOBE \nonumber
-\end{align}
+	Como já apresentado anteriormente no item 4, é possível aplicar a mesma
+	fórmula definida em \eqref{eq:quatro-b-e0-calc}, de modo a obter o valor
+	do erro amostral máximo de uma amostra com \CINCOn elementos.
 
-Como o valor de $E_0 = \CINCOBE$, a amostra não é suficiente para uma margem de erro de 2\%. Aplicando a fórmula \eqref{eq:quatro-b-n0} já mencionada, obtem-se o $n_0$ necessário para uma margem de erro de 2\% em \eqref{eq:cinco-b-n0-result}.
+	\begin{align}
+		\label{eq:cinco-b-e0-calc}
+		E_0 &= \sqrt{\frac{\CINCOzy \;\cdot\; \CINCOpAmostral (1 - \CINCOpAmostral) }{\frac{\CINCOn - \CINCOn \;\cdot\; \CINCON}{\CINCOn - \CINCON}}} \\
+			&= \CINCOBE \nonumber
+	\end{align}
 
-\begin{align}
-	n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-	    &= \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{0.02^2} \nonumber \\
-	    &= \label{eq:cinco-b-n0-result}
-	       \CINCOBnz	
-\end{align}
+	Como o valor de $E_0 = \CINCOBE$, a amostra não é suficiente para uma
+	margem de erro de 2\%. Aplicando a fórmula \eqref{eq:quatro-b-n0} já
+	mencionada, obtem-se o $n_0$ necessário para uma margem de erro de 2\%
+	em \eqref{eq:cinco-b-n0-result}.
 
-Como o tamanho da população é conhecido, o valor em \eqref{eq:cinco-b-n0-result} pode ainda ser reduzido para o valor obtido em \eqref{eq:cinco-b-n-result}.
+	\begin{align}
+		n_0 &= \lceil \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \rceil \\
+			&= \lceil \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{0.02^2} \nonumber \rceil \\
+			&= \label{eq:cinco-b-n0-result}
+			   \CINCOBnz	
+	\end{align}
 
-\begin{align}
-	n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
-    &= \CINCOBn \nonumber \\
-	  &\sim \label{eq:cinco-b-n-result} 
-	     \CINCOBnceil
-\end{align}
+	Como o tamanho da população é conhecido, o valor em
+	\eqref{eq:cinco-b-n0-result} pode ainda ser reduzido para o valor obtido
+	em \eqref{eq:cinco-b-n-result}.
 
-Pode-se concluir que a amostra de tamanho 200 não é suficiente para um intervalo de confiança de 95\% com precisão de 2\%, sendo, portanto, neccessário obter uma amostra de tamanho mínimo de \CINCOBnceil.
+	\begin{align}
+		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
+		  &= \lceil \CINCOBn \nonumber \rceil \\
+		  &= \lceil \label{eq:cinco-b-n-result} 
+			 \CINCOBnceil \rceil
+	\end{align}
 
+	Pode-se concluir que a amostra de tamanho 200 não é suficiente para um
+	intervalo de confiança de 95\% com precisão de 2\%, sendo, portanto,
+	neccessário obter uma amostra de tamanho mínimo de \CINCOBnceil.
 
 \subsection{Tamanho da amostra sem amostra piloto}
 
-Para estimar o tamanho da amostra que garanta erro amostral máximo de $2\%$ com um nível de confiança de $95\%$ e sem uma estimativa adequada para a proporção populacional $p$, foi utilizada a fórmula \eqref{eq:quatro-c-n0-expr} (já apresentada no item 4 deste trabalho) para obtenção de $n_0$. 
-Do modo análogo, o valor de $p$ foi superestimado para $0.5$ aplicando na \autoref{eq:quatro-b-n0} supracitada.
+	Para estimar o tamanho da amostra que garanta erro amostral máximo de
+	$2\%$ com um nível de confiança de $95\%$ e sem uma estimativa adequada
+	para a proporção populacional $p$, foi utilizada a fórmula
+	\eqref{eq:quatro-c-n0-expr} (já apresentada no item 4 deste trabalho)
+	para obtenção de $n_0$.  Do modo análogo, o valor de $p$ foi
+	superestimado para $0.5$ aplicando na \autoref{eq:quatro-b-n0}
+	supracitada.
 
-\begin{align}
-	n_0 
-	    &= \frac{\CINCOzy^2}{4 \cdot (0.02)^2} \nonumber \\
-	    &= \label{eq:cinco-c-n0-result}
-	       \CINCOCnz
-\end{align}
+	\begin{align}
+		n_0 
+			&= \lceil \frac{\CINCOzy^2}{4 \cdot (0.02)^2} \nonumber \rceil \\
+			&= \label{eq:cinco-c-n0-result}
+			   \CINCOCnz
+	\end{align}
 
-Em seguida, como o tamanho da população é conhecido, o resultado obtido em \eqref{eq:cinco-c-n0-result} pode ser substituído na fórmula \eqref{eq:quatro-b-n}, resultando em \eqref{eq:cinco-c-n-result}, o qual representa o tamanho da amostra necessário.
+	Em seguida, como o tamanho da população é conhecido, o resultado obtido
+	em \eqref{eq:cinco-c-n0-result} pode ser substituído na fórmula
+	\eqref{eq:quatro-b-n}, resultando em \eqref{eq:cinco-c-n-result}, o qual
+	representa o tamanho da amostra necessário.
 
-\begin{align}
-	n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
-	  &= \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1} \nonumber \\
-	  &= \CINCOCn \nonumber \\
-	  &= \label{eq:cinco-c-n-result} 
-	     \CINCOCnceil
-\end{align}
+	\begin{align}
+		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
+		  &= \lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
+		  \nonumber \rceil \\
+		  &= \lceil \CINCOCn \nonumber \rceil\\
+		  &= \label{eq:cinco-c-n-result} 
+			 \CINCOCnceil
+	\end{align}
 
-Portanto, considerando a ausência de uma amostra piloto, é preciso ter uma amostra de tamanho mínimo de \CINCOCnceil para estimar com $95\%$ de confiança e precisão de $2\%$ a proporção populacional de alunos com opiniões negativas sobre a EAD da TYU.
+	Portanto, considerando a ausência de uma amostra piloto, é preciso ter
+	uma amostra de tamanho mínimo de \CINCOCnceil para estimar com $95\%$ de
+	confiança e precisão de $2\%$ a proporção populacional de alunos com
+	opiniões negativas sobre a EAD da TYU.
