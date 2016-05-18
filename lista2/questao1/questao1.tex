@@ -2,9 +2,9 @@
 
 Foram retiradas 200 amostras, sem reposição, com tamanhos 4, 8, 16, 30 e 100, 
 dentre os 4986 alunos que possuíam um valor definido para a variável Renda.
-A população possuí média de ${\UMx}$ para a variável Renda, com desvio padrão de
-${\UMsd}$. A \autoref{tab:q1} apresentam os valores esperados da média amostral
-e seu respectivos desvios padrões.
+A população possuí média $\mu$ = ${\UMx}$ para a variável Renda, com desvio padrão $\sigma$ = ${\UMsd}$.
+A \autoref{tab:q1} apresentam os valores da média e desvio padrão para cada tamanho
+de amostra e seu respectivo valor esperado de desvio padrão.
 
 \begin{table}[h]
 \centering
@@ -24,23 +24,22 @@ e seu respectivos desvios padrões.
 \end{tabular}
 \end{table}
 
-\subsection{(item a)}
-A medida que se aumentou o tamanho da amostra, de 4 para 16, o resultado se aproximou à media populacional.
-Porém para amostra de tamanho 30 e 100, a média amostral se distanciou da média populacional.
+\subsection{Valor esperado da média amostral}
+Na \autoref{tab:q1} é possível observar que a medida que se aumenta o tamanho da amostra o valor da média fica cada vez mais próximo ao valor da média populacional, que é de ${\UMx}$.
 
 
-\subsection{(item b)}
-Sim, as amostras retiradas confirmam a afirmação. Conforme indicado na \autoref{tab:q1}, os valores 
-de desvio padrão das amostras são próximos aos valores de $\frac{\sigma}{\sqrt{n}}$ e para a amostra de tamanho 100, 
-são exatamente iguais.
+\subsection{Valor esperado do desvio padrão da média amostral}
+Conforme indicado na \autoref{tab:q1}, os valores de desvio padrão das amostras ficam mais próximos aos valores de $\frac{\sigma}{\sqrt{n}}$ à medida que se aumenta o tamanho das amostras.
 
-\subsection{(item c)}
+\subsection{Distribuição amostral da média}
+Conforme indicado nas \autoref{fig:m4,fig:m8,fig:m16,fig:m30,fig:m100}, a medida que se aumenta o tamanho da amostra,
+a distribuição amostral se torna similar a uma distribuição normal.
 
 \begin{figure}[h]
 \begin{minipage}{0.50\textwidth}
 	\includegraphics[width=\linewidth]{plots/histogram_renda_n4.eps}
 	\caption{Amostra de tamanho 4}
-	\label{fig:m8}
+	\label{fig:m4}
 \end{minipage}
 \begin{minipage}{0.50\textwidth}
 	\includegraphics[width=\linewidth]{plots/histogram_renda_n8.eps}
