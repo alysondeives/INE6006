@@ -81,11 +81,11 @@ ic99b=c(xb-delta99b,xb+delta99b)
 #Note: open = "w" means open for writing (nothing about truncation is specified)
 #      however, it does truncate the file on this line, but avoids truncation on every cat.
 out <- file("vars.tex", open = "w")
-cat(sprintf("\\newcommand{\\TRESicmin}{%.2f\\xspace}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicmax}{%.2f\\xspace}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESicmin}{\num{%.2f}\\xspace}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicmax}{\num{%.2f}\\xspace}\n", ic[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESicNoveNovemin}{%.2f\\xspace}\n", ic99[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicNoveNovemax}{%.2f\\xspace}\n", ic99[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNovemin}{\num{%.2f}\\xspace}\n", ic99[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNovemax}{\num{%.2f}\\xspace}\n", ic99[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESnZero}{%.0f\\xspace}\n", n0), file = out)
+cat(sprintf("\\newcommand{\\TRESnZero}{\num{%.0f}\\xspace}\n", n0), file = out)
 close(out)

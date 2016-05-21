@@ -2,12 +2,12 @@
 
 Para avaliação da variável Renda, primeiramente foi feita uma recodificação
 da mesma em uma variável quantiatativa de dois valores: alunos com renda
-familiar inferior a $2,5$ salários mínimos e alunos com renda igual ou
-superior a $2,5$ salários mínimos. Nesse processo, apenas foram considerados
+familiar inferior a $\num{2,5}$ salários mínimos e alunos com renda igual ou
+superior a $\num{2,5}$ salários mínimos. Nesse processo, apenas foram considerados
 aqueles alunos que possuíam um valor definido para a variável, totalizando
 $N=\SEISN$ alunos. Em seguida, retirou-se uma amostra aleatório simples de
 \SEISn elementos dessa população. A proporção amostral $\hat{p}$ de alunos
-com renda superior a $2.5$ salários mínimos é de \SEISpAmostral.
+com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 
 \subsection{Intervalo de Confiança}
 
@@ -23,7 +23,7 @@ com renda superior a $2.5$ salários mínimos é de \SEISpAmostral.
 
 	\noindent Dada uma amostra aleatória simples de \SEISn alunos
 	selecionados dentre os \SEISN da população há $95\%$ de chance de que a
-	proporção de alunos que possuem renda familiar superior a $2,5$ salários
+	proporção de alunos que possuem renda familiar superior a $\num{2,5}$ salários
 	mínimos seja um valor no intervalo $[\SEISAICinf, \SEISAICsup]$
 
 \subsection{Precisão}
@@ -76,12 +76,12 @@ com renda superior a $2.5$ salários mínimos é de \SEISpAmostral.
 	sem uma estimativa adequada para a proporção populacional $p$, deve ser
 	utilizada a fórmula \eqref{eq:seis-c-n0-expr} para obtenção de $n_0$. A
 	fórmula em \eqref{eq:seis-c-n0-expr} foi obtida superestimando $p$ como
-	$0.5$ e aplicando isso em \eqref{eq:seis-b-n0}
+	$\num{0.5}$ e aplicando isso em \eqref{eq:seis-b-n0}
 
 	\begin{align}
 		n_0 &= \label{eq:seis-c-n0-expr}
-			   \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
-			&= \frac{\SEISzy^2}{4 \cdot (0.02)^2} \nonumber \\
+			   \frac{z_\gamma^2 \cdot \num{0.5} \cdot (1 - \num{0.5})}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+			&= \frac{\SEISzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
 			&= \label{eq:seis-c-n0-result}
 			   \SEISCnz
 	\end{align}
@@ -101,7 +101,7 @@ com renda superior a $2.5$ salários mínimos é de \SEISpAmostral.
 	Portanto, considerando a ausência de uma amostra piloto, é preciso ter uma
 	amostra de tamanho mínimo de \SEISCnceil para estimar com 95\% de
 	confiança e precisão de 2\% a proporção populacional de alunos de EAD da TYU
-	apresentam renda familiar superior a $2,5$ salários mínimosi.
+	apresentam renda familiar superior a $\num{2,5}$ salários mínimosi.
 
 \subsection{Impactos na Recodificação da Variável}
 
