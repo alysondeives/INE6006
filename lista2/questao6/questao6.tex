@@ -1,16 +1,18 @@
 \input{questao6/vars}
 
+\todo[inline]{``recodificação da mesma em uma variável \st{quantiatativa}\hl{qualitativa} de dois valores''}
 Para avaliação da variável Renda, primeiramente foi feita uma recodificação
 da mesma em uma variável quantiatativa de dois valores: alunos com renda
 familiar inferior a $\num{2,5}$ salários mínimos e alunos com renda igual ou
 superior a $\num{2,5}$ salários mínimos. Nesse processo, apenas foram considerados
 aqueles alunos que possuíam um valor definido para a variável, totalizando
-$N=\SEISN$ alunos. Em seguida, retirou-se uma amostra aleatório simples de
+$N=\SEISN$ alunos. Em seguida, retirou-se uma amostra aleatória simples de
 \SEISn elementos dessa população. A proporção amostral $\hat{p}$ de alunos
 com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 
 \subsection{Intervalo de Confiança}
 
+	\todo[inline]{O intervalo de confiança para a \hl{proporção $p$} é (...)}
 	O intervalo de confiança para a a estatística $\hat{p}$ é dado por:
 	%
 	\begin{align*}
@@ -91,7 +93,7 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 	\eqref{eq:seis-c-n-result}.
 
 	\begin{align}
-		n &= \Bgi\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
+		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
 		  &= \Big\lceil \frac{\SEISN \cdot \SEISCnz}{\SEISN + \SEISCnz - 1} \Big\rceil \nonumber \\
 		  &= \lceil \SEISCn \rceil \nonumber \\
 		  &= \label{eq:seis-c-n-result} 
