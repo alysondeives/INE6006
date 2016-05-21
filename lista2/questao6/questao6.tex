@@ -91,9 +91,9 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 	\eqref{eq:seis-c-n-result}.
 
 	\begin{align}
-		n &= \frac{N n_0}{N + n_0 - 1} \nonumber \\
-		  &= \frac{\SEISN \cdot \SEISCnz}{\SEISN + \SEISCnz - 1} \nonumber \\
-		  &= \SEISCn \nonumber \\
+		n &= \Bgi\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
+		  &= \Big\lceil \frac{\SEISN \cdot \SEISCnz}{\SEISN + \SEISCnz - 1} \Big\rceil \nonumber \\
+		  &= \lceil \SEISCn \rceil \nonumber \\
 		  &= \label{eq:seis-c-n-result} 
 			 \SEISCnceil
 	\end{align}
