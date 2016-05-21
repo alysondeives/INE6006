@@ -84,8 +84,8 @@ out <- file("vars.tex", open = "w")
 cat(sprintf("\\newcommand{\\TRESicmin}{%.2f\\xspace}\n", ic[1]), file = out)
 cat(sprintf("\\newcommand{\\TRESicmax}{%.2f\\xspace}\n", ic[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESic99min}{%.2f\\xspace}\n", ic99[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESic99max}{%.2f\\xspace}\n", ic99[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNovemin}{%.2f\\xspace}\n", ic99[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNovemax}{%.2f\\xspace}\n", ic99[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESn0}{%.0f\\xspace}\n", n0), file = out)
+cat(sprintf("\\newcommand{\\TRESnZero}{%.0f\\xspace}\n", n0), file = out)
 close(out)
