@@ -3,11 +3,11 @@
 	Foi retirada uma amostra aleatória simples, sem reposição, com \QUATROn
 	elementos, dentre os \QUATRON alunos que possuíam um valor definido para a
 	variável Pagamento. A proporção amostral $\hat{p}$ de alunos cuja fonte de
-	Pagamento são ``Incentivos Federais'' foi de \QUATROpAmostral.
+	Pagamento era ``Incentivos Federais'' foi de \QUATROpAmostral.
 
 \subsection{Intervalo de confiança}
 
-	O intervalo de confiança para a a estatística $\hat{p}$ é dado pela
+	O intervalo de confiança para a proporção $p$ é dado pela
 	\autoref{eq:quatro-a-expr}.
 
 	\begin{align} 
@@ -22,20 +22,21 @@
 	\end{align}
 
 	Dada uma amostra aleatória simples de \QUATROn alunos tomados dentre os
-	\QUATRON da população, há 95\% de chance de que a proporção de alunos
-	cuja fonte de recursos são ``Incentivos Federais'' seja um valor contido
-	no intervalo \eqref{eq:quatro-a-result}.
+	\QUATRON da população, há 95\% de chance de que a proporção amostral $\hat{p}$ 
+    de alunos cuja fonte de recursos são ``Incentivos Federais'' seja um valor 
+    contido no intervalo \eqref{eq:quatro-a-result}.
 
 	Em \eqref{eq:quatro-a-expr}, $\sigma_{\hat{p}}$ simboliza o desvio
 	padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser
-	tomadas da população. Como não possuímos tal parâmetro, e como $n$ é
-	grande ($n = \QUATROn \geq 50$), $\sigma_{\hat{p}}$ foi aproximado por
-	$s_{\hat{p}}$, o desvio padrão da amostra tomada.
+	tomadas da população. Como não possuímos tal parâmetro (que depende da 
+    proporção populacional $p$), e como $n$ é grande ($n = \QUATROn \geq 50$),
+    $\sigma_{\hat{p}}$ foi aproximado por $s_{\hat{p}}$, o desvio padrão da 
+    amostra tomada.
 
 \subsection{Precisão}
 
 	No contexto dessa questão, é possível calcular o tamanho da amostra
-	necessária para que $|\hat{p} - E(\hat{p})| \leq E_0$ usando as fórmulas
+	necessária para que $|\hat{p} - p| \leq E_0$ usando as fórmulas
 	\eqref{eq:quatro-b-n0} e \eqref{eq:quatro-b-n}.
 
 	\begin{align}
@@ -47,21 +48,19 @@
 
 	Para obter o erro amostral máximo, dado o tamanho da amostra, as
 	equações \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} podem
-	ser usadas. 
-
-	Sabemos $n$, $N$ $z\gamma$ e $\hat{p}$, que pode ser usado para
+	ser usadas. Sabemos $n$, $N$, $z\gamma$ e $\hat{p}$, que pode ser usado para
 	aproximar $p$. Para encontrar $E_0$, podemos deduzir
 	\eqref{eq:quatro-b-e0-expr} algebricamente de \eqref{eq:quatro-b-n0}.
 	Para encontrar $n_0$, usado em \eqref{eq:quatro-b-e0-expr}, $n_0$ pode
-	ser isolada em \eqref{eq:quatro-b-n}, resultando em
-	\eqref{eq:quatro-b-n0-expr}. Para tal foi utilizada a ferramenta
-	WolframAlpha\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}.
+	ser isolada\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}
+    em \eqref{eq:quatro-b-n}, resultando em
+	\eqref{eq:quatro-b-n0-expr}. 
 
 	\begin{align}
 		E_0 &= \label{eq:quatro-b-e0-expr}
 			   \sqrt{\frac{z_\gamma p(1 - p) }{n_0}} \\
 		n_0 &= \label{eq:quatro-b-n0-expr}
-			   \frac{n-n N}{n-N}
+			   \frac{n-n N}{n-N} \qquad \forall (n, N) : n \neq N
 	\end{align}
 
 	Combinando \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} e
@@ -84,7 +83,7 @@
 
 	\begin{align}
 		n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-			&= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{0.02^2} \nonumber \\
+			&= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{\num{0.02}^2} \nonumber \\
 			&= \label{eq:quatro-b-n0-result}
 			   \QUATROBnz	
 	\end{align}
@@ -94,7 +93,7 @@
 	\eqref{eq:quatro-b-n-result}.
 
 	\begin{align}
-		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
+		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
 		  &= \lceil \QUATROBn \nonumber \rceil \\
 		  &= \label{eq:quatro-b-n-result} \QUATROBnceil
 	\end{align}
@@ -105,12 +104,12 @@
 	2\% sem uma estimativa adequada para a proporção populacional $p$, deve
 	ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de
 	$n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida
-	superestimando $p$ como $0.5$ e aplicando isso em \eqref{eq:quatro-b-n0}
+	superestimando $p$ como $\num{0.5}$ e aplicando isso em \eqref{eq:quatro-b-n0}
 
 	\begin{align}
 		n_0 &= \label{eq:quatro-c-n0-expr}
-			   \frac{z_\gamma^2 \cdot 0.5 \cdot (1 - 0.5)}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
-			&= \frac{\QUATROzy^2}{4 \cdot (0.02)^2} \nonumber \\
+			   \frac{z_\gamma^2 \cdot \num{0.5} \cdot (1 - \num{0.5})}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+			&= \frac{\QUATROzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
 			&= \label{eq:quatro-c-n0-result}
 			   \QUATROCnz
 	\end{align}
@@ -120,8 +119,8 @@
 	\eqref{eq:quatro-c-n-result}.
 
 	\begin{align}
-		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
-		  &= \lceil \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz -1} \nonumber \rceil \\
+		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
+		  &= \Big\lceil \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz -1} \nonumber \Big\rceil \\
 		  &= \lceil \QUATROCn \nonumber \rceil \\
 		  &= \label{eq:quatro-c-n-result} 
 			 \QUATROCnceil

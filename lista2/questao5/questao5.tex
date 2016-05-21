@@ -12,6 +12,7 @@
 
 \subsection{Intervalo de confiança}
 
+	\todo[inline]{O intervalo de confiança para a \hl{proporção $p$} é (...)}
 	O intervalo de confiança para a estatística $\hat{p}$ é dado pelas
 	equações \eqref{eq:quatro-a-expr} e \eqref{eq:quatro-a-estim} já
 	apresentadas no item 4 deste trabalho.  Substituindo na fórmula os
@@ -53,8 +54,8 @@
 	em \eqref{eq:cinco-b-n0-result}.
 
 	\begin{align}
-		n_0 &= \lceil \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \rceil \\
-			&= \lceil \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{0.02^2} \nonumber \rceil \\
+		n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
+			&= \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{\num{0.02}^2} \nonumber \\
 			&= \label{eq:cinco-b-n0-result}
 			   \CINCOBnz	
 	\end{align}
@@ -64,10 +65,10 @@
 	em \eqref{eq:cinco-b-n-result}.
 
 	\begin{align}
-		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
+		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
 		  &= \lceil \CINCOBn \nonumber \rceil \\
-		  &= \lceil \label{eq:cinco-b-n-result} 
-			 \CINCOBnceil \rceil
+		  &= \label{eq:cinco-b-n-result} 
+			 \CINCOBnceil
 	\end{align}
 
 	Pode-se concluir que a amostra de tamanho 200 não é suficiente para um
@@ -81,12 +82,12 @@
 	para a proporção populacional $p$, foi utilizada a fórmula
 	\eqref{eq:quatro-c-n0-expr} (já apresentada no item 4 deste trabalho)
 	para obtenção de $n_0$.  Do modo análogo, o valor de $p$ foi
-	superestimado para $0.5$ aplicando na \autoref{eq:quatro-b-n0}
+	superestimado para $\num{0.5}$ aplicando na \autoref{eq:quatro-b-n0}
 	supracitada.
 
 	\begin{align}
 		n_0 
-			&= \lceil \frac{\CINCOzy^2}{4 \cdot (0.02)^2} \nonumber \rceil \\
+			&= \frac{\CINCOzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
 			&= \label{eq:cinco-c-n0-result}
 			   \CINCOCnz
 	\end{align}
@@ -97,9 +98,9 @@
 	representa o tamanho da amostra necessário.
 
 	\begin{align}
-		n &= \lceil \frac{N n_0}{N + n_0 - 1} \nonumber \rceil \\
-		  &= \lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
-		  \nonumber \rceil \\
+		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
+		  &= \Big\lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
+		  \nonumber \Big\rceil \\
 		  &= \lceil \CINCOCn \nonumber \rceil\\
 		  &= \label{eq:cinco-c-n-result} 
 			 \CINCOCnceil
