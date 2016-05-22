@@ -206,17 +206,17 @@ cat(sprintf("\\newcommand{\\UMxDezesseis}{\num{%.3f}\\xspace}\n", x16), file = o
 cat(sprintf("\\newcommand{\\UMxTrinta}{\num{%.3f}\\xspace}\n", x30), file = out)
 cat(sprintf("\\newcommand{\\UMxCem}{\num{%.3f}\\xspace}\n", x100), file = out)
 
-cat(sprintf("\\newcommand{\\UMsdQuatro}{\num{%.3f}\\xspace}\n", sd4), file = out)
-cat(sprintf("\\newcommand{\\UMsdOito}{\num{%.3f}\\xspace}\n", sd8), file = out)
-cat(sprintf("\\newcommand{\\UMsdDezesseis}{\num{%.3f}\\xspace}\n", sd16), file = out)
-cat(sprintf("\\newcommand{\\UMsdTrinta}{\num{%.3f}\\xspace}\n", sd30), file = out)
-cat(sprintf("\\newcommand{\\UMsdCem}{\num{%.3f}\\xspace}\n", sd100), file = out)
+cat(sprintf("\\newcommand{\\UMsdQuatro}{\\num{%.3f}\\xspace}\n", sd4), file = out)
+cat(sprintf("\\newcommand{\\UMsdOito}{\\num{%.3f}\\xspace}\n", sd8), file = out)
+cat(sprintf("\\newcommand{\\UMsdDezesseis}{\\num{%.3f}\\xspace}\n", sd16), file = out)
+cat(sprintf("\\newcommand{\\UMsdTrinta}{\\num{%.3f}\\xspace}\n", sd30), file = out)
+cat(sprintf("\\newcommand{\\UMsdCem}{\\num{%.3f}\\xspace}\n", sd100), file = out)
 
-cat(sprintf("\\newcommand{\\UMsdeQuatro}{\num{%.3f}\\xspace}\n", sde4), file = out)
-cat(sprintf("\\newcommand{\\UMsdeOito}{\num{%.3f}\\xspace}\n", sde8), file = out)
-cat(sprintf("\\newcommand{\\UMsdeDezesseis}{\num{%.3f}\\xspace}\n", sde16), file = out)
-cat(sprintf("\\newcommand{\\UMsdeTrinta}{\num{%.3f}\\xspace}\n", sde30), file = out)
-cat(sprintf("\\newcommand{\\UMsdeCem}{\num{%.3f}\\xspace}\n", sde100), file = out)
+cat(sprintf("\\newcommand{\\UMsdeQuatro}{\\num{%.3f}\\xspace}\n", sde4), file = out)
+cat(sprintf("\\newcommand{\\UMsdeOito}{\\num{%.3f}\\xspace}\n", sde8), file = out)
+cat(sprintf("\\newcommand{\\UMsdeDezesseis}{\\num{%.3f}\\xspace}\n", sde16), file = out)
+cat(sprintf("\\newcommand{\\UMsdeTrinta}{\\num{%.3f}\\xspace}\n", sde30), file = out)
+cat(sprintf("\\newcommand{\\UMsdeCem}{\\num{%.3f}\\xspace}\n", sde100), file = out)
 
 close(out)
 #------------------------------------------------------------------------------------------------

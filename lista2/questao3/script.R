@@ -89,26 +89,26 @@ print(n0corrigidoRounded)
 #Note: open = "w" means open for writing (nothing about truncation is specified)
 #      however, it does truncate the file on this line, but avoids truncation on every cat.
 out <- file("vars.tex", open = "w")
-<<<<<<< HEAD
-cat(sprintf("\\newcommand{\\TRESN}{\num{%.0f}\\xspace}\n", N), file = out)
-cat(sprintf("\\newcommand{\\TRESX}{\num{%.3f}\\xspace}\n", X), file = out)
-cat(sprintf("\\newcommand{\\TRESSD}{\num{%.3f}\\xspace}\n", SD), file = out)
 
-cat(sprintf("\\newcommand{\\TRESn}{\num{%.0f}\\xspace}\n", n), file = out)
-cat(sprintf("\\newcommand{\\TRESx}{\num{%.3f}\\xspace}\n", x), file = out)
-cat(sprintf("\\newcommand{\\TRESsd}{\num{%.3f}\\xspace}\n", sd), file = out)
+cat(sprintf("\\newcommand{\\TRESN}{\\num{%.0f}\\xspace}\n", N), file = out)
+cat(sprintf("\\newcommand{\\TRESX}{\\num{%.3f}\\xspace}\n", X), file = out)
+cat(sprintf("\\newcommand{\\TRESSD}{\\num{%.3f}\\xspace}\n", SD), file = out)
 
-cat(sprintf("\\newcommand{\\TRESdelta}{\num{%.3f}\\xspace}\n", delta), file = out)
-cat(sprintf("\\newcommand{\\TRESicmin}{\num{%.3f}\\xspace}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicmax}{\num{%.3f}\\xspace}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESn}{\\num{%.0f}\\xspace}\n", n), file = out)
+cat(sprintf("\\newcommand{\\TRESx}{\\num{%.3f}\\xspace}\n", x), file = out)
+cat(sprintf("\\newcommand{\\TRESsd}{\\num{%.3f}\\xspace}\n", sd), file = out)
 
-cat(sprintf("\\newcommand{\\TRESdeltaNoveNove}{\num{%.3f}\\xspace}\n", delta99), file = out)
-cat(sprintf("\\newcommand{\\TRESicNoveNoveMin}{\num{%.3f}\\xspace}\n", ic99[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicNoveNoveMax}{\num{%.3f}\\xspace}\n", ic99[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESdelta}{\\num{%.3f}\\xspace}\n", delta), file = out)
+cat(sprintf("\\newcommand{\\TRESicmin}{\\num{%.3f}\\xspace}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicmax}{\\num{%.3f}\\xspace}\n", ic[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESnZero}{\num{%.2f}\\xspace}\n", n0), file = out)
-cat(sprintf("\\newcommand{\\TRESnZeroRounded}{\num{%.0f}\\xspace}\n", n0Rounded), file = out)
-cat(sprintf("\\newcommand{\\TRESnZeroCorrigido}{\num{%.2f}\\xspace}\n", n0corrigido), file = out)
-cat(sprintf("\\newcommand{\\TRESnZeroCorrigidoRounded}{\num{%.0f}\\xspace}\n", n0corrigidoRounded), file = out)
+cat(sprintf("\\newcommand{\\TRESdeltaNoveNove}{\\num{%.3f}\\xspace}\n", delta99), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNoveMin}{\\num{%.3f}\\xspace}\n", ic99[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNoveMax}{\\num{%.3f}\\xspace}\n", ic99[2]), file = out)
+
+cat(sprintf("\\newcommand{\\TRESnZero}{\\num{%.2f}\\xspace}\n", n0), file = out)
+cat(sprintf("\\newcommand{\\TRESnZeroRounded}{\\num{%.0f}\\xspace}\n", n0Rounded), file = out)
+cat(sprintf("\\newcommand{\\TRESnZeroCorrigido}{\\num{%.2f}\\xspace}\n", n0corrigido), file = out)
+cat(sprintf("\\newcommand{\\TRESnZeroCorrigidoRounded}{\\num{%.0f}\\xspace}\n", n0corrigidoRounded), file = out)
 
 close(out)
