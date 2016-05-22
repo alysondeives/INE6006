@@ -1,14 +1,14 @@
 \input{questao1/vars}
 
-Foram retiradas 200 amostras, sem reposição, com tamanhos 4, 8, 16, 30 e 100, 
-dentre os 4986 alunos que possuíam um valor definido para a variável Renda.
-A população possuí média $\mu$ = ${\UMx}$ para a variável Renda, com desvio padrão $\sigma$ = ${\UMsd}$.
+Foram retiradas 200 amostras, sem reposição, com tamanhos $n$ = 4, 8, 16, 30 e 100, 
+dentre os 4986 alunos que possuíam um valor definido para a variável \textit{Renda}.
+A população possuí média $\mu$ = ${\UMx}$ para a variável \textit{Renda}, com desvio padrão $\sigma$ = ${\UMsd}$.
 A \autoref{tab:q1} apresentam os valores da média e desvio padrão para cada tamanho
-de amostra e seu respectivo valor esperado de desvio padrão.
+de amostra e seu respectivo valor esperado de desvio padrão ($\frac{\sigma}{\sqrt{n}}$).
 
 \begin{table}[h]
 \centering
-\caption{Valores das médias amostrais para a variável \textit{Renda}}
+\caption{Valores da média e desvio padrão das médias amostrais da variável \textit{Renda}.}
 \label{tab:q1}
 \vspace{0.5em}
 \begin{tabular}{l r r r}
@@ -32,40 +32,42 @@ Na \autoref{tab:q1} é possível observar que a medida que se aumenta o tamanho 
 Conforme indicado na \autoref{tab:q1}, os valores de desvio padrão das amostras ficam mais próximos dos valores de $\frac{\sigma}{\sqrt{n}}$ à medida que se aumenta o tamanho das amostras.
 
 \subsection{Distribuição amostral da média}
-Conforme indicado nas Figuras 1 à 5, à medida que se aumenta o tamanho das amostras
+Conforme indicado na Figura \ref{fig:distribuicao-amostral}, à medida que se aumenta o tamanho das amostras
 a distribuição amostral da média se torna similar à uma distribuição normal.
 
-\begin{figure}[h]
-\begin{minipage}{0.50\textwidth}
-	\includegraphics[width=\linewidth]{plots/histogram_renda_n4.eps}
-	\caption{Distribuição amostral da média para amostras de tamanho 4}
-	\label{fig:m4}
-\end{minipage}
-\begin{minipage}{0.50\textwidth}
-	\includegraphics[width=\linewidth]{plots/histogram_renda_n8.eps}
-	\caption{Distribuição amostral da média para amostras de tamanho 8}
-	\label{fig:m8}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[h]
-\begin{minipage}{0.50\textwidth}
-	\includegraphics[width=\linewidth]{plots/histogram_renda_n16.eps}
-	\caption{Distribuição amostral da média para amostras de tamanho 16}
-	\label{fig:m16}
-\end{minipage}
-\begin{minipage}{0.50\textwidth}
-	\includegraphics[width=\linewidth]{plots/histogram_renda_n30.eps}
-	\caption{Distribuição amostral da média para amostras de tamanho 30}
-	\label{fig:m30}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-	\includegraphics[width=0.50\textwidth]{plots/histogram_renda_n100.eps}
-	\caption{Distribuição amostral da média para amostras de tamanho 100}
-	\label{fig:m100}
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_n4.eps}
+		\caption{}
+		\label{fig:m4}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_n8.eps}
+		\caption{}
+		\label{fig:m8}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_n16.eps}
+		\caption{}
+		\label{fig:m16}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_n30.eps}
+		\caption{}
+		\label{fig:m30}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_n30.eps}
+		\caption{}
+		\label{fig:m30}
+	\end{subfigure}
+	\label{fig:distribuicao-amostral}
+	\caption{Distribuições amostrais das médias para amostras de tamanho 4(a), 8(b), 16(c), 30(d) e 100(e).}
 \end{figure}
 
 \FloatBarrier
