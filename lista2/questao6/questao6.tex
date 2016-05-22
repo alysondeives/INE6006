@@ -12,12 +12,12 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 \subsection{Intervalo de Confiança}
 
 	\todo[inline]{O intervalo de confiança para a \hl{proporção $p$} é (...)}
-	O intervalo de confiança para a estatística $\hat{p}$ é dado por:
+	Como $\sigma_{\hat{p}}$ não é conhecido e $n$ é suficientemente grande,
+	o intervalo de confiança para a proporção $p$ foi calculado pela
+	\autoref{equation: intervalo de confianca para proporcao 2}.
 	%
 	\begin{align*}
-		IC(p, 95\%) &= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
-					&= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
-					&= \SEISpAmostral \pm \SEISzy \sqrt{\frac{\SEISpAmostral (1- \SEISpAmostral)}{\SEISn}} \nonumber \\
+		IC(p, 95\%) &= \SEISpAmostral \pm \SEISzy \sqrt{\frac{\SEISpAmostral (1- \SEISpAmostral)}{\SEISn}} \nonumber \\
 					&= \SEISpAmostral \pm \SEISAdelta \nonumber \\
 					&= [\SEISAICinf, \SEISAICsup]
 	\end{align*}

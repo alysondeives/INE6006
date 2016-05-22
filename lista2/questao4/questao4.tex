@@ -7,15 +7,12 @@
 
 \subsection{Intervalo de confiança}
 
-	O intervalo de confiança para a proporção $p$ é dado pela
-	\autoref{eq:quatro-a-expr}.
+	Como $\sigma_{\hat{p}}$ não é conhecido e $n$ é suficientemente grande,
+	o intervalo de confiança para a proporção $p$ foi calculado pela
+	\autoref{equation: intervalo de confianca para proporcao 2}.
 
 	\begin{align} 
-		IC(p, 95\%) \label{eq:quatro-a-expr}
-					&= \hat{p} \pm z_\gamma \sigma_{\hat{p}} \\
-					\label{eq:quatro-a-estim}
-					&= \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
-					&= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
+		IC(p, 95\%) &= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
 					&= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
 					\label{eq:quatro-a-result}
 					&= [\QUATROAICinf, \QUATROAICsup]
@@ -25,13 +22,6 @@
 	\QUATRON da população, há 95\% de chance de que a proporção amostral $\hat{p}$ 
     de alunos cuja fonte de recursos são ``Incentivos Federais'' seja um valor 
     contido no intervalo \eqref{eq:quatro-a-result}.
-
-	Em \eqref{eq:quatro-a-expr}, $\sigma_{\hat{p}}$ simboliza o desvio
-	padrão de $\hat{p}$ em todas as amostras aleatórias que podem ser
-	tomadas da população. Como não possuímos tal parâmetro (que depende da 
-    proporção populacional $p$), e como $n$ é grande ($n = \QUATROn \geq 50$),
-    $\sigma_{\hat{p}}$ foi aproximado por $s_{\hat{p}}$, o desvio padrão da 
-    amostra tomada.
 
 \subsection{Precisão}
 
