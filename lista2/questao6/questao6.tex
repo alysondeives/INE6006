@@ -36,8 +36,24 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 		E_0 &= \SEISBE
 	\end{align*}
 
-	Como $E_0 = \SEISBE$, a amostra é suficientemente grande para se afirmar
-	um erro de $2\%$.
+	Como $E_0 = \SEISBE$, a amostra não é suficiente para uma margem de erro
+	de 2\%. Usando a Equação \ref{equation: tamanho amostra 1} obtemos o
+	valor de $n_0$ necessário para uma margem de erro de 2\%:
+
+	\begin{align*}
+		n_0 &= \frac{\SEISzy^2 \cdot \SEISpAmostral(1-\SEISpAmostral)}{\num{0.02}^2} \\
+		n_0 &= \SEISBnz
+	\end{align*}
+
+	Como o tamanho da população é conhecido, esse valor pode ser reduzido
+	para, aplicando-se a Equação \ref{equation: tamanho amostra 2}.
+
+	\begin{align*}
+		n &= \Big\lceil \frac{\SEISN \cdot  \SEISBnz}{\SEISN + \SEISBnz - 1} \Big\rceil \\
+		  &= \lceil \SEISBn \rceil \\
+		  &= \SEISBnceil
+	\end{align*}
+
 
 \subsection{Tamanho da Amostra sem Amostra-Piloto}
 
