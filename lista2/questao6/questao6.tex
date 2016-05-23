@@ -29,24 +29,6 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 
 \subsection{Precisão}
 
-	Para obter o erro amostral máximo, dado o tamanho da amostra, as equações
-	\eqref{eq:seis-b-e0-expr} e \eqref{eq:seis-b-n0-expr} podem ser usadas. 
-
-	Sabemos $n$, $N$, $z\gamma$ e $\hat{p}$, que pode ser usado para aproximar
-	$p$. Para encontrar $E_0$, podemos deduzir \eqref{eq:seis-b-e0-expr}
-	algebricamente de \eqref{eq:seis-b-n0}. Para encontrar $n_0$, usado em
-	\eqref{eq:seis-b-e0-expr}, $n_0$ pode ser isolada em
-	\eqref{eq:seis-b-n}, resultando em \eqref{eq:seis-b-n0-expr}. Para tal
-	foi utilizada a ferramenta
-	WolframAlpha\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}.
-
-	\begin{align}
-		E_0 &= \label{eq:seis-b-e0-expr}
-			   \sqrt{\frac{z_\gamma p(1 - p) }{n_0}} \\
-		n_0 &= \label{eq:seis-b-n0-expr}
-			   \frac{n-n N}{n-N}
-	\end{align}
-
 	Combinando \eqref{eq:seis-b-e0-expr} e \eqref{eq:seis-b-n0-expr} e
 	substituindo os valores, o erro amostral máximo de uma amostra com
 	\SEISn elementos é dado por \eqref{eq:seis-b-e0-calc}.
