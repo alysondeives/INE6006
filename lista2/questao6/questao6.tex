@@ -30,11 +30,11 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 
 	O erro amostral máximo de uma amostra com \SEISn elementos é dado pela
 	Equação \ref{equation: erro amostral maximo}.
-
-	\begin{align}
-		E_0 &= \sqrt{\frac{\SEISzy \;\cdot\; \SEISpAmostral (1 - \SEISpAmostral) }{\frac{\SEISn - \SEISn \;\cdot\; \SEISN}{\SEISn - \SEISN}}} \nonumber \\
-		E_0 &= \SEISBE \nonumber
-	\end{align}
+	%
+	\begin{align*}
+		E_0 &= \sqrt{\frac{\SEISzy \;\cdot\; \SEISpAmostral (1 - \SEISpAmostral) }{\frac{\SEISn - \SEISn \;\cdot\; \SEISN}{\SEISn - \SEISN}}} \\
+		E_0 &= \SEISBE
+	\end{align*}
 
 	Como $E_0 = \SEISBE$, a amostra é suficientemente grande para se afirmar
 	um erro de $2\%$.
@@ -55,9 +55,8 @@ com renda superior a $\num{2.5}$ salários mínimos é de \SEISpAmostral.
 
 	Usando esse valor para $n_0$ superestimado, pode-se calcular o tamanho da
 	amostra necessária pela Equação \ref{equation: tamanho amostra 2}.
-
+	%
 	\begin{align*}
-		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \Big\rceil \\
 		n &= \Big\lceil \frac{\SEISN \cdot \SEISCnz}{\SEISN + \SEISCnz - 1} \Big\rceil \\
 		n &= \lceil \SEISCn \rceil \\
 		n &= \SEISCnceil
