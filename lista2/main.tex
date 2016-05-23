@@ -71,6 +71,40 @@
 	\section*{Parte 2: Intervalos de Confiança para Média}
 \end{center}
 
+	Nas questões que se seguem, são estudados os intervalos de confiança
+	para a média de algumas das variáveis da população. Para fins de síntese,
+	considere as seguintes equações no desenvolvimento desta segunda parte.
+
+	Dada uma população de tamanho $N$ e uma amostra aleatória desta população
+	com tamanho $n$, média $\bar{x}$ e desvio padrão $\sigma$, o intervalo de 
+	confiança para a média populacional $\mu$, com nível de confiança $\gamma$
+	é definido pela \autoref{eq:intervalo-confianca-media}:
+
+	\begin{equation}
+		\label{eq:intervalo-confianca-media}
+		IC (\mu, \gamma) = \bar{x} \pm t_\gamma \frac{s}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}
+	\end{equation}
+
+	Para se determinar o tamanho mínimo $n$ de uma amostra de maneira que
+	um determinado valor de erro amostral máximo $E_{0}$ para um nível de
+	confiança $\gamma$ seja atendido, utiliza-se a \autoref{eq:tamanho-amostra-n0}.
+	Nesta equação os valores de $t_{\gamma}$ e $s$ são definidos à partir
+	de uma amostra piloto.
+
+	\begin{equation}
+		\label{eq:tamanho-amostra-n0}
+		 n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
+	\end{equation}
+
+	Adicionalmente, caso o tamanho $N$ da população seja conhecido, o tamanho mínimo $n$ da amostra
+	é definido pela \autoref{eq:tamanho-amostra-n}. Caso contrário, $n = n_{0}$.
+
+	\begin{align}
+		\label{eq:tamanho-amostra-n}
+		n = \frac{N . n_0}{N + n_0}
+	\end{align}
+	
+
 \section{Variável Idade}
 \label{questao:2}
 \input{questao2/questao2}
