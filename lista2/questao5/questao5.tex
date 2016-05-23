@@ -12,10 +12,10 @@
 
 \subsection{Intervalo de confiança}
 
-	O intervalo de confiança para a proporção $p$ é dado pelas
-	equações \eqref{eq:quatro-a-expr} e \eqref{eq:quatro-a-estim}.  
-	Substituindo na fórmula os valores obtidos na amostra, encontra-se
-	o seguinte resultado:
+	O intervalo de confiança para a proporção $p$ é dado pela
+    \autoref{equation: intervalo de confianca para proporcao 1}, mas como $\sigma_{\hat{p}}$ 
+    não é conhecido e $n$ é grande, a 
+    \autoref{equation: intervalo de confianca para proporcao 2} pode ser usada.
 
 	\begin{align} 
 		IC(p, 95\%) 
@@ -25,11 +25,6 @@
 					&= [\CINCOAICinf, \CINCOAICsup]
 	\end{align}
 
-	Do mesmo modo em que foi aplicada a \autoref{eq:quatro-a-expr} no item
-	4, $\sigma_{\hat{p}}$ (desvio padrão de $\hat{p}$ em todas as amostras
-	aleatórias que podem ser tomadas da população) também foi aproximado
-	pelo desvio padrão da amostra tomada $s_{\hat{p}}$.
-
 	Portanto, dada uma amostra aleatória simples de \CINCOn alunos tomados
 	dentre os \CINCON da população, há 95\% de chance de que a proporção de
 	alunos com opiniões negativas seja um valor entre \CINCOAICinf e
@@ -37,9 +32,9 @@
 
 \subsection{Precisão}
 
-	Como já apresentado anteriormente, é possível aplicar a mesma
-	fórmula definida em \eqref{eq:quatro-b-e0-calc}, de modo a obter o valor
-	do erro amostral máximo de uma amostra com \CINCOn elementos.
+	Como já apresentado anteriormente, é possível aplicar a fórmula
+    definida na \autoref{equation: erro amostral maximo}, de modo a obter
+    o valor do erro amostral máximo de uma amostra com \CINCOn elementos.
 
 	\begin{align}
 		\label{eq:cinco-b-e0-calc}
@@ -48,13 +43,12 @@
 	\end{align}
 
 	Como o valor de $E_0 = \CINCOBE$, a amostra não é suficiente para uma
-	margem de erro de 2\%. Aplicando a fórmula \eqref{eq:quatro-b-n0} já
+	margem de erro de 2\%. Aplicando a fórmula \autoref{equation: tamanho amostra 1} já
 	mencionada, obtem-se o $n_0$ necessário para uma margem de erro de 2\%
 	em \eqref{eq:cinco-b-n0-result}.
 
 	\begin{align}
-		n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-			&= \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{\num{0.02}^2} \nonumber \\
+		n_0 &= \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{\num{0.02}^2} \nonumber \\
 			&= \label{eq:cinco-b-n0-result}
 			   \CINCOBnz	
 	\end{align}
@@ -64,8 +58,7 @@
 	em \eqref{eq:cinco-b-n-result}.
 
 	\begin{align}
-		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
-		  &= \lceil \CINCOBn \nonumber \rceil \\
+		n &= \lceil \CINCOBn \nonumber \rceil \\
 		  &= \label{eq:cinco-b-n-result} 
 			 \CINCOBnceil
 	\end{align}
@@ -79,25 +72,23 @@
 	Para estimar o tamanho da amostra que garanta erro amostral máximo de
 	$2\%$ com um nível de confiança de $95\%$ e sem uma estimativa adequada
 	para a proporção populacional $p$, foi utilizada a fórmula
-	\eqref{eq:quatro-c-n0-expr} para obtenção de $n_0$.  
-	De modo análogo, o valor de $p$ foi superestimado para $\num{0.5}$ 
-	aplicando na \autoref{eq:quatro-b-n0} supracitada.
+	\autoref{equation: tamanho amostra 1} para obtenção de $n_0$.  
+	De modo análogo a qurestão 4, o valor de $p$ foi superestimado para $\num{0.5}$ 
+	aplicando na \autoref{equation: tamanho amostra 1} supracitada.
 
 	\begin{align}
-		n_0 
-			&= \frac{\CINCOzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
+		n_0 &= \frac{\CINCOzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
 			&= \label{eq:cinco-c-n0-result}
 			   \CINCOCnz
 	\end{align}
 
 	Em seguida, como o tamanho da população é conhecido, o resultado obtido
 	em \eqref{eq:cinco-c-n0-result} pode ser substituído na fórmula
-	\eqref{eq:quatro-b-n}, resultando em \eqref{eq:cinco-c-n-result}, o qual
+	\autoref{equation: tamanho amostra 2}, resultando em \eqref{eq:cinco-c-n-result}, o qual
 	representa o tamanho da amostra necessário.
 
 	\begin{align}
-		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
-		  &= \Big\lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
+		n &= \Big\lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
 		  \nonumber \Big\rceil \\
 		  &= \lceil \CINCOCn \nonumber \rceil\\
 		  &= \label{eq:cinco-c-n-result} 
