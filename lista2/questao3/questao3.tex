@@ -1,75 +1,61 @@
 \input{questao3/vars.tex}
 
-Foi retirada uma amostra aleatória simples, sem reposição, com $n$ = 20 elementos,
-dentre os \TRESN alunos que possuíam um valor definido para a variável Renda.
-A população possui média \TRESX e desvio padrão de \TRESSD.
-A média amostral obtida foi de \TRESx com desvio padrão de \TRESsd.
+	Foi retirada uma amostra aleatória simples, sem reposição, com $n = 20$
+	elementos, dentre os \TRESN alunos que possuíam um valor definido para a
+	variável Renda.  A população possui média \TRESX e desvio padrão de
+	\TRESSD.  A média amostral obtida foi de \TRESx com desvio padrão de
+	\TRESsd.
 
-%<<<<<<< HEAD
-\subsection{Intervalo de 95\% de confiança para a média populacional da Renda dos alunos}
-Como o tamanho da amostra é pequeno ($n$ < 30), devemos calcular o intervalo
-de confiança utilizando a \textit{distribuiçao t de Student}. Para um intervalo
-de confiança de 95\% e 19 graus de liberdade (pois gl = 1-$n$), obtemos um valor $t$ = 2,093.
-Assim, podemos calcular o intervalo de confiança de acordo com a \autoref{eq:dois-a-expr}:
+\subsection{IC de 95\% para a Média Populacional da Renda dos Alunos}
 
-\begin{align*}
-	IC (\mu, 95\%) &= \TRESx \pm 2,093 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
-	IC (\mu, 95\%) &= \TRESx \pm \TRESdelta
-\end{align*}
+	Como o tamanho da amostra é pequeno ($n < 30$), devemos calcular o intervalo
+	de confiança utilizando a \textit{distribuiçao t de Student}. Para um
+	intervalo de confiança de 95\% e 19 graus de liberdade (pois $gl = 1-n$),
+	obtemos um valor $t = 2,093$.  Assim, podemos calcular o intervalo de
+	confiança de acordo com a \autoref{eq:dois-a-expr}:
 
-Assim, o intervalo de (\TRESicmin;\TRESicmax) contêm, com 95\% confiança, o
-valor da média populacional para a variável Renda.
+	\begin{align*}
+		IC (\mu, 95\%) &= \TRESx \pm 2,093 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
+		IC (\mu, 95\%) &= \TRESx \pm \TRESdelta
+	\end{align*}
 
-\subsection{Intervalo de 99\% de confiança para a média populacional da Renda dos alunos}
-Para um intervalo de confiança de 99\% e 19 graus de liberdade, obtemos um valor $t$ = 2,861.
-Utilizando novamente a \autoref{eq:dois-a-expr}:
+	Assim, o intervalo de (\TRESicmin;\TRESicmax) contêm, com 95\% confiança, o
+	valor da média populacional para a variável Renda.
 
-\begin{align*}
-	IC (\mu, 99\%) &= \TRESx \pm 2,861 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
-	IC (\mu, 99\%) &= \TRESx \pm \TRESdeltaNoveNove
-\end{align*}
+\subsection{IC de 99\% para a Média Populacional da Renda dos Alunos}
 
-Assim, o intervalo de \TRESicNoveNoveMin à \TRESicNoveNoveMax contêm, com grau de confiança de 99\%, o valor
-da média populacional para a variável Renda. Nota-se que o intervalo ficou maior em relação ao intervalo com grau de confiança de 95\%. 
-Para diminuir este intervalo é necessário aumentar o tamanho da amostra.
+	Para um intervalo de confiança de 99\% e 19 graus de liberdade, obtemos
+	um valor $t$ = 2,861.  Utilizando novamente a \autoref{eq:dois-a-expr}:
 
-\subsection{Tamanho mínimo da amostra para um intervalo de 99\% de confiança e precisão de 1,5 salários}
-Para se obter o tamanho mínimo da amostra, primeiramente utilizamos a \autoref{eq:dois-b-expr1}, considerando 
-como amostra piloto a mesma amostra retirada anteriormente:
+	\begin{align*}
+		IC (\mu, 99\%) &= \TRESx \pm 2,861 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
+		IC (\mu, 99\%) &= \TRESx \pm \TRESdeltaNoveNove
+	\end{align*}
 
-\begin{align*}
-	n_0 = \left (\frac{2,861 \times \TRESsd}{1,5} \right)^2 = \TRESnZero %\cong \TRESnZeroRounded
-\end{align*}
+	Assim, o intervalo de \TRESicNoveNoveMin à \TRESicNoveNoveMax contêm,
+	com grau de confiança de 99\%, o valor da média populacional para a
+	variável Renda. Nota-se que o intervalo ficou maior em relação ao
+	intervalo com grau de confiança de 95\%.  Para diminuir este intervalo é
+	necessário aumentar o tamanho da amostra.
 
-Como tamanho da população não é grande e é conhecido, adicionalmente utilizamos a \autoref{eq:dois-b-expr2}:
+\subsection{Tamanho Mínimo da Amostra para um IC de 99\% e $E_0$ de 1,5}
 
-\begin{align*}
-		n &= \lceil \frac{\TRESN \times \TRESnZero}{\TRESN + \TRESnZero} \rceil \\
-		n &= \lceil \TRESnZeroCorrigido \rceil \\
-		n &= \TRESnZeroCorrigidoRounded
-\end{align*}
+	Para se obter o tamanho mínimo da amostra, primeiramente utilizamos a
+	\autoref{eq:dois-b-expr1}, considerando como amostra piloto a mesma
+	amostra retirada anteriormente:
+
+	\begin{align*}
+		n_0 = \left (\frac{2,861 \times \TRESsd}{1,5} \right)^2 = \TRESnZero %\cong \TRESnZeroRounded
+	\end{align*}
+
+	Como tamanho da população não é grande e é conhecido, adicionalmente
+	utilizamos a \autoref{eq:dois-b-expr2}:
+
+	\begin{align*}
+			n &= \Big\lceil \frac{\TRESN \times \TRESnZero}{\TRESN + \TRESnZero} \Big\rceil \\
+			n &= \Big\lceil \TRESnZeroCorrigido \Big\rceil \\
+			n &= \TRESnZeroCorrigidoRounded
+	\end{align*}
 
 Portanto, são necessários \TRESnZeroCorrigidoRounded amostras para se obter, com 99\% de confiança,
 um intervalo de precisão de 1,5 salários mínimos em que se encontre a média populacional.
-%=======
-%\subsection{Intervalo de confiança de 95\% para Renda}
-%\todo[inline]{Desenvolvimento?}
-%O intervalo encontrado com grau de confiança de 95\% é de \TRESicmin à \TRESicmax.
-%\todo[inline]{Interpretação do resultado?}
-
-%\subsection{Intervalo de Confiança de 99\% para Renda}
-%\todo[inline]{Desenvolvimento?}
-%O intervalo encontrado com grau de confiança de 99\% é de \TRESicNoveNoveMin à \TRESicNoveNoveMax.
-%O intervalo ficou maior em relação ao intervalo com grau de confiança de 95\%.{}
-%Para diminuir esse intervalo seria necessário aumentar o tamanho da amostra.
-
-%\subsection{Tamanho mínimo de amostra}
-%\todo[inline]{Desenvolvimento? No mínimo citar as equações usadas (o professor não tem acesso ao script)}
-%\todo[inline]{Erro: Aqui está sendo calculado $n_0$. Como $N$ (tamanho da população) é conhecido, \\ $n=\frac{N \cdot n_0}{N + n_0 - 1}$}
-%\todo[inline]{Mencionar que a variância populacional foi estimada a partir da amostra já usada nessa questão, considerando a distribuição $t$ com $gl=19$.}
-%Para se obter um intervalo de confiança de 99\% com precisão de \num{1.5} salários
-%minimos, seria necessário uma amostra de tamanho \TRESnZero.
-
-%Obs: precisao de \num{1.5} quer dizer um intervalo de \num{1.5}, entao E = \num{1.5}/2?
-%\todo[inline]{Precisão de \num{1.5} quer dizer $E_0=\num{1.5}$}
-%>>>>>>> c837ae06ebc7ea456f04253385b1ccb383b46cef
