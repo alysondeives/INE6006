@@ -9,7 +9,8 @@
 
 	Como $\sigma_{\hat{p}}$ não é conhecido e $n$ é suficientemente grande,
 	o intervalo de confiança para a proporção $p$ foi calculado pela
-	\autoref{equation: intervalo de confianca para proporcao 2}.
+	\autoref{equation: intervalo de confianca para proporcao 2}  
+    aproximando $\sigma_{\hat{p}}$ por $s_{\hat{p}}$.
 
 	\begin{align} 
 		IC(p, 95\%) &= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
@@ -25,37 +26,32 @@
 
 \subsection{Precisão}
 
-	Combinando \eqref{eq:quatro-b-e0-expr} e \eqref{eq:quatro-b-n0-expr} e
+	Combinando \eqref{equation: erro amostral maximo} e \eqref{equation: tamanho amostral maximo} e
 	substituindo os valores, o erro amostral máximo de uma amostra com
 	\QUATROn elementos é dado por \eqref{eq:quatro-b-e0-calc}.
 
 	\begin{align}
-		\label{eq:quatro-b-e0-calc}
-		E_0 &= \sqrt{\frac{z_\gamma \hat{p}(1 - \hat{p}) }{\frac{n-n N}{n - N}}} \\
-			&= \sqrt{\frac{\QUATROzy \;\cdot\; \QUATROpAmostral (1 - \QUATROpAmostral) }{\frac{\QUATROn - \QUATROn \;\cdot\; \QUATRON}{\QUATROn - \QUATRON}}} \nonumber \\
+		E_0 &= \label{eq:quatro-b-e0-calc}
+               \sqrt{\frac{\QUATROzy \;\cdot\; \QUATROpAmostral (1 - \QUATROpAmostral) }{\frac{\QUATROn - \QUATROn \;\cdot\; \QUATRON}{\QUATROn - \QUATRON}}}  \\
 			&= \QUATROBE \nonumber
 	\end{align}
 
 	Como $E_0 = \QUATROBE$, a amostra não é suficiente para uma margem de
-	erro de 2\%. Usando \eqref{eq:quatro-b-n0} obtemos $n_0$ necessário para
-	uma margem de erro de 2\% em \eqref{eq:quatro-b-n0-result}.
-	% e \eqref{eq:quatro-b-n} (pois sabemos o tamanho da população),
-	% necessitaríamos de uma amostra com \QUATROBn elementos. Os detalhes
-	% são mostrados em \eqref{eq:quatro-b-n-2p}.
+	erro de 2\%. Usando \eqref{equation: tamanho amostra 1} obtemos o valor de $n_0$ 
+    necessário para uma margem de erro de 2\% em \eqref{eq:quatro-b-n0-result}.
 
 	\begin{align}
-		n_0 &= \frac{z_\gamma^2 p(1-p)}{E_0^2} \nonumber \\
-			&= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{\num{0.02}^2} \nonumber \\
+		n_0 &= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{\num{0.02}^2} \nonumber \\
 			&= \label{eq:quatro-b-n0-result}
 			   \QUATROBnz	
 	\end{align}
 
 	Como o tamanho da população é conhecido, o valor em
 	\eqref{eq:quatro-b-n0-result} pode ser reduzido para o valor em
-	\eqref{eq:quatro-b-n-result}.
+	\eqref{eq:quatro-b-n-result} aplicando \eqref{equation: tamanho amostra 2}.
 
 	\begin{align}
-		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
+		n &= \Big\lceil \frac{\QUATRON \cdot  \QUATROBnz}{\QUATRON + \QUATROBnz - 1} \nonumber \Big\rceil \\
 		  &= \lceil \QUATROBn \nonumber \rceil \\
 		  &= \label{eq:quatro-b-n-result} \QUATROBnceil
 	\end{align}
@@ -64,25 +60,24 @@
 
 	Para estimar o tamanho da amostra que garanta erro amostral máximo de
 	2\% sem uma estimativa adequada para a proporção populacional $p$, deve
-	ser utilizada a fórmula \eqref{eq:quatro-c-n0-expr} para obtenção de
+	ser utilizada a fórmula \eqref{equation: tamanho amostra 1} para obtenção de
 	$n_0$. A fórmula em \eqref{eq:quatro-c-n0-expr} foi obtida
-	superestimando $p$ como $\num{0.5}$ e aplicando isso em \eqref{eq:quatro-b-n0}
+	superestimando $p$ como $\num{0.5}$.
 
 	\begin{align}
 		n_0 &= \label{eq:quatro-c-n0-expr}
-			   \frac{z_\gamma^2 \cdot \num{0.5} \cdot (1 - \num{0.5})}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
+               \frac{z_\gamma^2 \cdot \num{0.5} \cdot (1 - \num{0.5})}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
 			&= \frac{\QUATROzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
 			&= \label{eq:quatro-c-n0-result}
 			   \QUATROCnz
 	\end{align}
 
 	Novamente, \eqref{eq:quatro-c-n0-result} pode ser substituído em
-	\eqref{eq:quatro-b-n}, resultando no tamanho da amostra necessário, em
+	\eqref{equation: tamanho amostra 2}, resultando no tamanho da amostra necessário, em
 	\eqref{eq:quatro-c-n-result}.
 
 	\begin{align}
-		n &= \Big\lceil \frac{N n_0}{N + n_0 - 1} \nonumber \Big\rceil \\
-		  &= \Big\lceil \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz -1} \nonumber \Big\rceil \\
+		n &= \Big\lceil \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz -1} \nonumber \Big\rceil \\
 		  &= \lceil \QUATROCn \nonumber \rceil \\
 		  &= \label{eq:quatro-c-n-result} 
 			 \QUATROCnceil
