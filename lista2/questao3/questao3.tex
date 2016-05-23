@@ -12,7 +12,7 @@
 	de confiança utilizando a \textit{distribuiçao t de Student}. Para um
 	intervalo de confiança de 95\% e 19 graus de liberdade (pois $gl = 1-n$),
 	obtemos um valor $t_{\gamma} = 2,093$.  Assim, podemos calcular o intervalo de
-	confiança de acordo com a \autoref{eq:dois-a-expr}:
+	confiança de acordo com a \autoref{eq:intervalo-confianca-media}:
 
 	\begin{align*}
 		IC (\mu, 95\%) &= \TRESx \pm 2,093 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
@@ -25,7 +25,7 @@
 \subsection{IC de 99\% para a Média Populacional da Renda dos Alunos}
 
 	Para um intervalo de confiança de 99\% e 19 graus de liberdade, obtemos
-	um valor $t_{\gamma} = 2,861$.  Utilizando novamente a \autoref{eq:dois-a-expr}:
+	um valor $t_{\gamma} = 2,861$.  Utilizando novamente a \autoref{eq:intervalo-confianca-media}:
 
 	\begin{align*}
 		IC (\mu, 99\%) &= \TRESx \pm 2,861 \frac{\TRESsd}{\sqrt{\TRESn}} \sqrt{\frac{\TRESN - \TRESn}{\TRESN - 1}} \\
@@ -41,7 +41,7 @@
 \subsection{Tamanho Mínimo da Amostra para um IC de 99\% e $E_0$ de 1,5}
 
 	Para se obter o tamanho mínimo da amostra, primeiramente utilizamos a
-	\autoref{eq:dois-b-expr1}. Consideramos como amostra piloto a mesma
+	\autoref{eq:tamanho-amostra-n0}. Consideramos como amostra piloto a mesma
 	amostra retirada anteriormente, assim $t_{\gamma}$ = 2,861 e $s = \TRESsd$:
 
 	\begin{align*}
@@ -49,7 +49,7 @@
 	\end{align*}
 
 	Como tamanho da população não é grande e é conhecido, adicionalmente
-	utilizamos a \autoref{eq:dois-b-expr2}:
+	utilizamos a \autoref{eq:tamanho-amostra-n}:
 
 	\begin{align*}
 			n &= \Big\lceil \frac{\TRESN \times \TRESnZero}{\TRESN + \TRESnZero} \Big\rceil \\
@@ -57,5 +57,5 @@
 			n &= \TRESnZeroCorrigidoRounded
 	\end{align*}
 
-Portanto, são necessários \TRESnZeroCorrigidoRounded amostras para se obter, com 99\% de confiança,
+Portanto, são necessárias \TRESnZeroCorrigidoRounded amostras para se obter, com 99\% de confiança,
 um intervalo com precisão de 1,5 salários mínimos em que se encontre a média populacional.
