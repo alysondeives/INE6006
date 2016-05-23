@@ -6,17 +6,11 @@
 	adquirida, tem-se média $\bar{x}$ = \num{32,1} e desvio padrão s = \num{4,930037}.
 	Com o desvio padrão da população desconhecido, utiliza-se o desvio
 	padrão da amostra ($s = \num{4,930037}$).  O tamanho da população é conhecido ($N
-	= 4987$) e o da amostra é pequeno, $n < 50$, então, nesse caso utiliza-se
+	= 4987$) e o da amostra é pequeno, $n \leq 50$, então, nesse caso utiliza-se
 	a distribuição t de Student.
 
 	Para obter o intervalo de confiança para a média em uma população
-	conhecida, é possível utilizar a seguinte equação:
-
-	
-	\begin{align}
-		\label{eq:dois-a-expr}
-		IC (\mu, \gamma) = \bar{x} \pm t_\gamma \frac{s}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}
-	\end{align}
+	conhecida, é possível utilizar a \autoref{eq:intervalo-confianca-media}.
 
 	Para um intervalo de confiança de 95\%, obtém-se o valor da cauda
 	superior de \num{0,025}. Diante disso, procura-se na tabela da distribuição
@@ -35,65 +29,48 @@
 
 \subsection{Intervalo de 99\% de confiança para a média populacional da Idade dos alunos, com uma precisão de 2 anos}
 
-	\todo[inline]{(...) utiliza-se da amostra piloto com $n=20$, o desvio (...)}
-    \todo[inline]{Mesma coisa sobre $t$ de Student para $n \leq 50$}
-	Com o desvio padrão da população desconhecido, utiliza-se como amostra
-	piloto n = 20 e desvio padrão $s = \num{6,11534}$, obtidos anteriormente. Como o
-	tamanho da amostra é pequeno ($n < 30$) utiliza-se a
-	distribuição t student.
+	Com o desvio padrão da população desconhecido, utiliza-se da amostra
+	piloto n = 20, o desvio padrão $s = \num{4,930037}$, obtidos anteriormente. Como o
+	tamanho da amostra é pequeno ($n \leq 30$) utiliza-se a distribuição t student.
 
 	Para saber o tamanho da amostra necessário para estimar a média
 	populacional da idade dos alunos, com erro amostral máximo tolerado de 2
-	anos, utiliza-se a seguinte equação:
-
-	\begin{align}
-		\label{eq:dois-b-expr1}
-		 n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
-	\end{align}
+	anos, utiliza-se a \autoref{eq:tamanho-amostra-n0}.
 
 	Sabendo-se que o grau de liberdade é 19, pois gl = n - 1, e o nível de
 	confiança é de 99\%, o valor da cauda superior será de \num{0,005}. Obtendo os
 	valores da tabela de distribuição t student, t = \num{2,861}.
 	Inserindo os valores na equação, tem-se:
 
-    \todo[inline]{No livro arredondamento do $n_0$ só acontece quando ele é atribuído pra $n$. Acho que aqui $\cong 77$ não faz sentido, já que ali embaixo, $n_0$ é usado como \num{76.52}}
 	\begin{align*}
-		n_0 = \left (\frac{\num{2,861} \times \num{6,11534}}{2} \right)^2 = \num{76,52} \cong 77
+		n_0 = \left (\frac{\num{2,861} \times \num{4,930037}}{2} \right)^2 = \num{49,7358}
 	\end{align*}
 
 	Como o tamanho da população não é grande e é conhecido, adicionalmente,
-	utiliza-se a seguinte equação para calcular o tamanho da amostra.
-
-	\begin{align}
-		\label{eq:dois-b-expr2}
-		n = \frac{N . n_0}{N + n_0}
-	\end{align}
+	utiliza-se a \autoref{eq:tamanho-amostra-n} para calcular o tamanho da amostra.
 
 	Inserindo os valores na equação, tem-se:
 
 	\begin{align*}
-		n &= \Big\lceil \frac{4987 \times \num{76,52}}{4987 + \num{76,52}} \Big\rceil \\
-		n &= \lceil \num{75,3636} \rceil \\
-		n &= 76
+		n &= \Big\lceil \frac{4987 \times \num{49,7358}}{4987 + \num{49,7358}} \Big\rceil \\
+		n &= \lceil \num{49,2446} \rceil \\
+		n &= 50
 	\end{align*}
 
 	Diante dos cálculos apresentados acima, pode-se dizer que uma amostra
 	com 20 elementos não é suficiente para encontrar um intervalo de 99\% de
 	confiança para a média populacional da idade dos alunos com um erro
-	máximo tolerado de 2 anos. Seriam necessários, no mínimo $76$ elementos da
+	máximo tolerado de 2 anos. Seriam necessários, no mínimo $50$ elementos da
 	amostra para garantir certa precisão. 
 
 \subsection{Você concorda com o plano de amostragem usado, que considerou a população homogênea}
 	
-	\todo[inline]{\st{Com o objetivo de caracterizar melhor o perfil dos alunos através da
-	variável idade, o}O plano de amostragem (...)}
-    \todo[inline]{(...) uma vez que \hl{uma análise exploratória dos dados da população} mostra que a variável idade (...)}
+	
     %Eliza, avacalhei com tuas quebras de linhas quando troquei \textquotedblleft e 
     %\textquotedblright por ``''. Você não tinha um apego emocional nal com elas, tinha?
-	Com o objetivo de caracterizar melhor o perfil dos alunos através da
-	variável idade, o plano de amostragem utilizado, considerando a
-	população homogênea, não é o ideal, uma vez que a variável idade está
-	associada a pelo menos uma outra variável. Por exemplo, existe uma
+	O plano de amostragem utilizado, considerando a população homogênea, não é o ideal, 
+	uma vez que, uma análise exploratória dos dados da população mostra que a variável idade está associada 
+	a pelo menos uma outra variável. Por exemplo, existe uma
 	associação entre a variável Idade e a variável Opinião, mostrando que os
 	alunos com idades inferiores a 30 anos possuem maiores percentuais
 	(\num{72,57}\%) para a opinião `` Muito Satisfeitos'', enquanto os 
@@ -101,10 +78,8 @@
 	a 30 anos possuem maiores percentuais (\num{25,62}\%) para a opinião
     `` Indiferente'', não obtendo flutuação
 	maior do que 5\% para as opiniões ``Satisfeitos'' (\num{21,94}\%) 
-    e ``Insatisfeitos'' (\num{21,28}\%). Além disso, o perfil dos
-	alunos pode ser analisado através da associações entre outras variáveis,
-	como por exemplo, Opinião e Pagamento e Pagamento e Região, conforme
-	apresentado na Lista 1. 
+    e ``Insatisfeitos'' (\num{21,28}\%). Outras associações entre as variáveis podem ser realizadas, como por exemplo, 
+       Opinião e Pagamento e Pagamento e Região, conforme apresentado na Lista 1. 
 
 	Como resultado da associação entre Opinião e Pagamento, observou-se que
 	os alunos que pagam sua mensalidade com Auxílio de Familiares são mais
@@ -126,7 +101,6 @@
 	fim, os alunos de Paranapitanga utilizam, maioritariamente, a forma de
 	pagamento `` Incentivos Federais'' (\num{95,87}\%). 
 
-	Para caracterizar melhor o perfil dos alunos, poderia ser realizado um
-	plano de amostragem estratificada proporcional, uma vez que se conhece,
-	neste caso, as características da população (quantos e quais são os
-	tamanhos dos estratos). 
+	Por fim, entende-se que poderia ser realizado um plano de amostragem estratificada 
+	proporcional, uma vez que se conhece, neste caso, as características da população 
+	(quantos e quais são os tamanhos dos estratos). 
