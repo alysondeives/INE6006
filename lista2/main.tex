@@ -107,6 +107,20 @@
 			IC(p, \gamma) = \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
 			\label{equation: intervalo de confianca para proporcao 2}
 		\end{equation}
+	
+	O cálculo do tamanho de uma amostra necessária para que $|\hat{p} - p|
+	\leq E_0$ é feito de acordo com a Equação \ref{equation: tamanho amostra
+	1} e Equação \ref{equation: tamanho amostra 2}.
+
+	\begin{equation}
+		n_0 = \frac{z_\gamma^2 p(1-p)}{E_0^2}
+		\label{equation: tamanho amostra 1}
+	\end{equation}
+
+	\begin{equation}
+		n = \frac{N n_0}{N + n_0 - 1}
+		\label{equation: tamanho amostra 2}
+	\end{equation}
 
 \section{Variável Pagamento}
 \label{questao:4}
