@@ -6,7 +6,7 @@
 \usepackage{amssymb}
 \usepackage[output-decimal-marker={,}]{siunitx}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{hyperref} %\autoref
+\usepackage[hidelinks]{hyperref} %\autoref
 \usepackage{todonotes} % todos
 \usepackage{placeins} %\FloatBarrier
 \usepackage{caption}
@@ -109,7 +109,7 @@
 		\end{equation}
 	
 	O cálculo do tamanho de uma amostra necessária para que $|\hat{p} - p|
-	\leq E_0$ é feito de acordo com a Equação \ref{equation: tamanho amostra
+	\leq E_0$ foi feito de acordo com a Equação \ref{equation: tamanho amostra
 	1} e a Equação \ref{equation: tamanho amostra 2}.
 
 	\begin{equation}
@@ -123,19 +123,16 @@
 	\end{equation}
 
 	Por fim, poara se obter o erro amostral máximo, dado o tamanho da
-	amostra, a Equação \eqref{eq:quatro-b-e0-expr} e a Equação
-	\eqref{eq:quatro-b-n0-expr} são empregradas. Sabemos $n$, $N$, $z\gamma$
-	e $\hat{p}$, que pode ser usado para aproximar $p$. Para encontrar
-	$E_0$, podemos deduzir \eqref{eq:quatro-b-e0-expr} algebricamente de
-	\eqref{eq:quatro-b-n0}.  Para encontrar $n_0$, usado em
-	\eqref{eq:quatro-b-e0-expr}, $n_0$ pode ser
-	isolada\footnote{\url{https://www.wolframalpha.com/input/?i=solve+n\%3D(N*m)\%2F(N\%2Bm-1)+for+m}}
-	em \eqref{eq:quatro-b-n}, resultando em \eqref{eq:quatro-b-n0-expr}. 
-
+	amostra, foi empregada a Equação \ref{equation: erro amostral maximo}.
+	
 	\begin{equation}
 		E_0 = \sqrt{\frac{z_\gamma p(1 - p) }{n_0}}
 		\label{equation: erro amostral maximo}
 	\end{equation}
+	
+	Onde, $n_0$ é expresso pela Equação	\ref{equation: tamanho amostral
+	maximo}, que pode ser deduzida pela Equação \ref{equation: tamanho
+	amostra 2}.
 
 	\begin{equation}
 		n_0 = \frac{n-n N}{n-N} \qquad \forall (n, N) : n \neq N
