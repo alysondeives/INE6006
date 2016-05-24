@@ -116,9 +116,9 @@ cat(sprintf("\\newcommand{\\TRESdeltaNoveNove}{\\num{%.4f}\\xspace}\n", delta99)
 cat(sprintf("\\newcommand{\\TRESicNoveNoveMin}{\\num{%.4f}\\xspace}\n", ic99[1]), file = out)
 cat(sprintf("\\newcommand{\\TRESicNoveNoveMax}{\\num{%.4f}\\xspace}\n", ic99[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESnZero}{\\num{%.2f}\\xspace}\n", n0), file = out)
+cat(sprintf("\\newcommand{\\TRESnZero}{\\num{%.4f}\\xspace}\n", n0), file = out)
 cat(sprintf("\\newcommand{\\TRESnZeroRounded}{\\num{%.0f}\\xspace}\n", n0Rounded), file = out)
-cat(sprintf("\\newcommand{\\TRESnZeroCorrigido}{\\num{%.2f}\\xspace}\n", n0corrigido), file = out)
+cat(sprintf("\\newcommand{\\TRESnZeroCorrigido}{\\num{%.4f}\\xspace}\n", n0corrigido), file = out)
 cat(sprintf("\\newcommand{\\TRESnZeroCorrigidoRounded}{\\num{%.0f}\\xspace}\n", n0corrigidoRounded), file = out)
 
 close(out)
