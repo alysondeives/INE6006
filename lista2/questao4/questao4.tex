@@ -13,9 +13,9 @@
 
 	\begin{align} 
 		IC(p, 95\%) &= \QUATROpAmostral \pm \QUATROzy \sqrt{\frac{\QUATROpAmostral (1- \QUATROpAmostral)}{\QUATROn}} \nonumber \\
-					&= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
-					\label{eq:quatro-a-result}
-					&= [\QUATROAICinf, \QUATROAICsup]
+		IC(p, 95\%) &= \QUATROpAmostral \pm \QUATROAdelta \nonumber \\
+		                \label{eq:quatro-a-result}
+		IC(p, 95\%) &= [\QUATROAICinf, \QUATROAICsup]
 	\end{align}
 
 	Dada uma amostra aleatória simples de \QUATROn alunos tomados dentre os
@@ -32,7 +32,7 @@
 	\begin{align}
 		E_0 &= \label{eq:quatro-b-e0-calc}
                \sqrt{\frac{\QUATROzy \;\cdot\; \QUATROpAmostral (1 - \QUATROpAmostral) }{\frac{\QUATROn - \QUATROn \;\cdot\; \QUATRON}{\QUATROn - \QUATRON}}}  \\
-			&= \QUATROBE \nonumber
+		E_0 &= \QUATROBE \nonumber
 	\end{align}
 
 	Como $E_0 = \QUATROBE$, a amostra não é suficiente para uma margem de
@@ -41,7 +41,7 @@
 
 	\begin{align}
 		n_0 &= \frac{\QUATROzy^2 \cdot \QUATROpAmostral(1-\QUATROpAmostral)}{\num{0.02}^2} \nonumber \\
-			&= \label{eq:quatro-b-n0-result}
+		n_0 &= \label{eq:quatro-b-n0-result}
 			   \QUATROBnz	
 	\end{align}
 
@@ -51,8 +51,8 @@
 
 	\begin{align}
 		n &= \Big\lceil \frac{\QUATRON \cdot  \QUATROBnz}{\QUATRON + \QUATROBnz - 1} \nonumber \Big\rceil \\
-		  &= \lceil \QUATROBn \nonumber \rceil \\
-		  &= \label{eq:quatro-b-n-result} \QUATROBnceil
+		n &= \lceil \QUATROBn \nonumber \rceil \\
+		n &= \label{eq:quatro-b-n-result} \QUATROBnceil
 	\end{align}
 
 \subsection{Tamanho da amostra sem amostra piloto}
@@ -66,8 +66,8 @@
 	\begin{align}
 		n_0 &= \label{eq:quatro-c-n0-expr}
                \frac{z_\gamma^2 \cdot \num{0.5} \cdot (1 - \num{0.5})}{E_0^2} = \frac{z_\gamma^2}{4 \cdot E_0^2} \\
-			&= \frac{\QUATROzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
-			&= \label{eq:quatro-c-n0-result}
+		n_0	&= \frac{\QUATROzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
+		n_0	&= \label{eq:quatro-c-n0-result}
 			   \QUATROCnz
 	\end{align}
 
@@ -77,8 +77,8 @@
 
 	\begin{align}
 		n &= \Big\lceil \frac{\QUATRON \cdot \QUATROCnz}{\QUATRON + \QUATROCnz -1} \nonumber \Big\rceil \\
-		  &= \lceil \QUATROCn \nonumber \rceil \\
-		  &= \label{eq:quatro-c-n-result} 
+		n &= \lceil \QUATROCn \nonumber \rceil \\
+		n &= \label{eq:quatro-c-n-result} 
 			 \QUATROCnceil
 	\end{align}
 

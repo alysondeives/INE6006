@@ -20,9 +20,9 @@
 	\begin{align} 
 		IC(p, 95\%) 
 					&= \CINCOpAmostral \pm \CINCOzy \sqrt{\frac{\CINCOpAmostral (1- \CINCOpAmostral)}{\CINCOn}} \nonumber \\
-					&= \CINCOpAmostral \pm \CINCOAdelta \nonumber \\
+		IC(p, 95\%)			&= \CINCOpAmostral \pm \CINCOAdelta \nonumber \\
 					\label{eq:cinco-a-result}
-					&= [\CINCOAICinf, \CINCOAICsup]
+		IC(p, 95\%)			&= [\CINCOAICinf, \CINCOAICsup]
 	\end{align}
 
 	Portanto, dada uma amostra aleatória simples de \CINCOn alunos tomados
@@ -39,7 +39,7 @@
 	\begin{align}
 		\label{eq:cinco-b-e0-calc}
 		E_0 &= \sqrt{\frac{\CINCOzy \;\cdot\; \CINCOpAmostral (1 - \CINCOpAmostral) }{\frac{\CINCOn - \CINCOn \;\cdot\; \CINCON}{\CINCOn - \CINCON}}} \\
-			&= \CINCOBE \nonumber
+	    E_0		&= \CINCOBE \nonumber
 	\end{align}
 
 	Como o valor de $E_0 = \CINCOBE$, a amostra não é suficiente para uma
@@ -49,7 +49,7 @@
 
 	\begin{align}
 		n_0 &= \frac{\CINCOzy^2 \cdot \CINCOpAmostral(1-\CINCOpAmostral)}{\num{0.02}^2} \nonumber \\
-			&= \label{eq:cinco-b-n0-result}
+		n_0	&= \label{eq:cinco-b-n0-result}
 			   \CINCOBnz	
 	\end{align}
 
@@ -59,7 +59,7 @@
 
 	\begin{align}
 		n &= \lceil \CINCOBn \nonumber \rceil \\
-		  &= \label{eq:cinco-b-n-result} 
+		n  &= \label{eq:cinco-b-n-result} 
 			 \CINCOBnceil
 	\end{align}
 
@@ -78,7 +78,7 @@
 
 	\begin{align}
 		n_0 &= \frac{\CINCOzy^2}{4 \cdot (\num{0.02})^2} \nonumber \\
-			&= \label{eq:cinco-c-n0-result}
+		n_0	&= \label{eq:cinco-c-n0-result}
 			   \CINCOCnz
 	\end{align}
 
@@ -90,8 +90,8 @@
 	\begin{align}
 		n &= \Big\lceil \frac{\CINCON \cdot \CINCOCnz}{\CINCON + \CINCOCnz - 1}
 		  \nonumber \Big\rceil \\
-		  &= \lceil \CINCOCn \nonumber \rceil\\
-		  &= \label{eq:cinco-c-n-result} 
+		n  &= \lceil \CINCOCn \nonumber \rceil\\
+		n  &= \label{eq:cinco-c-n-result} 
 			 \CINCOCnceil
 	\end{align}
 
