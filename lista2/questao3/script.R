@@ -68,7 +68,6 @@ print(ic99)
 
 #b) Sim, o intervalo ficou maior. Poderia aumentar o tamanho da amostra pq...
 
-
 E0 = 1.5
 n0 = (t99*sd/E0)*(t99*sd/E0)
 print(n0)
@@ -84,6 +83,17 @@ n0corrigidoRounded = ceiling(n0corrigido)
 print(n0corrigidoRounded)
 #[1] 3
 
+
+#Confirmando
+amostra3 <- sample(pop, size = 3, replace = FALSE)
+t99_3 = 9.925
+delta99_3 = t99_3*(sd(amostra3)/sqrt(3))*((N-3)/(N-1))
+print(delta99_3)
+#[1] 4
+ic99_3=c(mean(amostra3)-delta99_3,mean(amostra3)+delta99)
+print(ic99_3)
+#[1] -2.237  5.763
+
 #----------------------------------------------------------------------------------------------------
 # Write parameters as latex commands
 #Note: open = "w" means open for writing (nothing about truncation is specified)
@@ -91,20 +101,20 @@ print(n0corrigidoRounded)
 out <- file("vars.tex", open = "w")
 
 cat(sprintf("\\newcommand{\\TRESN}{\\num{%.0f}\\xspace}\n", N), file = out)
-cat(sprintf("\\newcommand{\\TRESX}{\\num{%.3f}\\xspace}\n", X), file = out)
-cat(sprintf("\\newcommand{\\TRESSD}{\\num{%.3f}\\xspace}\n", SD), file = out)
+cat(sprintf("\\newcommand{\\TRESX}{\\num{%.4f}\\xspace}\n", X), file = out)
+cat(sprintf("\\newcommand{\\TRESSD}{\\num{%.4f}\\xspace}\n", SD), file = out)
 
 cat(sprintf("\\newcommand{\\TRESn}{\\num{%.0f}\\xspace}\n", n), file = out)
-cat(sprintf("\\newcommand{\\TRESx}{\\num{%.3f}\\xspace}\n", x), file = out)
-cat(sprintf("\\newcommand{\\TRESsd}{\\num{%.3f}\\xspace}\n", sd), file = out)
+cat(sprintf("\\newcommand{\\TRESx}{\\num{%.4f}\\xspace}\n", x), file = out)
+cat(sprintf("\\newcommand{\\TRESsd}{\\num{%.4f}\\xspace}\n", sd), file = out)
 
-cat(sprintf("\\newcommand{\\TRESdelta}{\\num{%.3f}\\xspace}\n", delta), file = out)
-cat(sprintf("\\newcommand{\\TRESicmin}{\\num{%.3f}\\xspace}\n", ic[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicmax}{\\num{%.3f}\\xspace}\n", ic[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESdelta}{\\num{%.4f}\\xspace}\n", delta), file = out)
+cat(sprintf("\\newcommand{\\TRESicmin}{\\num{%.4f}\\xspace}\n", ic[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicmax}{\\num{%.4f}\\xspace}\n", ic[2]), file = out)
 
-cat(sprintf("\\newcommand{\\TRESdeltaNoveNove}{\\num{%.3f}\\xspace}\n", delta99), file = out)
-cat(sprintf("\\newcommand{\\TRESicNoveNoveMin}{\\num{%.3f}\\xspace}\n", ic99[1]), file = out)
-cat(sprintf("\\newcommand{\\TRESicNoveNoveMax}{\\num{%.3f}\\xspace}\n", ic99[2]), file = out)
+cat(sprintf("\\newcommand{\\TRESdeltaNoveNove}{\\num{%.4f}\\xspace}\n", delta99), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNoveMin}{\\num{%.4f}\\xspace}\n", ic99[1]), file = out)
+cat(sprintf("\\newcommand{\\TRESicNoveNoveMax}{\\num{%.4f}\\xspace}\n", ic99[2]), file = out)
 
 cat(sprintf("\\newcommand{\\TRESnZero}{\\num{%.2f}\\xspace}\n", n0), file = out)
 cat(sprintf("\\newcommand{\\TRESnZeroRounded}{\\num{%.0f}\\xspace}\n", n0Rounded), file = out)
