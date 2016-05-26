@@ -24,8 +24,43 @@ O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte código :\
 \subsection{Poder do Teste}
 \label{questao:1b}
 
-\todo[inline]{Fazer}
+O poder do teste ($\beta$) foi calculado usando a função \r|power.t.test|, de maneira análoga ao mostrado em documento disponibilizado no Moodle da disciplina. A \autoref{tb:1b} mostra o poder do teste calculado para os valores listados no enunciado. Essa tabela foi gerada a partir do resultado do seguinte frgmento de código R:
 
+\inputminted{r}{questao1/b.R}
+
+\todo[inline]{Discussão: Eu não consigo explicar o que fiz em texto sem enrolar demais. E o pior é que além de enrolado a explicação ficaria confusa, o que não é nada bom. \\
+
+Tentei muitas coisas, a melhor solução for dividir o script.R em script.R, calc.R e b.R. Todas as coisas relacionadas com I/O ficam no script.R, calc.R só tem cálculos e b.R foi separado para que pudesse ser incluído. Eu também mudei as variáveis para que o nome delas fosse representativo do significado. Assim, eu espero, nós nao precisamos colocar o calc.R como anexo. Se adotarmos essa abordagem, precisamos todos entrar em acordo quanto a convenção de nomenclatura das variáveis no R pensando no que vai ficar claro pro professor.
+}
+
+%Pensando em editar o tex gerado? Pense denovo.
+\input{questao1/tb-power}
+
+\subsection{Tamanho mínimo de amostra}
+\label{questao:1c}
+
+A mesma função, \r|power.t.test| do ambiente R, usada em \autoref{questao:1b} pode ser ser usada para calcular o tamanho mínimo da amostra. Nesse caso, é desejado um poder do teste de 90\% ao detectar a uma diferença de 2 anos na média, ao nível de significância de 5\%. Novamente usando o desvio padrão amostral $s = \UMAs$ como estimativa para $\sigma$, o seguinte código R pode ser usado:
+
+\inputminted{r}{questao1/c.R}
+
+O tamanho de amostra encontrado pela função, \UMCn, não é um inteiro, portanto é necessário efetuar um arredondamento para cima e proceder com um novo cálculo de $\beta$. Desse modo, o tamanho mínimo de amostra necessário é de \UMCnMin, que para média real $\mu = 29$, concede ao teste um poder de \UMCbeta.
+
+A amostra atual não é suficiente, pois os \UMAn elementos da amostras possibilitariam um teste com poder de apenas \UMCbetaOld, mantidos $\alpha = 0.05$ e $\mu = 29$.
+
+\subsection{Nova amostra}
+\label{questao:1d}
+
+Foi retirada uma amostra aleatória simples com \UMCnMin elementos, que apresentou desvio padrão amostral $s = \UMDs$. De maneira análoga, a função \r|power.t.test| foi usada para calcular o poder do teste considerando diversas possibilidades para a média real da população. A lista de difereças \r|deltas1b|  permanace a mesma, pois essa lista é definida pela expressão $\mu - \mu_0$, onde $\mu$ é a média real que assume os valores listados no enunciado do \autoref{questao:1b}.
+
+\inputminted{r}{questao1/d-2.R}
+
+Os resultados desse cálculo são apresentados na linha $\beta_d$ da \autoref{tb:1d}, que também contêm os mesmos resultados usando o desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no \autoref{questao:1b}. Houve aumento do poder do teste para todos os valores de $\mu$, que possuiam $\beta_b \neq 1$. Em especial, quanto mais distante de $\beta_b$ estava de 1, maior foi o aumento proporcional observado em $\beta_d$. Esse aumento em $\beta_d$ poderia ter sido ainda maior, se o desvio padrão amostral da nova amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da amostra usada no \autoref{questao:1b}, \UMAs.
+
+A \autoref{fig:1d} mostra gráficamente a relação entre distância da média real com $\mu_0 = \UMAu0$.
+
+\todo[inline]{Fazer gráfico}
+
+\input{questao1/tb-power-d}
 
 %%% Local Variables:
 %%% mode: latex

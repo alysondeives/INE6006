@@ -23,13 +23,23 @@
 \usepackage{booktabs}
 \usepackage{soulutf8}
 \usepackage[parfill]{parskip}
+\usepackage{minted} %melhor que listings, compilar com -shell-escape, requer pygmentize (pygments) instalado
+
+\setminted{breaklines,linenos}
 
 
 %%%%%%%%%%%% Configuring packages
 
+%\autoref deve fazer coisas do tipo Questão 1, Item 2.b
+\addto\extrasbrazil{%
+  \renewcommand{\sectionautorefname}{Questão}
+  \renewcommand{\subsectionautorefname}{Item}
+}
+
 \newcommand{\specialcell}[3][c]
 {\begin{tabular}[#1]{@{}#2@{}}#3\end{tabular}}
 
+% Numeração de seções e subseções consistente com questões e itens
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
 
@@ -46,6 +56,10 @@
 \newcommand{\eng}{Engenharia e Produção\xspace}
 \newcommand{\hum}{Humanidades\xspace}
 \newcommand{\jur}{Jurídica e Contábil\xspace}
+
+% Atalho para \mintinline{r}|...|
+\def\r|#1|{\mintinline{r}|#1|}
+%\def\r|#1|{\texttt{#1}}
 
 %%%%%%%%%%%%% Autor e Título
 
@@ -98,3 +112,5 @@
 
 
 \end{document}
+
+%%% TeX-command-extra-options: "-shell-escape"
