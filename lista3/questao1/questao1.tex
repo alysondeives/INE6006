@@ -56,11 +56,16 @@ Foi retirada uma amostra aleatória simples com \UMCnMin elementos, que apresent
 
 Os resultados desse cálculo são apresentados na linha $\beta_d$ da \autoref{tb:1d}, que também contêm os mesmos resultados usando o desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no \autoref{questao:1b}. Houve aumento do poder do teste para todos os valores de $\mu$, que possuiam $\beta_b \neq 1$. Em especial, quanto mais distante de $\beta_b$ estava de 1, maior foi o aumento proporcional observado em $\beta_d$. Esse aumento em $\beta_d$ poderia ter sido ainda maior, se o desvio padrão amostral da nova amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da amostra usada no \autoref{questao:1b}, \UMAs.
 
-A \autoref{fig:1d} mostra gráficamente a relação entre distância da média real com $\mu_0 = \UMAu0$.
-
-\todo[inline]{Fazer gráfico}
-
 \input{questao1/tb-power-d}
+
+A \autoref{fig:1-power} mostra graficamente o poder do teste usando os parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo com a média real $\mu$. Os dados foram obtidos usando o mesmo método usado na \autoref{tb:1d}, e $\beta_b$ e $\beta_d$ possuem o mesmo significado.
+
+\begin{figure}[ht]
+  \centering
+  \input{questao1/powers.tex}
+  \caption{Poder do teste para diferentes médias reais}
+  \label{fig:1-power}
+\end{figure}
 
 %%% Local Variables:
 %%% mode: latex

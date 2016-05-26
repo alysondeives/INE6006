@@ -27,6 +27,19 @@ table <- xtable(powers, digits=4, label = "tb:1d",
 print.xtable(table, caption.placement = "top", sanitize.text.function = identity, 
              booktabs = TRUE, comment = TRUE, file = "tb-power-d.tex")
 
+# --- plot 
+deltas <- c(seq(10, 0, by=-0.01), seq(0, 10, by=0.01))
+us <- c(seq(-10, 0, by=0.01)+u01a, seq(0, 10, by=0.01)+u01a)
+bpowers <- power.t.test(n=n1a, delta=deltas, sd=s1a, sig.level=alpha1a,
+                        type="one.sample", alternative="one.sided")$power
+dpowers <- power.t.test(n=n1d, delta=deltas, sd=s1d, sig.level=alpha1a,
+                        type="one.sample", alternative="one.sided")$power
+powers <- matrix(c(us, bpowers, dpowers), nrow = length(deltas), ncol = 3)
+colnames(powers) <- c("u", "beta.b", "beta.d")
+write.csv(powers, file = "powers.csv", row.names = FALSE, 
+          na="", fileEncoding = "UTF-8", eol="\r\n")
+
+
 # --- vars file
 out <- file("vars.tex", open = "w")
 cat(sprintf("\\def\\UMAalpha{\\num[round-mode=off]{%.2f}\\xspace}\n", alpha1a), file = out)
