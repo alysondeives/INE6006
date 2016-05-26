@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[output-decimal-marker={,},round-mode=places,round-precision=4]{siunitx}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[hidelinks]{hyperref} %\autoref
+\usepackage{todonotes} % todos
+\usepackage{placeins} %\FloatBarrier
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{capt-of} %Workarounds for manually inserting captions
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{soulutf8}
+\usepackage[parfill]{parskip}
+
+
+%%%%%%%%%%%% Configuring packages
+
+\newcommand{\specialcell}[3][c]
+{\begin{tabular}[#1]{@{}#2@{}}#3\end{tabular}}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\alph{subsection}}
+
+%%%%%%%%%%%%% Macros
+\newcommand{\arat}{Aratibutantã\xspace}
+\newcommand{\baep}{Baependinha\xspace}
+\newcommand{\itam}{Itamaracanã\xspace}
+\newcommand{\jaqu}{Jaquereçaba\xspace}
+\newcommand{\para}{Paranapitanga\xspace}
+
+\newcommand{\adm}{Administração\xspace}
+\newcommand{\comp}{Computação e Matemática\xspace}
+\newcommand{\edu}{Educacional\xspace}
+\newcommand{\eng}{Engenharia e Produção\xspace}
+\newcommand{\hum}{Humanidades\xspace}
+\newcommand{\jur}{Jurídica e Contábil\xspace}
+
+%%%%%%%%%%%%% Autor e Título
+
+\author{%
+	Alexis A. Huf, %
+	Alyson D. Pereira, %
+	Bruno C. N. Oliveira,\\%
+	Eliza Gomes, %
+	Pedro H. Penna
+	}
+
+\title{Lista de Exercícios III - Grupo 6}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+	\section*{Parte 1: Testes de Hipótese para 1 Média}
+\end{center}
+\section{Variável Idade}
+\label{questao:1}
+\input{questao1/questao1}
+
+\section{Variável Renda}
+\label{questao:2}
+\input{questao2/questao2}
+
+\begin{center}
+	\section*{Parte 2: Testes de Hipótese para 1 Proporção}
+\end{center}q
+
+\section{Variável Pagamento}
+\label{questao:3}
+\input{questao3/questao3}
+
+\section{Variável Opinião}
+\label{questao:4}
+\input{questao4/questao4}
+
+
+\begin{center}
+	\section*{Parte 3: Testes de Hipóteses para 2 Médias}
+\end{center}
+
+\section{Variável Renda em Função de Pagamento}
+\label{questao:5}
+\input{questao5/questao5}
+
+
+\end{document}
