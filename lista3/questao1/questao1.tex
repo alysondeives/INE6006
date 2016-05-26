@@ -1,1 +1,33 @@
+\input{questao1/vars}
+
+\subsection{Teste de hipótese}
+\label{questao:1a}
+
+Para testar a hipótese descrita é realizadodeve ser realizado um teste de hipótese assimétrico para a média. Como essa é a situação mais comum na prática, a variância populacional foi considerada como desconhecida. Considere como hipótese nula que a média populacional da variável Idade é de \UMAu0 anos. Para a hipótese alternativa, considere que a média populacional da variável Idade é maior que \UMAu0 anos. O nível de significância do teste é de 5\%.
+
+\begin{align*}
+  H_0\!:   &\; \mu = \UMAu0 \\
+  H_1\!:   &\; \mu > \UMAu0  \\
+  \alpha\!:&\; \UMAalpha  
+\end{align*}
+
+Por se tratar de um teste sobre a média, e como o desvio padrão populacional é desconhecido, a estatística do teste é o valor $t$ (da distribuição de Student) com $gl=\UMAgl$.
+
+\begin{align*}
+  t &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
+  t &= \frac{(\UMAbarx - \UMAu0)\cdot\sqrt{\UMAn}}{\UMAs} \\
+  t &= \UMAt
+\end{align*}
+
+O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte código :\texttt{pt(x = \UMAt, df = \UMAgl, lower.tail = FALSE)}. Logo, como $p \geq \alpha$, $H_0$ é aceita e não se pode afirmar que há evidencia em favor de $H_1$. A hipótese da direção de que a média de idade é maior que 27 anos não pôde ser confirmada (com uma amostra de \UMAn alunos).
+
+\subsection{Poder do Teste}
+\label{questao:1b}
+
 \todo[inline]{Fazer}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
