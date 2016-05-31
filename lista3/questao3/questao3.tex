@@ -1,1 +1,96 @@
-\todo[inline]{Fazer}
+\subsection{Teste de hipótese}
+\label{questao:3a}
+Para verificar se o colega estava certo em afirmar que menos de $35\%$ dos alunos utilizam a forma de pagamento ``Incentivos Federais'', 
+foram formuladas as hipóteses nula e alternativa.
+Consideramos como hipótese nula que a proporção de alunos que usam ``Incentivos Federais`` é igual ou superior a $0.35$. 
+Para a hipótese alternativa, consideramos que a proporção de alunos que usam ``Incentivos Federais'' é menor que $0.35$.
+
+\begin{align*}
+  H_0\!:   &\; p \geq 0.35 \\
+  H_1\!:   &\; p < 0.35  \\
+   \alpha\!:&\; 0.05
+\end{align*}
+
+A proporção amostral $\hat{p}$ de alunos (obtida anteriormente na \textit{Lista 2}) cuja fonte de pagamento
+é ``Incentivos Federais'' foi de $0.32$, para uma amostra aleatória de $200$ registros.
+Como procura-se evidência de que a proporção de alunos, cuja fonte de pagamento é ``Incentivos Federais'', 
+seja inferior a $35\%$ ($0.35$), realiza-se um teste unilateral a esquerda. É possível utilizar a aproximação pela normal, pois:
+
+\begin{align*}
+  n \times p_0\!  &\; = 200 \times 0.35 \\
+  &\; = 70 \geq 5 ,\\
+  e \\
+  n \times (1 - p_0)\!	=   &\;	200 \times (1 - 0.35) \\
+  &\;= 130  \geq 5 \\
+\end{align*}
+
+É recomendável, ainda, aplicar a correção de continuidade. 
+Como, neste caso, estamos trabalhando com uma aproximação pela normal e  
+$y < n \times p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
+incrementamos $0.5$ do $y$ para obter $y'$. Logo, $y' = 64.5$.
+
+\begin{align}
+  \label{eq:cinco-a-y-correcao}
+  y   &\; =  n \times \hat{p} < n \times p_0 \\ 
+      &\; = 200 \times 0.32 < 200 \times 0.35 \nonumber \\
+      &\; = 64 < 70 \nonumber
+\end{align}
+
+Logo, aplicamos a equação \ref{eq:cinco-b-n-result} com o intuito de obter o \textit{valor-p} 
+apropriado e compará-lo com o nível de significância de $5\%$.
+
+\begin{equation}
+  \label{eq:cinco-b-n-result}
+  z = \frac{y' - n \times p_0}{ \sqrt{n \times p_0 (1 - p_0)} }
+\end{equation}
+
+Substituindo os valores, temos:
+
+\begin{align*}
+  z &\;= \frac{64.5 - 200 \times 0.35}{ \sqrt{200 \times 0.35 \times (1 - 0.35)} } \\
+    &\;= - 0.8154 \nonumber \\
+\end{align*}
+
+Procurando na tabela da distribuição normal pelo z, 
+obtém-se uma cauda inferior de aproximadamente $p = 0.2074$.
+Portanto, como $p > 0.05$, aceita-se $H_0$ ao nível de significância de 5\%. 
+Não se pode afirmar, ao nível de significância de $5\%$, que o colega estava certo, ou seja, 
+não é possível afirmar que a proporção de  alunos que usam ``Incentivos Federais'' é menor do que $35\%$.
+
+
+\subsection{Poder do Teste}
+\label{questao:3b}
+
+Para obter o tamanho da amostra foi utilizado o software R e o seguinte comando:
+
+\todo[inline]{Pendente}
+
+\inputminted{r}{questao3/b.R}
+
+
+\subsection{Tamanho mínimo de amostra}
+\label{questao:3c}
+A mesma função, do ambiente R, usada no \autoref{questao:3b} pode ser ser utilizada para calcular o tamanho mínimo da amostra: 
+
+\inputminted{r}{questao3/c.R}
+
+Como resultado, foram obtidos os dados apresentados pela \autoref{tb:3c}. 
+Como o tamanho de amostra encontrado pela função não é um inteiro ($2177.447$), é necessário efetuar um arredondamento para cima, obtendo $2178$.
+
+\begin{table}[ht]
+\centering
+\caption{Poder do Teste para detectar o tamanho da amostra.} 
+\label{tb:3c}
+\begin{tabular}{rrrrr}
+  \toprule
+ $p$ & $p_0$ & $n$ & $Effect Size$ & $1 - \beta$ \\ 
+  \midrule
+  $0.31$ & $0.35$ & $2177.447$ & $-0.08510364$ & $0.99$ \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+
+A amostra de $200$ elementos, portanto, não é suficiente para detectar com 99\% de probabilidade que a proporção
+de alunos que usam a fonte de pagamento ``Incentivos Federais'' é igual a 31\%, considerando 5\% de significância.
+Através do cálculo para o tamanho mínimo de amostra realizado no R, 
+obteve-se que este tamanho deve ser de pelo menos $2178$ elementos.
