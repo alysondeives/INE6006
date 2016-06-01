@@ -51,7 +51,7 @@ Substituindo os valores, temos:
     &\;= - 0.8154 \nonumber \\
 \end{align*}
 
-Procurando na tabela da distribuição normal pelo z, 
+Procurando na tabela da distribuição normal pelo $z$, 
 obtém-se uma cauda inferior de aproximadamente $p = 0.2074$.
 Portanto, como $p > 0.05$, aceita-se $H_0$ ao nível de significância de 5\%. 
 Não se pode afirmar, ao nível de significância de $5\%$, que o colega estava certo, ou seja, 
@@ -61,21 +61,45 @@ não é possível afirmar que a proporção de  alunos que usam ``Incentivos Fed
 \subsection{Poder do Teste}
 \label{questao:3b}
 
-Para obter o tamanho da amostra foi utilizado o software R e o seguinte comando:
+Para obter o tamanho da amostra foi utilizado o software R e a função \r|pwr.p.test|, a qual calcula o poder para testes de proporção de uma amostra.
+A função \r|ES.h|, por sua vez, foi utilizada também para calcular o \textit{Effect Size} para proporção.
+Em vista disso, o seguinte fragmento de código foi executado no ambiente R:
 
-\todo[inline]{Pendente}
+\inputr{questao3/b.R}
 
-\inputminted{r}{questao3/b.R}
+Na função \r|pwr.p.test| foram passados como parâmetros os \textit{Effect Sizes} das proporções contidas em \r|propsList3b|;
+o tamanho da amostra (\r|n = 200|); 
+o nível de significância de $5\%$ (\r|sig.level = 0.05|);
+a indicação de que se trata de um teste unilateral à esquerda (\r|alternative = less|); 
+e o poder (\r|power|) como NULL, visto que se trata do valor desejado a ser calculado.
+A partir da execução do código R, foi gerada a \autoref{tb:3b}, a qual mostra os resultados obtidos do poder do teste calculado para os valores $0.30$, $0.32$ $0.33$ e $0.34$.
+
+\begin{table}[ht]
+\centering
+\caption{Poder do teste para diferentes valores de proporção de alunos que usam Incentivos Federais.} 
+\label{tb:3b}
+\begin{tabular}{rrrrr}
+  \toprule
+ $p$ & 0.30 & 0.32 & 0.33 & 0.34 \\ 
+  \midrule
+$ES$ 	& -0.10682 & -0.06358 & -0.04222 & -0.02104 \\ 
+$\beta$ & 0.44665   & 0.22791   & 0.14739   & 0.08893  \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+
+Observou-se que à medida que a proporção $p$ se aproxima da proporção $p_0$, o poder do teste diminui.
 
 
 \subsection{Tamanho mínimo de amostra}
 \label{questao:3c}
-A mesma função, do ambiente R, usada no \autoref{questao:3b} pode ser ser utilizada para calcular o tamanho mínimo da amostra: 
+O mesmo comando \r|pwr.p.test| do ambiente R, utilizado no \autoref{questao:3b}, pode ser ser usado para calcular o tamanho mínimo da amostra: 
 
-\inputminted{r}{questao3/c.R}
+\inputr{questao3/c.R}
 
+Como o objetivo é encontrar o tamanho mínimo da amostra, o parâmetro $n$ é passado na função como NULL.
 Como resultado, foram obtidos os dados apresentados pela \autoref{tb:3c}. 
-Como o tamanho de amostra encontrado pela função não é um inteiro ($2177.447$), é necessário efetuar um arredondamento para cima, obtendo $2178$.
+Visto que o tamanho de amostra encontrado pela função não é um inteiro ($2177.447$), é necessário efetuar um arredondamento para cima, obtendo o valor final de $2178$.
 
 \begin{table}[ht]
 \centering
