@@ -26,7 +26,8 @@
 \usepackage{minted} %melhor que listings, compilar com -shell-escape, requer pygmentize (pygments) instalado
 
 %%%%%%%%%%%% Configuring packages
-\setminted{breaklines,linenos}
+% Minted \setminted onyly in minted >= 2.0
+%\setminted{breaklines,linenos}
 
 %\autoref deve fazer coisas do tipo Questão 1, Item 2.b
 \addto\extrasbrazil{%
@@ -56,8 +57,10 @@
 \newcommand{\jur}{Jurídica e Contábil\xspace}
 
 % Atalho para \mintinline{r}|...|
-\def\r|#1|{\mintinline{r}|#1|}
-%\def\r|#1|{\texttt{#1}}
+% minted < 2.0 não tem mintinline
+%\def\r|#1|{\mintinline{r}|#1|}
+\def\r|#1|{\texttt{#1}}
+\newcommand{\inputr}[1]{\inputminted[linenos]{r}{#1}}
 
 %%%%%%%%%%%%% Autor e Título
 
