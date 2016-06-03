@@ -20,16 +20,19 @@ seja inferior a $35\%$ ($0.35$), realiza-se um teste unilateral a esquerda. É p
 \begin{align*}
   n \times p_0\!  &\; = 200 \times 0.35 \\
   &\; = 70 \geq 5 ,\\
-  e \\
-  n \times (1 - p_0)\!	=   &\;	200 \times (1 - 0.35) \\
+  & \text{e} \\
+  n \times (1 - p_0)\!	&\;=\; 200 \times (1 - 0.35) \\
   &\;= 130  \geq 5 \\
 \end{align*}
 
+\todo[inline]{Até então estavamos usando $\cdot$ para multiplicação. Esse $\times$ fica fora de estilo e até confuso.}
 É recomendável, ainda, aplicar a correção de continuidade. 
 Como, neste caso, estamos trabalhando com uma aproximação pela normal e  
 $y < n \times p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
 incrementamos $0.5$ do $y$ para obter $y'$. Logo, $y' = 64.5$.
 
+\todo[inline]{A correção de continuídade não é condicional, a correção deve ocorrer sempre. Eu acho que eu entendi errado essa expressão e meu todo não faz sentido, nesse caso corrija o que você suspeita que tenha feito eu falar merda.}
+\todo[inline]{Faltou dizer o que $y$ é, não é algo tão óbvio quanto $\mu$.}
 \begin{align}
   \label{eq:cinco-a-y-correcao}
   y   &\; =  n \times \hat{p} < n \times p_0 \\ 
@@ -101,6 +104,7 @@ O mesmo comando \r|pwr.p.test| do ambiente R, utilizado no \autoref{questao:3b},
 Como o objetivo é encontrar o tamanho mínimo da amostra, o parâmetro $n$ é passado na função como NULL.
 Como resultado, foram obtidos os dados apresentados pela \autoref{tb:3c}. 
 Visto que o tamanho de amostra encontrado pela função não é um inteiro ($2177.447$), é necessário efetuar um arredondamento para cima, obtendo o valor final de $2178$.
+\todo[inline]{É bom em algum lugar escrever explicitamente que o ``poder do teste é 0.99''.}
 
 \begin{table}[ht]
 \centering
