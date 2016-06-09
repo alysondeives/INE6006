@@ -1,1 +1,30 @@
-\todo[inline]{Fazer}
+\input{questao2/vars}
+
+\subsection{Teste de Hipótese}
+
+Para testar a hipótese de que a renda média mensal dos alunos é menor que $4,5$
+salários mínimos, deve ser aplicado um teste de hiipótese com a média. Nesse
+caso, a hipótese nula ($H_0$) é de que a remédia média mensal dos alunos é
+superior ou igual a $4,5$ salários mínimos e a hipótese alternativa ($H_1$) é
+de que a renda média mensal dos alunos é inferior a $4,5$ salários mínimos. O
+nível de significância para o teste é de $5\%$
+%
+\begin{align*}
+	H_0: \mu &\geq 4,5\\
+	H_1: \mu &< 4,5   \\
+	     \alpha &= 0,05
+\end{align*}
+
+Como o desvio padrão da população é desconhecido, a estatística do teste é
+expressa pelo valor $t$ da Distribuição de Student, com grau de liberdade
+$\DOISgrauLiberdade$:
+%
+\begin{align*}
+	t &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
+	t &= \dfrac{(\DOISmediaAmostra - \DOISmediaPopulacao) \cdot \sqrt{\DOIStamanhoAmostra}}{\DOISdesvioAmostra} \\
+	t &\approx 0
+\end{align*}
+
+Como $t < \alpha$ rejeita-se a hipótese nula. Ou seja, há evidências
+estatísticas de que a média mensal dos alunos é menor que $4,5$ salários
+mínimos com $5\%$ de nível de significância.
