@@ -3,22 +3,21 @@
 \subsection{Teste de Hipótese}
 
 	Para testar a hipótese de que a renda média mensal dos alunos é menor
-	que $4,5$ salários mínimos, deve ser aplicado um teste de hiipótese com a
+	que $4,5$ salários mínimos, deve ser aplicado um teste de hipótese com a
 	média. Nesse caso, a hipótese nula ($H_0$) é de que a remédia média mensal dos
 	alunos é superior ou igual a $4,5$ salários mínimos e a hipótese alternativa
 	($H_1$) é de que a renda média mensal dos alunos é inferior a $4,5$ salários
-	mínimos. O nível de significância para o teste é de $5\%$
+	mínimos. O nível de significância para o teste é de $5\%$.
 	%
 	\begin{align*}
-		H_0: \mu &\geq 4,5\\
+		H_0: \mu &= \geq 4,5\\
 		H_1: \mu &< 4,5   \\
 		     \alpha &= 0,05
 	\end{align*}
 
 	Como o desvio padrão da população é desconhecido, a estatística do
-	teste é expressa pelo valor $t$ da Distribuição de Student, com grau de
-	liberdade
-	$\DOISgrauLiberdade$:
+	teste é expressa pelo valor $t$ da Distribuição T-Student, com grau de
+	liberdade $\DOISgrauLiberdade$:
 	%
 	\begin{align*}
 		t &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
@@ -32,4 +31,31 @@
 
 \subsection{Poder Teste}
 
-
+	Para calcular o poder do deste, deve-se empregar a distribuição não
+	central T-Student. Portanto, deve-se, primeiramente, calcular o fator de
+	centralidade.
+	%
+	\begin{align*}
+		d_{3,50} &= \DOISabicissaA\\
+		d_{3,75} &= \DOISabicissaB\\
+		d_{3,85} &= \DOISabicissaC\\
+		d_{3,95} &= \DOISabicissaD\\
+		d_{4,15} &= \DOISabicissaE\\
+		d_{4,25} &= \DOISabicissaF\\
+		d_{4,35} &= \DOISabicissaG\\
+	\end{align*}
+	
+	Com posse desses dados o poder desses valores, o pode do teste pode ser
+	calculado com a função \texttt{pwr.t.test()} do software estatístico R.	Para o
+	teste, considerou-se o nível de significância em $1\%$ e o desvio padrão
+	amostral como estimativa do desvio padrão populacional.
+	%
+	\begin{align*}
+		1 - \beta_{3,50} &= \DOISpoderA\\
+		1 - \beta_{3,75} &= \DOISpoderB\\
+		1 - \beta_{3,85} &= \DOISpoderC\\
+		1 - \beta_{3,95} &= \DOISpoderD\\
+		1 - \beta_{4,15} &= \DOISpoderE\\
+		1 - \beta_{4,25} &= \DOISpoderF\\
+		1 - \beta_{4,35} &= \DOISpoderG\\
+	\end{algin*}
