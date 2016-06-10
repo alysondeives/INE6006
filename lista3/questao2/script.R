@@ -24,9 +24,13 @@ print(sample20test)
 #                              Poder do Teste
 #==============================================================================
 
-sample20deltas <- c((sample20x-3.5)/sample20s, (sample20x-3.75)/sample20s, (sample20x-3.85)/sample20s, (sample20x-3.95)/sample20s, (sample20x-4.15)/sample20s, (sample20x-4.25)/sample20s, (sample20x-4.35)/sample20s)
+sample20deltas <- c((H0-3.5)/sample20s, (H0-3.75)/sample20s, (H0-3.85)/sample20s, (H0-3.95)/sample20s, (H0-4.15)/sample20s, (H0-4.25)/sample20s, (H0-4.35)/sample20s)
 
 sample20powers <- pwr.t.test(n=sample20size, d=sample20deltas, sig.level=0.01, power=NULL, type="one.sample", alternative="less")
 
 print(sample20deltas)
 print(sample20powers$power)
+
+#==============================================================================
+#                        Análise do Poder do Teste
+#==============================================================================
