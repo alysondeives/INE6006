@@ -64,3 +64,36 @@
 
 \subsection{Análise do Poder de Teste}
 
+	A análise do poder de teste com amostras de tamanho $40$, $50$, $60$ e $70$
+	é apresentada na \autoref{figure: poder do teste renda}. Em todos os casos o
+	nível de significância foi fixado em $1\%$ e o desvio padrão amostral fixado
+	em $\DOISdesvioAmostra$, o desvio padrão amostral obtido com amostra de
+	tamanho 20.
+
+	Analisando o gráfico é possível constatar que, quanto maior o tamanho da
+	amostra, maior o poder do teste, e quanto mais próxima a média populacional
+	é daquela fixada na hipótese nula, menor o poder do teste. A escolha correta
+	do tamanho da amostra depende de de dois fatores: (a) facilidade para
+	obtenção de amostras; e (b) poder do teste desejado.
+	
+	Considerando esses dois fatores de igual importância, a Figura
+	\autoref{figure: poder do teste e tamanho da amostra renda} resume essa
+	relação em um único fator $\dfrac{\text{poder do teste}}{\text{tamanho da
+	amostra}}$. Por análise, para a detecção de médias discrepantes inferiores a
+	$3.8$ salários, uma amostra de $70$ é a mais indicada, enquanto que para a
+	detecção de médias discrepantes superiores a $3.8$ salários, uma amostra de
+	tamanho $40$ é desempenha suficientemente igual às demais.
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{questao2/powers.eps}
+		\caption{Curva característica de operação para variável \textit{Renda}}
+		\label{figure: poder do teste renda}
+	\end{figure}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{questao2/powers-breakdown.eps}
+		\caption{Poder do teste em relação ao tamanho da amostra para a variável \textit{Renda}}
+		\label{figure: poder do teste e tamanho da amostra renda}
+	\end{figure}
