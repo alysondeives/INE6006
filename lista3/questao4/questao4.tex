@@ -1,1 +1,123 @@
-\todo[inline]{Fazer}
+\input{questao4/vars}
+\subsection{Teste de hipótese}
+\label{questao:4a}
+	%Foi retirada uma amostra aleatória simples sem reposição com \QUATROn
+	%elementos, dentre os \QUATRON alunos que possuíam um valor definido para
+	%a variável Opinião.  A proporção amostral $\hat{p}$ de alunos com
+	%opiniões negativas (ou seja, alunos que consideraram ``Insatisfeitos''
+	%ou ``Muito insatisfeitos'') foi de \QUATROpAmostral.
+
+	%\begin{align*} 
+		%\hat{p}  &= {\frac{\QUATROqtdOpinioesNegativas}{\QUATROn}} = \QUATROpAmostral \nonumber \\
+	%\end{align*}
+
+	Para determinar se a proporção populacional de alunos com opinião negativa
+	sobre a EAD da TYU é superior à 20\%, definimos as hipotéses:
+
+	\begin{align*} 
+		H_0\!:   &\; p = 0.20 \\
+		H_1\!:   &\; p > 0.20  \\
+		\alpha\!:&\; 0.01
+	\end{align*}
+
+	A proporção amostral $\hat{p}$ de alunos (obtida anteriormente na \textit{Lista 2}) com opiniões
+	negativas (alunos que se consideram ``Insatisfeitos'' ou ``Muito Insatisfeitos'')
+	foi de \QUATROpAmostral, para uma amostra aleatória simples sem reposição de tamanho $n = \QUATROn$.
+
+	\begin{align*} 
+		\hat{p}  = \frac{y}{n} = {\frac{\QUATROy}{\QUATROn}} = \QUATROpAmostral
+	\end{align*}
+	
+	Como procura-se evidência de que a proporção de alunos com opiniões negativas seja superior
+	a $20\%$ ($0.20$), realiza-se um teste unilateral à direita.
+	É possível utilizar a aproximação pela normal, pois:
+
+	\begin{align*}
+	  n \times p_0\!  &\; = \QUATROn \times 0.20 \\
+	  &\; = 40 \geq 5 ,\\
+	  & \text{e} \\
+	  n \times (1 - p_0)\!	&\;=\; \QUATROn \times (1 - 0.20) \\
+	  &\;= 160  \geq 5 \\
+	\end{align*}
+
+	O cálculo da estatística do teste é feito por:
+
+	\begin{align*}
+		z = \frac{y' - n \cdot p_0}{\sqrt{n \cdot p_0 \cdot (1 - p_0)}}
+	\end{align*}
+
+	Como $y > \QUATROn \times p_0$, $y' = y + 0,5 = 54,5$. Assim:
+
+	\begin{align*}
+		z &\; = \frac{\QUATROyLinha - \QUATROn \cdot 0,2}{\sqrt{\QUATROn \cdot 0,2 \cdot (1 - 0,2}}\\
+		&\; = \QUATROz
+	\end{align*}
+
+	Com o auxílio da tabela de distribuição normal padrão, obtemos a area acima de $z$ e que corresponde 
+	ao valor $p$. Para $z = \QUATROz$, $p = \QUATROpValue$. Como $p < \alpha$, rejeita-se $H_0$ ao nível
+	de significância de $1\%$ e aceita-se $H_1$. Portanto, conclui-se que há evidência de que a proporção
+	populacional com opinião negativa sobre a EAD da TYU seja superior à $20\%$.
+
+\subsection{Poder do Teste}
+\label{questao:4b}
+
+	Para obter o tamanho da amostra foi utilizado o software R e a função \r|pwr.p.test|, a qual calcula o poder para testes de proporção de uma amostra.
+	A função \r|ES.h|, por sua vez, foi utilizada também para calcular o \textit{Effect Size} para proporção.
+	Em vista disso, o seguinte fragmento de código foi executado no ambiente R:
+
+	\inputr{questao4/4b.R}
+
+	Na função \r|pwr.p.test| foram passados como parâmetros os \textit{Effect Sizes} das proporções contidas em \r|probList|;
+	o tamanho da amostra (\r|n = 200|); 
+	o nível de significância de $5\%$ (\r|sig.level = 0.01|);
+	a indicação de que se trata de um teste unilateral à direita (\r|alternative = greater|); 
+	e o poder (\r|power|) como NULL, visto que se trata do valor desejado a ser calculado.
+	A partir da execução do código R, foi gerada a \autoref{table:4b}, a qual mostra os resultados obtidos do poder do teste calculado para os valores $0.21$, $0.22$,  $0.24$, $0.25$, $0.26$ e $0.27$.
+
+	\begin{table}[ht]
+	\centering
+	\caption{Poder do teste para diferentes valores de proporção de alunos com opiniões negativas} 
+	\label{table:4b}
+	\begin{tabular}{rrrrrrr}
+		\toprule
+		$p$ 	& 0.21 & 0.22 & 0.24 & 0.25 & 0.26 & 0.27 \\ 
+		\midrule
+		$ES$ 	& \QUATROesVinteUm & \QUATROesVinteDois & \QUATROesVinteQuatro & \QUATROesVinteCinco & \QUATROesVinteSeis & \QUATROesVinteSete \\ 
+		$\beta$ & \QUATROpVinteUm & \QUATROpVinteDois & \QUATROpVinteQuatro & \QUATROpVinteCinco & \QUATROpVinteSeis & \QUATROpVinteSete \\ 
+	   \bottomrule
+	\end{tabular}
+	\end{table}
+
+	Observou-se que à medida que a proporção $p$ se distancia da proporção $p_0$, o poder do teste aumenta.
+	\todo[inline]{Ajuda: o que isso quer dizer?}
+
+\subsection{Tamanho mínimo de amostra}
+\label{questao:4c}
+
+	O mesmo comando \r|pwr.p.test| do ambiente R, utilizado no \autoref{questao:4b}, pode ser ser usado para calcular o tamanho mínimo da amostra: 
+
+	\inputr{questao4/4c.R}
+
+	Como o objetivo é encontrar o tamanho mínimo da amostra, o parâmetro
+	$n$ é passado na função como NULL.
+	Como resultado, foram obtidos os dados apresentados pela \autoref{table:4c}. 
+	Visto que o tamanho de amostra encontrado pela função não é um inteiro
+	(\QUATROtamanhoAmostra), é necessário efetuar um arredondamento para cima,
+	obtendo o valor final de \QUATROtamanhoAmostraRounded.
+
+	\begin{table}[ht]
+	\centering
+	\caption{Poder do Teste para detectar o tamanho da amostra.} 
+	\label{table:4c}
+	\begin{tabular}{rrrrr}
+	  \toprule
+		$p$ & $p_0$ & $n$ & $Effect Size$ & $1 - \beta$ \\ 
+		\midrule
+		$0.23$ & $0.20$ & $\QUATROtamanhoAmostra$ & $\QUATROesAmostra$ & $0.99$ \\ 
+		\bottomrule
+	\end{tabular}
+	\end{table}
+
+	A amostra de \QUATROn elementos, portanto, não é suficiente para detectar com 99\% de probabilidade que a proporção	de alunos com opiniões negativas é igual a $23\%$, considerando 1\% de significância.
+	Através do cálculo para o tamanho mínimo de amostra realizado no R, 
+	obteve-se que este tamanho deve ser de pelo menos \QUATROtamanhoAmostraRounded elementos.
