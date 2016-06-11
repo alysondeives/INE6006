@@ -26,7 +26,7 @@ print(sample20test)
 
 sample20deltas <- c((H0-3.5)/sample20s, (H0-3.75)/sample20s, (H0-3.85)/sample20s, (H0-3.95)/sample20s, (H0-4.15)/sample20s, (H0-4.25)/sample20s, (H0-4.35)/sample20s)
 
-sample20powers <- pwr.t.test(n=sample20size, d=sample20deltas, sig.level=0.01, power=NULL, type="one.sample", alternative="less")
+sample20powers <- power.t.test(n=sample20size, d=sample20deltas, sd=sample20s, sig.level=0.01, power=NULL, type="one.sample", alternative="one.sided", strict=FALSE)
 
 print(sample20deltas)
 print(sample20powers$power)
