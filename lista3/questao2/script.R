@@ -55,4 +55,16 @@ print(powers)
 write.csv(powers, file = "powers.csv", row.names = FALSE, 
           na="", fileEncoding = "UTF-8", eol="\r\n")
 
+#==============================================================================
+#                                  Tamanho Amostra
+#==============================================================================
 
+H0 <- 4.0
+sample20delta <- (H0 - sample20x)/sample20s
+
+talpha <- qt(p=0.99, df=sample20gl, ncp=sample20delta)
+tbeta  <- qt(p=0.95, df=sample20gl, ncp=sample20delta)
+
+n = ((talpha + tbeta)/(abs(sample20x - H0)/sample20s))^2
+
+print(n)
