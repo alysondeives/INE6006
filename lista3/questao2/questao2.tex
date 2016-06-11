@@ -10,7 +10,7 @@
 	mínimos. O nível de significância para o teste é de $5\%$.
 	%
 	\begin{align*}
-		H_0: \mu &= \geq 4,5\\
+		H_0: \mu &= 4,5\\
 		H_1: \mu &< 4,5   \\
 		     \alpha &= 0,05
 	\end{align*}
@@ -20,12 +20,14 @@
 	liberdade $\DOISgrauLiberdade$:
 	%
 	\begin{align*}
-		t &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
-		t &= \dfrac{(\DOISmediaAmostra - \DOISmediaPopulacao) \cdot \sqrt{\DOIStamanhoAmostra}}{\DOISdesvioAmostra} \\
-		t &\approx 0
+		t_{19} &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
+		t_{19} &= \dfrac{(\DOISmediaAmostra - \DOISmediaPopulacao) \cdot \sqrt{\DOIStamanhoAmostra}}{\DOISdesvioAmostra} \\
+		t_{19} &= \DOISteste
 	\end{align*}
 
-	Como $t < \alpha$ rejeita-se a hipótese nula. Ou seja, há evidências
+	Com o auxílio do software estatístico R, calculou-se $P(t  \leq t_{19})
+	= -4.83\times 10^{-10}$ através da função \texttt{pt()}. Como $P(t  \leq
+	t_{19}) < \alpha$ rejeita-se a hipótese nula. Ou seja, há evidências
 	estatísticas de que a média mensal dos alunos é menor que $4,5$ salários
 	mínimos com $5\%$ de nível de significância.
 
@@ -59,3 +61,6 @@
 		1 - \beta_{4,25} &= \DOISpoderF\\
 		1 - \beta_{4,35} &= \DOISpoderG\\
 	\end{align*}
+
+\subsection{Análise do Poder de Teste}
+
