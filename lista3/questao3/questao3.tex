@@ -5,8 +5,6 @@ foram formuladas as hipóteses nula e alternativa.
 Consideramos como hipótese nula que a proporção de alunos que usam ``Incentivos Federais`` é igual ou superior a $0.35$. 
 Para a hipótese alternativa, consideramos que a proporção de alunos que usam ``Incentivos Federais'' é menor que $0.35$.
 
-\todo[inline]{Os exemplos no livro sempre usam = em $H_0$ para testes de média. Um cara perguntou na aula e o professor meio que não quis entrar em detalhes cabeludos, mas ele disse que deve ser '=' pois quando $H_0$ é aceita não há evidência de que $\mu \geq \mu_0$ como está afirmado aqui. $H_0$ aceita significa ``Não há evidência estatística a 5\% de significãncia de que $\mu < \mu_0$}
-\todo[inline]{BR: feito.}
 \begin{align*}
   H_0\!:   &\; p = 0.35 \\
   H_1\!:   &\; p < 0.35  \\
@@ -19,27 +17,25 @@ Como procura-se evidência de que a proporção de alunos, cuja fonte de pagamen
 seja inferior a $35\%$ ($0.35$), realiza-se um teste unilateral a esquerda. É possível utilizar a aproximação pela normal, pois:
 
 \begin{align*}
-  n \times p_0\!  &\; = 200 \times 0.35 \\
+  n $\cdot$ p_0\!  &\; = 200 $\cdot$ 0.35 \\
   &\; = 70 \geq 5 ,\\
   & \text{e} \\
-  n \times (1 - p_0)\!	&\;=\; 200 \times (1 - 0.35) \\
+  n $\cdot$ (1 - p_0)\!	&\;=\; 200 $\cdot$ (1 - 0.35) \\
   &\;= 130  \geq 5 \\
 \end{align*}
 
-\todo[inline]{Até então estavamos usando $\cdot$ para multiplicação. Esse $\times$ fica fora de estilo e até confuso.}
 É recomendável, ainda, aplicar a correção de continuidade. 
 Como, neste caso, estamos trabalhando com uma aproximação pela normal e  
-$y < n \times p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
+$y < n $\cdot$ p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
 incrementamos $0.5$ do $y$ para obter $y'$. Logo, $y' = 64.5$, sendo $y$ o número de alunos utilizam a forma de pagamento ``Incentivos Federais'' 
 
 \todo[inline]{A correção de continuídade não é condicional, a correção deve ocorrer sempre. Eu acho que eu entendi errado essa expressão e meu todo não faz sentido, nesse caso corrija o que você suspeita que tenha feito eu falar merda.}
 \todo[inline]{BR: Me baseei pela pág 213 do livro}
-\todo[inline]{Faltou dizer o que $y$ é, não é algo tão óbvio quanto $\mu$.}
-\todo[inline]{BR: feito.}
+
 \begin{align}
   \label{eq:cinco-a-y-correcao}
-  y   &\; =  n \times \hat{p} < n \times p_0 \\ 
-      &\; = 200 \times 0.32 < 200 \times 0.35 \nonumber \\
+  y   &\; =  n $\cdot$ \hat{p} < n $\cdot$ p_0 \\ 
+      &\; = 200 $\cdot$ 0.32 < 200 $\cdot$ 0.35 \nonumber \\
       &\; = 64 < 70 \nonumber
 \end{align}
 
@@ -48,13 +44,13 @@ apropriado e compará-lo com o nível de significância de $5\%$.
 
 \begin{equation}
   \label{eq:cinco-b-n-result}
-  z = \frac{y' - n \times p_0}{ \sqrt{n \times p_0 (1 - p_0)} }
+  z = \frac{y' - n $\cdot$ p_0}{ \sqrt{n $\cdot$ p_0 (1 - p_0)} }
 \end{equation}
 
 Substituindo os valores, temos:
 
 \begin{align*}
-  z &\;= \frac{64.5 - 200 \times 0.35}{ \sqrt{200 \times 0.35 \times (1 - 0.35)} } \\
+  z &\;= \frac{64.5 - 200 $\cdot$ 0.35}{ \sqrt{200 $\cdot$ 0.35 $\cdot$ (1 - 0.35)} } \\
     &\;= - 0.8154 \nonumber \\
 \end{align*}
 
@@ -104,10 +100,9 @@ O mesmo comando \r|pwr.p.test| do ambiente R, utilizado no \autoref{questao:3b},
 
 \inputr{questao3/c.R}
 
-Como o objetivo é encontrar o tamanho mínimo da amostra, o parâmetro $n$ é passado na função como NULL.
+Como o objetivo é encontrar o tamanho mínimo da amostra, o parâmetro $n$ é passado na função como NULL. Além disso, consideramos o poder do teste como $0.99$.
 Como resultado, foram obtidos os dados apresentados pela \autoref{tb:3c}. 
 Visto que o tamanho de amostra encontrado pela função não é um inteiro ($2177.447$), é necessário efetuar um arredondamento para cima, obtendo o valor final de $2178$.
-\todo[inline]{É bom em algum lugar escrever explicitamente que o ``poder do teste é 0.99''.}
 
 \begin{table}[ht]
 \centering
