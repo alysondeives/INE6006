@@ -5,7 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[
-  output-decimal-marker={,},
+  output-decimal-marker={.},
   round-mode=places,
   round-precision=4,
   zero-decimal-to-integer
@@ -23,7 +23,7 @@
 \usepackage{booktabs}
 \usepackage{soulutf8}
 \usepackage[parfill]{parskip}
-\usepackage{minted} %melhor que listings, compilar com -shell-escape, requer pygmentize (pygments) instalado
+\usepackage{listings}
 
 %%%%%%%%%%%% Configuring packages
 % Minted \setminted onyly in minted >= 2.0
@@ -60,7 +60,7 @@
 % minted < 2.0 não tem mintinline
 %\def\r|#1|{\mintinline{r}|#1|}
 \def\r|#1|{\texttt{#1}}
-\newcommand{\inputr}[1]{\inputminted[linenos]{r}{#1}}
+\newcommand{\inputr}[1]{\lstinputlisting{#1}}
 
 %%%%%%%%%%%%% Autor e Título
 

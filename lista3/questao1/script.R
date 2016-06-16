@@ -12,7 +12,7 @@ source("calc.R")
 # --- b
 powers <- matrix(data=bpower$power, ncol = length(bpower$power), nrow = 1)
 colnames(powers) <- us1b
-rownames(powers) <- "$\\beta$"
+rownames(powers) <- "$1-\\beta$"
 table <- xtable(powers, digits=4, label = "tb:1b", 
                 caption = "Poder do teste para diferentes valores da média populacional real.")
 print.xtable(table, caption.placement = "top", sanitize.text.function = identity, 
@@ -21,15 +21,15 @@ print.xtable(table, caption.placement = "top", sanitize.text.function = identity
 # --- d
 powers <- matrix(data=c(dpower$power, bpower$power), ncol = length(dpower$power), nrow = 2, byrow = TRUE)
 colnames(powers) <- us1b
-rownames(powers) <- c("$\\beta_d$", "$\\beta_b$")
+rownames(powers) <- c("$1-\\beta_d$", "$1-\\beta_b$")
 table <- xtable(powers, digits=4, label = "tb:1d", 
                 caption = "Poder do teste usando $s$ e $n$ das amostras dos itens d e b.")
 print.xtable(table, caption.placement = "top", sanitize.text.function = identity, 
              booktabs = TRUE, comment = TRUE, file = "tb-power-d.tex")
 
 # --- plot 
-deltas <- c(seq(10, 0, by=-0.01), seq(0, 10, by=0.01))
-us <- c(seq(-10, 0, by=0.01)+u01a, seq(0, 10, by=0.01)+u01a)
+deltas <- c(seq(10, 0, by=-0.5), seq(0, 10, by=0.5))
+us <- c(seq(-10, 0, by=0.5)+u01a, seq(0, 10, by=0.5)+u01a)
 bpowers <- power.t.test(n=n1a, delta=deltas, sd=s1a, sig.level=alpha1a,
                         type="one.sample", alternative="one.sided")$power
 dpowers <- power.t.test(n=n1d, delta=deltas, sd=s1d, sig.level=alpha1a,

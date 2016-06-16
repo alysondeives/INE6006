@@ -16,6 +16,7 @@ z = (yLinha-n*p0)/sqrt(n*p0*(1-p0))
 pValue = 1 - pnorm(abs(z))
 #----------------------------------------------------------------------------------------------------
 probList <- c(0.20, 0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27)
+#probList <- seq(from=0.2,to=1.0, by=0.01)
 
 effectSize <- ES.h(probList, 0.20)
 
@@ -55,6 +56,9 @@ cat(sprintf("\\newcommand{\\QUATROpVinteQuatro}{\\num{%.4f}\\xspace}\n", power$p
 cat(sprintf("\\newcommand{\\QUATROpVinteCinco}{\\num{%.4f}\\xspace}\n", power$power[6]), file = out)
 cat(sprintf("\\newcommand{\\QUATROpVinteSeis}{\\num{%.4f}\\xspace}\n", power$power[7]), file = out)
 cat(sprintf("\\newcommand{\\QUATROpVinteSete}{\\num{%.4f}\\xspace}\n", power$power[8]), file = out)
+
+cat(sprintf("\\newcommand{\\QUATROpVinteUmP}{%.2f\\%%\\xspace}\n", power$power[2]*100), file = out)
+cat(sprintf("\\newcommand{\\QUATROpVinteSeteP}{%.2f\\%%\\xspace}\n", power$power[8]*100), file = out)
 
 cat(sprintf("\\newcommand{\\QUATROesAmostra}{\\num{%.4f}\\xspace}\n", effectSizeAmostra), file = out)
 cat(sprintf("\\newcommand{\\QUATROtamanhoAmostra}{\\num{%.4f}\\xspace}\n", tamanhoAmostra), file = out)
