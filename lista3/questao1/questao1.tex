@@ -87,15 +87,34 @@
 \subsection{Nova amostra}
 \label{questao:1d}
 
-Foi retirada uma amostra aleatória simples com \UMCnMin elementos, que apresentou desvio padrão amostral $s = \UMDs$. De maneira análoga, a função \r|power.t.test| foi usada para calcular o poder do teste considerando diversas possibilidades para a média real da população. A lista de difereças \r|deltas1b|  permanace a mesma, pois essa lista é definida pela expressão $\mu - \mu_0$, onde $\mu$ é a média real que assume os valores listados no enunciado do \autoref{questao:1b}.
+Foi retirada uma amostra aleatória simples com \UMCnMin elementos, que
+apresentou desvio padrão amostral $s = \UMDs$. De maneira análoga, a
+função \r|power.t.test| foi usada para calcular o poder do teste
+considerando diversas possibilidades para a média real da população. A
+lista de difereças \r|deltas1b| permanace a mesma, pois essa lista é
+definida pela expressão $\mu - \mu_0$, onde $\mu$ é a média real que
+assume os valores listados no enunciado do \autoref{questao:1b}.
 
 \inputr{questao1/d-2.R}
 
-Os resultados desse cálculo são apresentados na linha $1 - \beta_d$ da \autoref{tb:1d}, que também contêm os mesmos resultados usando o desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no \autoref{questao:1b}. Houve aumento do poder do teste para todos os valores de $\mu$, que possuiam $1 - \beta_b \neq 1$. Em especial, quanto mais distante de $1 - \beta_b$ estava de 1, maior foi o aumento proporcional observado em $1 - \beta_d$. Esse aumento em $1 - \beta_d$ poderia ter sido ainda maior, se o desvio padrão amostral da nova amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da amostra usada no \autoref{questao:1b}, \UMAs.
+Os resultados desse cálculo são apresentados na linha $1 - \beta_d$ da
+\autoref{tb:1d}, que também contêm os mesmos resultados usando o
+desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no
+\autoref{questao:1b}. Houve aumento do poder do teste para todos os
+valores de $\mu$, que possuiam $1 - \beta_b \neq 1$. Em especial,
+quanto mais distante de $1 - \beta_b$ estava de 1, maior foi o aumento
+proporcional observado em $1 - \beta_d$. Esse aumento em $1 - \beta_d$
+poderia ter sido ainda maior, se o desvio padrão amostral da nova
+amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da
+amostra usada no \autoref{questao:1b}, \UMAs.
 
 \input{questao1/tb-power-d}
 
-A \autoref{fig:1-power} mostra graficamente o poder do teste usando os parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo com a média real $\mu$. Os dados foram obtidos usando o mesmo método usado na \autoref{tb:1d}, e $1 - \beta_b$ e $1 - \beta_d$ possuem o mesmo significado.
+A \autoref{fig:1-power} mostra graficamente o poder do teste usando os
+parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo
+com a média real $\mu$. Os dados foram obtidos usando o mesmo método
+usado na \autoref{tb:1d}, e $1 - \beta_b$ e $1 - \beta_d$ possuem o
+mesmo significado.
 
 \todo[inline]{Usar cores e linha contínua para $1- \beta_b$. Interpolar essa porra.}
 \begin{figure}[ht]
