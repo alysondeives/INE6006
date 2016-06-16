@@ -3,42 +3,71 @@
 \subsection{Teste de hipótese}
 \label{questao:1a}
 
-Para testar a hipótese descrita é realizadodeve ser realizado um teste de hipótese assimétrico para a média. Como essa é a situação mais comum na prática, a variância populacional foi considerada como desconhecida. Considere como hipótese nula que a média populacional da variável Idade é de \UMAu0 anos. Para a hipótese alternativa, considere que a média populacional da variável Idade é maior que \UMAu0 anos. O nível de significância do teste é de 5\%.
+	Para testar a hipótese descrita é realizadodeve ser realizado um teste de
+	hipótese assimétrico para a média. Como essa é a situação mais comum na
+	prática, a variância populacional foi considerada como desconhecida.
+	Considere como hipótese nula que a média populacional da variável Idade é de
+	\UMAu0 anos. Para a hipótese alternativa, considere que a média populacional
+	da variável Idade é maior que \UMAu0 anos. O nível de significância do teste
+	é de 5\%.
 
-\begin{align*}
-  H_0\!:   &\; \mu = \UMAu0 \\
-  H_1\!:   &\; \mu > \UMAu0  \\
-  \alpha\!:&\; \UMAalpha  
-\end{align*}
+	\begin{align*}
+	  H_0\!:   &\; \mu = \UMAu0 \\
+	  H_1\!:   &\; \mu > \UMAu0  \\
+	  \alpha\!:&\; \UMAalpha  
+	\end{align*}
 
-Por se tratar de um teste sobre a média, e como o desvio padrão populacional é desconhecido, a estatística do teste é o valor $t$ (da distribuição de Student) com $gl=\UMAgl$.
+	Por se tratar de um teste sobre a média, e como o desvio padrão
+	populacional é desconhecido, a estatística do teste é o valor $t$ (da
+	distribuição de Student) com $gl=\UMAgl$.
 
-\todo[inline]{Usar parâmetro de não centralidade na função \texttt{pt}.}
+	\todo[inline]{Usar parâmetro de não centralidade na função \texttt{pt}.}
 
-O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte código: \texttt{pt(x = \UMAt, df = \UMAgl, lower.tail = FALSE)}. Logo, como $p \geq \alpha$, $H_0$ é aceita e não se pode afirmar que há evidencia em favor de $H_1$. A hipótese da direção de que a média de idade é maior que 27 anos não pôde ser confirmada (com uma amostra de \UMAn alunos).
+	O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte
+	código: \texttt{pt(x = \UMAt, df = \UMAgl, lower.tail = FALSE)}. Logo,
+	como $p \geq \alpha$, $H_0$ é aceita e não se pode afirmar que há
+	evidencia em favor de $H_1$. A hipótese da direção de que a média de
+	idade é maior que 27 anos não pôde ser confirmada (com uma amostra de
+	\UMAn alunos).
 
 \subsection{Poder do Teste}
 \label{questao:1b}
 
-O poder do teste ($1 - \beta$) foi calculado usando a função \r|power.t.test|, de maneira análoga ao mostrado em documento disponibilizado no Moodle da disciplina. A \autoref{tb:1b} mostra o poder do teste calculado para os valores listados no enunciado. Essa tabela foi gerada a partir do resultado do seguinte frgmento de código R:
+	O poder do teste ($1 - \beta$) foi calculado usando a função
+	\r|power.t.test|, de maneira análoga ao mostrado em documento
+	disponibilizado no Moodle da disciplina. A \autoref{tb:1b} mostra o
+	poder do teste calculado para os valores listados no enunciado. Essa
+	tabela foi gerada a partir do resultado do seguinte frgmento de código
+	R:
 
-\inputr{questao1/b.R}
+	\inputr{questao1/b.R}
 
-\todo[inline]{Discutir um dos resultados do poder do teste.}
+	\todo[inline]{Discutir um dos resultados do poder do teste.}
 
-%Pensando em editar o tex gerado? Pense denovo.
-\input{questao1/tb-power}
+	%Pensando em editar o tex gerado? Pense denovo.
+	\input{questao1/tb-power}
 
 \subsection{Tamanho mínimo de amostra}
 \label{questao:1c}
 
-A mesma função, \r|power.t.test| do ambiente R, usada em \autoref{questao:1b} pode ser ser usada para calcular o tamanho mínimo da amostra. Nesse caso, é desejado um poder do teste de 90\% ao detectar a uma diferença de 2 anos na média, ao nível de significância de 5\%. Novamente usando o desvio padrão amostral $s = \UMAs$ como estimativa para $\sigma$, o seguinte código R pode ser usado:
+	A mesma função, \r|power.t.test| do ambiente R, usada em
+	\autoref{questao:1b} pode ser ser usada para calcular o tamanho mínimo
+	da amostra. Nesse caso, é desejado um poder do teste de 90\% ao detectar
+	a uma diferença de 2 anos na média, ao nível de significância de 5\%.
+	Novamente usando o desvio padrão amostral $s = \UMAs$ como estimativa
+	para $\sigma$, o seguinte código R pode ser usado:
 
-\inputr{questao1/c.R}
+	\inputr{questao1/c.R}
 
-O tamanho de amostra encontrado pela função, \UMCn, não é um inteiro, portanto é necessário efetuar um arredondamento para cima e proceder com um novo cálculo de $1-\beta$. Desse modo, o tamanho mínimo de amostra necessário é de \UMCnMin, que para média real $\mu = 29$, concede ao teste um poder de \UMCbeta.
+	O tamanho de amostra encontrado pela função, \UMCn, não é um
+	inteiro, portanto é necessário efetuar um arredondamento para cima e
+	proceder com um novo cálculo de $1-\beta$. Desse modo, o tamanho
+	mínimo de amostra necessário é de \UMCnMin, que para média real $\mu
+	= 29$, concede ao teste um poder de \UMCbeta.
 
-A amostra atual não é suficiente, pois os \UMAn elementos da amostras possibilitariam um teste com poder de apenas \UMCbetaOld, mantidos $\alpha = 0.05$ e $\mu = 29$.
+	A amostra atual não é suficiente, pois os \UMAn elementos da
+	amostras possibilitariam um teste com poder de apenas \UMCbetaOld,
+	mantidos $\alpha = 0.05$ e $\mu = 29$.
 
 \subsection{Nova amostra}
 \label{questao:1d}
