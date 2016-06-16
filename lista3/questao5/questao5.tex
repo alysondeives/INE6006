@@ -1,1 +1,81 @@
-\todo[inline]{Fazer}
+\subsection{Diferença entre as Médias}
+
+Sabe-se que o tamanho da população é $N = 4850$ e os valores obtidos da amostra de 80 elementos são apresentados na Tab. \ref{tb:5a}.
+
+\begin{table}[ht]
+\centering
+\caption{Valores de Tamanho da Amostra, Média e Desvio-Padrão} 
+\label{tb:5a}
+\begin{tabular}{rrrr}
+  \toprule
+  Pagamento C & n & $\bar{x}$ & s \\
+  \midrule
+ Incentivos Federais & 28 & 3.6560 & 1.4513 \\ 
+ Outras Formas de Pagamento & 52 & 1.8305 & 0.7834 \\
+   \bottomrule
+\end{tabular}
+\end{table}
+
+Como a variância populacional é desconhecida, primeiramente, faz-se necessário determinar estatisticamente se as variâncias dos dois grupos são iguais ou diferentes. Para isso, são formuladas as 
+seguintes hipóteses:
+
+\begin{align*} 
+		H_0\!:   &\; \sigma^2_1 = \sigma^2_2 \\
+		H_1\!:   &\; \sigma^2_1 \neq \sigma^2_2  \\
+		\alpha\!:&\; 0.01
+\end{align*}
+
+Para comparar as variâncias, com nível de significância de $1\%$, foi realizado o teste f com o seguinte código no programa R.
+
+\inputr{questao5/5a1.R}
+
+Foram passados como parâmetros para o teste f as rendas dos alunos que pagam suas mensalidades com incentivos federais (\r|incentivos\$Renda|), as rendas dos alunos que pagam suas mensalidades com 
+outras formas de pagamento (\r|outras\$Renda|), a indicação de que se trata de um teste bilateral (\r|alternative = two.sided|), nível de confiança de 99\% (\r|conf.level = 0.99|).
+
+Com a execução do código, o R retornou o $valor-p = 0.0001465$, o que permite rejeitar $H_{0}$. Considerando que o $valor-p$ é menor do que a significância ($\alpha = 0.01$), pode-se dizer que há 
+evidências estatísticas que as variâncias são diferentes. Com isso, é possível determinar se há diferença entre as médias dos dois grupos.  
+
+Para determinar a diferença, ou não, entre as médias das variáveis Incentivos Federais e Outras Formas de Pagamento, primeiramente faz-se necessário determinar as hipóteses:
+
+\begin{align*} 
+		H_0\!:   &\; \mu_1 = \mu_2 \\
+		H_1\!:   &\; \mu_1 \neq \mu_2  \\
+		\alpha\!:&\; 0.05
+\end{align*}
+
+onde $H_{0}$ representa as igualdades entre as médias e $H_{1}$ a diferença entre elas. De acordo com as hipóteses, pode-se dizer que se trata de um teste bilateral.
+
+Para testar as médias foi realizado o teste t utilizando o programa R com o seguinte código:
+
+\inputr{questao5/5a.R}
+
+A variável \textquotedblleft amostra\textquotedblright representa a amostra de 80 elementos. Foram passados como parâmetros para o teste t as rendas dos alunos que pagam suas mensalidades com 
+incentivos federais (\r|incentivos\$Renda|), as rendas dos alunos que pagam suas mensalidades com outras formas de pagamento (\r|outras\$Renda|), a indicação de que se trata de um teste bilateral 
+(\r|alternative = two.sided|), nível de confiança de 95\% (\r|conf.level = 0.95|) e que as variâncias são diferentes (\r|var.equal = FALSE|).
+
+Com a execução do código, o R retornou o $valor-p = 0.0000004046$. Como a significância é $\alpha = 0.05$ e $valor-p < \alpha$, rejeita-se $H_{0}$ e conclui-se que: há evidências estatísticas que as 
+médias das rendas dos alunos que pagam suas mensalidades com \textquotedblleft Incentivos Federais\textquotedblright e as dos alunos que pagam suas mensalidades com \textquotedblleft Outras 
+Formas de Pagamento\textquotedblright são diferentes. 
+
+\subsection{Poder do Teste}
+
+Para obter o desvio agrupado a partir dos desvios padrões e tamanho de cada subgrupo é preciso calcular a variância agregada, utilizando a equação \ref{eq:5b}.
+
+\begin{equation}
+ \label{eq:5b}
+ S^2_a = \frac{(n_1 - 1) \cdot S^2_1 + (n_2 - 1) \cdot S^2_2}{n_1 + n_2 - 2}
+\end{equation}
+
+Substituindo os valores tem-se:
+
+\begin{align*}
+ S^2_a &\; = \frac{(28 - 1) \cdot 1.4513^2 + (52 - 1) \cdot 0.7834^2}{28 + 52 - 2} \\
+       &\; = 1.1303 \\
+\end{align*}
+
+Tirando a raiz quadrada, tem-se o valor do desvio padrão da amostra de acordo com o tamanho das amostras dos dois grupos. Nesse caso, $S_a = 1.0631$ salários mínimos.
+
+
+
+\subsection{Tamanho Mínimo de Amostra}
+

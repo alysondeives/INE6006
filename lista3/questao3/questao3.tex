@@ -17,16 +17,16 @@ Como procura-se evidência de que a proporção de alunos, cuja fonte de pagamen
 seja inferior a $35\%$ ($0.35$), realiza-se um teste unilateral a esquerda. É possível utilizar a aproximação pela normal, pois:
 
 \begin{align*}
-  n $\cdot$ p_0\!  &\; = 200 $\cdot$ 0.35 \\
+  n \cdot p_0\!  &\; = 200 \cdot 0.35 \\
   &\; = 70 \geq 5 ,\\
   & \text{e} \\
-  n $\cdot$ (1 - p_0)\!	&\;=\; 200 $\cdot$ (1 - 0.35) \\
+  n \cdot (1 - p_0)\!	&\;=\; 200 \cdot (1 - 0.35) \\
   &\;= 130  \geq 5 \\
 \end{align*}
 
 É recomendável, ainda, aplicar a correção de continuidade. 
 Como, neste caso, estamos trabalhando com uma aproximação pela normal e  
-$y < n $\cdot$ p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
+$y < n \cdot p_0$ – conforme demonstrado na fórmula \ref{eq:cinco-a-y-correcao} – 
 incrementamos $0.5$ do $y$ para obter $y'$. Logo, $y' = 64.5$, sendo $y$ o número de alunos utilizam a forma de pagamento ``Incentivos Federais'' 
 
 \todo[inline]{A correção de continuídade não é condicional, a correção deve ocorrer sempre. Eu acho que eu entendi errado essa expressão e meu todo não faz sentido, nesse caso corrija o que você suspeita que tenha feito eu falar merda.}
@@ -34,8 +34,8 @@ incrementamos $0.5$ do $y$ para obter $y'$. Logo, $y' = 64.5$, sendo $y$ o núme
 
 \begin{align}
   \label{eq:cinco-a-y-correcao}
-  y   &\; =  n $\cdot$ \hat{p} < n $\cdot$ p_0 \\ 
-      &\; = 200 $\cdot$ 0.32 < 200 $\cdot$ 0.35 \nonumber \\
+  y   &\; =  n \cdot \hat{p} < n \cdot p_0 \\ 
+      &\; = 200 \cdot 0.32 < 200 \cdot 0.35 \nonumber \\
       &\; = 64 < 70 \nonumber
 \end{align}
 
@@ -44,13 +44,13 @@ apropriado e compará-lo com o nível de significância de $5\%$.
 
 \begin{equation}
   \label{eq:cinco-b-n-result}
-  z = \frac{y' - n $\cdot$ p_0}{ \sqrt{n $\cdot$ p_0 (1 - p_0)} }
+  z = \frac{y' - n \cdot p_0}{ \sqrt{n \cdot p_0 (1 - p_0)} }
 \end{equation}
 
 Substituindo os valores, temos:
 
 \begin{align*}
-  z &\;= \frac{64.5 - 200 $\cdot$ 0.35}{ \sqrt{200 $\cdot$ 0.35 $\cdot$ (1 - 0.35)} } \\
+  z &\;= \frac{64.5 - 200 \cdot 0.35}{ \sqrt{200 \cdot 0.35 \cdot (1 - 0.35)} } \\
     &\;= - 0.8154 \nonumber \\
 \end{align*}
 
