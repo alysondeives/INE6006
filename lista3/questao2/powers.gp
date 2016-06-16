@@ -1,7 +1,7 @@
 set datafile separator ";"
 
-set terminal postscript eps enhanced color
-set output "powers.eps"
+set terminal cairolatex pdf enhanced color
+set output "powers.tex"
 
 set xrange [3.50:4.35]
 set yrange [0.0:1.0]

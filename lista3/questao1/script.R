@@ -28,8 +28,8 @@ print.xtable(table, caption.placement = "top", sanitize.text.function = identity
              booktabs = TRUE, comment = TRUE, file = "tb-power-d.tex")
 
 # --- plot 
-deltas <- c(seq(10, 0, by=-0.01), seq(0, 10, by=0.01))
-us <- c(seq(-10, 0, by=0.01)+u01a, seq(0, 10, by=0.01)+u01a)
+deltas <- c(seq(10, 0, by=-0.5), seq(0, 10, by=0.5))
+us <- c(seq(-10, 0, by=0.5)+u01a, seq(0, 10, by=0.5)+u01a)
 bpowers <- power.t.test(n=n1a, delta=deltas, sd=s1a, sig.level=alpha1a,
                         type="one.sample", alternative="one.sided")$power
 dpowers <- power.t.test(n=n1d, delta=deltas, sd=s1d, sig.level=alpha1a,
