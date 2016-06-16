@@ -34,19 +34,19 @@
 \subsection{Poder Teste}
 
 	Para calcular o poder do deste, deve-se empregar a distribuição não
-	central T-Student. Portanto, deve-se, primeiramente, calcular o fator de
-	centralidade.
+	central $t$ de Student. Portanto, deve-se, primeiramente, calcular o fator de
+	não centralidade.
 	%
 	\begin{align*}
-		d_{3,50} &= \DOISabicissaA\\
-		d_{3,75} &= \DOISabicissaB\\
-		d_{3,85} &= \DOISabicissaC\\
-		d_{3,95} &= \DOISabicissaD\\
-		d_{4,15} &= \DOISabicissaE\\
-		d_{4,25} &= \DOISabicissaF\\
-		d_{4,35} &= \DOISabicissaG\\
+		d_{3,50} &= -\DOISabicissaA\\
+		d_{3,75} &= -\DOISabicissaB\\
+		d_{3,85} &= -\DOISabicissaC\\
+		d_{3,95} &= -\DOISabicissaD\\
+		d_{4,15} &= -\DOISabicissaE\\
+		d_{4,25} &= -\DOISabicissaF\\
+		d_{4,35} &= -\DOISabicissaG\\
 	\end{align*}
-	
+
 	Com posse desses dados o poder desses valores, o pode do teste pode ser
 	calculado com a função \texttt{pwr.t.test()} do software estatístico R.	Para o
 	teste, considerou-se o nível de significância em $1\%$ e o desvio padrão
