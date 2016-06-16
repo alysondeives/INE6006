@@ -24,9 +24,7 @@ O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte código: \
 \subsection{Poder do Teste}
 \label{questao:1b}
 
-\todo[inline]{Daqui pra frente, inclusive no gráfico o poder do teste está sendo referido por $\beta$, quando deveria ser $1 - \beta$.}
-
-O poder do teste ($\beta$) foi calculado usando a função \r|power.t.test|, de maneira análoga ao mostrado em documento disponibilizado no Moodle da disciplina. A \autoref{tb:1b} mostra o poder do teste calculado para os valores listados no enunciado. Essa tabela foi gerada a partir do resultado do seguinte frgmento de código R:
+O poder do teste ($1 - \beta$) foi calculado usando a função \r|power.t.test|, de maneira análoga ao mostrado em documento disponibilizado no Moodle da disciplina. A \autoref{tb:1b} mostra o poder do teste calculado para os valores listados no enunciado. Essa tabela foi gerada a partir do resultado do seguinte frgmento de código R:
 
 \inputr{questao1/b.R}
 
@@ -45,7 +43,7 @@ A mesma função, \r|power.t.test| do ambiente R, usada em \autoref{questao:1b} 
 
 \inputr{questao1/c.R}
 
-O tamanho de amostra encontrado pela função, \UMCn, não é um inteiro, portanto é necessário efetuar um arredondamento para cima e proceder com um novo cálculo de $\beta$. Desse modo, o tamanho mínimo de amostra necessário é de \UMCnMin, que para média real $\mu = 29$, concede ao teste um poder de \UMCbeta.
+O tamanho de amostra encontrado pela função, \UMCn, não é um inteiro, portanto é necessário efetuar um arredondamento para cima e proceder com um novo cálculo de $1-\beta$. Desse modo, o tamanho mínimo de amostra necessário é de \UMCnMin, que para média real $\mu = 29$, concede ao teste um poder de \UMCbeta.
 
 A amostra atual não é suficiente, pois os \UMAn elementos da amostras possibilitariam um teste com poder de apenas \UMCbetaOld, mantidos $\alpha = 0.05$ e $\mu = 29$.
 
@@ -56,11 +54,11 @@ Foi retirada uma amostra aleatória simples com \UMCnMin elementos, que apresent
 
 \inputr{questao1/d-2.R}
 
-Os resultados desse cálculo são apresentados na linha $\beta_d$ da \autoref{tb:1d}, que também contêm os mesmos resultados usando o desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no \autoref{questao:1b}. Houve aumento do poder do teste para todos os valores de $\mu$, que possuiam $\beta_b \neq 1$. Em especial, quanto mais distante de $\beta_b$ estava de 1, maior foi o aumento proporcional observado em $\beta_d$. Esse aumento em $\beta_d$ poderia ter sido ainda maior, se o desvio padrão amostral da nova amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da amostra usada no \autoref{questao:1b}, \UMAs.
+Os resultados desse cálculo são apresentados na linha $1 - \beta_d$ da \autoref{tb:1d}, que também contêm os mesmos resultados usando o desvio padrão amostral $s$ e o tamanho $n$ da amostra usada no \autoref{questao:1b}. Houve aumento do poder do teste para todos os valores de $\mu$, que possuiam $1 - \beta_b \neq 1$. Em especial, quanto mais distante de $1 - \beta_b$ estava de 1, maior foi o aumento proporcional observado em $1 - \beta_d$. Esse aumento em $1 - \beta_d$ poderia ter sido ainda maior, se o desvio padrão amostral da nova amostra, \UMDs, tivesse sido menor ou igual ao desvio padrão da amostra usada no \autoref{questao:1b}, \UMAs.
 
 \input{questao1/tb-power-d}
 
-A \autoref{fig:1-power} mostra graficamente o poder do teste usando os parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo com a média real $\mu$. Os dados foram obtidos usando o mesmo método usado na \autoref{tb:1d}, e $\beta_b$ e $\beta_d$ possuem o mesmo significado.
+A \autoref{fig:1-power} mostra graficamente o poder do teste usando os parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo com a média real $\mu$. Os dados foram obtidos usando o mesmo método usado na \autoref{tb:1d}, e $1 - \beta_b$ e $1 - \beta_d$ possuem o mesmo significado.
 
 \begin{figure}[ht]
   \centering

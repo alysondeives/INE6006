@@ -12,7 +12,7 @@ source("calc.R")
 # --- b
 powers <- matrix(data=bpower$power, ncol = length(bpower$power), nrow = 1)
 colnames(powers) <- us1b
-rownames(powers) <- "$\\beta$"
+rownames(powers) <- "$1-\\beta$"
 table <- xtable(powers, digits=4, label = "tb:1b", 
                 caption = "Poder do teste para diferentes valores da média populacional real.")
 print.xtable(table, caption.placement = "top", sanitize.text.function = identity, 
@@ -21,7 +21,7 @@ print.xtable(table, caption.placement = "top", sanitize.text.function = identity
 # --- d
 powers <- matrix(data=c(dpower$power, bpower$power), ncol = length(dpower$power), nrow = 2, byrow = TRUE)
 colnames(powers) <- us1b
-rownames(powers) <- c("$\\beta_d$", "$\\beta_b$")
+rownames(powers) <- c("$1-\\beta_d$", "$1-\\beta_b$")
 table <- xtable(powers, digits=4, label = "tb:1d", 
                 caption = "Poder do teste usando $s$ e $n$ das amostras dos itens d e b.")
 print.xtable(table, caption.placement = "top", sanitize.text.function = identity, 

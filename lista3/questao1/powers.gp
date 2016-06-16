@@ -11,8 +11,8 @@ set xtics 1
 set ytics 0,0.1,1
 set key on inside right bottom 
 set xlabel "$\\mu$"
-set ylabel "$\\beta$"
+set ylabel "$1-\\beta$"
 
 set datafile separator ","
-plot 'powers.csv' using (column("u")):(column("beta.b")) title "$\\beta_b$" with lines lt 2, \
-     'powers.csv' using (column("u")):(column("beta.d")) title "$\\beta_d$" with lines lt 1
+plot 'powers.csv' using (column("u")):(column("beta.b")) title "$1-\\beta_b$" with lines lt 2, \
+     'powers.csv' using (column("u")):(column("beta.d")) title "$1-\\beta_d$" with lines lt 1
