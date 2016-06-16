@@ -1,16 +1,6 @@
 \input{questao4/vars}
 \subsection{Teste de hipótese}
 \label{questao:4a}
-	%Foi retirada uma amostra aleatória simples sem reposição com \QUATROn
-	%elementos, dentre os \QUATRON alunos que possuíam um valor definido para
-	%a variável Opinião.  A proporção amostral $\hat{p}$ de alunos com
-	%opiniões negativas (ou seja, alunos que consideraram ``Insatisfeitos''
-	%ou ``Muito insatisfeitos'') foi de \QUATROpAmostral.
-
-	%\begin{align*} 
-		%\hat{p}  &= {\frac{\QUATROqtdOpinioesNegativas}{\QUATROn}} = \QUATROpAmostral \nonumber \\
-	%\end{align*}
-
 	Para determinar se a proporção populacional de alunos com opinião negativa
 	sobre a EAD da TYU é superior à 20\%, definimos as hipotéses:
 
@@ -33,10 +23,10 @@
 	É possível utilizar a aproximação pela normal, pois:
 
 	\begin{align*}
-	  n \times p_0\!  &\; = \QUATROn \times 0.20 \\
+	  n \times p_0\!  &\; = \QUATROn \cdot 0.20 \\
 	  &\; = 40 \geq 5 ,\\
 	  & \text{e} \\
-	  n \times (1 - p_0)\!	&\;=\; \QUATROn \times (1 - 0.20) \\
+	  n \times (1 - p_0)\!	&\;=\; \QUATROn \cdot (1 - 0.20) \\
 	  &\;= 160  \geq 5 \\
 	\end{align*}
 
@@ -46,10 +36,10 @@
 		z = \frac{y' - n \cdot p_0}{\sqrt{n \cdot p_0 \cdot (1 - p_0)}}
 	\end{align*}
 
-	Como $y > \QUATROn \times p_0$, $y' = y + 0,5 = 54,5$. Assim:
+	Como $y > n \cdot p_0$, $y' = y + 0.5 = 54.5$. Substituindo os valores, temos:
 
 	\begin{align*}
-		z &\; = \frac{\QUATROyLinha - \QUATROn \cdot 0,2}{\sqrt{\QUATROn \cdot 0,2 \cdot (1 - 0,2}}\\
+		z &\; = \frac{\QUATROyLinha - \QUATROn \cdot 0.2}{\sqrt{\QUATROn \cdot 0.2 \cdot (1 - 0.2}}\\
 		&\; = \QUATROz
 	\end{align*}
 
@@ -69,7 +59,7 @@
 
 	Na função \r|pwr.p.test| foram passados como parâmetros os \textit{Effect Sizes} das proporções contidas em \r|probList|;
 	o tamanho da amostra (\r|n = 200|); 
-	o nível de significância de $5\%$ (\r|sig.level = 0.01|);
+	o nível de significância de $1\%$ (\r|sig.level = 0.01|);
 	a indicação de que se trata de um teste unilateral à direita (\r|alternative = greater|); 
 	e o poder (\r|power|) como NULL, visto que se trata do valor desejado a ser calculado.
 	A partir da execução do código R, foi gerada a \autoref{table:4b}, a qual mostra os resultados obtidos do poder do teste calculado para os valores $0.21$, $0.22$,  $0.24$, $0.25$, $0.26$ e $0.27$.
@@ -83,17 +73,16 @@
 		$p$ 	& 0.21 & 0.22 & 0.24 & 0.25 & 0.26 & 0.27 \\ 
 		\midrule
 		$ES$ 	& \QUATROesVinteUm & \QUATROesVinteDois & \QUATROesVinteQuatro & \QUATROesVinteCinco & \QUATROesVinteSeis & \QUATROesVinteSete \\ 
-		$\beta$ & \QUATROpVinteUm & \QUATROpVinteDois & \QUATROpVinteQuatro & \QUATROpVinteCinco & \QUATROpVinteSeis & \QUATROpVinteSete \\ 
+		$1 - \beta$ & \QUATROpVinteUm & \QUATROpVinteDois & \QUATROpVinteQuatro & \QUATROpVinteCinco & \QUATROpVinteSeis & \QUATROpVinteSete \\ 
 	   \bottomrule
 	\end{tabular}
 	\end{table}
 
-	Observou-se que à medida que a proporção $p$ se distancia da proporção $p_0$, o poder do teste aumenta.
-	\todo[inline]{Ajuda: o que isso quer dizer?}
-	\todo[inline]{oder do teste é $1-\beta$ e não $\beta$}
-	\todo[inline]{A discussão deve ser feita no sentido de explicar o que
-	significa um poder do teste $x$ com proporção $y$. Usar os valores
-	apresentados na tabela.}
+	Como é indicado na \autoref{table:4b}, a probabilidade de um teste $t$ de rejeitar $H_0$ quando a proporção populacional real $p$ é maior que $0.2$ aumenta conforme a proporção real $p$ se distancia de $0.2$.
+	Por exemplo, quando $p$ = $0.21$, a hipótese alternativa $H_1$ é verdadeira, no entanto
+	o teste tem uma probabilidade de apenas \QUATROpVinteUmP de detectar essa situação a partir de uma
+	amostra de $n=\QUATROn$ elementos, rejeitando $H_0$. Porém, caso a proporção real $p$ seja de $0.27$,
+	o teste tem \QUATROpVinteSeteP de probabilidade de aceitar a hipótese alternativa $H_1$, para uma amostra de tamanho $n = \QUATROn$.
 
 \subsection{Tamanho mínimo de amostra}
 \label{questao:4c}
@@ -122,6 +111,6 @@
 	\end{tabular}
 	\end{table}
 
-	A amostra de \QUATROn elementos, portanto, não é suficiente para detectar com 99\% de probabilidade que a proporção	de alunos com opiniões negativas é igual a $23\%$, considerando 1\% de significância.
+	A amostra de \QUATROn elementos, portanto, não é suficiente para detectar com $99\%$ de probabilidade que a proporção	de alunos com opiniões negativas seja igual a $23\%$, considerando $1\%$ de significância.
 	Através do cálculo para o tamanho mínimo de amostra realizado no R, 
 	obteve-se que este tamanho deve ser de pelo menos \QUATROtamanhoAmostraRounded elementos.
