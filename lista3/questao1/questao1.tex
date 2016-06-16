@@ -21,7 +21,11 @@
 	populacional é desconhecido, a estatística do teste é o valor $t$ (da
 	distribuição de Student) com $gl=\UMAgl$.
 
-	\todo[inline]{Usar parâmetro de não centralidade na função \texttt{pt}.}
+    \begin{align*}
+      t &= \frac{(\bar{x} - \mu_0)\cdot\sqrt{n}}{s} \\
+      t &= \frac{(\UMAbarx - \UMAu0)\cdot\sqrt{\UMAn}}{\UMAs} \\
+      t &= \UMAt
+    \end{align*}
 
 	O valor $p$ da amostra é de \UMAp, calculado com R usando o seguinte
 	código: \texttt{pt(x = \UMAt, df = \UMAgl, lower.tail = FALSE)}. Logo,
@@ -42,10 +46,10 @@
 
 	\inputr{questao1/b.R}
 
-	\todo[inline]{Discutir um dos resultados do poder do teste.}
-
 	%Pensando em editar o tex gerado? Pense denovo.
 	\input{questao1/tb-power}
+
+    Como é indicado na tabela \autoref{tb:1b}, a probabilidade de o teste $t$ rejeitar $H_0$ quando a média populacional real $\mu$ é maior que 27 aumenta conforme a média real $\mu$ se distancia de 27. Por exemplo, quando $\mu = 28$, A hipótese alternativa $H_1$ é verdadeira, no entanto o teste tem uma probabilidade de apenas 22\% de detectar essa situação a partir de uma amostra de $\texttt{n1a} = 20$ alunos, rejeitando $H_0$. Conforme a média real $\mu$ se distancia de 27, o poder do teste aumenta se aproximando de 1. Nesse caso, se a média real $\mu$ for maior que 32, praticamente qualquer amostra de 20 elementos na qual for aplicado o teste de hipótese causará a rejeição de $H_0$ e aceitação da hipótese alternativa de que $\mu > 27$.
 
 \subsection{Tamanho mínimo de amostra}
 \label{questao:1c}
@@ -82,6 +86,7 @@ Os resultados desse cálculo são apresentados na linha $1 - \beta_d$ da \autore
 
 A \autoref{fig:1-power} mostra graficamente o poder do teste usando os parâmetros do \autoref{questao:1b} e do \autoref{questao:1d} de acordo com a média real $\mu$. Os dados foram obtidos usando o mesmo método usado na \autoref{tb:1d}, e $1 - \beta_b$ e $1 - \beta_d$ possuem o mesmo significado.
 
+\todo[inline]{Usar cores e linha contínua para $1- \beta_b$. Interpolar essa porra.}
 \begin{figure}[ht]
   \centering
   \input{questao1/powers.tex}
