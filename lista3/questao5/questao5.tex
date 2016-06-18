@@ -6,7 +6,7 @@ Sabe-se que o tamanho da população é $N = 4850$ e os valores obtidos da amost
 \centering
 \caption{Valores de Tamanho da Amostra, Média e Desvio-Padrão} 
 \label{tb:5a}
-\begin{tabular}{rrrr}
+\begin{tabular}{cccc}
   \toprule
   Pagamento C & n & $\bar{x}$ & s \\
   \midrule
@@ -75,7 +75,59 @@ Substituindo os valores tem-se:
 
 Tirando a raiz quadrada, tem-se o valor do desvio padrão da amostra de acordo com o tamanho das amostras dos dois grupos. Nesse caso, $S_a = 1.0631$ salários mínimos.
 
+Para calcular o poder do teste, foi utilizado o programa R com o seguinte código:
 
+\inputr{questao5/5b.R}
+
+A variável $tempD$ representa o valor da variável de teste ($\bar{x} / S_a$), na qual o valor $-10$ irá variar para $-5$, $-2$, $-1$, $1$, $2$, $5$, $10$. A variável $n$ representa a quantidade de 
+elementos da amostra, $d$ a diferença entre as médias medida em números de desvios padrões, $sig. level$ o nível de significância ($5\%$), $power$ o poder do teste, $type$ determina que são duas 
+amostras independentes e $alternative$ que é um teste bilateral.
+
+A Tabela \ref{tb:5b} apresenta os dados obtidos com a execução do código descrito acima.
+
+\begin{table}[ht]
+\centering
+\caption{Poder do teste para diferença entre as médias das rendas dos alunos} 
+\label{tb:5b}
+\begin{tabular}{cccc}
+  \toprule
+  & & \multicolumn{2}{c}{$1 - \beta$} \\
+  \cline{3-4}
+  Diferenças entre as médias & Diferenças / $S_a$  & $n = 28$ & $n = 52$ \\
+  \midrule
+ $-10$ & $9.4064$ & $1$ & $1$ \\ 
+ $-5$  & $4.7032$ & $1$ & $1$ \\
+ $-2$  & $1.8812$ & $0.9999$ & $1$ \\
+ $-1$  & $0.9406$ & $0.9327$ & $0.9973$ \\
+ $1$   & $0.9406$ & $0.9327$ & $0.9973$ \\
+ $2$   & $1.8812$ & $0.9999$ & $1$ \\
+ $5$   & $4.7032$ & $1$ & $1$ \\
+ $10$  & $9.4064$ & $1$ & $1$ \\
+   \bottomrule
+\end{tabular}
+\end{table}
+
+Pode-se observar que, de acordo com os dados, conforme a diferença entre as duas médias aumenta o poder do teste também aumenta, independentemente de qual lado.
 
 \subsection{Tamanho Mínimo de Amostra}
 
+Para obter o tamanho mínimo da amostra utilizou-se o programa R com o seguinte código:
+
+\inputr{questao5/5c.R}
+
+A Tabela \ref{tb:5c} apresenta os resultados obtidos pelo programa.
+
+\begin{table}[ht]
+\centering
+\caption{Poder do teste para diferença entre as médias das rendas dos alunos} 
+\label{tb:5c}
+\begin{tabular}{cccc}
+  \toprule
+  Diferenças entre as médias & Tamanho da Amostra & Diferenças / $S_a$  & $1 - \beta$ \\
+  \midrule
+ $3$ & $6.3732$ & $2.8219$ & $0.95$ \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+
+Conforme pode ser analisado, 

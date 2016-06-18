@@ -18,5 +18,6 @@ t.test(incentivos$Renda, outras$Renda, alternative = "two.sided", conf.level = 0
 mean(amostra$Renda)
 sd(amostra$Renda)
 var.test(incentivos$Renda, outras$Renda, alternative = "two.sided", conf.level = 0.99)
-
-
+tempD <- (3)/1.0631
+pwr.t.test(n = NULL, d = tempD, sig.level = 0.01, power = 0.95, type = "two.sample", alternative = "two.sided")
+power.t.test(n = NULL, delta = 3, sd = 1.0631, sig.level = 0.01,power = 0.95, type = "two.sample",alternative = "two.sided",strict = TRUE)
