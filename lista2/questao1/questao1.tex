@@ -1,38 +1,81 @@
 \input{questao1/vars}
 
-Foram retiradas 200 amostras, sem reposição, com tamanhos 4, 8, 16, 30 e 100, 
-dentre os 4986 alunos que possuíam um valor definido para a variável Renda.
-A população possuí média de ${\UMx}$ para a variável Renda, com desvio padrão de
-${\UMsd}$. A tabela \ref{tab:q1} apresentam os valores esperados da média amostral
-e seu respectivos desvios padrões.
+	Foram retiradas 200 amostras, sem reposição, com tamanhos $n$ = 4, 8, 16, 30
+	e 100, dentre os 4986 alunos que possuem um valor definido para a variável
+	\textit{Renda}.  A população possuí média $\mu$ = ${\UMx}$ para a variável
+	\textit{Renda}, com desvio padrão $\sigma$ = ${\UMsd}$.  A \autoref{tab:q1}
+	apresenta os valores da média das médias e média dos desvios padrões para cada 
+	tamanho de amostra e seu respectivo valor esperado de desvio padrão ($\frac{\sigma}{\sqrt{n}}$).
 
-\begin{table}[h]
-\centering
-\caption{Valores das médias amostrais para a variável \textit{Renda}}
-\label{tab:q1}
-\vspace{0.5em}
-\begin{tabular}{l r r r}
-	\toprule
-	\textbf{n} & \textbf{Média} & \textbf{Desvio Padrão} & \textbf{\sigma/\sqrt{n}\\
-	\midrule
-	$4$       & ${\UMx4}$   & ${\UMsd4}$   & ${\UMsde4}$   \\
-	$8$       & ${\UMx8}$   & ${\UMsd8}$   & ${\UMsde8}$   \\
-	$16$      & ${\UMx16}$  & ${\UMsd16}$  & ${\UMsde16}$  \\
-	$30$      & ${\UMx30}$  & ${\UMsd30}$  & ${\UMsde30}$  \\
-	$100$     & ${\UMx100}$ & ${\UMsd100}$ & ${\UMsde100}$ \\
-	\bottomrule
-\end{tabular}
-\end{table}
+	\begin{table}[h]
+	\centering
+	\caption{Valores da média e desvio padrão das médias amostrais da variável \textit{Renda}.}
+	\label{tab:q1}
+	\vspace{0.5em}
+	\begin{tabular}{l r r r}
+		\toprule
+		\textbf{\specialcell{c}{Tamanho das \\Amostras}} & \textbf{\specialcell{c}{Média das\\ Médias}} & \textbf{\specialcell{c}{Média dos\\Desvios Padrões}} & \textbf{$\frac{\sigma}{\sqrt{n}}$}\\
+		\midrule
+		$4$       & ${\UMxQuatro}$   & ${\UMsdQuatro}$   & ${\UMsdeQuatro}$   \\
+		$8$       & ${\UMxOito}$   & ${\UMsdOito}$   & ${\UMsdeOito}$   \\
+		$16$      & ${\UMxDezesseis}$  & ${\UMsdDezesseis}$  & ${\UMsdeDezesseis}$  \\
+		$30$      & ${\UMxTrinta}$  & ${\UMsdTrinta}$  & ${\UMsdeTrinta}$  \\
+		$100$     & ${\UMxCem}$ & ${\UMsdCem}$ & ${\UMsdeCem}$ \\
+		\bottomrule
+	\end{tabular}
+	\end{table}
 
-\subsection{(item a)}
-A medida que se aumentou o tamanho da amostra, de 4 para 16, o resultado se aproximou à media populacional.
-Porém para amostra de tamanho 30 e 100, a média amostral se distanciou da média populacional.
+\subsection{Valor Esperado da Média Amostral}
 
+	Na \autoref{tab:q1} é possível observar que a medida que se aumenta o
+	tamanho da amostra, a média das médias amostrais fica cada vez mais
+	próxima do valor da média populacional, que é de ${\UMx}$.
 
-\subsection{(item b)}
-Sim, as amostras retiradas confirmam a afirmação. Conforme indicado na tabela \ref{tab:q1}, os valores 
-de desvio padrão das amostras são próximos aos valores de ^\sigma/_sqrt{n} e para a amostra de tamanho 100, 
-são exatamente iguais.
+\subsection{Valor Esperado do Desvio Padrão da Média Amostral}
 
-\subsection{(item c)}
-Como gerar o gráfico? Escolher uma amostra dentre as 200 para algum tamanho? Qual seria o valor da distribuição?
+	Conforme indicado na \autoref{tab:q1}, a média dos desvios padrões
+	amostrais ficam mais próximos dos valores de $\frac{\sigma}{\sqrt{n}}$ a
+	medida que o tamanho das amostras aumenta.
+
+\subsection{Distribuição Amostral da Média}
+
+	Conforme indicado na Figura \ref{fig:distribuicao-amostral}, a medida
+	que o tamanho das amostras aumenta, a distribuição amostral da média se
+	torna similar a uma distribuição normal.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_m4.eps}
+		\caption{}
+		\label{fig:m4}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_m8.eps}
+		\caption{}
+		\label{fig:m8}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_m16.eps}
+		\caption{}
+		\label{fig:m16}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_m30.eps}
+		\caption{}
+		\label{fig:m30}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.48\textwidth}
+		\includegraphics[width=\textwidth]{plots/histogram_renda_m100.eps}
+		\caption{}
+		\label{fig:m100}
+	\end{subfigure}
+	\caption{Distribuições amostrais das médias para amostras de tamanho 4(a), 8(b), 16(c), 30(d) e 100(e).}
+	\label{fig:distribuicao-amostral}
+\end{figure}
+
+\FloatBarrier

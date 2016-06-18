@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \subsection{Intervalo de 95\% de confiança para a média populacional da Idade dos alunos}
 \label{sub:1a}
 Após retirar os dados perdidos da variável Idade, foi retirada uma amostra aleatória de 20 idades, por meio de sorteio. Com a amostra adquirida, tem-se média $\bar{x}$ = 31,85 e desvio padrão s 
@@ -73,3 +74,111 @@ Paranapitanga utilizam, maioritariamente, a forma de pagamento \textquotedblleft
 
 Para caracterizar melhor o perfil dos alunos, poderia ser realizado um plano de amostragem estratificada proporcional, uma vez que se conhece, neste caso, as características da população (quantos e 
 quais são os tamanhos dos estratos). 
+=======
+\subsection{IC de 95\% para a Média Populacional da Idade dos Alunos}
+\label{sub:1a}
+	
+	Após retirar os dados perdidos da variável Idade, foi retirada uma
+	amostra aleatória de 20 alunos, dos quais a variável idade foi obtida por meio de sorteio. Com a amostra
+	adquirida, tem-se média $\bar{x}$ = \num{32,1} e desvio padrão s = \num{4,930037}.
+	Com o desvio padrão da população desconhecido, utiliza-se o desvio
+	padrão da amostra ($s = \num{4,930037}$).  O tamanho da população é conhecido ($N
+	= 4987$) e o da amostra é pequeno, $n \leq 50$, então, nesse caso utiliza-se
+	a distribuição t de Student.
+
+	Para obter o intervalo de confiança para a média em uma população
+	conhecida, é possível utilizar a \autoref{eq:intervalo-confianca-media}.
+
+	Para um intervalo de confiança de 95\%, obtém-se o valor da cauda
+	superior de \num{0,025}. Diante disso, procura-se na tabela da distribuição
+	t de student o grau de liberdade 19, pois gl = n-1, e o valor \num{0,025},
+	resultando em $t = \num{2,093}$. Inserindo os valores na equação
+	tem-se:
+
+	\begin{align*}
+		IC (\mu, 95\%) &= \num{32,1} \pm \num{2,093} \frac{\num{4,930037}}{\sqrt{20}} \sqrt{\frac{4987 - 20}{4987 - 1}} \\
+		IC (\mu, 95\%) &= \num{32,1} \pm \num{2,3024}
+	\end{align*}
+
+	A média de idades de amostra é \num{32,1} anos, com o nível de confiança de
+	95\%, a margem de erro é de \num{2,3024} anos para mais ou para menos. Diante
+	disso, o intervalo de confiança é de [\num{29,7976}; \num{34,4024}].
+
+\subsection{IC de 99\% para a Média Populacional da Idade dos Alunos}
+
+	Com o desvio padrão da população desconhecido, utiliza-se da amostra
+	piloto n = 20, o desvio padrão $s = \num{4,930037}$, obtidos anteriormente. Como o
+	tamanho da amostra é pequeno ($n \leq 30$) utiliza-se a distribuição t student.
+
+	Para saber o tamanho da amostra necessário para estimar a média
+	populacional da idade dos alunos, com erro amostral máximo tolerado de 2
+	anos, utiliza-se a \autoref{eq:tamanho-amostra-n0}.
+
+	Sabendo-se que o grau de liberdade é 19, pois gl = n - 1, e o nível de
+	confiança é de 99\%, o valor da cauda superior será de \num{0,005}. Obtendo os
+	valores da tabela de distribuição t student, t = \num{2,861}.
+	Inserindo os valores na equação, tem-se:
+
+	\begin{align*}
+		n_0 = \left (\frac{\num{2,861} \times \num{4,930037}}{2} \right)^2 = \num{49,7358}
+	\end{align*}
+
+	Como o tamanho da população não é grande e é conhecido, adicionalmente,
+	utiliza-se a \autoref{eq:tamanho-amostra-n} para calcular o tamanho da amostra.
+
+	Inserindo os valores na equação, tem-se:
+
+	\begin{align*}
+		n &= \Big\lceil \frac{4987 \times \num{49,7358}}{4987 + \num{49,7358}} \Big\rceil \\
+		n &= \lceil \num{49,2446} \rceil \\
+		n &= 50
+	\end{align*}
+
+	Diante dos cálculos apresentados acima, pode-se dizer que uma amostra
+	com 20 elementos não é suficiente para encontrar um intervalo de 99\% de
+	confiança para a média populacional da idade dos alunos com um erro
+	máximo tolerado de 2 anos. Seriam necessários, no mínimo $50$ elementos da
+	amostra para garantir certa precisão. 
+
+\subsection{Análise do Plano de Amostragem Usado}
+	
+	
+    %Eliza, avacalhei com tuas quebras de linhas quando troquei \textquotedblleft e 
+    %\textquotedblright por ``''. Você não tinha um apego emocional nal com elas, tinha?
+	O plano de amostragem utilizado, considerando a população homogênea, não é o ideal, 
+	uma vez que, uma análise exploratória dos dados da população mostra que a variável idade está associada 
+	a pelo menos uma outra variável. Por exemplo, existe uma
+	associação entre a variável Idade e a variável Opinião, mostrando que os
+	alunos com idades inferiores a 30 anos possuem maiores percentuais
+	(\num{72,57}\%) para a opinião `` Muito Satisfeitos'', enquanto os 
+    alunos com idades superiores
+	a 30 anos possuem maiores percentuais (\num{25,62}\%) para a opinião
+    `` Indiferente'', não obtendo flutuação
+	maior do que 5\% para as opiniões ``Satisfeitos'' (\num{21,94}\%) 
+    e ``Insatisfeitos'' (\num{21,28}\%). Outras associações entre as variáveis podem ser realizadas, como por exemplo, 
+       Opinião e Pagamento e Pagamento e Região, conforme apresentado na Lista 1. 
+
+	Como resultado da associação entre Opinião e Pagamento, observou-se que
+	os alunos que pagam sua mensalidade com Auxílio de Familiares são mais
+	`` Indiferentes'' (\num{36,96}\%), com Bolsas
+	de Estudos são mais `` Indiferentes''
+	(\num{38,72}\%), com Financiamento Bancário são mais ``Muito Satisfeitos''
+    (\num{66,36}\%), com Incentivos Federal são mais``Insatisfeitos'' (\num{35,30}\%) e com
+	Recursos Próprios são mais ``
+	Satisfeitos'' (\num{34,48}\%).
+
+	Por outro lado, a associação entre as variáveis Pagamento e Região
+	apresentou o seguinte resultado: os alunos de Aratibutantã utilizam,
+	maioritariamente, a forma de pagamento por ``Incentivos Federais''
+    (\num{47,51}\%), os de Baependinha utilizam o
+	`` Financiamento Bancário'' (\num{53,01}\%), os
+	de Itamaracanã utilizam o `` Financiamento Bancário'' 
+    (\num{90,98}\%), os de Jaquereçaba utilizam os
+	`` Incentivos Federais'' (\num{76,68}\%) e por
+	fim, os alunos de Paranapitanga utilizam, maioritariamente, a forma de
+	pagamento `` Incentivos Federais'' (\num{95,87}\%). 
+
+	Por fim, entende-se que poderia ser realizado um plano de amostragem estratificada 
+	proporcional, uma vez que se conhece, neste caso, as características da população 
+	(quantos e quais são os tamanhos dos estratos). 
+>>>>>>> 296d5690033ea0ad57805d98cde9d7af75c84187

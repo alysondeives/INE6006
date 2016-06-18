@@ -4,18 +4,21 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage[output-decimal-marker={,},round-mode=places,round-precision=4]{siunitx}
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{hyperref} %\autoref
+\usepackage[hidelinks]{hyperref} %\autoref
 \usepackage{todonotes} % todos
 \usepackage{placeins} %\FloatBarrier
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{capt-of} %Workarounds for manually inserting captions
-%\usepackage{subcaption} %subfigure environment
 \usepackage{xspace}
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{booktabs}
-%\usepackage{titlesec} %Customization of headings
+\usepackage{soulutf8}
+\usepackage[parfill]{parskip}
+
 
 %%%%%%%%%%%% Configuring packages
 
@@ -68,10 +71,46 @@
  	\section*{Parte 2: Intervalos de Confiança para Média}
  \end{center}
 
+	Nas questões que se seguem, são estudados os intervalos de confiança
+	para a média de algumas das variáveis da população. Para fins de síntese,
+	considere as seguintes equações no desenvolvimento desta segunda parte.
+
+	Dada uma população de tamanho $N$ e uma amostra aleatória desta população
+	com tamanho $n$, média $\bar{x}$ e desvio padrão $\sigma$, o intervalo de 
+	confiança para a média populacional $\mu$, com nível de confiança $\gamma$
+	é definido pela \autoref{eq:intervalo-confianca-media}:
+
+	\begin{equation}
+		\label{eq:intervalo-confianca-media}
+		IC (\mu, \gamma) = \bar{x} \pm t_\gamma \frac{s}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}
+	\end{equation}
+
+	Para se determinar o tamanho mínimo $n$ de uma amostra de maneira que
+	um determinado valor de erro amostral máximo $E_{0}$ para um nível de
+	confiança $\gamma$ seja atendido, utiliza-se a \autoref{eq:tamanho-amostra-n0}.
+	Nesta equação os valores de $t_{\gamma}$ e $s$ são definidos à partir
+	de uma amostra piloto.
+
+	\begin{equation}
+		\label{eq:tamanho-amostra-n0}
+		 n_0 = \left (\frac{t_\gamma s}{E_0} \right)^2
+	\end{equation}
+
+	Adicionalmente, caso o tamanho $N$ da população seja conhecido e não muito grande,
+	o tamanho mínimo $n$ da amostra é definido pela \autoref{eq:tamanho-amostra-n}.
+	Caso contrário, $n = n_{0}$.
+
+	\begin{align}
+		\label{eq:tamanho-amostra-n}
+		n = \frac{N . n_0}{N + n_0}
+	\end{align}
+	
+
 \section{Variável Idade}
 \label{questao:2}
 \input{questao2/questao2}
 
+<<<<<<< HEAD
  \section{Variável Renda}
  \label{questao:3}
  \input{questao3/questao3}
@@ -91,5 +130,82 @@
  \section{Variável Renda}
  \label{questao:6}
  \input{questao6/questao6}
+=======
+\section{Variável Renda}
+\label{questao:3}
+\input{questao3/questao3}
+
+\newpage
+\begin{center}
+	\section*{Parte 3: Intervalos de Confiança para Proporção}
+\end{center}
+
+	Nas questões que se seguem, são estudados os intervalos de confiança
+	para a proporção de algumas das variáveis da população. Para fins de
+	síntese, considere as seguintes equações no desenvolvimento dessa
+	terceira parte.
+	
+	A estimação do parâmetro proporção da população foi feita com base na
+	Equação \ref{equation: intervalo de confianca para proporcao 1}.
+
+		\begin{equation}
+			IC(p, \gamma) = \hat{p} \pm z_\gamma \sigma_{\hat{p}}
+			\label{equation: intervalo de confianca para proporcao 1}
+		\end{equation}
+	
+	Alternativamente, quando $\sigma_{\hat{p}}$ não é conhecido, e $n$ é
+	suficientemente grande ($n \geq 50$), $\sigma_{\hat{p}}$ pode
+	ser aproximado por $s_{\hat{p}}$, o desvio padrão da amostra tomada, e o
+	parâmetro proporção pode ser estimado de acordo com a Equação
+	\ref{equation: intervalo de confianca para proporcao 2}.
+
+		\begin{equation}
+			IC(p, \gamma) = \hat{p} \pm z_\gamma \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+			\label{equation: intervalo de confianca para proporcao 2}
+		\end{equation}
+	
+	O cálculo do tamanho de uma amostra necessária para que $|\hat{p} - p|
+	\leq E_0$ foi feito de acordo com a Equação \ref{equation: tamanho amostra
+	1} e a Equação \ref{equation: tamanho amostra 2}.
+
+	\begin{equation}
+		n_0 = \frac{z_\gamma^2 p(1-p)}{E_0^2}
+		\label{equation: tamanho amostra 1}
+	\end{equation}
+
+	\begin{equation}
+		n = \frac{N n_0}{N + n_0 - 1}
+		\label{equation: tamanho amostra 2}
+	\end{equation}
+
+	Por fim, para se obter o erro amostral máximo, dado o tamanho da
+	amostra, foi empregada a Equação \ref{equation: erro amostral maximo}.
+	
+	\begin{equation}
+		E_0 = \sqrt{\frac{z_\gamma p(1 - p) }{n_0}}
+		\label{equation: erro amostral maximo}
+	\end{equation}
+	
+	Onde, $n_0$ é expresso pela Equação	\ref{equation: tamanho amostral
+	maximo}, que pode ser deduzida pela Equação \ref{equation: tamanho
+	amostra 2}.
+
+	\begin{equation}
+		n_0 = \frac{n-n N}{n-N} \qquad \forall (n, N) : n \neq N
+	\label{equation: tamanho amostral maximo}
+	\end{equation}
+
+\section{Variável Pagamento}
+\label{questao:4}
+\input{questao4/questao4}
+
+\section{Variável Opinião}
+\label{questao:5}
+\input{questao5/questao5}
+
+\section{Variável Renda}
+\label{questao:6}
+\input{questao6/questao6}
+>>>>>>> 296d5690033ea0ad57805d98cde9d7af75c84187
 
 \end{document}
