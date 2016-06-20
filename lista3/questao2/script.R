@@ -38,7 +38,7 @@ print(sample20powers$power)
 #==============================================================================
 
 medias <- c(seq(3.50, 4.35, by=0.05))
-deltas <- c((H0 - medias)/sample20s)
+deltas <- c((H0 - medias))
 
 sample40powers <- power.t.test(n=40, d=deltas, sd=sample20s, sig.level=0.01, power=NULL, type="one.sample", alternative="one.sided", strict=FALSE)
 sample50powers <- power.t.test(n=50, d=deltas, sd=sample20s, sig.level=0.01, power=NULL, type="one.sample", alternative="one.sided", strict=FALSE)
