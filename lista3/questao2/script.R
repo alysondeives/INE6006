@@ -1,6 +1,6 @@
 options(digits=4)
 
-sample20 <- read.table("~/Documents/INE6006/lista3/questao2/sample20.txt", quote="\"", header=TRUE)
+sample20 <- read.table("sample20.txt", quote="\"", header=TRUE)
 
 sample20size <- length(sample20$Renda)
 sample20gl   <- sample20size - 1
@@ -24,7 +24,9 @@ print(sample20test)
 #                              Poder do Teste
 #==============================================================================
 
+#Errado: não transformar deltas em número de desvios padrões se sd é dado em power.t.test.
 sample20deltas <- c((H0-3.5)/sample20s, (H0-3.75)/sample20s, (H0-3.85)/sample20s, (H0-3.95)/sample20s, (H0-4.15)/sample20s, (H0-4.25)/sample20s, (H0-4.35)/sample20s)
+sample20deltas <- c((H0-3.5), (H0-3.75), (H0-3.85), (H0-3.95), (H0-4.15), (H0-4.25), (H0-4.35))
 
 sample20powers <- power.t.test(n=sample20size, d=sample20deltas, sd=sample20s, sig.level=0.01, power=NULL, type="one.sample", alternative="one.sided", strict=FALSE)
 

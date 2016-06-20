@@ -31,11 +31,11 @@
 	estatísticas de que a média mensal dos alunos é menor que $4,5$ salários
 	mínimos com $5\%$ de nível de significância.
 
-\subsection{Poder Teste}
+\subsection{Poder do Teste}
 
 	Para calcular o poder do deste, deve-se empregar a distribuição não
 	central $t$ de Student. Portanto, deve-se, primeiramente, calcular o fator de
-	não centralidade.
+	não centralidade em salários mínimos.
 	%
 	\begin{align*}
 		d_{3,50} &= -\DOISabicissaA\\
@@ -47,10 +47,14 @@
 		d_{4,35} &= -\DOISabicissaG\\
 	\end{align*}
 
-	Com posse desses dados o poder desses valores, o pode do teste pode ser
-	calculado com a função \texttt{pwr.t.test()} do software estatístico R.	Para o
-	teste, considerou-se o nível de significância em $1\%$ e o desvio padrão
-	amostral como estimativa do desvio padrão populacional.
+	Com posse desses dados o poder desses valores, o poder do teste
+    pode ser calculado com a função \texttt{pwr.t.test()} do software
+    estatístico R. Para o teste, considerou-se o nível de
+    significância $1\%$ e o desvio padrão amostral como estimativa do
+    desvio padrão populacional (como $d_\mu$ é expresso em salários
+    mínimos, o desvio padrão é fornecido para
+    \texttt{pwr.t.test}). Para cada valor de $\mu$, o poder do teste é
+    mostrado a seguir:
 	%
 	\begin{align*}
 		1 - \beta_{3,50} &= \DOISpoderA\\
