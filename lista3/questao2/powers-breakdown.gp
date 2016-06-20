@@ -1,4 +1,4 @@
-set datafile separator ";"
+set datafile separator ","
 
 set terminal postscript eps enhanced color
 set output "powers-breakdown.eps"
