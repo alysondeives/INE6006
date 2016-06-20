@@ -1,14 +1,14 @@
 set datafile separator ","
 
 set terminal postscript eps enhanced color
-set output "powers.tex"
+set output "powers.eps"
 
 set xrange [3.50:4.35]
 set yrange [0.0:1.0]
 #set xtics 3.50,0.05,4.35
 #set ytics 0,0.1,1
 set key on inside right top 
-set xlabel "Média"
+set xlabel "Media"
 set ylabel "Poder do Teste"
 
 plot 'powers.csv' using 1:2 title "40" with linespoints lt 1, \

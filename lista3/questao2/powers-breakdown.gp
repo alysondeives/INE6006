@@ -7,8 +7,8 @@ set xrange [3.50:4.35]
 #set xtics 3.50,0.05,4.35
 #set ytics 0,0.1,1
 set key on inside right top 
-set xlabel "Média"
-set ylabel "Poder do Teste/Tamanho da Amostra"
+set xlabel "Media"
+set ylabel "Poder do Teste / Tamanho da Amostra"
 
 plot 'powers-breakdown.csv' using 1:2 title "40" with linespoints lt 1, \
      'powers-breakdown.csv' using 1:3 title "50" with linespoints lt 2, \
